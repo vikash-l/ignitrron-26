@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #050506;
+    --bg-wine: #140A15;
+    --card-bg: rgba(20, 10, 21, 0.8);
+    --border-purple: rgba(143, 38, 255, 0.2);
+    --accent-violet: #6B1FDB;
+    --accent-purple: #8F26FF;
+    --accent-magenta: #E626FF;
+    --accent-pink: #FF3BE6;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: #F8F5FC;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Subtle Vignette & Dark Atmospheric Backgrounds */
+.gambit-bg-dark {
+  background-color: #050506;
+}
+
+/* Subtle Charged Card Edge Glow */
+.charged-card-glow {
+  box-shadow: 0 0 25px rgba(230, 38, 255, 0.45);
+  border: 1.5px solid #E626FF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050506;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A0C1C;
+  border-radius: 4px;
+  border: 1px solid rgba(143, 38, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F26FF;
+}

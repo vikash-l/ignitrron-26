@@ -1,0 +1,25 @@
+{
+  "name": "ignitrron-26",
+  "version": "1.0.0",
+  "description": "Ignitrron '26 Official Website & Event Portals",
+  "type": "module",
+  "main": "serve-deployment.js",
+  "scripts": {
+    "start": "node serve-deployment.js",
+    "serve": "node serve-deployment.js",
+    "dev": "node dev-server.js",
+    "build": "node build-all-deployments.js",
+    "assemble": "node assemble-final.js",
+    "verify": "node verify-deployment.js"
+  },
+  "keywords": [
+    "ignitrron",
+    "ignitrron26",
+    "symposium",
+    "tech-fest",
+    "vite",
+    "react"
+  ],
+  "author": "vikash-l",
+  "license": "MIT"
+}

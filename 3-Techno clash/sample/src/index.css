@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #050814;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050814;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00F0FF, #7000FF);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Section scroll offset for sticky navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Futuristic Sci-Fi UI Utilities */
+.glass-panel {
+  background: rgba(11, 17, 44, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-hud {
+  background: rgba(5, 8, 20, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(112, 0, 255, 0.3);
+  box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.05), 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+}
+
+.glow-violet {
+  box-shadow: 0 0 25px rgba(112, 0, 255, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(255, 184, 0, 0.35);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.7);
+}
+
+.text-glow-violet {
+  text-shadow: 0 0 12px rgba(112, 0, 255, 0.7);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(255, 184, 0, 0.7);
+}
+
+/* Grid & Hologram Patterns */
+.bg-tech-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+}
+
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Keyframe Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-core {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.6));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 35px rgba(112, 0, 255, 0.9));
+  }
+}
+
+@keyframes scanline-beam {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000%);
+    opacity: 0;
+  }
+}
+
+@keyframes speed-line {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 35s linear infinite;
+}
+
+.animate-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-core {
+  animation: pulse-core 3s ease-in-out infinite;
+}
+
+.animate-speed-lines {
+  animation: speed-line 1.5s linear infinite;
+}
+
+/* Scanline beam visual */
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #00F0FF, #7000FF, #00F0FF, transparent);
+  box-shadow: 0 0 15px #00F0FF, 0 0 30px #7000FF;
+  z-index: 40;
+}

@@ -1,0 +1,64 @@
+{
+  "event": "Model United Nations Conference",
+  "theme": "Nick Fury",
+  "directive": "S.H.I.E.L.D. Strategic Directive",
+  "organizedBy": [
+    "MUN Club",
+    "Debate Union",
+    "Sweet Talkers Club"
+  ],
+  "expectedParticipants": 50,
+  "teamSize": "2 Members / Team",
+  "day": "Day 1",
+  "time": "10:00 AM – 5:00 PM",
+  "venue": "Pallavi Hall",
+  "faculty": {
+    "name": "Ms. Malavika M P",
+    "role": "Faculty Advisor"
+  },
+  "coordinators": [
+    {
+      "name": "Nithish S",
+      "role": "Coordinator 1",
+      "phone": "7350614725"
+    },
+    {
+      "name": "Bhavana B",
+      "role": "Coordinator 2",
+      "phone": "9030870406"
+    },
+    {
+      "name": "Seshanth V",
+      "role": "Coordinator 3",
+      "phone": "9566783359"
+    }
+  ],
+  "prizePool": {
+    "total": 6000,
+    "first": 3000,
+    "second": 2000,
+    "third": 1000
+  },
+  "rounds": [
+    {
+      "id": "01",
+      "name": "THE BRIEFING",
+      "items": [
+        "Jury introduction",
+        "Rules and round explanation",
+        "Issue/problem briefing",
+        "Team preparation and discussion"
+      ]
+    },
+    {
+      "id": "02",
+      "name": "THE SOLUTION",
+      "items": [
+        "Teams present their solution",
+        "Discussion",
+        "Final solution proposal",
+        "Jury evaluation"
+      ]
+    }
+  ]
+}

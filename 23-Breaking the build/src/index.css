@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #030304;
+    --bg-near-black: #070506;
+    --bg-deep-brown: #120A08;
+    --bg-burgundy: #24100D;
+    --accent-deep-crimson: #7F1D1D;
+    --accent-crimson: #B42318;
+    --accent-bright-red: #EF4444;
+    --accent-ember-orange: #F97316;
+    --accent-warm-gold: #F59E0B;
+    --text-primary: #F5F1ED;
+    --text-secondary: #A8A09A;
+    --text-muted: #6E6762;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #030304;
+  }
+
+  body {
+    background-color: #030304;
+    color: #A8A09A;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+}
+
+/* Typography classes */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030304;
+}
+::-webkit-scrollbar-thumb {
+  background: #24100D;
+  border-radius: 4px;
+  border: 1px solid rgba(127, 29, 29, 0.35);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7F1D1D;
+}
+
+/* Scroll Offset for Anchor Links */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Ultra-Fast Precision Module & Panel Styling (Cosmic Crimson) */
+.tech-panel {
+  background: rgba(18, 10, 8, 0.72);
+  border: 1px solid rgba(127, 29, 29, 0.28);
+  position: relative;
+  will-change: transform, opacity;
+}
+
+.tech-panel-interactive {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.tech-panel-interactive:hover {
+  background: rgba(36, 16, 13, 0.88);
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 16px 36px -10px rgba(7, 5, 6, 0.95), 0 0 24px -6px rgba(180, 35, 24, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Hairline Grid Overlay (Subtle Game-Dev Technical Geometry) */
+.bg-subtle-grid {
+  background-size: 56px 56px;
+  background-image: 
+    linear-gradient(to right, rgba(180, 35, 24, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(180, 35, 24, 0.05) 1px, transparent 1px);
+}
+
+/* Atmospheric Glows */
+.glow-subtle-crimson {
+  text-shadow: 0 0 24px rgba(180, 35, 24, 0.45);
+}
+
+.glow-subtle-ember {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}

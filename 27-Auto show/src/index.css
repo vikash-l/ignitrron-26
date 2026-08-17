@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #030303;
+    --color-charcoal: #101010;
+    --color-burnt: #17110D;
+    --color-darkred: #4A0A07;
+    --color-flame: #D72614;
+    --color-hotorange: #FF6A00;
+    --color-fireyellow: #FFB000;
+    --color-text: #F5F2EC;
+    --color-muted: #858585;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #030303;
+  }
+
+  body {
+    background-color: #030303;
+    color: #F5F2EC;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Ghost Rider Scorched Scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #030303;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #17110D;
+    border-radius: 2px;
+    border: 1px solid #4A0A07;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D72614;
+    box-shadow: 0 0 10px #FF6A00;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-glow-fire {
+    text-shadow: 0 0 20px rgba(255, 106, 0, 0.6), 0 0 40px rgba(215, 38, 20, 0.4);
+  }
+
+  .text-glow-yellow {
+    text-shadow: 0 0 25px rgba(255, 176, 0, 0.7);
+  }
+
+  .scorched-card {
+    background: linear-gradient(145deg, rgba(16, 16, 16, 0.92) 0%, rgba(23, 17, 13, 0.95) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(74, 10, 7, 0.45);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.9);
+  }
+
+  .scorched-card:hover {
+    border-color: rgba(255, 106, 0, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.95), 0 0 25px rgba(215, 38, 20, 0.25);
+  }
+
+  .metal-border {
+    border: 1px solid rgba(245, 242, 236, 0.08);
+  }
+
+  /* Asphalt Road & Cracked Texture Overlay */
+  .asphalt-texture {
+    background-image: 
+      radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0),
+      linear-gradient(180deg, rgba(3, 3, 3, 0.97) 0%, rgba(23, 17, 13, 0.8) 50%, rgba(3, 3, 3, 0.97) 100%);
+    background-size: 24px 24px, 100% 100%;
+  }
+
+  /* Ember particle animation */
+  @keyframes emberRise {
+    0% {
+      transform: translateY(100vh) translateX(0px) scale(0.6);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.8;
+    }
+    85% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-10vh) translateX(40px) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  .ember-spark {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #FF6A00;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #FFB000, 0 0 14px #D72614;
+    pointer-events: none;
+  }
+}
+
+/* Accessible focus ring with hot orange fire accent */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #FF6A00;
+  outline-offset: 2px;
+}

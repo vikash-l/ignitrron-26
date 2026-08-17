@@ -1,0 +1,227 @@
+/* ==========================================================================
+   PYMVERSE — Components & Interactive Modules
+   ========================================================================== */
+
+/* Quantum Particle Canvas Container */
+#quantum-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+#quantum-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Hero Section Components */
+.hero-scientist-wrapper {
+  position: relative;
+  border-radius: 24px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.3) 0%, rgba(168, 85, 247, 0.2) 50%, rgba(15, 23, 42, 0.8) 100%);
+  box-shadow: 0 0 45px rgba(0, 240, 255, 0.15), inset 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.hero-scientist-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  filter: contrast(1.05) brightness(1.02);
+}
+
+/* Holographic Floating Ring around Scientist */
+.holo-orbit-ring {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border: 1.5px dashed rgba(0, 240, 255, 0.6);
+  border-radius: 50%;
+  animation: orbitSpin 16s linear infinite;
+  pointer-events: none;
+}
+
+.holo-orbit-ring-inner {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  border-radius: 50%;
+  animation: orbitSpin 10s linear infinite reverse;
+}
+
+/* Holographic Floating Badge on Hero Visual */
+.hero-floating-hud {
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  background: rgba(9, 14, 26, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Pym Particle Scale Regulator Bar */
+.pym-regulator-container {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 9999px;
+  padding: 4px 6px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.pym-regulator-btn {
+  padding: 6px 14px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* 3-Step Quantum Process Connecting Circuit */
+.quantum-step-node {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .quantum-step-node:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    right: -24px;
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, #00f0ff, #a855f7);
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+    z-index: 10;
+  }
+}
+
+/* Form Controls & Styling */
+.quantum-input {
+  background: rgba(11, 18, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.quantum-input:focus {
+  border-color: var(--cyan-quantum);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.15), 0 0 15px rgba(0, 240, 255, 0.2);
+  outline: none;
+}
+
+/* Drag & Drop File Upload Area */
+.file-drop-zone {
+  border: 2px dashed rgba(0, 240, 255, 0.35);
+  background: rgba(8, 14, 28, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.file-drop-zone:hover {
+  border-color: var(--cyan-quantum);
+  background: rgba(0, 240, 255, 0.05);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
+}
+
+/* Quantum Progress Bar */
+.quantum-progress-track {
+  height: 6px;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.quantum-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00f0ff, #38bdf8);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  transition: width 0.3s ease;
+}
+
+/* Interactive Buttons */
+.btn-quantum-primary {
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
+  color: #030712;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-quantum-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.6);
+  filter: brightness(1.1);
+}
+
+.btn-quantum-outline {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  color: #f1f5f9;
+  font-weight: 600;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-quantum-outline:hover {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: var(--cyan-quantum);
+  color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Holographic Success Ring */
+.success-holo-circle {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid #10b981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.35);
+}
+
+.success-holo-circle::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px dashed rgba(16, 185, 129, 0.5);
+  border-radius: 50%;
+  animation: orbitSpin 12s linear infinite;
+}
+
+/* Sticky Navbar Blur */
+#main-navbar {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

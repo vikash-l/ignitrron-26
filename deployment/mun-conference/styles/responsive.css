@@ -1,0 +1,235 @@
+/* ==========================================================================
+   MODEL UNITED NATIONS — NICK FURY TACTICAL DIRECTIVE
+   RESPONSIVE DESIGN & ADAPTIVE LAYOUTS (PRODUCTION POLISH)
+   ========================================================================== */
+
+/* Laptop & Medium Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .intel-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-timeline-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .storyline-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .storyline-connector-arrow {
+    display: none;
+  }
+}
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+  }
+
+  .hero-grid-layout {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .hero-visual-col {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .radar-hud-container {
+    max-width: 320px;
+  }
+
+  .rounds-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coordinators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .podium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .podium-first {
+    order: 1;
+    transform: none;
+  }
+
+  .podium-second {
+    order: 2;
+  }
+
+  .podium-third {
+    order: 3;
+  }
+
+  .storyline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
+  section {
+    padding: 4.5rem 0;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-telemetry-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+
+  .hero-status-dashboard {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .status-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+  }
+
+  .status-cell:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+
+  .metadata-pill {
+    width: 100%;
+  }
+
+  .intel-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-directive-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .round-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .prizes-hero-card {
+    padding: 2rem 1rem;
+  }
+
+  .faculty-advisor-box {
+    padding: 1.25rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .final-cta-card {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .final-cta-question {
+    font-size: 1.35rem;
+  }
+
+  .final-cta-title {
+    font-size: 1.85rem;
+  }
+
+  .final-cta-logistics-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+  }
+
+  .final-cta-logistics-bar span:nth-child(2),
+  .final-cta-logistics-bar span:nth-child(4) {
+    display: none;
+  }
+}
+
+/* Mobile Slide-in Drawer Menu */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 74px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 6, 9, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transform: translateX(-100%);
+  transition: transform var(--transition-med);
+  border-top: 1px solid rgba(255, 30, 56, 0.22);
+}
+
+.mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-link {
+  font-family: var(--font-tactical);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-silver);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-drawer-link:hover, .mobile-drawer-link.active {
+  color: var(--crimson-primary);
+  border-bottom-color: var(--crimson-primary);
+}

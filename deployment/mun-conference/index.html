@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MODEL UNITED NATIONS — Nick Fury Strategic Directive | Ignitrron 2026</title>
+  <meta name="description" content="Official Model United Nations Conference - Nick Fury Theme. Day 1, 10:00 AM – 5:00 PM at Pallavi Hall. Organized by MUN, Debate Union and Sweet Talkers Clubs. ₹6,000 Prize Pool." />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Tactical Style Sheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+</head>
+<body>
+
+  <!-- Atmospheric Layers: CRT Scanlines, Vignette & Canvas Layers -->
+  <div class="crt-scanlines"></div>
+  <div class="tactical-vignette"></div>
+  <div class="grid-bg-overlay"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ========================================================================
+       1. NAVIGATION & TACTICAL HUD HEADER
+       ======================================================================== -->
+  <nav class="hud-navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" title="S.H.I.E.L.D. Strategic Directive">
+        <div class="shield-insignia-box">
+          <!-- S.H.I.E.L.D. Eagle Insignia SVG -->
+          <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">MUN '26</span>
+          <span class="brand-subtitle">STRATEGIC DIRECTIVE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">HOME</a></li>
+        <li><a href="#briefing" class="nav-link">BRIEFING</a></li>
+        <li><a href="#rounds" class="nav-link">ROUNDS</a></li>
+        <li><a href="#rewards" class="nav-link">REWARDS</a></li>
+        <li><a href="#mission-control" class="nav-link">MISSION CONTROL</a></li>
+      </ul>
+
+      <!-- HUD Tactical Actions (DEFCON Badge, Live Clock, SFX Audio Toggle) -->
+      <div class="nav-actions">
+        <div class="hud-defcon-badge" title="Directive Readiness Status">
+          <span class="pulse-dot"></span>
+          <span>DEFCON 1</span>
+        </div>
+
+        <button id="audio-toggle-btn" class="btn-audio-toggle active" title="Tactical Audio: ON" aria-label="Toggle Tactical Audio Effects">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Slide-in Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-nav-drawer">
+    <div class="dossier-stamp" style="margin-bottom: 0.5rem;">S.H.I.E.L.D. SECURE COMMS</div>
+    <a href="#hero" class="mobile-drawer-link">01. HOME <span>→</span></a>
+    <a href="#intelligence" class="mobile-drawer-link">02. INTELLIGENCE STATS <span>→</span></a>
+    <a href="#briefing" class="mobile-drawer-link">03. BRIEFING <span>→</span></a>
+    <a href="#rounds" class="mobile-drawer-link">04. ROUNDS <span>→</span></a>
+    <a href="#strategy" class="mobile-drawer-link">05. STRATEGY PIPELINE <span>→</span></a>
+    <a href="#rewards" class="mobile-drawer-link">06. REWARDS <span>→</span></a>
+    <a href="#mission-control" class="mobile-drawer-link">07. MISSION CONTROL <span>→</span></a>
+    <a href="#final-cta" class="mobile-drawer-link">08. ACCEPT THE MISSION <span>→</span></a>
+  </div>
+
+  <!-- ========================================================================
+       1. HERO — MISSION ACTIVATION (WITH NICK FURY PORTRAIT)
+       ======================================================================== -->
+  <header id="hero" class="hero-section">
+    <div class="container">
+      
+      <!-- Top Telemetry Bar -->
+      <div class="hero-telemetry-bar tactical-box">
+        <div class="hero-telemetry-item">
+          <span>COORDINATES:</span>
+          <span class="hero-telemetry-val">13.0827° N, 80.2707° E // SECTOR 07</span>
+        </div>
+        <div class="hero-telemetry-item">
+          <span>SYS CLOCK:</span>
+          <span id="hud-live-clock" class="hero-telemetry-val">--:--:-- IST</span>
+        </div>
+        <div class="hero-telemetry-item">
+          <span>CLEARANCE:</span>
+          <span class="hero-telemetry-val">SECURITY LEVEL: OMEGA</span>
+        </div>
+      </div>
+
+      <div class="hero-grid-layout" style="display: grid; grid-template-columns: 1.25fr 0.85fr; gap: 3.5rem; align-items: center;">
+        
+        <!-- Left Content Column -->
+        <div class="hero-content-col">
+          <!-- Classified Badge -->
+          <div class="hero-classified-stamp">
+            <span class="pulse-dot"></span>
+            MISSION: NICK FURY // TOP SECRET
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="hero-headline">
+            MODEL UNITED <br />
+            <span class="hero-headline-highlight">NATIONS</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <div class="hero-subtitle">
+            <span class="hero-subtitle-bar"></span>
+            <span>THE WORLD NEEDS A STRATEGIST.</span>
+          </div>
+
+          <!-- Metadata Badges -->
+          <div class="hero-metadata-grid">
+            <div class="metadata-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>DAY 01 • 10:00 AM — 05:00 PM</span>
+            </div>
+
+            <div class="metadata-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>VENUE: PALLAVI HALL</span>
+            </div>
+          </div>
+
+          <!-- CTA Group -->
+          <div class="hero-cta-group">
+            <a href="#briefing" id="btn-enter-briefing" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>ENTER THE BRIEFING</span>
+            </a>
+
+            <a href="#rounds" class="btn-secondary">
+              <span>VIEW MISSION DETAILS</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Animated Status Display (Mission Status, Intel Level, Operatives) -->
+          <div class="hero-status-dashboard tactical-box">
+            <div class="status-cell">
+              <div class="status-cell-label">MISSION STATUS</div>
+              <div class="status-cell-value active-glow">
+                <span class="pulse-dot"></span> ACTIVE
+              </div>
+            </div>
+
+            <div class="status-cell">
+              <div class="status-cell-label">INTELLIGENCE LEVEL</div>
+              <div class="status-cell-value text-crimson">
+                TOP SECRET
+              </div>
+            </div>
+
+            <div class="status-cell">
+              <div class="status-cell-label">OPERATIVES</div>
+              <div class="status-cell-value">
+                50 DEPLOYED
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Radar Telemetry + Nick Fury Commander Portrait -->
+        <div class="hero-visual-col">
+          <div class="radar-hud-container">
+            
+            <!-- Radar Rotating Rings Behind Portrait -->
+            <div class="radar-bg-rings">
+              <div class="radar-ring radar-ring-1"></div>
+              <div class="radar-ring radar-ring-2"></div>
+              <div class="radar-ring radar-ring-3"></div>
+            </div>
+
+            <!-- Nick Fury High-Impact Tactical Portrait -->
+            <div class="hero-fury-card tactical-box">
+              <div class="hero-fury-header-tag">
+                <span>OPERATIVE DOSSIER // DIRECTIVE #01</span>
+                <span class="pulse-dot"></span>
+              </div>
+              <div class="hero-fury-img-wrap">
+                <img src="assets/nick_fury_cosmic.jpg" alt="Director Nick Fury - Strategic Directive" />
+                <div class="hero-fury-overlay"></div>
+                <div class="hero-fury-caption">
+                  <div>
+                    <div class="hero-fury-name">DIRECTOR NICK FURY</div>
+                    <div class="hero-fury-sub">S.H.I.E.L.D. STRATEGIC INITIATIVE</div>
+                  </div>
+                  <div class="dossier-stamp">LVL 7</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. INTELLIGENCE — EVENT STATISTICS
+       ======================================================================== -->
+  <section id="intelligence" class="intelligence-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="pulse-dot"></span> S.H.I.E.L.D. FIELD TELEMETRY
+        </div>
+        <h2 class="section-title">INTELLIGENCE BRIEF</h2>
+        <p class="section-subtitle">
+          Verified operational metrics for Model United Nations Conference.
+        </p>
+      </div>
+
+      <div class="intel-stats-grid">
+        
+        <!-- Stat 1: Expected Participants -->
+        <div class="intel-stat-card tactical-box">
+          <span class="stat-metric-badge">PARAM_01 // AGENTS</span>
+          <div class="stat-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-counter-val animate-counter" data-target="50" data-duration="1500">0</div>
+          <div class="stat-label-text">Expected Participants</div>
+          <div class="stat-sub-text">50 High-Level Delegates</div>
+        </div>
+
+        <!-- Stat 2: Team Size -->
+        <div class="intel-stat-card tactical-box">
+          <span class="stat-metric-badge">PARAM_02 // SQUAD</span>
+          <div class="stat-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <polyline points="16 11 18 13 22 9"></polyline>
+            </svg>
+          </div>
+          <div class="stat-counter-val animate-counter" data-target="2" data-duration="1200">0</div>
+          <div class="stat-label-text">Members / Team</div>
+          <div class="stat-sub-text">Strategic Duo Units</div>
+        </div>
+
+        <!-- Stat 3: Evaluation Rounds -->
+        <div class="intel-stat-card tactical-box">
+          <span class="stat-metric-badge">PARAM_03 // PHASES</span>
+          <div class="stat-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="stat-counter-val animate-counter" data-target="2" data-duration="1200">0</div>
+          <div class="stat-label-text">Evaluation Rounds</div>
+          <div class="stat-sub-text">Briefing & Final Solution</div>
+        </div>
+
+        <!-- Stat 4: Total Prize Pool -->
+        <div class="intel-stat-card tactical-box">
+          <span class="stat-metric-badge">PARAM_04 // BOUNTY</span>
+          <div class="stat-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="stat-counter-val animate-counter text-crimson" data-target="6000" data-prefix="₹" data-duration="1800">₹0</div>
+          <div class="stat-label-text">Total Prize Pool</div>
+          <div class="stat-sub-text">Cash Rewards For Top 3</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. BRIEFING — ABOUT THE MISSION (WITH NICK FURY DOSSIER CARD)
+       ======================================================================== -->
+  <section id="briefing" class="directive-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag section-tag-amber">
+          MISSION FILE: MUN-01 // CLASSIFIED
+        </div>
+        <h2 class="section-title">ABOUT THE MISSION</h2>
+        <p class="section-subtitle">
+          Strategic intelligence briefing on global crisis management and international diplomacy.
+        </p>
+      </div>
+
+      <!-- Split Layout: Directive + Nick Fury Photo Dossier -->
+      <div class="briefing-split-layout">
+        
+        <!-- Core Directive Card (All "debate" changed to "discuss") -->
+        <div class="mission-directive-card tactical-box">
+          <blockquote class="directive-core-quote">
+            "The world faces complex issues. Your mission is to understand them, discuss them and engineer the solution."
+          </blockquote>
+          <p class="directive-desc">
+            The jury begins with an introduction and explanation of both rounds. Participants will be given an issue to discuss. Each team must analyze the issue, discuss possible approaches, and finally present a solution to the given issue.
+          </p>
+        </div>
+
+        <!-- Nick Fury Dossier Visual Card -->
+        <div class="briefing-photo-card tactical-box">
+          <div class="briefing-photo-img-wrap">
+            <img src="assets/nick_fury_dossier.png" alt="Nick Fury Classified Dossier" />
+          </div>
+          <div class="briefing-photo-hud">
+            <div>
+              <span class="text-crimson font-mono" style="font-weight: 700;">CLASSIFIED FILE:</span>
+              <span class="text-silver"> N. FURY</span>
+            </div>
+            <span class="dossier-stamp dossier-stamp-amber">TOP SECRET</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. ROUNDS — TWO-ROUND EVALUATION STRUCTURE (ROUND 2 ANALYSIS -> SOLUTION)
+       ======================================================================== -->
+  <section id="rounds" class="rounds-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          OFFICIAL PROTOCOL // 2 ROUNDS
+        </div>
+        <h2 class="section-title">TWO-ROUND STRUCTURE</h2>
+        <p class="section-subtitle">
+          Rigorous 2-phase evaluation conducted by the official Model United Nations jury.
+        </p>
+      </div>
+
+      <div class="rounds-grid">
+        
+        <!-- ROUND 01 CARD -->
+        <div class="round-card round-card-1 tactical-box">
+          <div>
+            <div class="round-header-row">
+              <span class="round-phase-tag round-1-tag">PHASE 01</span>
+              <span class="font-mono text-muted" style="font-size: 0.75rem;">DAY 01 // MORNING</span>
+            </div>
+
+            <h3 class="round-title">ROUND 01 — THE BRIEFING</h3>
+
+            <ul class="round-step-list">
+              <li class="round-step-item">
+                <span class="step-marker">01</span>
+                <span>Jury introduction</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">02</span>
+                <span>Rules and round explanation</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">03</span>
+                <span>Issue/problem briefing</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">04</span>
+                <span>Team preparation and discussion</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="round-footer-hud">
+            <span>DIRECTIVE: PROBLEM BRIEFING</span>
+            <span class="text-amber">PHASE READY</span>
+          </div>
+        </div>
+
+        <!-- ROUND 02 CARD (UPDATED: "analysis" -> "solution", "debate" -> "discussion") -->
+        <div class="round-card round-card-2 tactical-box">
+          <div>
+            <div class="round-header-row">
+              <span class="round-phase-tag round-2-tag">PHASE 02</span>
+              <span class="font-mono text-crimson" style="font-size: 0.75rem;">DAY 01 // AFTERNOON</span>
+            </div>
+
+            <h3 class="round-title">ROUND 02 — THE SOLUTION</h3>
+
+            <ul class="round-step-list">
+              <li class="round-step-item">
+                <span class="step-marker">01</span>
+                <span>Teams present their solution</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">02</span>
+                <span>Discussion</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">03</span>
+                <span>Final solution proposal</span>
+              </li>
+              <li class="round-step-item">
+                <span class="step-marker">04</span>
+                <span>Jury evaluation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="round-footer-hud">
+            <span>DIRECTIVE: SOLUTION PROPOSAL</span>
+            <span class="text-crimson">HIGH STAKES</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. STRATEGY — ISSUE-TO-SOLUTION JOURNEY (WITH COMIC TACTICAL CARD)
+       ======================================================================== -->
+  <section id="strategy" class="strategy-section">
+    <div class="container">
+      
+      <!-- Strategy Header Split with Tactical Graphic -->
+      <div class="strategy-header-split">
+        <div>
+          <div class="section-tag section-tag-amber">
+            OPERATIONAL PROGRESSION PIPELINE
+          </div>
+          <h2 class="section-title">STRATEGY & RESOLUTION</h2>
+          <p class="section-subtitle">
+            From intelligence briefing to executive policy resolution.
+          </p>
+        </div>
+
+        <div class="strategy-comic-card tactical-box">
+          <div class="strategy-comic-img-wrap">
+            <img src="assets/nick_fury_comic.jpg" alt="Nick Fury Tactical Operations" />
+          </div>
+          <div class="strategy-comic-hud">
+            <span>OPERATIONAL TARGETING</span>
+            <span>DIRECTIVE: ACTION</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Central Issue -> Solution Visual Storytelling Component (Updated debate -> discuss) -->
+      <div class="storyline-container">
+        <div class="storyline-grid">
+          
+          <!-- Stage 1 -->
+          <div class="storyline-node tactical-box">
+            <span class="node-step-badge">STAGE 01</span>
+            <h3 class="node-title">GLOBAL ISSUE</h3>
+            <p class="node-desc">Confidential real-world crisis statement released by the jury panel.</p>
+            <div class="storyline-connector-arrow">→</div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="storyline-node tactical-box">
+            <span class="node-step-badge">STAGE 02</span>
+            <h3 class="node-title">ANALYSIS</h3>
+            <p class="node-desc">Break down core geopolitics, systemic bottlenecks, and key stakeholders.</p>
+            <div class="storyline-connector-arrow">→</div>
+          </div>
+
+          <!-- Stage 3 (Changed from DEBATE to DISCUSS) -->
+          <div class="storyline-node tactical-box">
+            <span class="node-step-badge">STAGE 03</span>
+            <h3 class="node-title">DISCUSS</h3>
+            <p class="node-desc">Discuss multi-lateral approaches, test viability, and evaluate alternatives.</p>
+            <div class="storyline-connector-arrow">→</div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="storyline-node tactical-box">
+            <span class="node-step-badge">STAGE 04</span>
+            <h3 class="node-title">STRATEGY</h3>
+            <p class="node-desc">Synthesize pragmatic directives, policy frameworks, and execution roadmap.</p>
+            <div class="storyline-connector-arrow">→</div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="storyline-node tactical-box">
+            <span class="node-step-badge">STAGE 05</span>
+            <h3 class="node-title">FINAL SOLUTION</h3>
+            <p class="node-desc">Deliver authoritative proposal before the jury for final evaluation.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive Conceptual Mission Timeline (01-06, Updated debate -> discuss) -->
+      <div>
+        <div class="section-tag">CONCEPTUAL OPERATIVE JOURNEY</div>
+        
+        <div class="journey-timeline-grid">
+          <div class="journey-card tactical-box">
+            <div class="journey-num">01</div>
+            <div class="journey-tag">RECRUIT</div>
+            <div class="journey-detail">Mobilize your duo team with complementary analytical skillsets.</div>
+          </div>
+
+          <div class="journey-card tactical-box">
+            <div class="journey-num">02</div>
+            <div class="journey-tag">BRIEF</div>
+            <div class="journey-detail">Ingest the confidential issue briefing and jury guidelines.</div>
+          </div>
+
+          <div class="journey-card tactical-box">
+            <div class="journey-num">03</div>
+            <div class="journey-tag">DISCUSS</div>
+            <div class="journey-detail">Examine multiple angles, assess trade-offs, and discuss approaches.</div>
+          </div>
+
+          <div class="journey-card tactical-box">
+            <div class="journey-num">04</div>
+            <div class="journey-tag">STRATEGIZE</div>
+            <div class="journey-detail">Engineer an airtight, tactical solution and actionable proposal.</div>
+          </div>
+
+          <div class="journey-card tactical-box">
+            <div class="journey-num">05</div>
+            <div class="journey-tag">SOLVE</div>
+            <div class="journey-detail">Defend your resolution during the high-stakes jury presentation.</div>
+          </div>
+
+          <div class="journey-card tactical-box">
+            <div class="journey-num">06</div>
+            <div class="journey-tag">WIN</div>
+            <div class="journey-detail">Secure top standing and claim your share of the ₹6,000 bounty.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. REWARDS — PRIZE POOL
+       ======================================================================== -->
+  <section id="rewards" class="rewards-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          BOUNTY ALLOCATION // REWARDS
+        </div>
+        <h2 class="section-title">MISSION PAYOUT</h2>
+        <p class="section-subtitle">
+          Direct merit awards allocated to top-performing diplomatic teams.
+        </p>
+      </div>
+
+      <!-- Total Pool Hero Banner -->
+      <div class="prizes-hero-card tactical-box">
+        <div class="total-pool-label">TOTAL MISSION PRIZE POOL</div>
+        <div class="total-pool-amount animate-counter" data-target="6000" data-prefix="₹" data-duration="2000">₹0</div>
+        <div class="font-mono text-muted" style="font-size: 0.85rem; letter-spacing: 0.15em;">
+          OFFICIAL CASH REWARDS • 3 PODIUM CLEARANCES
+        </div>
+      </div>
+
+      <!-- Podium Grid -->
+      <div class="podium-grid">
+        
+        <!-- 2nd Place -->
+        <div class="podium-card podium-second tactical-box">
+          <div class="podium-rank-badge rank-2-badge">🥈</div>
+          <h3 class="podium-title">2ND PRIZE</h3>
+          <div class="podium-clearance">SILVER DIRECTIVE // RUNNER-UP</div>
+          <div class="podium-amount animate-counter" data-target="2000" data-prefix="₹" data-duration="1500">₹0</div>
+        </div>
+
+        <!-- 1st Place -->
+        <div class="podium-card podium-first tactical-box">
+          <div class="podium-rank-badge rank-1-badge">🥇</div>
+          <h3 class="podium-title">1ST PRIZE</h3>
+          <div class="podium-clearance">GOLD DIRECTIVE // CHAMPION</div>
+          <div class="podium-amount animate-counter" data-target="3000" data-prefix="₹" data-duration="1800">₹0</div>
+        </div>
+
+        <!-- 3rd Place -->
+        <div class="podium-card podium-third tactical-box">
+          <div class="podium-rank-badge rank-3-badge">🥉</div>
+          <h3 class="podium-title">3RD PRIZE</h3>
+          <div class="podium-clearance">BRONZE DIRECTIVE // 2ND RUNNER-UP</div>
+          <div class="podium-amount animate-counter" data-target="1000" data-prefix="₹" data-duration="1400">₹0</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. MISSION CONTROL — FACULTY & COORDINATORS
+       ======================================================================== -->
+  <section id="mission-control" class="command-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          S.H.I.E.L.D. COMMAND HIERARCHY
+        </div>
+        <h2 class="section-title">MISSION CONTROL</h2>
+        <p class="section-subtitle">
+          Direct communication lines with the official event coordinators and faculty.
+        </p>
+      </div>
+
+      <!-- Coordinators Grid -->
+      <div class="coordinators-grid">
+        
+        <!-- Coordinator 1 -->
+        <div class="coordinator-card tactical-box">
+          <div class="coord-rank-header">
+            <span class="coord-callsign">COORDINATOR 1</span>
+            <div class="coord-online-indicator">
+              <span class="coord-online-dot"></span> COMMS ONLINE
+            </div>
+          </div>
+          <div class="coord-name">Nithish S</div>
+          <div class="coord-role">Lead Coordinator</div>
+          <a href="tel:7350614725" class="coord-phone-action" title="Call Nithish S">
+            <span>📞 7350614725</span>
+            <button class="btn-copy-num" data-phone="7350614725" title="Copy Number" aria-label="Copy phone number">📋</button>
+          </a>
+        </div>
+
+        <!-- Coordinator 2 -->
+        <div class="coordinator-card tactical-box">
+          <div class="coord-rank-header">
+            <span class="coord-callsign">COORDINATOR 2</span>
+            <div class="coord-online-indicator">
+              <span class="coord-online-dot"></span> COMMS ONLINE
+            </div>
+          </div>
+          <div class="coord-name">Bhavana B</div>
+          <div class="coord-role">Lead Coordinator</div>
+          <a href="tel:9030870406" class="coord-phone-action" title="Call Bhavana B">
+            <span>📞 9030870406</span>
+            <button class="btn-copy-num" data-phone="9030870406" title="Copy Number" aria-label="Copy phone number">📋</button>
+          </a>
+        </div>
+
+        <!-- Coordinator 3 -->
+        <div class="coordinator-card tactical-box">
+          <div class="coord-rank-header">
+            <span class="coord-callsign">COORDINATOR 3</span>
+            <div class="coord-online-indicator">
+              <span class="coord-online-dot"></span> COMMS ONLINE
+            </div>
+          </div>
+          <div class="coord-name">Seshanth V</div>
+          <div class="coord-role">Lead Coordinator</div>
+          <a href="tel:9566783359" class="coord-phone-action" title="Call Seshanth V">
+            <span>📞 9566783359</span>
+            <button class="btn-copy-num" data-phone="9566783359" title="Copy Number" aria-label="Copy phone number">📋</button>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Faculty Advisor Box -->
+      <div class="faculty-advisor-box tactical-box">
+        <div>
+          <div class="faculty-title">FACULTY ADVISOR // STRATEGIC OVERSIGHT</div>
+          <div class="faculty-name">Ms. Malavika M P</div>
+        </div>
+        <div class="font-mono text-muted" style="font-size: 0.8rem; letter-spacing: 0.1em;">
+          DEPARTMENT ADVISORY BOARD
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. FINAL CTA — ENTER THE MISSION
+       ======================================================================== -->
+  <section id="final-cta" class="final-cta-section">
+    <div class="container">
+      <div class="final-cta-card tactical-box">
+        
+        <div class="dossier-stamp dossier-stamp-amber" style="margin-bottom: 1.5rem;">
+          EXECUTIVE DIRECTIVE
+        </div>
+
+        <div class="final-cta-question">
+          "THE WORLD HAS A PROBLEM.<br />WHAT'S YOUR SOLUTION?"
+        </div>
+
+        <h2 class="final-cta-title">
+          MODEL UNITED NATIONS
+        </h2>
+
+        <div class="final-cta-logistics-bar">
+          <span>DAY 1</span>
+          <span>•</span>
+          <span>10 AM – 5 PM</span>
+          <span>•</span>
+          <span>PALLAVI HALL</span>
+        </div>
+
+        <div>
+          <button id="btn-accept-mission" class="btn-primary" style="font-size: 1.15rem; padding: 1.1rem 2.8rem;">
+            <span>ACCEPT THE MISSION</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CLASSIFIED BRIEFING MODAL (ACCESS GRANTED OVERLAY + NICK FURY PHOTO)
+       ======================================================================== -->
+  <div id="classified-modal" class="classified-modal-backdrop">
+    <div class="classified-dossier-modal tactical-box">
+      <div class="modal-header-strip">
+        <span>SECURITY LEVEL: OMEGA // TOP SECRET</span>
+        <button id="btn-close-modal" class="modal-close-btn" aria-label="Close Dossier">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-content-grid">
+          <div>
+            <div class="modal-stamp">CLASSIFIED DIRECTIVE</div>
+            <h3 class="modal-title">MISSION DISPATCH: NICK FURY</h3>
+            <p class="modal-text">
+              "The world doesn't need spectators. It needs strategists. You are stepping into the Model United Nations Conference where policy meets precision. Study the briefing, analyze the bottlenecks, discuss with razor-sharp logic, and deliver the final resolution."
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;" class="font-mono">
+              <div style="background: rgba(255, 30, 56, 0.08); padding: 0.8rem; border-left: 2px solid var(--crimson-primary);">
+                <div style="font-size: 0.7rem; color: var(--text-muted);">TARGET VENUE</div>
+                <div style="font-weight: 700; color: #fff;">Pallavi Hall</div>
+              </div>
+              <div style="background: rgba(255, 140, 0, 0.08); padding: 0.8rem; border-left: 2px solid var(--amber-warning);">
+                <div style="font-size: 0.7rem; color: var(--text-muted);">TIME SCHEDULE</div>
+                <div style="font-weight: 700; color: #fff;">Day 1 (10 AM - 5 PM)</div>
+              </div>
+            </div>
+
+            <button id="btn-modal-acknowledge" class="btn-primary" style="width: 100%;">
+              <span>ACKNOWLEDGE & PROCEED TO ROUNDS</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div class="modal-photo-wrap tactical-box">
+            <img src="assets/nick_fury_bridge.png" alt="Director Nick Fury" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Access Granted HUD Toast -->
+  <div id="access-granted-toast" class="hud-toast-alert">
+    <span class="pulse-dot"></span>
+    <div>
+      <div style="font-weight: 700; color: #ff1e38; font-size: 0.75rem;">SECURITY PROTOCOL</div>
+      <div>ACCESS GRANTED // LEVEL 7 CLEARANCE INITIALIZED</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="hud-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div>
+          <div class="brand-title" style="font-size: 1.4rem; margin-bottom: 0.35rem;">
+            MODEL UNITED NATIONS CONFERENCE
+          </div>
+          <div class="footer-credits">
+            Organized by MUN, Debate Union and Sweet Talkers Clubs
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-status-tag">
+            <span class="pulse-dot" style="background: #22c55e; box-shadow: 0 0 8px #22c55e;"></span>
+            <span>MISSION STATUS: OPEN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>IGNITRRON 2026 // NICK FURY STRATEGIC INITIATIVE</div>
+        <div>CONFIDENTIALITY PROTOCOL: OMEGA // ALL RIGHTS RESERVED</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/particles.js"></script>
+  <script src="scripts/counters.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

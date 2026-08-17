@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sumi-black: #08090C;
+    --deep-indigo: #101827;
+    --ronin-indigo: #243B63;
+    --vermilion: #C63C32;
+    --antique-gold: #C9A45C;
+    --washi-ivory: #F1E8D5;
+    --muted-ash: #9B9A96;
+    
+    --bg-base: #08090C;
+    --bg-surface: #0E131F;
+    --bg-surface-elevated: #141C2E;
+    --bg-surface-highlight: #1B263E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #08090C;
+  }
+
+  body {
+    background-color: #08090C;
+    color: #F1E8D5;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
+}
+
+/* Typography classes */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-editorial {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-tech {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Japanese Night Street Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A2234;
+  border-radius: 4px;
+  border: 1px solid rgba(201, 164, 92, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C63C32;
+}
+
+/* Scroll Offset for Anchor Links */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Japanese Street Architectural Panels */
+.ronin-panel {
+  background: rgba(16, 24, 39, 0.88);
+  border: 1px solid rgba(201, 164, 92, 0.22);
+  position: relative;
+  will-change: transform, opacity;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.ronin-panel-interactive {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.ronin-panel-interactive:hover {
+  background: rgba(20, 28, 46, 0.96);
+  border-color: rgba(201, 164, 92, 0.55);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.85), 0 0 24px -6px rgba(198, 60, 50, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Shoji Grid Overlay */
+.bg-shoji-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(201, 164, 92, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(201, 164, 92, 0.04) 1px, transparent 1px);
+}
+
+/* Japanese Traditional Wave (Seigaiha) Subtle Overlay */
+.bg-seigaiha {
+  background-color: transparent;
+  background-image: radial-gradient(circle at 100% 150%, rgba(36, 59, 99, 0.15) 24%, transparent 25%),
+    radial-gradient(circle at 0 150%, rgba(36, 59, 99, 0.15) 24%, transparent 25%),
+    radial-gradient(circle at 50% 100%, rgba(201, 164, 92, 0.08) 10%, transparent 11%),
+    radial-gradient(circle at 100% 50%, rgba(36, 59, 99, 0.12) 15%, transparent 16%),
+    radial-gradient(circle at 0 50%, rgba(36, 59, 99, 0.12) 15%, transparent 16%);
+  background-size: 40px 20px;
+}
+
+/* Cinematic Japanese Atmospheric Glows */
+.glow-vermilion {
+  text-shadow: 0 0 24px rgba(198, 60, 50, 0.5);
+}
+
+.glow-gold {
+  text-shadow: 0 0 20px rgba(201, 164, 92, 0.45);
+}
+
+.glow-indigo {
+  text-shadow: 0 0 24px rgba(36, 59, 99, 0.6);
+}
+
+/* Lantern Pulsing Animation */
+@keyframes lanternGlow {
+  0%, 100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 15px rgba(198, 60, 50, 0.6));
+  }
+  50% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 25px rgba(198, 60, 50, 0.9));
+  }
+}
+
+.animate-lantern-glow {
+  animation: lanternGlow 4s ease-in-out infinite;
+}
+
+@keyframes goldShimmer {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-gold-shimmer {
+  animation: goldShimmer 3s ease-in-out infinite;
+}

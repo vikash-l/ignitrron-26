@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #050505;
+    --bg-secondary: #0b0b0b;
+    --bg-card: #0e0e0e;
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --border-red: rgba(193, 18, 31, 0.35);
+    --accent-red-primary: #8b0000;
+    --accent-red-main: #c1121f;
+    --accent-red-bright: #e31b23;
+    --accent-red-dark: #5a0000;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: #f5f5f5;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Bebas Neue', 'Oswald', 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Red Forensic Grid & Sonar Glows */
+.bg-forensic-grid {
+  background-image: 
+    linear-gradient(to right, rgba(193, 18, 31, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(193, 18, 31, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-radial-red-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(227, 27, 35, 0.12) 0%, rgba(139, 0, 0, 0.04) 45%, transparent 75%);
+}
+
+.bg-hero-red-glow {
+  background: radial-gradient(circle at 75% 30%, rgba(227, 27, 35, 0.18) 0%, rgba(90, 0, 0, 0.1) 50%, transparent 80%);
+}
+
+/* Sonar radar ring pulse animation */
+@keyframes sonar-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+    border-color: rgba(227, 27, 35, 0.8);
+  }
+  50% {
+    opacity: 0.5;
+    border-color: rgba(193, 18, 31, 0.5);
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+    border-color: rgba(139, 0, 0, 0);
+  }
+}
+
+.animate-sonar-pulse {
+  animation: sonar-ring 3.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* Slow Camera Push-in (1.00 <-> 1.025 zoom oscillation) */
+@keyframes slow-camera-push {
+  0%, 100% {
+    transform: scale(1.00);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+.animate-slow-push {
+  animation: slow-camera-push 16s ease-in-out infinite;
+}
+
+/* Light Sweep reflecting city light across suit */
+@keyframes light-sweep-reflection {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+.animate-light-sweep {
+  animation: light-sweep-reflection 9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Laser scanline animation */
+@keyframes scanline-red {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-scanline-red {
+  animation: scanline-red 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Subtle pulse */
+@keyframes subtle-red-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.animate-pulse-red {
+  animation: subtle-red-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom dark scrollbar with crimson thumb */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a0507;
+  border-radius: 3px;
+  border: 1px solid rgba(193, 18, 31, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(227, 27, 35, 0.6);
+}
+
+/* Glass panel black cards */
+.glass-panel-red {
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.glass-panel-red-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-red-hover:hover {
+  border-color: rgba(227, 27, 35, 0.5);
+  box-shadow: 0 0 30px -5px rgba(227, 27, 35, 0.25);
+  transform: translateY(-2px);
+}
