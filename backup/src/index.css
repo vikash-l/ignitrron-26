@@ -1,0 +1,46 @@
+/* Global Marvel High-Tech HUD Cursor Enforcer & Doomsday Theme */
+*, *::before, *::after, html, body, button, a, input, select, textarea, div, [role="button"] {
+  cursor: none !important;
+}
+
+:root {
+  --bg: #020605;
+  --surface: #07110D;
+  --accent: #39FF88;
+  --accent-secondary: #16C784;
+  --accent-deep: #063D2B;
+  --text: #EAF7F0;
+  --muted: #789589;
+  --border: rgba(57, 255, 136, 0.3);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Orbitron', system-ui, sans-serif;
+  --mono: 'Share Tech Mono', ui-monospace, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #020605 !important;
+  color: #EAF7F0 !important;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #020605 !important;
+}

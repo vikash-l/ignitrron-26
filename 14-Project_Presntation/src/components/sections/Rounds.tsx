@@ -39,7 +39,7 @@ export const Rounds: React.FC = () => {
               </div>
 
               <div className="mb-4">
-                <div className="text-white font-display text-5xl sm:text-6xl uppercase tracking-tight leading-none">
+                <div className="text-white font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl uppercase tracking-tight leading-none">
                   {eventData.presentationTime}
                 </div>
                 <div className="text-cyan-400 font-mono-tech text-[11px] uppercase tracking-widest mt-1 font-semibold">
@@ -91,7 +91,7 @@ export const Rounds: React.FC = () => {
               </div>
 
               <div className="mb-4">
-                <div className="text-white font-display text-5xl sm:text-6xl uppercase tracking-tight leading-none">
+                <div className="text-white font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl uppercase tracking-tight leading-none">
                   {eventData.qaTime}
                 </div>
                 <div className="text-blue-400 font-mono-tech text-[11px] uppercase tracking-widest mt-1 font-semibold">

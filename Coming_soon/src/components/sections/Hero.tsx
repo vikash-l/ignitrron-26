@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
     >
       {/* Interactive Cursor-Responsive Mystic Light Haze */}
       <motion.div
-        className="absolute w-[550px] h-[550px] rounded-full pointer-events-none opacity-20 blur-[130px]"
+        className="absolute w-full max-w-[550px] h-[550px] rounded-full pointer-events-none opacity-20 blur-[130px]"
         style={{
           background: 'radial-gradient(circle, #35E6A1 0%, #16A36A 40%, transparent 70%)',
           x: isHovered && !reducedMotion ? lightX : '50%',
@@ -245,7 +245,7 @@ export const Hero: React.FC = () => {
                 scale: reducedMotion ? 1 : artworkScrollScale,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[340px] sm:max-w-[420px] z-10 select-none pointer-events-none"
+              className="relative w-full max-w-full max-w-[340px] sm:max-w-full max-w-[420px] z-10 select-none pointer-events-none"
             >
               <div className="relative w-full aspect-[3/4] flex items-center justify-center">
                 

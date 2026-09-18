@@ -21,7 +21,7 @@ export const WhyParticipate: React.FC = () => {
             <span>INVESTIGATION HIGHLIGHTS</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl tracking-tight text-white uppercase">
             WHY ENTER THE <span className="text-[#e31b23]">INVESTIGATION?</span>
           </h2>
 
@@ -31,7 +31,7 @@ export const WhyParticipate: React.FC = () => {
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {EVENT_DATA.whyParticipate.map((item, idx) => {
             const Icon = iconMap[item.icon] || Eye;
             return (

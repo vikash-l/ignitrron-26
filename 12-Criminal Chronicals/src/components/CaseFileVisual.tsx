@@ -26,7 +26,7 @@ export const CaseFileVisual: React.FC = () => {
         </div>
 
         {/* Tab switcher */}
-        <div className="grid grid-cols-3 gap-1 p-1 bg-slate-900/80 rounded-lg border border-slate-800 mb-4 text-xs font-mono">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-1 bg-slate-900/80 rounded-lg border border-slate-800 mb-4 text-xs font-mono">
           <button
             onClick={() => setActiveTab('dossier')}
             className={`py-1.5 rounded transition ${
@@ -78,7 +78,7 @@ export const CaseFileVisual: React.FC = () => {
               </p>
 
               {/* Dynamic Metadata grid inside dossier */}
-              <div className="mt-4 w-full grid grid-cols-2 gap-2 text-left font-mono text-[11px]">
+              <div className="mt-4 w-full grid grid-cols-1 sm:grid-cols-2 gap-2 text-left font-mono text-[11px]">
                 <div className="p-2 rounded bg-slate-900/60 border border-slate-800">
                   <span className="text-slate-500 block text-[9px]">VENUE</span>
                   <span className="text-slate-200 font-semibold">{EVENT_DATA.venue}</span>

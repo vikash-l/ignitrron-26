@@ -45,7 +45,7 @@ export const Rounds: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
           title="ROUNDS & PHASES"
-          subtitle="A three-stage transformation layout mapping the progress of your scientific proposal."
+          subtitle="A two-stage research challenge mapping the progress of your scientific proposal."
           badge="STRUCTURE"
         />
 
@@ -63,8 +63,8 @@ export const Rounds: React.FC = () => {
                 className="p-6 sm:p-8 bg-slate-900/30 backdrop-blur-sm border-slate-900 hover:border-emerald-500/20 transition-all duration-300 relative overflow-hidden"
               >
                 
-                {/* Hulk Image (Only for Round 3 / index 2) - Positioned Prominently ABOVE the existing content */}
-                {index === 2 && (
+                {/* Hulk Image (Only for final round / index 1) - Positioned Prominently ABOVE the existing content */}
+                {index === 1 && (
                   <div className="w-full mb-6 rounded-xl overflow-hidden border border-emerald-550 border-emerald-900/30 shadow-[0_0_20px_rgba(16,185,129,0.15)]">
                     <img 
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNV_wRdciH39qA1XnRrH5AfP-AJlrPI29ByUnCZP38YCkqKixbEmC1Rw&s=10" 
@@ -119,24 +119,16 @@ export const Rounds: React.FC = () => {
 
                     {index === 0 && (
                       <div className="font-mono text-[10px] text-slate-400 space-y-1">
-                        <p className="text-emerald-500">// LAB_SCHEMATIC: ANALYZING DOCUMENTS</p>
-                        <p>&gt; checking literature references... [OK]</p>
-                        <p>&gt; extracting limitations... [12 gaps detected]</p>
+                        <p className="text-emerald-500">// CLUE_ANALYSIS: ENVELOPE OPENED</p>
+                        <p>&gt; inspecting clues and reference markers... [OK]</p>
+                        <p>&gt; problem statement deduction... [ACTIVE]</p>
                       </div>
                     )}
                     {index === 1 && (
-                      <div className="flex items-center space-x-3">
-                        <div className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-                        <span className="font-mono text-[10px] text-emerald-400 font-bold tracking-wide">
-                          // ENERGY LEVEL: 89% [BREAKTHROUGH MUTATION DETECTED]
-                        </span>
-                      </div>
-                    )}
-                    {index === 2 && (
                       <div className="font-mono text-[10px] text-green-400 space-y-1">
-                        <p className="text-green-400">// FINAL DEFENSE: HULK MODE ACTIVE</p>
-                        <p>&gt; strength: maximum</p>
-                        <p>&gt; query resolution factor: 100%</p>
+                        <p className="text-emerald-400">// JURY_DEFENSE: RESEARCH PROPOSAL ACTIVE</p>
+                        <p>&gt; presentation &amp; innovation scoring: [READY]</p>
+                        <p>&gt; jury Q&amp;A resolution factor: 100%</p>
                       </div>
                     )}
                   </div>

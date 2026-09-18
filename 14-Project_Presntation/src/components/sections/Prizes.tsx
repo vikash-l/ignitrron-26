@@ -16,9 +16,30 @@ export const Prizes: React.FC = () => {
           align="center"
         />
 
+        {/* Total Prize Pool Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-xl mx-auto mb-10 text-center"
+        >
+          <div className="tech-panel rounded-2xl p-6 border-2 border-cyan-500/40 bg-gradient-to-b from-[#06122c]/95 to-[#020714]/95 shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+            <span className="font-mono-tech text-xs text-cyan-400 font-bold uppercase tracking-widest block mb-1">
+              TOTAL PRIZE POOL
+            </span>
+            <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-blue-400">
+              {eventData.prizes.totalPool}
+            </div>
+            <div className="mt-2 text-xs font-mono-tech text-slate-400">
+              5 Categories × 2 Winners • 5 × ₹5,000 (₹25,000) + 5 × ₹4,000 (₹20,000)
+            </div>
+          </div>
+        </motion.div>
+
         {/* 2 Prize Tier Modules (Winner 01 and Winner 02) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {eventData.prizes.map((prize, idx) => {
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {eventData.prizes.tiers.map((prize, idx) => {
             const isFirst = idx === 0;
 
             return (
@@ -56,7 +77,7 @@ export const Prizes: React.FC = () => {
                   </div>
 
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-full bg-blue-950/80 border border-blue-800/50 flex items-center justify-center mx-auto mb-6 group-hover:scale-108 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-blue-950/80 border border-blue-800/50 flex items-center justify-center mx-auto mb-5 group-hover:scale-108 transition-transform duration-300">
                     {isFirst ? (
                       <Trophy className="h-8 w-8 text-cyan-400" />
                     ) : (
@@ -65,9 +86,14 @@ export const Prizes: React.FC = () => {
                   </div>
 
                   {/* Title & Position */}
-                  <h3 className="text-white font-display text-3xl uppercase tracking-wide mb-2 group-hover:text-blue-200 transition-colors">
+                  <h3 className="text-white font-display text-2xl sm:text-3xl uppercase tracking-wide mb-1 group-hover:text-blue-200 transition-colors">
                     {prize.title}
                   </h3>
+
+                  {/* Monetary Amount */}
+                  <div className="font-display text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 my-3">
+                    {prize.amount}
+                  </div>
 
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal mb-6 max-w-xs mx-auto">
                     {prize.description}
@@ -92,7 +118,7 @@ export const Prizes: React.FC = () => {
           className="mt-10 text-center max-w-xl mx-auto"
         >
           <div className="tech-panel rounded-xl p-4 border border-blue-900/40 text-slate-300 font-mono-tech text-xs shadow-md">
-            <span className="text-cyan-400 font-bold">SUMMARY:</span> 2 winners per category / 10 winning positions across 5 domains
+            <span className="text-cyan-400 font-bold">TOTAL POOL:</span> 5 × ₹5,000 (₹25,000) + 5 × ₹4,000 (₹20,000) = ₹45,000 Total Across 5 Domains
           </div>
         </motion.div>
       </div>

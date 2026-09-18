@@ -23,7 +23,7 @@ export const Conduct: React.FC<ConductProps> = ({ event }) => {
           subtitle="Code of conduct standards for all participating developers and attendees."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6">
           {event.conduct.map((item, index) => {
             const IconComponent = icons[index % icons.length];
 

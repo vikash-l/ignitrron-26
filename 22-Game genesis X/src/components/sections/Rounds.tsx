@@ -17,14 +17,14 @@ export const Rounds: React.FC<RoundsProps> = () => {
           <span className="text-xs font-mono text-[#E626FF] uppercase tracking-widest block mb-2 font-bold">
             STAGE STRUCTURE
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
+          <h2 className="text-3xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
             PITCH FORMAT
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[#6B1FDB] to-[#FF3BE6] mt-4 rounded-full"></div>
         </div>
 
         {/* Premium Event-Poster-Like Composition: 10 MIN PITCH + 5 MIN Q&A */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
           
           {/* 10 MIN PITCH */}
           <motion.div
@@ -41,7 +41,7 @@ export const Rounds: React.FC<RoundsProps> = () => {
               <Presentation className="w-8 h-8 text-[#FF3BE6]" />
             </div>
 
-            <div className="text-5xl font-extrabold font-mono text-white mb-2 tracking-tight">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-mono text-white mb-2 tracking-tight">
               10 MIN
             </div>
 
@@ -69,7 +69,7 @@ export const Rounds: React.FC<RoundsProps> = () => {
               <MessageSquare className="w-8 h-8 text-[#E626FF]" />
             </div>
 
-            <div className="text-5xl font-extrabold font-mono text-white mb-2 tracking-tight">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-mono text-white mb-2 tracking-tight">
               5 MIN
             </div>
 

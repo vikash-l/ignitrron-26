@@ -133,6 +133,7 @@ export const eventData: EventConfig = {
   venue: "MECH CLASS",
   mode: "On-Campus",
   teamSize: "3",
+  requirement: "Bring Own Laptops",
 
   sections: {
     hero: true,
@@ -246,26 +247,17 @@ export const eventData: EventConfig = {
   rounds: [
     {
       number: "ROUND 01",
-      title: "BANNER'S ANALYSIS",
-      marks: "25 MARKS",
-      description: "Teams receive a short research summary or a problem statement with existing solutions. Act as a researcher (Bruce Banner) to perform a detailed literature review, identify existing solutions, extract limitations, and define the unexplored research gap. Domains: AI in healthcare, plastic recycling, smart agriculture, etc.",
-      visualTheme: "Bruce Banner's Research Lab",
+      title: "CLUE TO PROBLEM STATEMENT",
+      description: "The participants are given an envelope which consists of clues, from which they are going to find the problem statement. If they find the problem statement they are advanced to the next round. If unable to find the problem statement using those clues they are eliminated. If they are able to find the problem statement partially and are not able to find the actual statement, their points would be deducted. The shortlisted teams advance to the next round.",
+      visualTheme: "Envelope & Clue Extraction",
       visualIcon: "FolderSearch"
     },
     {
       number: "ROUND 02",
-      title: "GAMMA BREAKTHROUGH",
-      description: "Transform the research gap into an original research concept. Teams formulate: Title, Objective, Proposed Methodology, Expected Outcome, and Scientific Novelty. This is the moment of scientific breakthrough—focus on the conceptual strength, originality, and logic of your proposal.",
-      visualTheme: "Gamma Experiment -> Research Discovery",
+      title: "BRAINSTORM & JURY DEFENSE",
+      description: "The shortlisted teams are given time to brainstorm with their team and present their research ideas with the juries. After the presentation there will be a question session with the juries. Based on their presentation skills, how well the team understands the problem, and how creative or innovative their solution is, they are awarded marks. Based on the marks, the top 3 teams are chosen and awarded the prizes.",
+      visualTheme: "Research Presentation & Jury Q&A",
       visualIcon: "Atom"
-    },
-    {
-      number: "ROUND 03",
-      title: "HULK'S CHALLENGE",
-      marks: "40 MARKS",
-      description: "Present your proposal in a grant-style pitch deck. Outline the problem, methodology, and future scope. Engage in an academic defense: answer judges' Q&A regarding implementation challenges, validation methodology, and real-world viability with complete confidence.",
-      visualTheme: "Hulk Emerging from Gamma Energy",
-      visualIcon: "Dumbbell"
     }
   ],
 
@@ -377,15 +369,11 @@ export const eventData: EventConfig = {
     },
     {
       question: "What happens in Round 1?",
-      answer: "Teams analyze a research summary or problem statement and identify: the existing solution, limitations, and the unexplored research gap."
+      answer: "Participants receive an envelope containing clues to deduce the problem statement. Solving it advances the team to Round 2; failing to deduce it leads to elimination; partial deductions incur point deductions."
     },
     {
       question: "What happens in Round 2?",
-      answer: "Teams convert their identified research gap into an original, structured research concept outlining objectives and methodology."
-    },
-    {
-      question: "What happens in Round 3?",
-      answer: "Teams pitch their research proposal in a grant-style defense presentation and answer judges' questioning."
+      answer: "Shortlisted teams brainstorm and present their research proposals to juries followed by a Q&A session. Scoring is based on presentation, problem understanding, and innovation. Top 3 teams win prizes."
     },
     {
       question: "Who organizes the event?",
@@ -395,7 +383,7 @@ export const eventData: EventConfig = {
 
   registration: {
     label: "ENTER THE RESEARCH ARENA",
-    url: "#participate"
+    url: "https://www.theticket9.com/event/ignitrron-26"
   },
 
   contact: {

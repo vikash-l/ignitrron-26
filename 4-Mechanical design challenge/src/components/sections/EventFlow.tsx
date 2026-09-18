@@ -18,7 +18,7 @@ export const EventFlow: React.FC = () => {
             <Layers className="w-3.5 h-3.5" />
             <span>Interactive Timeline</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             EVENT FLOW
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -57,7 +57,7 @@ export const EventFlow: React.FC = () => {
         </div>
 
         {/* Timeline Content Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 gap-8 items-stretch">
           
           {/* ROUND 1 CARD */}
           <div
@@ -88,7 +88,7 @@ export const EventFlow: React.FC = () => {
                 <h4 className="text-xs font-mono-tech uppercase text-cyan-400 font-bold mb-3 flex items-center gap-2">
                   <FileText className="w-4 h-4" /> Participants will receive:
                 </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="flex items-center gap-2 text-sm text-slate-200 bg-white/5 p-2.5 rounded-xl border border-white/5">
                     <span className="w-2 h-2 rounded-full bg-[#ff0055]" />
                     <span>An A3 Sheet</span>

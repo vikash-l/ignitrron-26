@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050816;
+    --oscorp-green: #00ff88;
+    --oscorp-green-glow: rgba(0, 255, 136, 0.4);
+    --oscorp-green-subtle: rgba(0, 255, 136, 0.12);
+    --deep-emerald: #00c96b;
+    --corporate-black: #0b0f14;
+    --silver-metallic: #cbd5e1;
+    --accent-gold: #f59e0b;
+    --accent-gold-glow: rgba(245, 158, 11, 0.35);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  body {
+    background-color: #050816;
+    color: #f8fafc;
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.12) 0%, transparent 55%),
+      radial-gradient(circle at 10% 35%, rgba(0, 201, 107, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 90% 65%, rgba(245, 158, 11, 0.06) 0%, transparent 45%),
+      linear-gradient(180deg, #050816 0%, #080d1e 50%, #050816 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Typography Utility Classes */
+.font-orbitron {
+  font-family: 'Orbitron', -apple-system, sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.font-tech {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Oscorp Holographic Glows */
+.glow-oscorp {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.35), inset 0 0 15px rgba(0, 255, 136, 0.08);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(0, 201, 107, 0.3), inset 0 0 12px rgba(0, 201, 107, 0.08);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.3), inset 0 0 10px rgba(245, 158, 11, 0.08);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.7), 0 0 30px rgba(0, 255, 136, 0.35);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.7), 0 0 25px rgba(245, 158, 11, 0.3);
+}
+
+.text-glow-silver {
+  text-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
+}
+
+/* Corporate Metallic & Holographic Gradients */
+.oscorp-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #00ff88 50%, #00c96b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 45%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism & High-Tech Corporate Panels */
+.glass-oscorp {
+  background: rgba(11, 15, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.glass-oscorp-elevated {
+  background: rgba(11, 15, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 136, 0.38);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 136, 0.15);
+}
+
+.glass-oscorp-subtle {
+  background: rgba(11, 15, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 213, 225, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.glass-oscorp-gold {
+  background: rgba(16, 18, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55), 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+/* Tech Cut Corners & Precision Borders */
+.oscorp-cut {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.oscorp-cut-lg {
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+}
+
+.oscorp-top-cut {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+/* Futuristic Tech Grid & Dot Patterns */
+.bg-oscorp-grid {
+  background-size: 40px 40px, 10px 10px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 136, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 136, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(203, 213, 225, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.02) 1px, transparent 1px);
+}
+
+.bg-oscorp-dots {
+  background-image: radial-gradient(rgba(0, 255, 136, 0.15) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Custom Oscorp Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff88 0%, #00c96b 50%, #0b0f14 100%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+section {
+  scroll-margin-top: 85px;
+}
+
+/* Animations */
+@keyframes oscorp-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.5));
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.85));
+  }
+}
+
+.animate-oscorp-pulse {
+  animation: oscorp-pulse 4s ease-in-out infinite;
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 8s linear infinite;
+}
+
+@keyframes scanline-glow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-scanline {
+  animation: scanline-glow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+}

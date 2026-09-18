@@ -23,7 +23,7 @@ export const Rules: React.FC = () => {
             <span>OFFICIAL GUIDELINES</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl tracking-tight text-white uppercase">
             RULES & <span className="text-[#e31b23]">GUIDELINES</span>
           </h2>
 

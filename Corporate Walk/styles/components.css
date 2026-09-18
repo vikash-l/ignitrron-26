@@ -1,0 +1,1364 @@
+/* ==========================================================================
+   CORPORATE WALK — BLACK WIDOW THEME
+   Components & Section Specific Styling
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   00. NAVIGATION
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 100;
+  transition: background-color 0.4s var(--ease-cinematic), border-color 0.4s var(--ease-cinematic), backdrop-filter 0.4s var(--ease-cinematic);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background-color: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--border-hairline);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.brand-logo .spider-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent-red);
+  filter: drop-shadow(0 0 6px var(--accent-red));
+  transition: transform 0.6s var(--ease-cinematic);
+}
+
+.brand-logo:hover .spider-icon {
+  transform: rotate(180deg);
+}
+
+.brand-separator {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.brand-event {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.35rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-red);
+  box-shadow: 0 0 6px var(--accent-red);
+  transition: width 0.35s var(--ease-cinematic);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Audio Atmospheric Toggle */
+.audio-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.audio-toggle-btn:hover {
+  border-color: var(--border-red);
+  color: var(--accent-red);
+  background: var(--accent-red-subtle);
+}
+
+.audio-toggle-btn.active {
+  color: var(--accent-red);
+  border-color: var(--accent-red);
+  box-shadow: 0 0 10px rgba(217, 4, 41, 0.25);
+}
+
+/* Register Button Minimal Outline */
+.btn-nav-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.btn-nav-register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-red);
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease-cinematic);
+  z-index: -1;
+}
+
+.btn-nav-register:hover {
+  border-color: var(--accent-red);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(217, 4, 41, 0.4);
+}
+
+.btn-nav-register:hover::before {
+  transform: translateY(0);
+}
+
+/* Mobile Nav Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   01. HERO SECTION (CLEAN RESIZED IMAGE & ZERO OVERLAP)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + 2rem);
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: 3.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+  white-space: nowrap;
+}
+
+.hero-title .title-line {
+  display: block;
+}
+
+.hero-title .title-line.accent {
+  color: var(--accent-red);
+  text-shadow: 0 0 25px rgba(217, 4, 41, 0.35);
+}
+
+/* Philosophy Ticker */
+.hero-philosophy {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent-red);
+}
+
+.hero-philosophy .dot {
+  color: var(--accent-red);
+}
+
+.hero-desc {
+  max-width: 480px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--accent-red);
+  color: #ffffff;
+  border: 1px solid var(--accent-red);
+  box-shadow: 0 0 20px rgba(217, 4, 41, 0.3);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hero-primary:hover {
+  background: #b50322;
+  box-shadow: 0 0 30px rgba(217, 4, 41, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.btn-hero-secondary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-primary);
+  transition: width 0.3s var(--ease-cinematic);
+}
+
+.btn-hero-secondary:hover {
+  color: var(--text-primary);
+}
+
+.btn-hero-secondary:hover::after {
+  width: 100%;
+}
+
+/* Hero Visual Frame (Clean & Resized) */
+.hero-visual-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-visual-frame {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 3 / 4;
+  background: rgba(14, 14, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(227, 27, 35, 0.35);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.9), 
+    0 0 35px rgba(227, 27, 35, 0.22),
+    inset 0 0 20px rgba(227, 27, 35, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-cinematic), box-shadow 0.5s var(--ease-cinematic), border-color 0.5s var(--ease-cinematic);
+}
+
+.hero-visual-frame:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(227, 27, 35, 0.7);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.95), 
+    0 0 45px rgba(227, 27, 35, 0.35);
+}
+
+.hero-glow-aura {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 50% 40%, rgba(227, 27, 35, 0.35) 0%, rgba(122, 0, 24, 0.15) 50%, transparent 70%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  position: relative;
+  z-index: 2;
+  border-radius: 6px;
+  filter: contrast(1.08) brightness(1.02);
+  transition: transform 0.8s var(--ease-cinematic);
+  display: block;
+}
+
+.hero-visual-wrapper:hover .hero-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    white-space: normal;
+  }
+  .hero-visual-wrapper {
+    justify-content: center;
+  }
+  .hero-visual-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   02. THE EXPERIENCE (Pure Typographic & Geometric Layout)
+   -------------------------------------------------------------------------- */
+.experience-section {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, #0a0a0c 50%, var(--bg-primary) 100%);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 5rem;
+  align-items: center;
+}
+
+.experience-quote {
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  line-height: 1.45;
+  color: var(--text-primary);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin-bottom: 2.5rem;
+  border-left: 2px solid var(--accent-red);
+  padding-left: 1.75rem;
+}
+
+.experience-quote strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.experience-desc {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+}
+
+/* Precision Graphic Box */
+.experience-metric-panel {
+  position: relative;
+  background: rgba(12, 12, 14, 0.7);
+  border: 1px solid var(--border-hairline);
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.experience-metric-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-red);
+}
+
+.metric-item {
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-hairline);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.metric-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.metric-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.metric-name {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.metric-code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 1024px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   03. THE MINDSET (Interactive Horizontal Rows - No Cards!)
+   -------------------------------------------------------------------------- */
+.mindset-section {
+  position: relative;
+}
+
+.mindset-rows {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.mindset-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  padding: 2.25rem 1rem;
+  border-bottom: 1px solid var(--border-hairline);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-cinematic);
+}
+
+.mindset-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  right: -1rem;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(217, 4, 41, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-cinematic);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mindset-row:hover::before {
+  opacity: 1;
+}
+
+.mindset-num {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 1;
+}
+
+.mindset-content {
+  position: relative;
+  z-index: 1;
+}
+
+.mindset-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  transition: transform 0.4s var(--ease-cinematic), color 0.4s var(--ease-cinematic);
+}
+
+.mindset-row:hover .mindset-title {
+  transform: translateX(12px);
+  color: #ffffff;
+}
+
+.mindset-details {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s var(--ease-cinematic), opacity 0.5s var(--ease-cinematic), margin-top 0.3s;
+}
+
+.mindset-row.active .mindset-details,
+.mindset-row:hover .mindset-details {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.mindset-arrow {
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  transition: transform 0.4s var(--ease-cinematic), color 0.4s var(--ease-cinematic);
+  position: relative;
+  z-index: 1;
+}
+
+.mindset-row:hover .mindset-arrow {
+  color: var(--accent-red);
+  transform: translateX(6px);
+}
+
+@media (max-width: 768px) {
+  .mindset-row {
+    grid-template-columns: 50px 1fr auto;
+    padding: 1.75rem 0.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   04. THE WALK (Runway Progression & Animated Laser Line)
+   -------------------------------------------------------------------------- */
+.walk-runway-section {
+  position: relative;
+  background: #08080a;
+  overflow: hidden;
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.runway-atmosphere-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(217, 4, 41, 0.22) 0%, rgba(122, 0, 24, 0.08) 50%, transparent 80%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.runway-track-container {
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+/* Horizontal Laser Track Line */
+.runway-line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 3.5rem;
+}
+
+.runway-line-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-red) 0%, #ff4d6d 50%, var(--accent-red) 100%);
+  box-shadow: 0 0 16px var(--accent-red);
+  transform-origin: left;
+  animation: laserPulse 4s infinite ease-in-out;
+}
+
+@keyframes laserPulse {
+  0% { opacity: 0.7; box-shadow: 0 0 10px var(--accent-red); }
+  50% { opacity: 1; box-shadow: 0 0 25px rgba(217, 4, 41, 0.8); }
+  100% { opacity: 0.7; box-shadow: 0 0 10px var(--accent-red); }
+}
+
+.runway-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.runway-step-item {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.runway-step-indicator {
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-red);
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px var(--accent-red);
+  transition: transform 0.3s var(--ease-cinematic), background-color 0.3s;
+}
+
+.runway-step-item:hover .runway-step-indicator {
+  transform: translateY(-50%) scale(1.4);
+  background-color: var(--accent-red);
+}
+
+.runway-step-phase {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.runway-step-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.runway-step-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .runway-steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .runway-line {
+    display: none;
+  }
+  .runway-step-indicator {
+    position: static;
+    transform: none;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .runway-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   05. THE LOOK (Asymmetric Full-Width Editorial Spread)
+   -------------------------------------------------------------------------- */
+.look-section {
+  position: relative;
+}
+
+.look-editorial-spread {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem 4rem;
+  margin-top: 4rem;
+}
+
+.look-spread-pillar {
+  position: relative;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-hairline);
+  transition: transform 0.4s var(--ease-cinematic), border-color 0.4s var(--ease-cinematic);
+}
+
+.look-spread-pillar:hover {
+  transform: translateY(-4px);
+  border-top-color: var(--accent-red);
+}
+
+.look-spread-num {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.look-spread-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.look-spread-note {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .look-editorial-spread {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   06. THE DETAILS (Minimalist Typographic Info Layout)
+   -------------------------------------------------------------------------- */
+.details-section {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, #09090b 50%, var(--bg-primary) 100%);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem 2rem;
+  margin-top: 4rem;
+}
+
+.detail-block {
+  position: relative;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-hairline);
+  transition: border-color 0.4s var(--ease-cinematic);
+}
+
+.detail-block:hover {
+  border-top-color: var(--accent-red);
+}
+
+.detail-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-value-huge {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.detail-subtext {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   07. THE PODIUM (Typographic Prize Breakdown)
+   -------------------------------------------------------------------------- */
+.podium-section {
+  position: relative;
+}
+
+.podium-composition {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4.5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.podium-ranks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.podium-rank-row {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  align-items: baseline;
+  padding: 1.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-hairline);
+  position: relative;
+  transition: all 0.4s var(--ease-cinematic);
+}
+
+.podium-rank-row:hover {
+  background: rgba(217, 4, 41, 0.04);
+  border-color: var(--border-red);
+  transform: translateX(8px);
+}
+
+.podium-rank-row.first-place {
+  border-color: rgba(217, 4, 41, 0.4);
+  background: linear-gradient(90deg, rgba(217, 4, 41, 0.08) 0%, rgba(5, 5, 5, 0.4) 100%);
+}
+
+.podium-rank-row.first-place:hover {
+  border-color: var(--accent-red);
+  box-shadow: 0 0 25px rgba(217, 4, 41, 0.2);
+}
+
+.rank-index {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 0.1em;
+}
+
+.rank-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.rank-amount {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.podium-total-card {
+  position: relative;
+  padding: 3rem 2.5rem;
+  background: radial-gradient(circle at 50% 0%, rgba(217, 4, 41, 0.15) 0%, rgba(12, 12, 14, 0.9) 70%);
+  border: 1px solid var(--border-red);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.podium-total-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.podium-total-amount {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(217, 4, 41, 0.4);
+}
+
+.podium-total-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-hairline);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .podium-composition {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   08. FINAL CTA (Cinematic Full Bleed)
+   -------------------------------------------------------------------------- */
+.final-cta-section {
+  position: relative;
+  padding: 10rem 0;
+  background: #040404;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.cta-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.25) 0%, rgba(122, 0, 24, 0.1) 40%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title-huge {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8.5vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+}
+
+.btn-cta-giant {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 3.5rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: var(--accent-red);
+  color: #ffffff;
+  border: 1px solid var(--accent-red);
+  box-shadow: 0 0 35px rgba(217, 4, 41, 0.4);
+  transition: all var(--transition-smooth);
+}
+
+.btn-cta-giant:hover {
+  background: #b50322;
+  box-shadow: 0 0 50px rgba(217, 4, 41, 0.8);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   09. REGISTRATION MODAL / DRAWER
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-cinematic);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-drawer {
+  width: 100%;
+  max-width: 540px;
+  height: 100%;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-hairline);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease-cinematic);
+  position: relative;
+}
+
+.modal-overlay.open .modal-drawer {
+  transform: translateX(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-hairline);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  background: var(--accent-red-subtle);
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-hairline);
+  padding: 0.875rem 1.25rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus {
+  border-color: var(--accent-red);
+  box-shadow: 0 0 12px rgba(217, 4, 41, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: var(--accent-red);
+  color: #ffffff;
+  border: 1px solid var(--accent-red);
+  margin-top: 1.5rem;
+  box-shadow: 0 0 20px rgba(217, 4, 41, 0.35);
+  transition: all var(--transition-smooth);
+}
+
+.form-submit-btn:hover {
+  background: #b50322;
+  box-shadow: 0 0 30px rgba(217, 4, 41, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   10. BOARDING PASS / CONFIRMATION STATE
+   -------------------------------------------------------------------------- */
+.ticket-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #08080a;
+  border: 1px solid var(--border-red);
+  position: relative;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-hairline);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ticket-id {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   11. CUSTOM CURSOR
+   -------------------------------------------------------------------------- */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear, width 0.3s var(--ease-cinematic), height 0.3s var(--ease-cinematic);
+  box-shadow: 0 0 8px var(--accent-red);
+}
+
+#custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(217, 4, 41, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s var(--ease-cinematic), height 0.3s var(--ease-cinematic), border-color 0.3s, background-color 0.3s;
+}
+
+#custom-cursor.hovering {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #ffffff;
+}
+
+#custom-cursor-follower.hovering {
+  width: 56px;
+  height: 56px;
+  border-color: var(--accent-red);
+  background-color: rgba(217, 4, 41, 0.1);
+  box-shadow: 0 0 20px rgba(217, 4, 41, 0.3);
+}
+
+/* Disable on touch screens */
+@media (pointer: coarse) {
+  #custom-cursor,
+  #custom-cursor-follower {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+  padding: 4rem 0 3rem;
+  border-top: 1px solid var(--border-hairline);
+  background: var(--bg-primary);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.footer-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+}
+
+/* Additional split layout mobile resets for Corporate Walk */
+@media (max-width: 992px) {
+  .hero-grid,
+  .experience-grid,
+  .runway-steps-grid,
+  .look-editorial-spread,
+  .details-grid,
+  .podium-composition {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}

@@ -40,7 +40,7 @@ export const Categories: React.FC = () => {
         />
 
         {/* 8 Aerospace Telemetry Spec Modules in Responsive Grid (Large Numbers) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-10">
           {eventData.specs.telemetry.map((item, idx) => (
             <motion.div
               key={idx}
@@ -91,7 +91,7 @@ export const Categories: React.FC = () => {
         </div>
 
         {/* Mandatory Guidelines & Prohibitions (Participant Marking & Ready-made Drones) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
           
           {/* Card 1: Participant Marking */}
           <motion.div

@@ -12,21 +12,21 @@ export const BuildSection: React.FC = () => {
     <section id="build" className="relative py-28 px-4 bg-[#0a0a0c] overflow-hidden border-t border-white/10">
       {/* Halftone & Glow Overlays */}
       <div className="absolute inset-0 bg-halftone-blue opacity-20 pointer-events-none" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#ff003c]/10 blur-3xl pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-[700px] h-[700px] bg-[#ff003c]/10 blur-3xl pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6 border-b-2 border-white/10 pb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-anton text-6xl md:text-8xl text-[#00f0ff] leading-none drop-shadow-[4px_4px_0px_#ff003c]">
+              <span className="font-anton text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-[#00f0ff] leading-none drop-shadow-[4px_4px_0px_#ff003c]">
                 02
               </span>
               <div className="flex flex-col">
                 <span className="font-space text-xs tracking-widest text-[#ff003c] uppercase font-bold">
                   PHASE 02 — THE BRAND SYSTEM
                 </span>
-                <h2 className="font-anton text-4xl sm:text-6xl text-white tracking-wider uppercase">
+                <h2 className="font-anton text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-white tracking-wider uppercase">
                   BUILD
                 </h2>
               </div>

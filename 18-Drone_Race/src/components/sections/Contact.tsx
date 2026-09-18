@@ -16,7 +16,7 @@ export const Contact: React.FC = () => {
           align="center"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {eventData.contacts.map((contact, idx) => (
             <motion.a
               key={idx}

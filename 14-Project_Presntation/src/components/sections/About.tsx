@@ -32,7 +32,7 @@ export const About: React.FC = () => {
     <section id="about" className="py-24 relative overflow-hidden border-t border-blue-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
-          index="01"
+          index="02"
           badge="EVENT OVERVIEW"
           title={eventData.about.title}
           subtitle="A competitive technical arena where creators defend their engineering innovations."

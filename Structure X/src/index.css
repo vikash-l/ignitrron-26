@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #05080d;
+    --bg-secondary: #07111b;
+    --bg-card: #0b1420;
+    --accent-cyan: #00d9ff;
+    --accent-purple: #7c5cff;
+    --accent-red: #ff3158;
+    --text-primary: #f5f7fa;
+    --text-muted: #8b98a8;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Consistent Max Content Container Width Across All Sections */
+.site-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Glassmorphism Futuristic UI Panels */
+.glass-panel {
+  background: rgba(11, 20, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+}
+
+.glass-panel-accent {
+  background: linear-gradient(135deg, rgba(7, 17, 27, 0.85) 0%, rgba(11, 20, 32, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+/* Technical Blueprint Grid Pattern */
+.bg-blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 217, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.07) 1px, transparent 1px);
+}
+
+/* HUD Corner Accents */
+.hud-corner {
+  position: relative;
+}
+
+.hud-corner::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #00d9ff;
+  border-left: 2px solid #00d9ff;
+  z-index: 10;
+}
+
+.hud-corner::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #00d9ff;
+  border-right: 2px solid #00d9ff;
+  z-index: 10;
+}
+
+/* Controlled Dark Blueprint Image Filter (No Overexposure) */
+.blueprint-image-dark {
+  filter: brightness(0.65) contrast(1.25) saturate(1.2) hue-rotate(185deg);
+}
+
+/* Cyan Glow Text Effects */
+.cyan-glow {
+  text-shadow: 0 0 25px rgba(0, 217, 255, 0.7);
+}
+
+.cyan-box-glow {
+  box-shadow: 0 0 35px rgba(0, 217, 255, 0.25);
+}
+
+/* Blueprint Mode Global Body Adjustments */
+body.blueprint-mode {
+  background-color: #030710;
+}
+
+body.blueprint-mode .glass-panel {
+  background: rgba(7, 17, 27, 0.9);
+  border-color: rgba(0, 217, 255, 0.4);
+}

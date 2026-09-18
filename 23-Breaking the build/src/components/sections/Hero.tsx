@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
     >
       {/* Interactive Cursor-Responsive Crimson & Ember Environmental Spotlight */}
       <motion.div
-        className="absolute w-[650px] h-[650px] rounded-full pointer-events-none opacity-20 blur-[150px]"
+        className="absolute w-full max-w-[650px] h-[650px] rounded-full pointer-events-none opacity-20 blur-[150px]"
         style={{
           background: 'radial-gradient(circle, #B42318 0%, #F97316 40%, transparent 70%)',
           x: isHovered && !reducedMotion ? lightX : '50%',
@@ -180,7 +180,7 @@ export const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.46, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-w-xl mx-auto lg:mx-0 mb-9"
+                className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 max-w-xl mx-auto lg:mx-0 mb-9"
               >
                 <div className="tech-panel px-3 py-2.5 rounded flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-[#F97316] flex-shrink-0" />
@@ -194,7 +194,7 @@ export const Hero: React.FC = () => {
                   <Clock className="h-4 w-4 text-[#EF4444] flex-shrink-0" />
                   <div>
                     <div className="text-[9px] font-mono-tech text-[#6E6762] uppercase tracking-widest">TIME</div>
-                    <div className="text-xs font-mono-tech text-[#F5F1ED] font-medium">10 AM – 1 PM</div>
+                    <div className="text-xs font-mono-tech text-[#F5F1ED] font-medium">9 AM – 1 PM</div>
                   </div>
                 </div>
 
@@ -301,7 +301,7 @@ export const Hero: React.FC = () => {
                 scale: reducedMotion ? 1 : artworkScrollScale,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[380px] sm:max-w-[440px] z-10"
+              className="relative w-full max-w-full max-w-[380px] sm:max-w-full max-w-[440px] z-10"
             >
               {/* Integrated Artwork Container with Soft Edge Fading */}
               <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-black/90 border border-[#7F1D1D]/40">

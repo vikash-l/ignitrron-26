@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
             <Headphones className="w-3.5 h-3.5" />
             <span>Support & Assistance</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             EVENT COORDINATORS
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
 
         {/* 3 Premium Glassmorphism Coordinator Cards Grid */}
         {/* Responsive layout: Desktop 3 cards in one row, Tablet 2 cards, Mobile 1 card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {cadForgeData.coordinators.map((coordinator, idx) => {
             const isRedAccent = idx % 2 === 0;
             return (
@@ -79,10 +79,9 @@ export const Contact: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Phone Action Button */}
                 <div className="pt-4 border-t border-white/10">
                   <a
-                    href={`tel:${coordinator.phone.replace(/\s+/g, '')}`}
+                    href={coordinator.telLink || `tel:${coordinator.phone.replace(/\s+/g, '')}`}
                     className={`flex items-center justify-between p-4 rounded-2xl bg-black/60 border transition-all duration-300 group/item ${
                       isRedAccent
                         ? 'border-[#ff0055]/30 hover:border-[#ff0055] hover:bg-[#ff0055]/10'

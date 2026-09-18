@@ -28,7 +28,7 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="font-anton text-3xl sm:text-5xl text-gray-400 uppercase tracking-wide"
+            className="font-anton text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-400 uppercase tracking-wide"
           >
             CHOOSE THE DOMAIN.
           </motion.h3>
@@ -38,7 +38,7 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="font-anton text-3xl sm:text-5xl text-[#00f0ff] uppercase tracking-wide"
+            className="font-anton text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00f0ff] uppercase tracking-wide"
           >
             CRACK THE MYSTERY.
           </motion.h3>
@@ -48,7 +48,7 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="font-anton text-3xl sm:text-5xl text-[#ff003c] uppercase tracking-wide"
+            className="font-anton text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#ff003c] uppercase tracking-wide"
           >
             BUILD THE BRAND.
           </motion.h3>
@@ -58,7 +58,7 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.45 }}
-            className="font-anton text-3xl sm:text-5xl text-white uppercase tracking-wide"
+            className="font-anton text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase tracking-wide"
           >
             OWN THE PITCH.
           </motion.h3>
@@ -75,10 +75,10 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
           transition={{ delay: 0.6 }}
           className="my-6"
         >
-          <h2 className="font-anton text-6xl sm:text-8xl md:text-9xl text-white tracking-tight uppercase leading-none drop-shadow-[5px_5px_0px_#ff003c]">
+          <h2 className="font-anton text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl sm:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-white tracking-tight uppercase leading-none drop-shadow-[5px_5px_0px_#ff003c]">
             🚀 LAUNCHPAD
           </h2>
-          <h3 className="font-bebas text-3xl sm:text-5xl text-[#00f0ff] tracking-wider uppercase mt-2">
+          <h3 className="font-bebas text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00f0ff] tracking-wider uppercase mt-2">
             NEW BRAND. YOUR BRAND.
           </h3>
           <p className="font-space text-lg text-gray-300 mt-2">
@@ -96,22 +96,22 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenRegister
             </svg>
           )}
 
-          <button
+          <a
+            href="https://www.theticket9.com/event/ignitrron-26"
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseEnter={() => {
               setIsHovered(true);
               soundFx.playClick();
             }}
             onMouseLeave={() => setIsHovered(false)}
-            onClick={() => {
-              soundFx.playWebShoot();
-              onOpenRegister();
-            }}
-            className="group relative px-10 py-5 bg-[#ff003c] text-white font-bebas text-3xl tracking-widest rounded-lg border-2 border-white shadow-spider-red hover:bg-[#ff003c]/90 hover:shadow-glow-red transition-all duration-200 active:translate-y-1 flex items-center gap-3"
+            onClick={() => soundFx.playWebShoot()}
+            className="group relative px-10 py-5 bg-[#ff003c] text-white font-bebas text-3xl tracking-widest rounded-lg border-2 border-white shadow-spider-red hover:bg-[#ff003c]/90 hover:shadow-glow-red transition-all duration-200 active:translate-y-1 inline-flex items-center gap-3 no-underline"
           >
             <Zap className="w-8 h-8 fill-white group-hover:text-[#00f0ff] transition-colors" />
             <span>ENTER LAUNCHPAD</span>
             <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

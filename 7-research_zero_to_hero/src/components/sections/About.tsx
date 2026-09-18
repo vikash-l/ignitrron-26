@@ -63,7 +63,7 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="w-full max-w-[480px] aspect-[16/9] sm:aspect-[4/3] border-2 border-dashed border-emerald-900/30 rounded-2xl flex flex-col justify-center items-center p-8 bg-slate-900/5 relative text-center shadow-[0_0_20px_rgba(16,185,129,0.02)]"
+              className="w-full max-w-full max-w-[480px] aspect-[16/9] sm:aspect-[4/3] border-2 border-dashed border-emerald-900/30 rounded-2xl flex flex-col justify-center items-center p-8 bg-slate-900/5 relative text-center shadow-[0_0_20px_rgba(16,185,129,0.02)]"
             >
               <div className="space-y-4">
                 {/* Visual laboratory grid icons */}

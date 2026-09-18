@@ -403,7 +403,7 @@ export const AtmosphericBackground: React.FC = () => {
       {/* Deep Cosmic Background Sacred Mandala Geometry (Dual Counter-Rotating Layers) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.07] overflow-hidden">
         {/* Mandala Ring 1 (Slow CW) */}
-        <div className="absolute w-[950px] h-[950px] animate-portal-cw-slow">
+        <div className="absolute w-full max-w-[950px] h-[950px] animate-portal-cw-slow">
           <svg viewBox="0 0 800 800" className="w-full h-full" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#35E6A1" strokeWidth="1.5" strokeDasharray="12 16" />
             <circle cx="400" cy="400" r="320" stroke="#16A36A" strokeWidth="1" strokeDasharray="4 8" />
@@ -425,7 +425,7 @@ export const AtmosphericBackground: React.FC = () => {
         </div>
 
         {/* Mandala Ring 2 (Slow CCW) */}
-        <div className="absolute w-[780px] h-[780px] animate-portal-ccw-slow">
+        <div className="absolute w-full max-w-[780px] h-[780px] animate-portal-ccw-slow">
           <svg viewBox="0 0 700 700" className="w-full h-full" fill="none">
             <rect x="150" y="150" width="400" height="400" stroke="#7CFFCB" strokeWidth="1" />
             <rect x="150" y="150" width="400" height="400" stroke="#35E6A1" strokeWidth="1" transform="rotate(45 350 350)" />

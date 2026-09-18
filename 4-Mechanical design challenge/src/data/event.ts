@@ -239,7 +239,7 @@ export const eventData: EventConfig = {
     },
     {
       day: "DAY 2",
-      time: "05:00 PM",
+      time: "04:00 PM",
       title: "FINAL SUBMISSION & JUDGING",
       description: "Project code submission deadline followed by live project demonstrations."
     }
@@ -340,7 +340,7 @@ export const eventData: EventConfig = {
 
   registration: {
     label: "REGISTER NOW",
-    url: "#"
+    url: "https://www.theticket9.com/event/ignitrron-26"
   },
 
   contact: {

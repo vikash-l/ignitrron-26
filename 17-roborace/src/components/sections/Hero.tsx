@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
               </span>
               
               {/* Event Name */}
-              <h1 className="text-5xl sm:text-7xl font-black tracking-tight text-white mb-2 leading-none font-display uppercase">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-black tracking-tight text-white mb-2 leading-none font-display uppercase">
                 <span className="text-chrome">ROBO RACE’26</span>
               </h1>
               
@@ -146,15 +146,21 @@ export const Hero: React.FC = () => {
 
               {/* Action CTAs */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full sm:w-auto font-bold"
-                  icon={<ArrowRight className="h-3.5 w-3.5" />}
-                  onClick={() => handleScrollTo('registration')}
+                <a
+                  href={eventData.registration?.url || "https://www.theticket9.com/event/ignitrron-26"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
                 >
-                  ENTER THE RACE
-                </Button>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="w-full sm:w-auto font-bold"
+                    icon={<ArrowRight className="h-3.5 w-3.5" />}
+                  >
+                    ENTER THE RACE
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   size="lg"
@@ -183,7 +189,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 0.96, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-              className="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[4/5] rounded-lg border border-zinc-850 bg-[#0d0e12]/60 backdrop-blur-md overflow-hidden shadow-2xl flex items-center justify-center group z-10"
+              className="relative w-full max-w-full max-w-[360px] sm:max-w-full max-w-[400px] aspect-[4/5] rounded-lg border border-zinc-850 bg-[#0d0e12]/60 backdrop-blur-md overflow-hidden shadow-2xl flex items-center justify-center group z-10"
             >
               {/* Chrome/Icy reflection glows */}
               <div className="absolute inset-0 bg-radial-gradient from-sky-500/15 via-transparent to-transparent opacity-60 z-10 pointer-events-none" />

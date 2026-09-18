@@ -17,7 +17,7 @@ export const FinalCTA: React.FC = () => {
       <div className="absolute inset-0 bg-forensic-grid opacity-30 pointer-events-none" />
       
       {/* Red Radial Radar Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-[#8b0000]/20 via-[#c1121f]/15 to-[#e31b23]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[400px] bg-gradient-to-r from-[#8b0000]/20 via-[#c1121f]/15 to-[#e31b23]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative glass-panel-red rounded-3xl p-8 sm:p-14 border border-red-900/40 overflow-hidden shadow-2xl text-center space-y-6">
@@ -32,7 +32,7 @@ export const FinalCTA: React.FC = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="font-heading font-black text-5xl sm:text-7xl tracking-tight text-white leading-tight uppercase">
+          <h2 className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl tracking-tight text-white leading-tight uppercase">
             READY TO CRACK <br />
             <span className="bg-gradient-to-r from-white via-slate-200 to-[#e31b23] bg-clip-text text-transparent">
               THE CASE?

@@ -10,12 +10,30 @@ export interface NavSection {
 }
 
 export const navSections: NavSection[] = [
-  { id: 'session', index: '01', label: 'SESSION', title: 'BREAK THE BUILD', badge: 'SESSION BRIEF' },
+  { id: 'session', index: '01', label: 'SESSION', title: 'BREAKING THE BUILD', badge: 'SESSION BRIEF' },
   { id: 'guest', index: '02', label: 'GUEST', title: 'MEET THE GUEST', badge: 'INDUSTRY PERSPECTIVE' },
   { id: 'experience', index: '03', label: 'EXPERIENCE', title: 'WHAT TO EXPECT', badge: 'SESSION PILLARS' },
-  { id: 'guidelines', index: '04', label: 'GUIDELINES', title: 'CODE OF CONDUCT', badge: 'SESSION PROTOCOLS' },
-  { id: 'faq', index: '05', label: 'FAQ', title: 'FREQUENTLY ASKED QUESTIONS', badge: 'INQUIRY & SUPPORT' },
+  { id: 'coordinators', index: '04', label: 'TEAM', title: 'EVENT COORDINATORS', badge: 'LEADERSHIP & CONTACTS' },
+  { id: 'guidelines', index: '05', label: 'GUIDELINES', title: 'CODE OF CONDUCT', badge: 'SESSION PROTOCOLS' },
+  { id: 'faq', index: '06', label: 'FAQ', title: 'FREQUENTLY ASKED QUESTIONS', badge: 'INQUIRY & SUPPORT' },
 ];
+
+export interface CoordinatorStudent {
+  name: string;
+  phone: string;
+  role: string;
+}
+
+export interface CoordinatorFaculty {
+  name: string;
+  role: string;
+  designation: string;
+}
+
+export interface CoordinatorsConfig {
+  faculty: CoordinatorFaculty;
+  students: CoordinatorStudent[];
+}
 
 export interface EventConfig {
   name: string;
@@ -33,6 +51,8 @@ export interface EventConfig {
   participation: string;
   characterImage: string;
   logoText: string;
+
+  coordinators: CoordinatorsConfig;
 
   guest: {
     name: string;
@@ -130,19 +150,32 @@ export const eventData: EventConfig = {
   category: "IGNITRRON 26",
   date: "September 19, 2026",
   dateShort: "19 / 09 / 2026",
-  time: "10:00 AM – 1:00 PM",
+  time: "9:00 AM – 1:00 PM",
   venue: "CSE GALAXY HALL",
   mode: "OFFLINE",
   participation: "INDIVIDUAL",
   characterImage: characterImg,
   logoText: "BB",
 
+  coordinators: {
+    faculty: {
+      name: "Mr. Munirathnam T.",
+      role: "Staff Coordinator",
+      designation: "Faculty / Staff Coordinator"
+    },
+    students: [
+      { name: "Srisanth S", phone: "7826993366", role: "Student Coordinator" },
+      { name: "Sredivit K T", phone: "9363717009", role: "Student Coordinator" },
+      { name: "Dhyan", phone: "9042212896", role: "Student Coordinator" }
+    ]
+  },
+
   guest: {
     name: "PRADEEP BASKARAN",
     title: "GAME DIRECTOR",
     secondaryTitle: "GAME DEVELOPER",
     image: pradeepImg,
-    bio: "Pradeep Baskaran is a Game Director building Target Forces and a game studio in India.",
+    bio: "Pradeep Baskaran is a Game Director of Target Forces and a game studio in India.",
     vision: "His vision focuses on creating immersive games through original IP, with deep lore, esports potential, content creation tools, and transmedia expansion across movies, animated series, and comics.",
     debutGame: {
       title: "TARGET FORCES",
@@ -154,12 +187,12 @@ export const eventData: EventConfig = {
       youtube: "https://www.youtube.com/@GamedirectionwithPradeep",
     },
     date: "19 SEPTEMBER 2026",
-    time: "10:00 AM — 01:00 PM",
+    time: "09:00 AM — 01:00 PM",
     venue: "CSE GALAXY HALL",
   },
 
   session: {
-    title: "BREAK THE BUILD.",
+    title: "BREAKING THE BUILD",
     eyebrow: "01  SESSION OVERVIEW",
     heading: "EXPLORE GAME DEVELOPMENT THROUGH REAL INTERACTION",
     description: "This session gives students a platform to showcase their creativity and technical vision while receiving constructive feedback and engaging in professional interaction.",
@@ -241,7 +274,7 @@ export const eventData: EventConfig = {
     },
     {
       label: "TIME",
-      value: "10:00 AM – 01:00 PM",
+      value: "09:00 AM – 01:00 PM",
       subValue: "Morning interactive session",
       highlight: false,
       icon: "Clock",
@@ -323,7 +356,7 @@ export const eventData: EventConfig = {
     },
     {
       question: "When is the session?",
-      answer: "The session is scheduled for September 19, 2026, from 10:00 AM to 1:00 PM."
+      answer: "The session is scheduled for September 19, 2026, from 9:00 AM to 1:00 PM."
     },
     {
       question: "Where is the session?",
@@ -331,7 +364,7 @@ export const eventData: EventConfig = {
     },
     {
       question: "Who is the guest?",
-      answer: "The guest for this interaction session is Pradeep Baskaran, Game Director building Target Forces."
+      answer: "The guest for this interaction session is Pradeep Baskaran, Game Director of Target Forces and a game studio in India."
     },
     {
       question: "Will participants receive certificates?",

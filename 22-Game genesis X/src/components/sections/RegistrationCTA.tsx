@@ -41,7 +41,7 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ event }) => {
           className="bg-[#140A15] border border-[#1A0C1C] rounded-xl p-8 sm:p-12 md:p-14"
         >
           {/* Heading */}
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-display uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl font-extrabold text-white font-display uppercase tracking-tight leading-none mb-6">
             YOUR GAME.<br />
             <span className="text-[#E626FF]">YOUR VISION.</span><br />
             <span className="text-[#FF3BE6]">YOUR MOVE.</span>
@@ -60,6 +60,8 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ event }) => {
             {/* REGISTER NOW ↗ Button */}
             <a
               href={url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-3.5 bg-[#050506] text-white hover:text-[#FF3BE6] font-mono font-bold text-sm rounded border border-[#E626FF] shadow-[0_0_20px_rgba(230,38,255,0.4)] hover:shadow-[0_0_35px_rgba(255,59,230,0.7)] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>REGISTER NOW</span>

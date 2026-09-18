@@ -15,8 +15,8 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ event }) => {
   const title = 'SYSTEM READY.';
   const subtitle = 'THE LEGACY CODE IS WAITING.';
   const label = 'ENTER THE CHALLENGE ↗';
-  const url = reg?.url || '#registration';
-  const deadlineText = reg?.deadlineText || '40 TEAMS MAXIMUM • NMS LAB • 18 SEPTEMBER 2026';
+  const url = reg?.url || 'https://www.theticket9.com/event/ignitrron-26';
+  const deadlineText = reg?.deadlineText || '40 TEAMS MAXIMUM • HPC LAB • 18 SEPTEMBER 2026';
 
   return (
     <section id="registration" className="py-20 bg-[#0D0F11] border-t border-[#262A33]">
@@ -37,7 +37,7 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ event }) => {
               <span>PROTOCOL INITIATION</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-industrial text-[#E8EAED] tracking-wider uppercase">
+            <h2 className="text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-industrial text-[#E8EAED] tracking-wider uppercase">
               {title}
             </h2>
 
@@ -52,7 +52,7 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ event }) => {
             )}
 
             <div className="pt-6">
-              <Button href={url} size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
+              <Button href={url} target="_blank" rel="noopener noreferrer" size="lg" icon={<ArrowUpRight className="w-4 h-4" />}>
                 {label}
               </Button>
             </div>

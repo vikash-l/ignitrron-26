@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>CORPORATE WALK — Ignitrron'26 | Deadpool</title>
+  <meta name="description" content="Official Corporate Walk Event at Ignitrron'26. Theme: Deadpool. Day 1, 10:00 AM – 1:00 PM at GITAM. Faculty Coordinator: Dr. Rekha P. Total Prize Pool ₹6,000." />
+
+  <!-- Google Fonts: Syne, Plus Jakarta Sans, Space Grotesk, Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+
+  <!-- Ignitrron Global Responsive Core Stylesheet -->
+  <style id="ignitrron-global-responsive">
+    html, body {
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      -webkit-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    img, picture, video, canvas, svg {
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2, h3, h4, h5, h6, p, span, a {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Custom Black Widow Cursor -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-follower"></div>
+
+  <!-- Ambient Radial Spotlights -->
+  <div class="ambient-glow-layer">
+    <div class="glow-red-hero"></div>
+    <div class="glow-crimson-left"></div>
+    <div class="glow-beam-bottom"></div>
+  </div>
+
+  <!-- Tactical Matrix Grid Pattern -->
+  <div class="tactical-grid-pattern"></div>
+
+  <!-- Background Deadpool Insignia Watermark -->
+  <div class="deadpool-bg-watermark"></div>
+
+  <!-- Background Particle & Geometry Canvas -->
+  <canvas id="canvas-backdrop"></canvas>
+
+  <!-- HUD Tactical Runway Telemetry -->
+  <div class="hud-telemetry">
+    <div class="hud-top-row">
+      <div class="hud-tag">
+        <span class="hud-dot"></span>
+        <span>RUNWAY // SECTOR 01: ACTIVE</span>
+      </div>
+      <div class="hud-tag">
+        <span class="hud-cross">+</span>
+        <span>DIRECTIVE // DEADPOOL TACTICAL</span>
+      </div>
+    </div>
+    <div class="hud-bottom-row">
+      <div class="hud-tag">
+        <span>LAT 11.0168° N • 76.9558° E</span>
+      </div>
+      <div class="hud-tag">
+        <span class="hud-cross">+</span>
+        <span>EXECUTIVE ATTITUDE // 100%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Architectural Guideline Lines -->
+  <div class="ambient-grid">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <!-- =========================================================================
+       00. NAVIGATION
+       ========================================================================= -->
+  <header id="main-navbar" class="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" class="brand-logo" aria-label="Corporate Walk Home">
+        <svg class="spider-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L9.5 7.5L4 8L8 12L7 17.5L12 15L17 17.5L16 12L20 8L14.5 7.5L12 2Z" />
+        </svg>
+        <span>IGNITRRON'26</span>
+        <span class="brand-separator">•</span>
+        <span class="brand-event">CORPORATE WALK</span>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#the-walk" class="nav-link">THE WALK</a></li>
+          <li><a href="#the-experience" class="nav-link">THE EXPERIENCE</a></li>
+          <li><a href="#the-mindset" class="nav-link">THE MINDSET</a></li>
+          <li><a href="#the-look" class="nav-link">THE LOOK</a></li>
+          <li><a href="#details" class="nav-link">DETAILS</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action CTAs -->
+      <div class="nav-actions">
+        <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle Atmosphere Sound" title="Atmospheric sound">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-nav-register">
+          REGISTER →
+        </a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer" class="modal-overlay" style="z-index: 250;">
+    <div class="modal-drawer">
+      <button id="mobile-nav-close" class="modal-close-btn" aria-label="Close Navigation">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="section-tag" style="margin-top: 2rem;">NAVIGATION</div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+        <li><a href="#hero" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">01 // OVERVIEW</a></li>
+        <li><a href="#the-walk" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">02 // THE WALK</a></li>
+        <li><a href="#the-experience" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">03 // THE EXPERIENCE</a></li>
+        <li><a href="#the-mindset" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">04 // THE MINDSET</a></li>
+        <li><a href="#the-look" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">05 // THE LOOK</a></li>
+        <li><a href="#details" class="mobile-nav-link nav-link" style="font-size: 1.25rem;">06 // DETAILS & PODIUM</a></li>
+      </ul>
+      <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="margin-top: 3rem; justify-content: center;">
+        REGISTER NOW →
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         01. HERO SECTION (ONLY BLACK WIDOW IMAGE ON THE WEBSITE)
+         ======================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        
+        <div class="hero-grid">
+          
+          <!-- Left Editorial Content -->
+          <div class="hero-content reveal-init">
+            <div class="section-tag">01 // CORPORATE PRESENCE</div>
+            
+            <h1 class="hero-title">
+              <span class="title-line">CORPORATE</span>
+              <span class="title-line accent">WALK.</span>
+            </h1>
+
+            <div class="hero-philosophy">
+              <span>CALM</span>
+              <span class="dot">•</span>
+              <span>CONTROLLED</span>
+              <span class="dot">•</span>
+              <span>PRECISE</span>
+            </div>
+
+            <p class="hero-desc">
+              A professional runway experience built around corporate attire, confidence, workplace presence and executive style.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+                ENTER THE WALK →
+              </a>
+              <a href="#the-walk" class="btn-hero-secondary">
+                EXPLORE RUNWAY ↓
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Visual Frame — Clean & Pure -->
+          <div class="hero-visual-wrapper reveal-init reveal-stagger-2">
+            <div class="hero-visual-frame">
+              <div class="hero-glow-aura"></div>
+              
+              <!-- Cinematic Deadpool Hero Image -->
+              <img 
+                src="assets/deadpool_hero.jpg" 
+                alt="Deadpool Executive Style and Presence" 
+                class="hero-img"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         02. SECTION 02 — THE EXPERIENCE (Pure Typographic & Precision Layout)
+         ======================================================================= -->
+    <section id="the-experience" class="section experience-section">
+      <div class="container">
+        <div class="experience-grid">
+          
+          <!-- Left Text Content -->
+          <div class="reveal-init">
+            <div class="section-tag">02 // THE EXPERIENCE</div>
+            <h2 class="section-heading-huge">
+              WHAT<br />
+              HAPPENS<br />
+              WHEN YOU<br />
+              ENTER THE<br />
+              <span class="text-red">WALK?</span>
+            </h2>
+
+            <div class="experience-quote">
+              "Corporate Walk challenges participants to present themselves with confidence through <strong>professional attire</strong>, <strong>posture</strong>, <strong>presence</strong> and <strong>executive style</strong>."
+            </div>
+
+            <p class="experience-desc">
+              Step onto a high-stakes runway where poise meets precision. Every stride communicates leadership, composure under pressure, and the authority of executive grace.
+            </p>
+          </div>
+
+          <!-- Right Graphic Precision Metrics Panel -->
+          <div class="experience-metric-panel reveal-init reveal-stagger-2">
+            
+            <div class="metric-item">
+              <div>
+                <div class="metric-title">01 // CADENCE</div>
+                <div class="metric-name">POSTURE & STRIDE</div>
+              </div>
+              <div class="metric-code">EXEC_01</div>
+            </div>
+
+            <div class="metric-item">
+              <div>
+                <div class="metric-title">02 // FOCUS</div>
+                <div class="metric-name">EXECUTIVE GAZE</div>
+              </div>
+              <div class="metric-code">EXEC_02</div>
+            </div>
+
+            <div class="metric-item">
+              <div>
+                <div class="metric-title">03 // GEOMETRY</div>
+                <div class="metric-name">TAILORED SILHOUETTE</div>
+              </div>
+              <div class="metric-code">EXEC_03</div>
+            </div>
+
+            <div class="metric-item">
+              <div>
+                <div class="metric-title">04 // AUTHORITY</div>
+                <div class="metric-name">UNWAVERING COMMAND</div>
+              </div>
+              <div class="metric-code">EXEC_04</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         03. SECTION 03 — THE MINDSET
+         ======================================================================= -->
+    <section id="the-mindset" class="section mindset-section">
+      <div class="container">
+        
+        <div class="reveal-init">
+          <div class="section-tag">03 // THE MINDSET</div>
+          <h2 class="section-heading-huge">
+            CALM.<br />
+            CONTROLLED.<br />
+            <span class="text-red">PRECISE.</span>
+          </h2>
+        </div>
+
+        <!-- 4 Minimal Editorial Rows (No Cards!) -->
+        <div class="mindset-rows">
+          
+          <div class="mindset-row reveal-init reveal-stagger-1 active">
+            <div class="mindset-num">01</div>
+            <div class="mindset-content">
+              <div class="mindset-title">CONFIDENCE</div>
+              <div class="mindset-details">
+                Project unwavering authority and self-assurance from the very first step on the runway.
+              </div>
+            </div>
+            <div class="mindset-arrow">→</div>
+          </div>
+
+          <div class="mindset-row reveal-init reveal-stagger-2">
+            <div class="mindset-num">02</div>
+            <div class="mindset-content">
+              <div class="mindset-title">PRESENCE</div>
+              <div class="mindset-details">
+                Command the room through deliberate posture, focused eye contact, and captivating poise.
+              </div>
+            </div>
+            <div class="mindset-arrow">→</div>
+          </div>
+
+          <div class="mindset-row reveal-init reveal-stagger-3">
+            <div class="mindset-num">03</div>
+            <div class="mindset-content">
+              <div class="mindset-title">PRECISION</div>
+              <div class="mindset-details">
+                Meticulous attention to sharp tailoring, clean lines, and measured execution in every movement.
+              </div>
+            </div>
+            <div class="mindset-arrow">→</div>
+          </div>
+
+          <div class="mindset-row reveal-init reveal-stagger-4">
+            <div class="mindset-num">04</div>
+            <div class="mindset-content">
+              <div class="mindset-title">COMPOSURE</div>
+              <div class="mindset-details">
+                Total emotional stillness and executive calm under the intense scrutiny of the spotlight.
+              </div>
+            </div>
+            <div class="mindset-arrow">→</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         04. SECTION 04 — THE WALK (Runway Progression)
+         ======================================================================= -->
+    <section id="the-walk" class="section walk-runway-section">
+      <div class="runway-atmosphere-glow"></div>
+      
+      <div class="container">
+        
+        <div class="reveal-init">
+          <div class="section-tag">04 // RUNWAY PROGRESSION</div>
+          <h2 class="section-heading-huge">
+            THE <span class="text-red">WALK</span>
+          </h2>
+          <p class="text-secondary" style="max-width: 500px; font-size: 1.0625rem;">
+            A seamless four-phase runway movement designed to showcase executive rhythm, poise, and corporate presence.
+          </p>
+        </div>
+
+        <div class="runway-track-container reveal-init reveal-stagger-2">
+          
+          <!-- Animated Horizontal Laser Line -->
+          <div class="runway-line">
+            <div class="runway-line-progress"></div>
+          </div>
+
+          <!-- 4 Step Flow -->
+          <div class="runway-steps-grid">
+            
+            <div class="runway-step-item">
+              <div class="runway-step-indicator"></div>
+              <div class="runway-step-phase">PHASE 01</div>
+              <div class="runway-step-title">ARRIVE</div>
+              <p class="runway-step-desc">
+                Enter the floor with purpose. Set your pace and center your visual focus on the evaluators.
+              </p>
+            </div>
+
+            <div class="runway-step-item">
+              <div class="runway-step-indicator"></div>
+              <div class="runway-step-phase">PHASE 02</div>
+              <div class="runway-step-title">PRESENT</div>
+              <p class="runway-step-desc">
+                Display the clean architectural lines of your corporate attire with calibrated posture.
+              </p>
+            </div>
+
+            <div class="runway-step-item">
+              <div class="runway-step-indicator"></div>
+              <div class="runway-step-phase">PHASE 03</div>
+              <div class="runway-step-title">WALK</div>
+              <p class="runway-step-desc">
+                Maintain fluid cadence, natural balance, and calm intensity through the length of the runway.
+              </p>
+            </div>
+
+            <div class="runway-step-item">
+              <div class="runway-step-indicator"></div>
+              <div class="runway-step-phase">PHASE 04</div>
+              <div class="runway-step-title">COMMAND</div>
+              <p class="runway-step-desc">
+                Conclude with an authoritative stance, making a definitive and memorable impression.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         05. SECTION 05 — THE LOOK (Asymmetric Full-Width Editorial Spread)
+         ======================================================================= -->
+    <section id="the-look" class="section look-section">
+      <div class="container">
+        
+        <div class="reveal-init">
+          <div class="section-tag">05 // WHAT TO BRING</div>
+          <h2 class="section-heading-huge">
+            THE <span class="text-red">LOOK</span>
+          </h2>
+        </div>
+
+        <div class="look-editorial-spread reveal-init">
+          
+          <div class="look-spread-pillar">
+            <div class="look-spread-num">01 // ESSENTIAL</div>
+            <div class="look-spread-name">CORPORATE ATTIRE</div>
+            <p class="look-spread-note">
+              Sharply tailored suits, executive blazers, formal workwear, and immaculate detailing designed to command immediate professional respect.
+            </p>
+          </div>
+
+          <div class="look-spread-pillar">
+            <div class="look-spread-num">02 // ALIGNMENT</div>
+            <div class="look-spread-name">CONFIDENT POSTURE</div>
+            <p class="look-spread-note">
+              Upright stance, measured stride, and a natural aura of authority and calm that communicates readiness before you speak.
+            </p>
+          </div>
+
+          <div class="look-spread-pillar">
+            <div class="look-spread-num">03 // IMPACT</div>
+            <div class="look-spread-name">EXECUTIVE PRESENCE</div>
+            <p class="look-spread-note">
+              Controlled energy, steady eye contact, and effortless communication that fills the room with quiet leadership.
+            </p>
+          </div>
+
+          <div class="look-spread-pillar">
+            <div class="look-spread-num">04 // IDENTITY</div>
+            <div class="look-spread-name">PERSONAL STYLE</div>
+            <p class="look-spread-note">
+              Distinct corporate refinement and elegance tailored to your unique executive identity.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         06. SECTION 06 — THE DETAILS (Event Specifications)
+         ======================================================================= -->
+    <section id="details" class="section details-section">
+      <div class="container">
+        
+        <div class="reveal-init">
+          <div class="section-tag">06 // EVENT SPECIFICATIONS</div>
+          <h2 class="section-heading-huge">
+            THE <span class="text-red">DETAILS</span>
+          </h2>
+        </div>
+
+        <div class="details-grid reveal-init reveal-stagger-1">
+          
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> EXPECTED CAPACITY
+            </div>
+            <div class="detail-value-huge">30</div>
+            <div class="detail-subtext">MAXIMUM PARTICIPANTS</div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> SCHEDULE
+            </div>
+            <div class="detail-value-huge">DAY 01</div>
+            <div class="detail-subtext">IGNITRRON FESTIVAL</div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> DURATION
+            </div>
+            <div class="detail-value-huge" style="font-size: clamp(1.75rem, 3.2vw, 2.75rem);">10:00 AM — 1:00 PM</div>
+            <div class="detail-subtext">3 HOURS INTENSIVE RUNWAY</div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> LOCATION
+            </div>
+            <div class="detail-value-huge">GITAM</div>
+            <div class="detail-subtext">MAIN AUDITORIUM STAGE</div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> FACULTY COORDINATOR
+            </div>
+            <div class="detail-value-huge" style="font-size: clamp(1.75rem, 3.2vw, 2.75rem);">Dr. Rekha P</div>
+            <div class="detail-subtext">EVENT SUPERVISION</div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-label">
+              <span class="text-red">●</span> CATEGORY
+            </div>
+            <div class="detail-value-huge" style="font-size: clamp(1.5rem, 2.8vw, 2.25rem);">CORPORATE</div>
+            <div class="detail-subtext">PROFESSIONAL EVENT</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         07. SECTION 07 — THE PODIUM (Prize Breakdown)
+         ======================================================================= -->
+    <section id="podium" class="section podium-section">
+      <div class="container">
+        
+        <div class="reveal-init">
+          <div class="section-tag">07 // PRIZE POOL</div>
+          <h2 class="section-heading-huge">
+            THE <span class="text-red">PODIUM</span>
+          </h2>
+        </div>
+
+        <div class="podium-composition reveal-init reveal-stagger-1">
+          
+          <!-- Ranks -->
+          <div class="podium-ranks">
+            
+            <div class="podium-rank-row first-place">
+              <div class="rank-index">01</div>
+              <div class="rank-title">1ST PRIZE — CHAMPION</div>
+              <div class="rank-amount text-red">₹3,000</div>
+            </div>
+
+            <div class="podium-rank-row">
+              <div class="rank-index">02</div>
+              <div class="rank-title">2ND PRIZE — RUNNER UP</div>
+              <div class="rank-amount">₹2,000</div>
+            </div>
+
+            <div class="podium-rank-row">
+              <div class="rank-index">03</div>
+              <div class="rank-title">3RD PRIZE — SECOND RUNNER UP</div>
+              <div class="rank-amount">₹1,000</div>
+            </div>
+
+          </div>
+
+          <!-- Total Prize Pool Callout -->
+          <div class="podium-total-card">
+            <div class="podium-total-label">TOTAL PRIZE POOL</div>
+            <div class="podium-total-amount">₹6,000</div>
+            <div class="podium-total-badge">
+              EXCLUSIVE CASH AWARDS + CERTIFICATION
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         08. SECTION 08 — FINAL CALL CTA
+         ======================================================================= -->
+    <section id="final-call" class="final-cta-section">
+      <div class="cta-ambient-glow"></div>
+      
+      <div class="container">
+        
+        <div class="cta-content reveal-init">
+          <div class="section-tag" style="justify-content: center;">08 // FINAL CALL</div>
+          
+          <h2 class="cta-title-huge">
+            STEP IN.<br />
+            <span class="text-red">STAND OUT.</span>
+          </h2>
+
+          <div class="cta-subtitle">
+            OWN THE WALK.
+          </div>
+
+          <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-cta-giant">
+            REGISTER NOW →
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="brand-logo">
+          <svg class="spider-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L9.5 7.5L4 8L8 12L7 17.5L12 15L17 17.5L16 12L20 8L14.5 7.5L12 2Z" />
+          </svg>
+          <span>IGNITRRON'26</span>
+          <span class="brand-separator">•</span>
+          <span class="brand-event">CORPORATE WALK</span>
+        </div>
+
+        <div class="footer-meta">
+          DAY 1 // 10:00 AM – 1:00 PM // GITAM
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>FACULTY COORDINATOR: DR. REKHA P</div>
+        <div>CALM. CONTROLLED. PRECISE.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/canvas.js"></script>
+  <script src="scripts/audio.js"></script>
+  <script src="scripts/cursor.js"></script>
+  <script src="scripts/app.js"></script>
+
+<!-- IGNITRRON GLOBAL TOP-LEFT BACK BUTTON -->
+<a href="/" id="ignitrron-global-back-btn" style="position: fixed; top: 16px; left: 16px; z-index: 99999; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9999px; color: #ffffff; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.06)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.25)';">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  <span>Back</span>
+</a>
+</body>
+</html>

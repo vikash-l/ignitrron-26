@@ -45,9 +45,9 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           
           {/* Brand Identity */}
-          <div
-            className="flex items-center gap-3 cursor-pointer group flex-shrink-0"
-            onClick={() => scrollToSection('hero')}
+          <a
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+            className="flex items-center gap-3 cursor-pointer group flex-shrink-0 no-underline"
           >
             <div 
               className="w-8 h-8 rounded flex items-center justify-center font-display text-white text-lg font-bold transition-transform group-hover:scale-105"
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                 {eventData.festName}
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Primary Desktop Navigation: 5 Clean Items (01 ABOUT to 05 FAQ) */}
           <nav className="hidden md:flex items-center gap-2 lg:gap-3">

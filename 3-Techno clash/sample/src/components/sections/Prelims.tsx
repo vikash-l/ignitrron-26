@@ -16,7 +16,7 @@ export const Prelims: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs mb-3 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
             <Laptop className="w-3.5 h-3.5" /> QUALIFICATION STAGE
           </div>
-          <h2 className="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h2 className="font-mono text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {p.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">— {p.subtitle}</span>
           </h2>
           <p className="text-slate-300 text-sm font-mono mt-3 leading-relaxed max-w-2xl mx-auto">
@@ -46,7 +46,7 @@ export const Prelims: React.FC = () => {
               <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
               <span className="text-xs font-bold text-cyan-400 tracking-widest block mb-1">QUALIFICATION CUTOFF</span>
-              <h3 className="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-cyan-400 tracking-tight my-2">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-cyan-400 tracking-tight my-2">
                 {p.qualificationBadge}
               </h3>
               <div className="inline-block bg-cyan-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-[0_0_15px_#00F0FF] mt-1">
@@ -91,7 +91,7 @@ export const Prelims: React.FC = () => {
                   <div className="text-xs text-white font-bold mb-2">
                     Q: Calculate worst-case time complexity of balancing a binary search tree.
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-[10px]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px]">
                     <div className="bg-cyan-950/60 border border-cyan-500/40 text-cyan-200 p-2 rounded flex items-center justify-between">
                       <span>A) O(log N)</span>
                       <CheckCircle2 className="w-3 h-3 text-cyan-400" />
@@ -102,7 +102,7 @@ export const Prelims: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="bg-slate-900/80 border border-cyan-500/20 p-3 rounded-xl">
                     <span className="text-slate-500 text-[10px] block">LIVE SCORE</span>
                     <span className="text-cyan-400 font-bold text-lg">285 PTS</span>

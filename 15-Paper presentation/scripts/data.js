@@ -11,19 +11,17 @@ window.IGNITRRON_DATA = {
     supportingText: "Where innovation meets presentation.",
     organizedBy: "Ignitrron",
     day: "Day 2",
-    time: "10:00 AM – 5:00 PM",
+    time: "9:00 AM – 4:00 PM",
     venue: "ECE Class",
-    expectedParticipants: 100,
-    expectedTeams: 25,
     teamSize: 4, // 4 members per team
     presentationDuration: "5–7 MIN",
     presentationDurationMinutes: "5 – 7 Minutes",
     facultyCoordinator: "Mr. Premkumar. T",
-    totalPrizePool: "₹40,000",
+    totalPrizePool: "₹25,000",
     prizePerDomain: {
-      first: "₹5,000",
-      second: "₹3,000",
-      total: "₹8,000"
+      first: "₹3,000",
+      second: "₹2,000",
+      total: "₹5,000"
     }
   },
 
@@ -55,10 +53,10 @@ window.IGNITRRON_DATA = {
   },
 
   stats: [
-    { value: "₹40K", label: "TOTAL PRIZE POOL", sub: "₹8,000 per domain" },
+    { value: "₹25K", label: "TOTAL PRIZE POOL", sub: "₹5,000 per domain" },
     { value: "5", label: "RESEARCH DOMAINS", sub: "Cross-Disciplinary" },
-    { value: "25", label: "EXPECTED TEAMS", sub: "4 Members / Team" },
-    { value: "100", label: "PARTICIPANTS", sub: "Day 2 · ECE Class" }
+    { value: "4", label: "MEMBERS / TEAM", sub: "Squad Size" },
+    { value: "Day 2", label: "EVENT DAY", sub: "9:00 AM – 4:00 PM" }
   ],
 
   domains: [
@@ -80,7 +78,7 @@ window.IGNITRRON_DATA = {
         "Cloud Computing & Cybersecurity",
         "Web3, Blockchain & Distributed Systems"
       ],
-      prizes: { first: "₹5,000", second: "₹3,000", total: "₹8,000" }
+      prizes: { first: "₹3,000", second: "₹2,000", total: "₹5,000" }
     },
     {
       id: "circuits",
@@ -100,7 +98,7 @@ window.IGNITRRON_DATA = {
         "Smart Power Grids & Renewable Control",
         "Sensors, IoT & Robotics Hardware"
       ],
-      prizes: { first: "₹5,000", second: "₹3,000", total: "₹8,000" }
+      prizes: { first: "₹3,000", second: "₹2,000", total: "₹5,000" }
     },
     {
       id: "hardware-3d",
@@ -120,7 +118,7 @@ window.IGNITRRON_DATA = {
         "Structural & Material Engineering",
         "Thermal & Fluid Flow Innovations"
       ],
-      prizes: { first: "₹5,000", second: "₹3,000", total: "₹8,000" }
+      prizes: { first: "₹3,000", second: "₹2,000", total: "₹5,000" }
     },
     {
       id: "bio",
@@ -140,7 +138,7 @@ window.IGNITRRON_DATA = {
         "Genetic & Molecular Engineering",
         "Bio-Materials & Nano-Medicine"
       ],
-      prizes: { first: "₹5,000", second: "₹3,000", total: "₹8,000" }
+      prizes: { first: "₹3,000", second: "₹2,000", total: "₹5,000" }
     },
     {
       id: "business-arts",
@@ -160,7 +158,7 @@ window.IGNITRRON_DATA = {
         "Creative Digital Media & Communication",
         "Strategic Management & Innovation"
       ],
-      prizes: { first: "₹5,000", second: "₹3,000", total: "₹8,000" }
+      prizes: { first: "₹3,000", second: "₹2,000", total: "₹5,000" }
     }
   ],
 
@@ -189,6 +187,10 @@ window.IGNITRRON_DATA = {
   ],
 
   guidelines: [
+    {
+      title: "Substantial Technical & Research Paper Requirement",
+      content: "Disclaimer: Idea-only presentations are not encouraged. Participants are expected to present a well-developed paper supported by proper research, technical analysis, methodology, implementation, experimental results, or relevant evidence. Simply presenting a concept or proposed idea without substantial technical/research content may not be considered favorably during evaluation."
+    },
     {
       title: "Bring Your Own Laptops",
       content: "Participants must bring their own laptops, presentation slides (PPT/PDF), and necessary demonstration requirements."

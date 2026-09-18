@@ -26,10 +26,36 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-base sm:text-lg text-slate-450 leading-relaxed mb-8 text-slate-400 font-normal"
+              className="text-base sm:text-lg text-slate-450 leading-relaxed mb-6 text-slate-400 font-normal"
             >
               {eventData.about.description}
             </motion.p>
+
+            {/* Disclaimer Callout Box */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="p-5 sm:p-6 rounded-2xl bg-amber-950/25 border border-amber-500/40 backdrop-blur-md shadow-[0_0_25px_rgba(245,158,11,0.12)] text-left mb-8 transition-all"
+            >
+              <div className="flex flex-col sm:flex-row items-start gap-4">
+                <div className="flex-shrink-0 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-xs font-mono font-bold tracking-widest text-amber-400 uppercase">PRESENTATION REQUIREMENT & DISCLAIMER</span>
+                    <span className="inline-block w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b] animate-pulse"></span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-amber-200/90 leading-relaxed font-normal">
+                    <strong className="font-semibold text-amber-300">Disclaimer:</strong> Idea-only presentations are not encouraged. Participants are expected to present a well-developed paper supported by proper research, technical analysis, methodology, implementation, experimental results, or relevant evidence. Simply presenting a concept or proposed idea without substantial technical/research content may not be considered favorably during evaluation.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Checkmark Bullets List */}
             {eventData.about.bullets && eventData.about.bullets.length > 0 && (

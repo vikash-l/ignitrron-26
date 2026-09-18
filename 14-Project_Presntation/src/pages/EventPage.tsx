@@ -27,9 +27,9 @@ export const EventPage: React.FC = () => {
       {/* Recommended Sequential Page Flow */}
       <main className="relative z-10">
         <Hero />
+        <Categories />
         <About />
         <EventInfo />
-        <Categories />
         <Highlights />
         <Rounds />
         <Timeline />

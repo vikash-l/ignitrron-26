@@ -29,7 +29,7 @@ export const Prizes: React.FC = () => {
   return (
     <section id="prizes" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[500px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
       
       {/* Speed lines for visual flair */}
       <div className="speed-streak-fast top-1/3" />

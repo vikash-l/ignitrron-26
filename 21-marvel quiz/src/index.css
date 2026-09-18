@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tva-bg: #030504;
+  --color-tva-surface: #07100B;
+  --color-tva-[#0C2419]: #0C2419;
+  --color-tva-emerald: #16A66A;
+  --color-tva-green: #38E39A;
+  --color-tva-gold: #B99A45;
+  --color-tva-softgold: #E1C66A;
+  --color-tva-text: #F4F5F3;
+  --color-tva-muted: #8E9A94;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sora: 'Sora', sans-serif;
+  --font-mono: 'Orbitron', monospace;
+}
+
+@layer base {
+  html, body {
+    background-color: #030504;
+    color: #F4F5F3;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030504;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #16A66A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38E39A;
+  }
+}
+
+/* Glassmorphism containers */
+.glass-panel {
+  background: rgba(7, 16, 11, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 227, 154, 0.14);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(12, 36, 25, 0.85);
+  border-color: rgba(56, 227, 154, 0.35);
+  box-shadow: 0 0 30px -5px rgba(56, 227, 154, 0.2);
+}
+
+.shadow-emerald-glow {
+  box-shadow: 0 0 25px -5px rgba(56, 227, 154, 0.25);
+}
+
+.shadow-emerald-lg {
+  box-shadow: 0 0 50px -10px rgba(56, 227, 154, 0.4);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 30px -5px rgba(185, 154, 69, 0.3);
+}
+
+/* Geometrically Stable Glowing Button for Primary CTA */
+.btn-timeline-glow {
+  position: relative;
+  background: linear-gradient(135deg, rgba(22, 166, 106, 0.3) 0%, rgba(7, 16, 11, 0.95) 100%);
+  border: 1px solid rgba(56, 227, 154, 0.45);
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out, background-color 0.25s ease-out;
+  overflow: hidden;
+  pointer-events: auto !important;
+}
+
+.btn-timeline-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(56, 227, 154, 0.5),
+    transparent 30%
+  );
+  animation: rotateGlow 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.btn-timeline-glow:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-portal-spin {
+  animation: portalSpin 30s linear infinite;
+}
+
+.animate-portal-spin-reverse {
+  animation: portalSpinReverse 25s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes portalSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes portalSpinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 15px rgba(56, 227, 154, 0.3)); }
+  50% { opacity: 0.8; filter: drop-shadow(0 0 35px rgba(56, 227, 154, 0.6)); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Grid Background */
+.bg-timeline-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 227, 154, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 227, 154, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 40%, rgba(22, 166, 106, 0.15) 0%, rgba(3, 5, 4, 0.95) 70%);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(56, 227, 154, 0.5);
+}
+
+button, a, input, select, textarea, [role="button"], .cursor-pointer {
+  pointer-events: auto !important;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid rgba(225, 198, 106, 0.8) !important;
+  outline-offset: 2px !important;
+}
+
+/* Decorative overlays strictly non-interactive */
+.pointer-events-none {
+  pointer-events: none !important;
+}

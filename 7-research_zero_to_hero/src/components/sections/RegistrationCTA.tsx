@@ -10,7 +10,7 @@ export const RegistrationCTA: React.FC = () => {
   return (
     <section id="registration" className="py-24 bg-slate-950/20 relative overflow-hidden">
       {/* Background emerald glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-emerald-550/5 blur-[90px] pointer-events-none animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] h-[350px] rounded-full bg-emerald-550/5 blur-[90px] pointer-events-none animate-pulse" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -28,7 +28,7 @@ export const RegistrationCTA: React.FC = () => {
               <Atom className="h-8 w-8 animate-spin-[spin_5s_linear_infinite] text-glow-emerald" />
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
               READY TO GO FROM BANNER TO HERO?
             </h2>
             
@@ -37,7 +37,7 @@ export const RegistrationCTA: React.FC = () => {
             </p>
 
             <div className="flex justify-center">
-              <a href={eventData.registration.url} className="inline-block">
+              <a href={eventData.registration.url} target="_blank" rel="noopener noreferrer" className="inline-block no-underline">
                 <Button 
                   variant="primary" 
                   size="lg" 

@@ -26,14 +26,14 @@ export const Highlights: React.FC<HighlightsProps> = ({ event }) => {
           <span className="text-xs font-mono text-[#E626FF] uppercase tracking-widest block mb-2 font-bold">
             PRESENTATION COMPONENTS
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
+          <h2 className="text-3xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
             BUILD THE IDEA
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[#6B1FDB] to-[#FF3BE6] mt-4 rounded-full"></div>
         </div>
 
         {/* 4 Clean Content Blocks (Not full casino cards, clean UI with suit icon accents) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cardsData.map((item, index) => {
             const IconComponent = item.icon;
 

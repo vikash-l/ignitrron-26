@@ -8,9 +8,9 @@ export const EventDetailsSection: React.FC = () => {
     { label: 'EVENT NAME', value: 'Launchpad', icon: <ShieldCheck className="w-6 h-6 text-[#ff003c]" /> },
     { label: 'EXPECTED PARTICIPANTS', value: '50 Teams / Designers', icon: <Users className="w-6 h-6 text-[#00f0ff]" /> },
     { label: 'SCHEDULED DAY', value: 'Day 2', icon: <Calendar className="w-6 h-6 text-[#bf00ff]" /> },
-    { label: 'EVENT TIMING', value: '10:00 AM — 1:00 PM', icon: <Clock className="w-6 h-6 text-[#00ff88]" /> },
+    { label: 'EVENT TIMING', value: '9:00 AM — 1:00 PM', icon: <Clock className="w-6 h-6 text-[#00ff88]" /> },
     { label: 'OFFICIAL VENUE', value: 'HPC Lab', icon: <MapPin className="w-6 h-6 text-[#ffff00]" /> },
-    { label: 'FACULTY ADVISOR', value: 'Mr. Manikandan P', icon: <UserCheck className="w-6 h-6 text-[#ff00aa]" /> },
+    { label: 'STAFF COORDINATOR', value: 'Mr. Manikandan P', icon: <UserCheck className="w-6 h-6 text-[#ff00aa]" /> },
   ];
 
   return (
@@ -23,7 +23,7 @@ export const EventDetailsSection: React.FC = () => {
           <span className="font-space text-xs tracking-widest text-[#00f0ff] uppercase font-bold">
             MISSION SPECIFICATIONS
           </span>
-          <h2 className="font-anton text-5xl sm:text-7xl text-white tracking-wider uppercase mt-2">
+          <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-white tracking-wider uppercase mt-2">
             EVENT DETAILS
           </h2>
           <p className="font-space text-base text-gray-400 mt-2">
@@ -32,7 +32,7 @@ export const EventDetailsSection: React.FC = () => {
         </div>
 
         {/* 6 Official Data Grid Panels */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-3 gap-6">
           {details.map((item, i) => (
             <motion.div
               key={item.label}

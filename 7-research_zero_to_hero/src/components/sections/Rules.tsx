@@ -39,7 +39,7 @@ export const Rules: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto"
         >
           {eventData.rules.map((rule, index) => (
             <motion.div key={index} variants={itemVariants}>

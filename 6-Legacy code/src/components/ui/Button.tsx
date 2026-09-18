@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type HTMLMotionProps } from 'framer-motion';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+
+import { cn } from '../../utils/cn';
 
 export interface ButtonProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
   children: React.ReactNode;
@@ -41,15 +41,13 @@ export const Button: React.FC<ButtonProps> = ({
     lg: 'px-7 py-3.5 text-sm sm:text-base gap-3',
   };
 
-  const combinedClasses = twMerge(
-    clsx(
+  const combinedClasses = cn(
       baseStyles,
       variants[variant],
       sizes[size],
       fullWidth && 'w-full',
       className
-    )
-  );
+    );
 
   const motionProps = {
     whileHover: { scale: 1.01 },

@@ -21,5 +21,8 @@
     "react"
   ],
   "author": "vikash-l",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer-core": "^25.8.0"
+  }
 }

@@ -37,7 +37,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         </div>
       )}
 
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white uppercase">
+      <h2 className="text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white uppercase">
         <span className="gradient-text">{title}</span>
       </h2>
 

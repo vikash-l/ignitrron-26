@@ -27,7 +27,7 @@ export const EventInfo: React.FC<EventInfoProps> = ({ event }) => {
   return (
     <section id="event-info" className="py-10 bg-[#070809] border-b border-[#262A33]">
       <Container size="lg">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {items.map((item, index) => {
             const Icon = item.icon;
             return (

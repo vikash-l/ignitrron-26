@@ -2,8 +2,8 @@ import { EventConfig } from '../types/event';
 
 export const eventData: EventConfig = {
   id: 'game-genesis-x-2026',
-  name: 'GAME GENESIS X',
-  subtitle: 'IN.ZEROS',
+  name: 'GAME GENESIS X IN.ZEROS',
+  subtitle: 'GAME DEVELOPMENT CLUB',
   tagline: 'PITCH THE GAME. BUILD THE VISION.',
   description: 'A game idea pitch and presentation experience where original concepts, gameplay systems, stories, and technical visions take the stage before an expert panel.',
   category: 'Game Pitch & Presentation',
@@ -12,7 +12,7 @@ export const eventData: EventConfig = {
   organizer: 'Game Development Club in collaboration with InZeros',
 
   date: '18/09/2026',
-  time: '10:00 AM – 1:00 PM',
+  time: '9:00 AM – 1:00 PM',
   venue: 'CS GALAXY',
   mode: 'On-Stage Pitch & Presentation',
   teamSize: '1–3 MEMBERS',
@@ -139,28 +139,28 @@ export const eventData: EventConfig = {
 
   timeline: [
     {
-      time: '09:40 AM',
+      time: '08:40 AM',
       date: '18/09/2026',
       title: 'QUEUE REPORTING & VENUE CHECK-IN',
       description: 'Teams report to CS GALAXY 20 minutes before the event window starts for queue alignment and AV checks.',
       tag: 'REPORT 20m PRIOR'
     },
     {
-      time: '10:00 AM',
+      time: '09:00 AM',
       date: '18/09/2026',
       title: 'OPENING KEYNOTE & STAGE COMMENCEMENT',
       description: 'Welcome address by Game Development Club and InZeros Representatives.',
       tag: 'COMMENCEMENT'
     },
     {
-      time: '10:15 AM',
+      time: '09:15 AM',
       date: '18/09/2026',
       title: 'THE PITCH TABLE: PITCHES & Q&A SLOTS',
       description: 'Sequential team pitches (10 Mins Presentation + 5 Mins Q&A per team).',
       tag: 'LIVE PITCHES'
     },
     {
-      time: '12:45 PM',
+      time: '12:44 PM',
       date: '18/09/2026',
       title: 'JURY DELIBERATION & AWARDS CEREMONY',
       description: 'Final scoring by InZeros panel, announcement of 1st, 2nd, and 3rd place winners.',
@@ -186,8 +186,7 @@ export const eventData: EventConfig = {
     {
       category: '03 — CONTENT REQUIREMENTS',
       items: [
-        'Presentations must cover: Core gameplay mechanics, Story / theme, Target audience, and Technical feasibility.',
-        'Prototypes or concept art are highly recommended.'
+        'Presentations must cover: Core gameplay mechanics, Story / theme, Target audience, and Technical feasibility.'
       ]
     },
     {
@@ -302,7 +301,7 @@ export const eventData: EventConfig = {
 
   registration: {
     label: 'REGISTER NOW',
-    url: '#register',
+    url: 'https://www.theticket9.com/event/ignitrron-26',
     secondaryLabel: 'VIEW RULES',
     secondaryUrl: '#rules',
     note: 'Queue Management: Report to CS GALAXY 20 minutes before your allocated slot.'

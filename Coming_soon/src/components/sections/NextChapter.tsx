@@ -9,7 +9,7 @@ export const NextChapter: React.FC = () => {
       
       {/* Background Soft Emerald Volumetric Fog */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none opacity-20 blur-[120px]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[500px] rounded-full pointer-events-none opacity-20 blur-[120px]"
         style={{
           background: 'radial-gradient(ellipse, #16A36A 0%, #35E6A1 30%, transparent 70%)',
         }}
@@ -35,7 +35,7 @@ export const NextChapter: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-white font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-wider leading-[0.95] mb-6 max-w-3xl mx-auto"
+          className="text-white font-display text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl uppercase tracking-wider leading-[0.95] mb-6 max-w-3xl mx-auto"
         >
           <span className="block text-[#F1F5F2]">
             IGNITRRON 26
@@ -87,7 +87,7 @@ export const NextChapter: React.FC = () => {
               <span>ONLINE</span>
             </div>
 
-            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left my-4">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 text-left my-4">
               
               <div className="p-4 rounded-xl bg-[#050807]/70 border border-[#16A36A]/20">
                 <div className="flex items-center gap-2 mb-2">

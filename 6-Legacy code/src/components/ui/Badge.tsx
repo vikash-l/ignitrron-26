@@ -1,6 +1,6 @@
 import React from 'react';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+
+import { cn } from '../../utils/cn';
 
 export interface BadgeProps {
   children: React.ReactNode;
@@ -23,13 +23,11 @@ export const Badge: React.FC<BadgeProps> = ({
 
   return (
     <span
-      className={twMerge(
-        clsx(
+      className={cn(
           'inline-flex items-center gap-2 px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest font-semibold shrink-0 border',
           variants[variant],
           className
-        )
-      )}
+        )}
     >
       {icon && <span className="inline-flex shrink-0">{icon}</span>}
       {children}

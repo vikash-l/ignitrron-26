@@ -24,7 +24,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ event }) => {
           subtitle="Organizations supporting this event initiative."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {sponsors.map((sponsor, idx) => (
             <motion.div
               key={idx}

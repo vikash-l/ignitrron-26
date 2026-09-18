@@ -32,7 +32,7 @@ export const Prizes: React.FC = () => {
           badge="REWARDS"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {eventData.prizes.map((prize, index) => {
             const isWinner = index === 0;
 

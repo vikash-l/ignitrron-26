@@ -138,17 +138,7 @@
       });
     }
 
-    if (acceptMissionBtn) {
-      acceptMissionBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        triggerAccessGrantedTransition('briefing');
-        if (briefingModal) {
-          setTimeout(() => {
-            briefingModal.classList.add('open');
-          }, 300);
-        }
-      });
-    }
+    // Accept mission button behavior is now handled by the semantic anchor link in index.html
 
     if (closeModalBtn) {
       closeModalBtn.addEventListener('click', () => {

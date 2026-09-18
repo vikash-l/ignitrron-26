@@ -51,7 +51,7 @@ export const Registration: React.FC = () => {
   return (
     <section id="registration" className="relative py-24 bg-[#05060b] overflow-hidden">
       {/* Spider-Verse Venom glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#ff0055]/15 via-[#9d4edd]/10 to-[#00f0ff]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[350px] bg-gradient-to-r from-[#ff0055]/15 via-[#9d4edd]/10 to-[#00f0ff]/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -61,7 +61,7 @@ export const Registration: React.FC = () => {
             <Zap className="w-3.5 h-3.5" />
             <span>Secure Registration Portal</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-3">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-3">
             Team Registration
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -108,7 +108,7 @@ export const Registration: React.FC = () => {
               </div>
 
               {/* Grid: Member 1 & Member 2 Names */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
                 
                 {/* Field 2: Member 1 Name */}
                 <div>
@@ -188,7 +188,7 @@ export const Registration: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
                     <span className="text-[10px] font-mono-tech uppercase text-slate-400 block mb-1">
                       Team Name

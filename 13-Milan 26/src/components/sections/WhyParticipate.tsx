@@ -38,7 +38,7 @@ export const WhyParticipate: React.FC = () => {
             <Target className="w-3.5 h-3.5" />
             <span>Value & Skill Growth</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             WHY PARTICIPATE
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -48,7 +48,7 @@ export const WhyParticipate: React.FC = () => {
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cadForgeData.whyParticipate.map((item, index) => (
             <div
               key={item.title}

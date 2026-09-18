@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
       {/* Spider-Verse Venom Background Glow Orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[700px] h-[350px] bg-gradient-to-tr from-[#ff0055]/15 via-[#9d4edd]/10 to-[#00f0ff]/15 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] sm:w-full max-w-[700px] h-[350px] bg-gradient-to-tr from-[#ff0055]/15 via-[#9d4edd]/10 to-[#00f0ff]/15 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Large Animated Title */}
-            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-extrabold font-orbitron tracking-tight text-white mb-4 leading-none glitch-hover select-none">
+            <h1 className="text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl xl:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-extrabold font-orbitron tracking-tight text-white mb-4 leading-none glitch-hover select-none">
               CAD <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff0055] via-[#ff2a6d] to-[#00f0ff] text-glow-red">
                 FORGE
               </span> <span className="text-[#00f0ff] text-glow-blue">2026</span>
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Prominent Badges Grid (4 badges) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-8">
               {/* Badge 1 */}
               <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/80 border border-cyan-500/30 backdrop-blur-md hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all">
                 <div className="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
@@ -97,7 +97,9 @@ export const Hero: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
               {/* Register Now Button */}
               <a
-                href="#contact"
+                href="https://www.theticket9.com/event/ignitrron-26"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative group px-8 py-4 rounded-xl bg-[#ff0055] text-white font-orbitron font-bold text-sm tracking-wider uppercase overflow-hidden shadow-[0_0_30px_rgba(255,0,85,0.6)] hover:shadow-[0_0_45px_rgba(255,0,85,0.9)] hover:scale-105 transition-all flex items-center gap-3"
               >
                 <Zap className="w-4 h-4 text-cyan-200 fill-cyan-200" />

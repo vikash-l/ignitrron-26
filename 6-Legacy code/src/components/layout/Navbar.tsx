@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ event, sections }) => {
   ].filter((link) => link.visible);
 
   const regLabel = 'REGISTER // ↗';
-  const regUrl = event.registration?.url || '#registration';
+  const regUrl = event.registration?.url || 'https://www.theticket9.com/event/ignitrron-26';
 
   return (
     <header
@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ event, sections }) => {
         <div className="flex items-center justify-between">
           {/* Logo Area: Minimal Abstract Ultron-Style Geometric Insignia */}
           <a
-            href="#hero"
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
             className="flex items-center gap-3 group focus:outline-none focus:ring-1 focus:ring-[#F04444] p-1"
           >
             <div className="w-8 h-8 bg-[#14161A] border border-[#3A404E] group-hover:border-[#F04444] flex items-center justify-center relative clip-corner-sm transition-colors">
@@ -82,6 +82,8 @@ export const Navbar: React.FC<NavbarProps> = ({ event, sections }) => {
             {sections.registration && (
               <Button
                 href={regUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 size="sm"
                 variant="primary"
                 className="hidden sm:inline-flex text-xs font-mono"

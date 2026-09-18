@@ -26,7 +26,7 @@ export const Rules: React.FC<RulesProps> = ({ event }) => {
         />
 
         {isCategorized ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8">
             {(event.rules as EventRuleCategory[]).map((cat, idx) => (
               <motion.div
                 key={cat.category || idx}

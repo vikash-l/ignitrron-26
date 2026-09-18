@@ -27,9 +27,9 @@ export const FuturisticBackground: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-[#0c0d10] to-[#14151a]" />
       
       {/* Soft radial glows behind Hero and key content spots */}
-      <div className="absolute top-[10%] left-[20%] w-[500px] h-[500px] rounded-full bg-slate-550/[0.03] blur-[140px]" />
-      <div className="absolute top-[40%] right-[10%] w-[600px] h-[600px] rounded-full bg-sky-500/[0.04] blur-[150px]" />
-      <div className="absolute bottom-[10%] left-[10%] w-[450px] h-[450px] rounded-full bg-zinc-400/[0.03] blur-[130px]" />
+      <div className="absolute top-[10%] left-[20%] w-full max-w-[500px] h-[500px] rounded-full bg-slate-550/[0.03] blur-[140px]" />
+      <div className="absolute top-[40%] right-[10%] w-full max-w-[600px] h-[600px] rounded-full bg-sky-500/[0.04] blur-[150px]" />
+      <div className="absolute bottom-[10%] left-[10%] w-full max-w-[450px] h-[450px] rounded-full bg-zinc-400/[0.03] blur-[130px]" />
       <div className="absolute inset-0 bg-vignette opacity-80" />
 
       {/* --- LAYER 2: PARALLAX BACKGROUND LAYOUTS (RC CARS & RADIAL LIGHT) --- */}

@@ -8,7 +8,7 @@ export const RegistrationCTA: React.FC = () => {
     <section id="registration" className="py-28 relative overflow-hidden border-t border-blue-900/20">
       {/* High-Intensity Atmospheric Energy Emitter (Culmination) */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] rounded-full opacity-35 blur-[150px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[850px] h-[550px] rounded-full opacity-35 blur-[150px] pointer-events-none"
         style={{ background: 'radial-gradient(ellipse, #1d4ed8 0%, #06b6d4 45%, transparent 75%)' }}
       />
 

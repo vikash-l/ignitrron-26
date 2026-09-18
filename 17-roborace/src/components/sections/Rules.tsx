@@ -56,7 +56,7 @@ export const Rules: React.FC = () => {
               // MACHINE SPECIFICATIONS
             </h3>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4">
               {specCards.map((spec, idx) => (
                 <Card 
                   key={idx}

@@ -7,6 +7,7 @@ import { About as Race } from '../components/sections/About';
 import { Rounds as Format } from '../components/sections/Rounds';
 import { Categories as Specs } from '../components/sections/Categories';
 import { Rules } from '../components/sections/Rules';
+import { Prizes } from '../components/sections/Prizes';
 import { FAQ } from '../components/sections/FAQ';
 import { Contact } from '../components/sections/Contact';
 import { RegistrationCTA } from '../components/sections/RegistrationCTA';
@@ -27,6 +28,7 @@ export const EventPage: React.FC = () => {
         <Format />
         <Specs />
         <Rules />
+        <Prizes />
         <FAQ />
         <Contact />
         <RegistrationCTA />

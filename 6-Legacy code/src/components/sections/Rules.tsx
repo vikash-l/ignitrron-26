@@ -24,7 +24,7 @@ export const Rules: React.FC<RulesProps> = ({ event }) => {
           subtitle="Mandatory operational protocols and competition guidelines."
         />
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 font-mono">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4 font-mono">
           {rules.map((rule, idx) => (
             <motion.div
               key={idx}

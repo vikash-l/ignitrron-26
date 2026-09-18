@@ -94,13 +94,6 @@ export function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Interactive Registration Modal */}
-      <RegistrationModal
-        isOpen={isRegisterOpen}
-        onClose={handleCloseRegister}
-        initialDomain={selectedDomain}
-      />
     </div>
   );
 }

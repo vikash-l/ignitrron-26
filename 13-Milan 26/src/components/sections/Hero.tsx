@@ -29,8 +29,8 @@ export const Hero: React.FC = () => {
     >
       {/* Background Decorative Rings & Tactical Radar Overlay */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-        <div className="w-[800px] h-[800px] rounded-full border border-blue-500/10 animate-shield-spin-slow" />
-        <div className="w-[1100px] h-[1100px] rounded-full border border-slate-700/15" />
+        <div className="w-full max-w-[800px] h-[800px] rounded-full border border-blue-500/10 animate-shield-spin-slow" />
+        <div className="w-full max-w-[1100px] h-[1100px] rounded-full border border-slate-700/15" />
         <div className="absolute inset-0 bg-tactical-grid opacity-30" />
       </div>
 
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-5xl sm:text-7xl md:text-8xl font-black font-orbitron tracking-tight text-white leading-none"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl font-black font-orbitron tracking-tight text-white leading-none"
               >
                 MILAN <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-slate-200 to-blue-500">'26</span>
               </motion.h1>

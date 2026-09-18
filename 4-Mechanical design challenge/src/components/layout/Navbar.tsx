@@ -20,6 +20,7 @@ export const Navbar: React.FC = () => {
     { label: 'Event Flow', href: '#event-flow' },
     { label: 'Rules', href: '#rules' },
     { label: 'Software', href: '#software' },
+    { label: 'Prizes', href: '#prizes' },
     { label: 'Why Join', href: '#why-participate' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -35,7 +36,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo & Department Brand */}
-          <a href="#hero" className="flex items-center gap-3 group">
+          <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" className="flex items-center gap-3 group no-underline">
             <div className="relative w-10 h-10 rounded-xl bg-black border border-[#ff0055] flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(255,0,85,0.5)] group-hover:scale-105 transition-transform">
               <div className="absolute inset-0 bg-gradient-to-br from-[#ff0055]/30 to-[#00f0ff]/30 opacity-70" />
               <Cpu className="w-5 h-5 text-white relative z-10 group-hover:rotate-12 transition-transform duration-300" />
@@ -73,7 +74,9 @@ export const Navbar: React.FC = () => {
           {/* Glowing Register Now Button */}
           <div className="hidden sm:flex items-center gap-4">
             <a
-              href="#contact"
+              href="https://www.theticket9.com/event/ignitrron-26"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group px-5 py-2 rounded-xl bg-gradient-to-r from-[#ff0055] to-[#e60049] text-white font-orbitron font-bold text-xs uppercase tracking-wider overflow-hidden shadow-[0_0_20px_rgba(255,0,85,0.4)] hover:shadow-[0_0_30px_rgba(255,0,85,0.7)] transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
             >
               <Sparkles className="w-3.5 h-3.5 text-cyan-200 animate-pulse" />
@@ -112,7 +115,9 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://www.theticket9.com/event/ignitrron-26"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-2 text-center py-3 rounded-xl bg-gradient-to-r from-[#ff0055] to-[#00f0ff] text-white font-orbitron font-bold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(255,0,85,0.4)]"
             >

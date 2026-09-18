@@ -17,7 +17,7 @@ export const About: React.FC = () => {
         />
 
         {/* Two Large Round Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto mb-10">
           
           {/* ROUND 01: OBSTACLE COURSE (MINIMAL OBSTACLES - POINT BASIS) */}
           <motion.div

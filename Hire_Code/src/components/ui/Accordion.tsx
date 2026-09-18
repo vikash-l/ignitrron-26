@@ -1,0 +1,79 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+
+interface AccordionItem {
+  question: string;
+  answer: string;
+}
+
+interface AccordionProps {
+  items: AccordionItem[];
+  className?: string;
+}
+
+export const Accordion: React.FC<AccordionProps> = ({ items, className = '' }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleItem = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className={`space-y-3.5 ${className}`}>
+      {items.map((item, index) => {
+        const isOpen = openIndex === index;
+        const indexStr = index < 9 ? `0${index + 1}` : `${index + 1}`;
+
+        return (
+          <div
+            key={index}
+            className={`tech-panel rounded-xl overflow-hidden transition-all duration-300 ${
+              isOpen 
+                ? 'border-[#22D3EE]/60 bg-[#0B1720]/95 shadow-lg shadow-[#00BFA6]/10' 
+                : 'border-[#00BFA6]/20 hover:border-[#00BFA6]/50'
+            }`}
+          >
+            <button
+              onClick={() => toggleItem(index)}
+              className="flex justify-between items-center w-full px-5 py-4 sm:px-6 sm:py-5 text-left text-[#E8EEF2] font-medium transition-colors cursor-pointer"
+              aria-expanded={isOpen}
+            >
+              <div className="flex items-center gap-3 sm:gap-4 pr-4">
+                <span className="font-mono-tech text-[10px] text-[#22D3EE] font-bold bg-[#08131C]/90 border border-[#00BFA6]/40 px-2.5 py-0.5 rounded flex-shrink-0">
+                  {indexStr}
+                </span>
+                <span className="text-xs sm:text-sm font-semibold text-[#E8EEF2] font-sans tracking-wide">
+                  {item.question}
+                </span>
+              </div>
+              <motion.span
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-[#8997A3] flex-shrink-0"
+              >
+                <ChevronDown className="h-4 w-4 text-[#00BFA6]" />
+              </motion.span>
+            </button>
+
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: 'easeInOut' }}
+                >
+                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-[#8997A3] leading-relaxed border-t border-[#00BFA6]/20 pt-4 font-normal">
+                    {item.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+

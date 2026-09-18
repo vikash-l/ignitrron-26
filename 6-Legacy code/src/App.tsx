@@ -51,7 +51,7 @@ export function App() {
                 <Database className="w-4 h-4 text-[var(--badge-text)]" />
                 <span>LOAD EVENT CONFIG</span>
               </div>
-              <div className="grid grid-cols-2 gap-2 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                 <button
                   onClick={loadLegacyEvent}
                   className={`p-2 rounded-lg text-left border text-[11px] font-semibold transition-colors cursor-pointer ${

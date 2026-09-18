@@ -196,6 +196,20 @@
   cursor: pointer;
 }
 
+.modal-venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-grid-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
 /* --------------------------------------------------------------------------
    2. BUTTONS & TACTICAL CTA
    -------------------------------------------------------------------------- */
@@ -572,7 +586,7 @@
    -------------------------------------------------------------------------- */
 .intel-stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 

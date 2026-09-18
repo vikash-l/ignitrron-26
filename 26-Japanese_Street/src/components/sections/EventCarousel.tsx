@@ -186,7 +186,7 @@ export const EventCarousel: React.FC = () => {
     <section id="carousel" className="py-24 relative overflow-hidden border-t border-[#C9A45C]/20">
       {/* Ambient background lantern light pool */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full opacity-20 blur-[130px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] rounded-full opacity-20 blur-[130px] pointer-events-none"
         style={{ background: 'radial-gradient(circle, #C63C32 0%, #243B63 60%, transparent 80%)' }}
       />
 

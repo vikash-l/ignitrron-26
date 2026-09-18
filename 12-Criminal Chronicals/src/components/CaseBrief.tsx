@@ -19,7 +19,7 @@ export const CaseBrief: React.FC = () => {
             <span>CASE BRIEFING</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl tracking-tight text-white uppercase">
             EVERY DETAIL <span className="text-[#e31b23]">MATTERS.</span>
           </h2>
 
@@ -36,7 +36,7 @@ export const CaseBrief: React.FC = () => {
         </div>
 
         {/* 3 Core Pillars Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {EVENT_DATA.caseBriefPillars.map((pillar, idx) => {
             const Icon = cardIcons[idx] || Eye;
             return (

@@ -40,16 +40,36 @@
 
   .hero-grid-layout {
     grid-template-columns: 1fr !important;
-    gap: 3rem !important;
+    gap: 2rem !important;
   }
 
   .hero-visual-col {
-    order: -1;
-    margin-bottom: 1rem;
+    order: 2;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .radar-hud-container {
-    max-width: 320px;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .briefing-split-layout {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .round-two-split-layout {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 
   .rounds-grid {
@@ -165,6 +185,10 @@
     padding: 1.5rem;
   }
 
+  .modal-venue-grid {
+    grid-template-columns: 1fr;
+  }
+
   .final-cta-card {
     padding: 2.5rem 1.25rem;
   }
@@ -232,4 +256,23 @@
 .mobile-drawer-link:hover, .mobile-drawer-link.active {
   color: var(--crimson-primary);
   border-bottom-color: var(--crimson-primary);
+}
+
+/* Additional split layout mobile resets */
+@media (max-width: 992px) {
+  .hero-grid-layout,
+  .briefing-split-layout,
+  .strategy-header-split,
+  .round-two-split-layout,
+  .storyline-grid,
+  .journey-timeline-grid,
+  .rounds-grid,
+  .podium-grid,
+  .coordinators-grid,
+  .intel-stats-grid,
+  .hero-status-dashboard,
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
 }

@@ -94,10 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         />
       </svg>
 
-      {/* Dynamic Radial Spotlight Glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-radial from-[#ff003c]/20 via-[#00f0ff]/10 to-transparent blur-3xl pointer-events-none rounded-full" />
-
-      {/* CRISP, SMALL SPIDER-MAN CAMEO (UPPER-RIGHT / RIGHT SIDE - 20-25% VW TARGET) */}
+      {/* LAPTOP / DESKTOP SPIDER-MAN CAMEO (ORIGINAL UNTOUCHED LAPTOP POSITION) */}
       <motion.div
         style={{
           y: spidermanScrollY,
@@ -107,7 +104,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 0.95, scale: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="absolute top-24 sm:top-28 md:top-32 right-3 sm:right-8 md:right-14 lg:right-20 z-10 w-[160px] sm:w-[220px] md:w-[270px] lg:w-[320px] max-w-[28vw] pointer-events-none select-none transition-transform duration-100 ease-out"
+        className="hidden md:block absolute top-28 md:top-32 right-8 md:right-14 lg:right-20 z-10 w-[220px] md:w-[270px] lg:w-full max-w-[320px] lg:max-w-[28vw] pointer-events-none select-none transition-transform duration-100 ease-out"
       >
         <div className="relative w-full h-auto p-2 bg-[#121216]/40 rounded-2xl border border-white/10 shadow-lg backdrop-blur-xs overflow-hidden">
           {/* Crisp, Unstretched Image container */}
@@ -127,7 +124,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </motion.div>
 
-      {/* Hero Typography & Content Container (Left / Center Dominant - Z-INDEX 20 HIGHEST PRIORITY) */}
+      {/* Hero Typography & Content Container */}
       <div
         className="relative z-20 max-w-5xl mx-auto text-center md:text-left flex flex-col items-center md:items-start"
         style={{
@@ -139,10 +136,34 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: -20, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#121216]/90 border border-[#ff003c] rounded text-[#ff003c] font-space text-xs sm:text-sm tracking-widest font-bold uppercase mb-6 shadow-[0_0_15px_rgba(255,0,60,0.3)] clip-comic-badge backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#121216]/90 border border-[#ff003c] rounded text-[#ff003c] font-space text-xs sm:text-sm tracking-widest font-bold uppercase mb-4 shadow-[0_0_15px_rgba(255,0,60,0.3)] clip-comic-badge backdrop-blur-sm"
         >
           <Sparkles className="w-4 h-4 text-[#00f0ff] animate-spin" />
           <span>IGNITRRON • EVENT 01</span>
+        </motion.div>
+
+        {/* MOBILE SPIDER-MAN CAMEO */}
+        <motion.div
+          style={{
+            y: spidermanScrollY,
+            opacity: spidermanOpacity,
+          }}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 0.95, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="block md:hidden relative my-4 mx-auto w-[200px] pointer-events-none select-none"
+        >
+          <div className="relative w-full h-auto p-2 bg-[#121216]/40 rounded-2xl border border-white/10 shadow-lg backdrop-blur-xs overflow-hidden">
+            <img
+              src={spidermanImg}
+              alt="Spider-Man swinging visual cameo"
+              className="w-full h-auto object-contain filter contrast-110 brightness-95 drop-shadow-[0_0_20px_rgba(255,0,60,0.3)]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-[#0a0a0c]/60 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0c]/80 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 border border-[#ff003c]/30 rounded-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-full h-full bg-radial from-[#00f0ff]/10 to-transparent pointer-events-none" />
+          </div>
         </motion.div>
 
         {/* Huge Display Title: LAUNCHPAD */}
@@ -153,7 +174,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           className="relative mb-2 w-full"
         >
           {/* Comic Shadow Duplication */}
-          <h1 className="font-anton text-7xl sm:text-9xl md:text-[11rem] leading-none tracking-tight text-white uppercase select-none drop-shadow-[6px_6px_0px_#ff003c]">
+          <h1 className="font-anton text-4xl sm:text-7xl md:text-8xl lg:text-9xl leading-none tracking-tight text-white uppercase select-none drop-shadow-[6px_6px_0px_#ff003c]">
             LAUNCHPAD
           </h1>
 
@@ -168,7 +189,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.2 }}
-          className="font-bebas text-3xl sm:text-5xl md:text-6xl text-[#00f0ff] tracking-wider mb-4 uppercase drop-shadow-[3px_3px_0px_#0a0a0c]"
+          className="font-bebas text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-[#00f0ff] tracking-wider mb-4 uppercase drop-shadow-[3px_3px_0px_#0a0a0c]"
         >
           NEW BRAND. YOUR BRAND.
         </motion.h2>
@@ -203,16 +224,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
         >
           {/* Primary CTA */}
-          <button
-            onClick={() => {
-              soundFx.playWebShoot();
-              onOpenRegister();
-            }}
-            className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#ff003c] text-white font-bebas text-2xl tracking-wider rounded border-2 border-white shadow-spider-red hover:bg-[#ff003c]/90 hover:shadow-glow-red transition-all duration-200 active:translate-y-1"
+          <a
+            href="https://www.theticket9.com/event/ignitrron-26"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => soundFx.playWebShoot()}
+            className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#ff003c] text-white font-bebas text-2xl tracking-wider rounded border-2 border-white shadow-spider-red hover:bg-[#ff003c]/90 hover:shadow-glow-red transition-all duration-200 active:translate-y-1 no-underline"
           >
             <span>ENTER THE CHALLENGE</span>
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
 
           {/* Secondary CTA */}
           <button

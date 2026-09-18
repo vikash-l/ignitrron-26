@@ -6,10 +6,10 @@ export const GambitBackground: React.FC = () => {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#050308]">
       
       {/* 1. SECTION-BASED SUBTLE ATMOSPHERIC GRADIENTS (Fades naturally with 90% dark space) */}
-      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-[#130922]/40 rounded-full blur-[180px]" />
-      <div className="absolute top-[25%] left-0 w-[600px] h-[600px] bg-[#190718]/30 rounded-full blur-[180px]" />
-      <div className="absolute top-[50%] right-0 w-[650px] h-[650px] bg-[#160822]/30 rounded-full blur-[180px]" />
-      <div className="absolute top-[75%] left-0 w-[600px] h-[600px] bg-[#110720]/40 rounded-full blur-[180px]" />
+      <div className="absolute top-0 right-0 w-full max-w-[700px] h-[700px] bg-[#130922]/40 rounded-full blur-[180px]" />
+      <div className="absolute top-[25%] left-0 w-full max-w-[600px] h-[600px] bg-[#190718]/30 rounded-full blur-[180px]" />
+      <div className="absolute top-[50%] right-0 w-full max-w-[650px] h-[650px] bg-[#160822]/30 rounded-full blur-[180px]" />
+      <div className="absolute top-[75%] left-0 w-full max-w-[600px] h-[600px] bg-[#110720]/40 rounded-full blur-[180px]" />
 
       {/* 2. SUBTLE COMIC HALFTONE TEXTURE OVERLAY (2.5% Opacity - noticeable only on close look) */}
       <svg className="absolute inset-0 w-full h-full opacity-[0.025] mix-blend-overlay">
@@ -23,26 +23,26 @@ export const GambitBackground: React.FC = () => {
       {/* 3. LARGE ABSTRACT PLAYING CARD SILHOUETTES (3-5 items, 3-6% opacity) */}
       {/* Card 1: Far Left Cropped */}
       <motion.div
-        className="absolute top-[4%] -left-[100px] w-[320px] h-[480px] border border-[#8F26FF]/20 rounded-2xl p-6 opacity-[0.04] rotate-[-14deg]"
+        className="absolute top-[4%] -left-[100px] w-full max-w-[320px] h-[480px] border border-[#8F26FF]/20 rounded-2xl p-6 opacity-[0.04] rotate-[-14deg]"
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
       >
         <div className="w-full h-full border border-[#E626FF]/15 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-3xl text-[#E626FF]">A</span>
-          <span className="font-mono text-7xl text-[#E626FF] self-center">♠</span>
+          <span className="font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-[#E626FF] self-center">♠</span>
           <span className="font-mono text-3xl text-[#E626FF] self-end rotate-180">A</span>
         </div>
       </motion.div>
 
       {/* Card 2: Behind Hero / Upper Right Edge */}
       <motion.div
-        className="absolute top-[8%] -right-[80px] w-[340px] h-[500px] border border-[#E626FF]/20 rounded-2xl p-6 opacity-[0.05] rotate-[12deg]"
+        className="absolute top-[8%] -right-[80px] w-full max-w-[340px] h-[500px] border border-[#E626FF]/20 rounded-2xl p-6 opacity-[0.05] rotate-[12deg]"
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
       >
         <div className="w-full h-full border border-[#8F26FF]/15 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-3xl text-[#FF3BE6]">K</span>
-          <span className="font-mono text-7xl text-[#FF3BE6] self-center">♦</span>
+          <span className="font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-[#FF3BE6] self-center">♦</span>
           <span className="font-mono text-3xl text-[#FF3BE6] self-end rotate-180">K</span>
         </div>
       </motion.div>
@@ -55,20 +55,20 @@ export const GambitBackground: React.FC = () => {
       >
         <div className="w-full h-full border border-[#E626FF]/15 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-3xl text-[#E626FF]">Q</span>
-          <span className="font-mono text-6xl text-[#E626FF] self-center">♥</span>
+          <span className="font-mono text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-[#E626FF] self-center">♥</span>
           <span className="font-mono text-3xl text-[#E626FF] self-end rotate-180">Q</span>
         </div>
       </motion.div>
 
       {/* Card 4: Lower Right near Prizes */}
       <motion.div
-        className="absolute top-[72%] -right-[90px] w-[330px] h-[490px] border border-[#E626FF]/20 rounded-2xl p-6 opacity-[0.05] rotate-[10deg]"
+        className="absolute top-[72%] -right-[90px] w-full max-w-[330px] h-[490px] border border-[#E626FF]/20 rounded-2xl p-6 opacity-[0.05] rotate-[10deg]"
         animate={{ y: [0, -14, 0] }}
         transition={{ duration: 19, repeat: Infinity, ease: 'easeInOut' }}
       >
         <div className="w-full h-full border border-[#8F26FF]/15 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-3xl text-[#FF3BE6]">J</span>
-          <span className="font-mono text-7xl text-[#FF3BE6] self-center">♣</span>
+          <span className="font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-[#FF3BE6] self-center">♣</span>
           <span className="font-mono text-3xl text-[#FF3BE6] self-end rotate-180">J</span>
         </div>
       </motion.div>

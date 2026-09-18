@@ -11,7 +11,7 @@ export const GambitBackground: React.FC = () => {
       
       {/* Hero Atmosphere (Soft Violet & Magenta Glow connecting toward Gambit's hand) */}
       <motion.div
-        className="absolute top-[-5%] right-[-5%] w-[850px] h-[850px] bg-radial from-[#6B1FDB]/35 via-[#E626FF]/20 to-transparent rounded-full blur-[140px]"
+        className="absolute top-[-5%] right-[-5%] w-full max-w-[850px] h-[850px] bg-radial from-[#6B1FDB]/35 via-[#E626FF]/20 to-transparent rounded-full blur-[140px]"
         animate={{
           x: [0, 30, -20, 0],
           y: [0, -20, 30, 0],
@@ -22,7 +22,7 @@ export const GambitBackground: React.FC = () => {
       
       {/* Mid Page Atmosphere (Deep Violet & Burgundy) */}
       <motion.div
-        className="absolute top-[32%] left-[-8%] w-[800px] h-[800px] bg-radial from-[#8F26FF]/30 via-[#1A071C]/35 to-transparent rounded-full blur-[150px]"
+        className="absolute top-[32%] left-[-8%] w-full max-w-[800px] h-[800px] bg-radial from-[#8F26FF]/30 via-[#1A071C]/35 to-transparent rounded-full blur-[150px]"
         animate={{
           x: [0, -40, 30, 0],
           y: [0, 40, -30, 0],
@@ -32,7 +32,7 @@ export const GambitBackground: React.FC = () => {
 
       {/* Prizes & CTA Atmosphere (Strong Magenta Energy Glow) */}
       <motion.div
-        className="absolute top-[68%] right-[-6%] w-[850px] h-[850px] bg-radial from-[#FF3BE6]/25 via-[#6B1FDB]/30 to-transparent rounded-full blur-[160px]"
+        className="absolute top-[68%] right-[-6%] w-full max-w-[850px] h-[850px] bg-radial from-[#FF3BE6]/25 via-[#6B1FDB]/30 to-transparent rounded-full blur-[160px]"
         animate={{
           x: [0, 40, -35, 0],
           y: [0, -35, 25, 0],
@@ -58,7 +58,7 @@ export const GambitBackground: React.FC = () => {
 
       {/* CARD 1: Left Side Enormous Card (-12deg) */}
       <motion.div
-        className="absolute top-[4%] -left-[140px] w-[380px] h-[580px] border-2 border-[#8F26FF]/40 bg-[#130922]/20 rounded-2xl p-7 opacity-[0.12] rotate-[-12deg] shadow-[0_0_50px_rgba(143,38,255,0.25)] hidden md:block"
+        className="absolute top-[4%] -left-[140px] w-full max-w-[380px] h-[580px] border-2 border-[#8F26FF]/40 bg-[#130922]/20 rounded-2xl p-7 opacity-[0.12] rotate-[-12deg] shadow-[0_0_50px_rgba(143,38,255,0.25)] hidden md:block"
         animate={{ y: [0, -18, 0], rotate: [-12, -9, -12] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -67,7 +67,7 @@ export const GambitBackground: React.FC = () => {
             <span>A</span>
             <span>♠</span>
           </div>
-          <span className="font-mono text-9xl text-[#FF3BE6] self-center">♠</span>
+          <span className="font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-[#FF3BE6] self-center">♠</span>
           <div className="flex justify-between items-center font-mono text-4xl text-[#FF3BE6] font-bold rotate-180">
             <span>A</span>
             <span>♠</span>
@@ -83,14 +83,14 @@ export const GambitBackground: React.FC = () => {
       >
         <div className="w-full h-full border border-[#8F26FF]/25 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-3xl text-[#E626FF] font-bold">Q</span>
-          <span className="font-mono text-7xl text-[#E626FF] self-center">♥</span>
+          <span className="font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-[#E626FF] self-center">♥</span>
           <span className="font-mono text-3xl text-[#E626FF] font-bold self-end rotate-180">Q</span>
         </div>
       </motion.div>
 
       {/* CARD 3: Right Side Enormous Card (12deg) */}
       <motion.div
-        className="absolute top-[8%] -right-[130px] w-[400px] h-[600px] border-2 border-[#FF3BE6]/40 bg-[#160822]/20 rounded-2xl p-7 opacity-[0.14] rotate-[12deg] shadow-[0_0_50px_rgba(255,59,230,0.25)] hidden md:block"
+        className="absolute top-[8%] -right-[130px] w-full max-w-[400px] h-[600px] border-2 border-[#FF3BE6]/40 bg-[#160822]/20 rounded-2xl p-7 opacity-[0.14] rotate-[12deg] shadow-[0_0_50px_rgba(255,59,230,0.25)] hidden md:block"
         animate={{ y: [0, 20, 0], rotate: [12, 9, 12] }}
         transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
@@ -99,7 +99,7 @@ export const GambitBackground: React.FC = () => {
             <span>K</span>
             <span>♦</span>
           </div>
-          <span className="font-mono text-9xl text-[#E626FF] self-center">♦</span>
+          <span className="font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-[#E626FF] self-center">♦</span>
           <div className="flex justify-between items-center font-mono text-4xl text-[#E626FF] font-bold rotate-180">
             <span>K</span>
             <span>♦</span>
@@ -115,33 +115,33 @@ export const GambitBackground: React.FC = () => {
       >
         <div className="w-full h-full border border-[#FF3BE6]/20 rounded-xl p-3 flex flex-col justify-between">
           <span className="font-mono text-2xl text-[#FF3BE6] font-bold">J</span>
-          <span className="font-mono text-6xl text-[#FF3BE6] self-center">♣</span>
+          <span className="font-mono text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-[#FF3BE6] self-center">♣</span>
           <span className="font-mono text-2xl text-[#FF3BE6] font-bold self-end rotate-180">J</span>
         </div>
       </motion.div>
 
       {/* CARD 5: Lower Left Large Card (-10deg) */}
       <motion.div
-        className="absolute top-[62%] -left-[120px] w-[370px] h-[560px] border-2 border-[#8F26FF]/40 bg-[#130922]/20 rounded-2xl p-6 opacity-[0.11] rotate-[-10deg] hidden md:block"
+        className="absolute top-[62%] -left-[120px] w-full max-w-[370px] h-[560px] border-2 border-[#8F26FF]/40 bg-[#130922]/20 rounded-2xl p-6 opacity-[0.11] rotate-[-10deg] hidden md:block"
         animate={{ y: [0, -16, 0], rotate: [-10, -7, -10] }}
         transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
       >
         <div className="w-full h-full border-2 border-[#E626FF]/25 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-4xl text-[#E626FF] font-bold">10</span>
-          <span className="font-mono text-9xl text-[#E626FF] self-center">♠</span>
+          <span className="font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-[#E626FF] self-center">♠</span>
           <span className="font-mono text-4xl text-[#E626FF] font-bold self-end rotate-180">10</span>
         </div>
       </motion.div>
 
       {/* CARD 6: Lower Right Large Card (14deg) */}
       <motion.div
-        className="absolute top-[76%] -right-[120px] w-[380px] h-[570px] border-2 border-[#FF3BE6]/40 bg-[#160822]/20 rounded-2xl p-6 opacity-[0.13] rotate-[14deg] hidden md:block"
+        className="absolute top-[76%] -right-[120px] w-full max-w-[380px] h-[570px] border-2 border-[#FF3BE6]/40 bg-[#160822]/20 rounded-2xl p-6 opacity-[0.13] rotate-[14deg] hidden md:block"
         animate={{ y: [0, 18, 0], rotate: [14, 11, 14] }}
         transition={{ duration: 21, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       >
         <div className="w-full h-full border-2 border-[#8F26FF]/25 rounded-xl p-4 flex flex-col justify-between">
           <span className="font-mono text-4xl text-[#FF3BE6] font-bold">A</span>
-          <span className="font-mono text-9xl text-[#FF3BE6] self-center">♦</span>
+          <span className="font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-[#FF3BE6] self-center">♦</span>
           <span className="font-mono text-4xl text-[#FF3BE6] font-bold self-end rotate-180">A</span>
         </div>
       </motion.div>
@@ -210,15 +210,15 @@ export const GambitBackground: React.FC = () => {
       {/* ========================================================================= */}
       {/* LAYER 05 — CARD CORNERS & SUIT SYMBOLS (5-10% OPACITY) */}
       {/* ========================================================================= */}
-      <div className="absolute top-[8%] left-[2%] text-[#FF3BE6]/12 font-mono text-5xl font-extrabold hidden sm:block">A ♠</div>
-      <div className="absolute top-[14%] right-[3%] text-[#E626FF]/12 font-mono text-5xl font-extrabold hidden sm:block">K ♦</div>
-      <div className="absolute top-[48%] left-[2%] text-[#8F26FF]/12 font-mono text-5xl font-extrabold hidden sm:block">Q ♥</div>
-      <div className="absolute top-[82%] right-[2%] text-[#FF3BE6]/12 font-mono text-5xl font-extrabold hidden sm:block">J ♣</div>
+      <div className="absolute top-[8%] left-[2%] text-[#FF3BE6]/12 font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold hidden sm:block">A ♠</div>
+      <div className="absolute top-[14%] right-[3%] text-[#E626FF]/12 font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold hidden sm:block">K ♦</div>
+      <div className="absolute top-[48%] left-[2%] text-[#8F26FF]/12 font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold hidden sm:block">Q ♥</div>
+      <div className="absolute top-[82%] right-[2%] text-[#FF3BE6]/12 font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold hidden sm:block">J ♣</div>
 
       {/* Scattered Oversized Suits */}
-      <div className="absolute top-[26%] right-[8%] text-[#E626FF]/08 font-mono text-8xl select-none">♦</div>
-      <div className="absolute top-[58%] left-[6%] text-[#8F26FF]/08 font-mono text-8xl select-none">♠</div>
-      <div className="absolute top-[88%] left-[8%] text-[#FF3BE6]/08 font-mono text-8xl select-none">♣</div>
+      <div className="absolute top-[26%] right-[8%] text-[#E626FF]/08 font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl select-none">♦</div>
+      <div className="absolute top-[58%] left-[6%] text-[#8F26FF]/08 font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl select-none">♠</div>
+      <div className="absolute top-[88%] left-[8%] text-[#FF3BE6]/08 font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl select-none">♣</div>
 
       {/* ========================================================================= */}
       {/* LAYER 06 — 35-45 CONCENTRATED KINETIC ENERGY PARTICLES (20-50% OPACITY) */}

@@ -38,7 +38,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           <span>{headerLabel}</span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-wider uppercase text-[#E8EAED] font-industrial">
+      <h2 className="text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-wider uppercase text-[#E8EAED] font-industrial">
         {title}
       </h2>
       {subtitle && (

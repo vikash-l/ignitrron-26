@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
     >
       {/* Interactive Cursor-Responsive Ambient Environmental Lighting */}
       <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 blur-[150px]"
+        className="absolute w-full max-w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 blur-[150px]"
         style={{
           background: 'radial-gradient(circle, #e8a63a 0%, #d6a84f 40%, transparent 70%)',
           x: isHovered && !reducedMotion ? lightX : '50%',
@@ -181,7 +181,7 @@ export const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.46, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 max-w-2xl mx-auto lg:mx-0 mb-9"
+                className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5 max-w-2xl mx-auto lg:mx-0 mb-9"
               >
                 <div className="tech-panel px-3 py-2.5 rounded flex items-center gap-2 border-[#d6a84f]/25 bg-[#0b1012]/80 min-w-0">
                   <Calendar className="h-4 w-4 text-[#d6a84f] flex-shrink-0" />
@@ -303,7 +303,7 @@ export const Hero: React.FC = () => {
                 scale: reducedMotion ? 1 : artworkScrollScale,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[380px] sm:max-w-[440px] z-10"
+              className="relative w-full max-w-full max-w-[380px] sm:max-w-full max-w-[440px] z-10"
             >
               {/* Integrated Artwork Container with Soft Edge Fading */}
               <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-black/90 border border-[#d6a84f]/35 bg-[#0b1012]">

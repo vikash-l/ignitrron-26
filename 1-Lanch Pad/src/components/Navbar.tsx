@@ -49,10 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Top-Left */}
-        <a
-          href="#"
-          onClick={() => soundFx.playClick()}
-          className="group flex items-center gap-3 text-decoration-none"
+        <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" className="group flex items-center gap-3 text-decoration-none"
         >
           {/* Spider-web Node Emblem */}
           <div className="relative w-8 h-8 flex items-center justify-center bg-black border border-[#ff003c] rounded transform group-hover:rotate-45 transition-transform duration-300 shadow-[0_0_10px_#ff003c]">
@@ -101,19 +98,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
           </button>
 
           {/* Header Action Button */}
-          <button
-            onClick={() => {
-              soundFx.playWebShoot();
-              onOpenRegister();
-            }}
-            className="relative group overflow-hidden px-5 py-2 font-bebas tracking-wider text-lg bg-[#ff003c] text-white rounded border border-[#ff003c] hover:border-[#00f0ff] shadow-spider-red transition-all duration-200 active:translate-y-0.5"
+          <a
+            href="https://www.theticket9.com/event/ignitrron-26"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => soundFx.playWebShoot()}
+            className="relative group overflow-hidden px-5 py-2 font-bebas tracking-wider text-lg bg-[#ff003c] text-white rounded border border-[#ff003c] hover:border-[#00f0ff] shadow-spider-red transition-all duration-200 active:translate-y-0.5 inline-flex items-center gap-1.5 no-underline"
           >
             <span className="relative z-10 flex items-center gap-1.5">
               <Zap className="w-4 h-4 fill-white group-hover:text-[#00f0ff] transition-colors" />
               JOIN CHALLENGE
             </span>
             <div className="absolute inset-0 bg-[#00f0ff] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out -z-0 opacity-20" />
-          </button>
+          </a>
         </nav>
 
         {/* Mobile Hamburger Toggle */}
@@ -154,17 +151,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
             </a>
           ))}
 
-          <button
+          <a
+            href="https://www.theticket9.com/event/ignitrron-26"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               soundFx.playWebShoot();
               setMobileMenuOpen(false);
-              onOpenRegister();
             }}
-            className="w-full mt-4 py-3 font-bebas text-xl bg-[#ff003c] text-white rounded border border-[#ff003c] shadow-spider-red flex items-center justify-center gap-2"
+            className="w-full mt-4 py-3 font-bebas text-xl bg-[#ff003c] text-white rounded border border-[#ff003c] shadow-spider-red flex items-center justify-center gap-2 no-underline"
           >
             <Zap className="w-5 h-5 fill-white" />
             ENTER THE CHALLENGE
-          </button>
+          </a>
         </div>
       )}
     </header>

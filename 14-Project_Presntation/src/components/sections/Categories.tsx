@@ -26,7 +26,7 @@ export const Categories: React.FC = () => {
     <section id="categories" className="py-24 relative overflow-hidden border-t border-blue-900/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
-          index="02"
+          index="01"
           badge="DOMAIN SPECIFICATION"
           title="05 DOMAINS. ONE ARENA."
           subtitle="Five official presentation categories spanning computational, hardware, biological, and enterprise disciplines."

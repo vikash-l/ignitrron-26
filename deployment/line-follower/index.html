@@ -2,10 +2,10 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Path Finder — Line Follower Hackathon | IGNITRRON '26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" data-replaced="true" content="width=device-width, initial-scale=1.0" />
+  <title>Line Follower Hackathon | IGNITRRON '26</title>
   <meta name="description" content="A robotics hackathon where teams design, build, and program an autonomous line-following robot capable of navigating a predefined track with maximum speed and precision." />
-  <meta name="keywords" content="Path Finder, Line Follower Hackathon, IGNITRRON 2026, Aviation and Robotics Club, PID Tuning, Arduino Nano" />
+  <meta name="keywords" content="Line Follower Hackathon, IGNITRRON 2026, Aviation and Robotics Club, PID Tuning, Arduino Nano" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,30 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <meta name="theme-color" content="#05050A" />
-  <script type="module" crossorigin src="/line-follower/assets/index-f0iXl27b.js"></script>
-  <link rel="stylesheet" crossorigin href="/line-follower/assets/index-83MvCM0r.css">
+
+  <!-- Ignitrron Global Responsive Core Stylesheet -->
+  <style id="ignitrron-global-responsive">
+    html, body {
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      -webkit-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    img, picture, video, canvas, svg {
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2, h3, h4, h5, h6, p, span, a {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  </style>
+
+  <script type="module" crossorigin src="/line-follower/assets/index-BPSb3KlI.js"></script>
+  <link rel="stylesheet" crossorigin href="/line-follower/assets/index-npqdGNK4.css">
 </head>
 <body class="bg-dark text-white antialiased selection:bg-blue selection:text-white">
 
@@ -31,7 +53,7 @@
       <div class="w-10 h-10 mb-5 flex items-center justify-center">
         <div class="w-6 h-6 rounded-full border-2 border-blue border-t-transparent animate-spin"></div>
       </div>
-      <div class="font-mono text-xs text-blue tracking-widest uppercase mb-2">INITIALIZING PATH FINDER PROTOCOL...</div>
+      <div class="font-mono text-xs text-blue tracking-widest uppercase mb-2">INITIALIZING LINE FOLLOWER HACKATHON PROTOCOL...</div>
       <h2 class="font-heading font-extrabold text-xl text-white tracking-wider uppercase mb-4">
         IGNITRRON '26
       </h2>
@@ -48,11 +70,11 @@
     <div class="page-container header-container">
       
       <!-- Target Logo & Brand -->
-      <a href="#hero" class="header-brand">
+      <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" class="header-brand">
         <div class="header-brand-icon">🎯</div>
         <div>
           <div class="header-brand-title">IGNITRRON '26</div>
-          <div class="header-brand-sub">PATH FINDER</div>
+          <div class="header-brand-sub">LINE FOLLOWER HACKATHON</div>
         </div>
       </a>
 
@@ -63,6 +85,7 @@
         <a href="#build-kit" class="nav-link">BUILD KIT</a>
         <a href="#journey" class="nav-link">JOURNEY</a>
         <a href="#rules" class="nav-link">RULES</a>
+        <a href="#prizes" class="nav-link">PRIZES</a>
         <a href="#contact" class="nav-link">CONTACT</a>
       </nav>
 
@@ -72,7 +95,7 @@
           <span class="audio-pulse-dot"></span>
         </button>
 
-        <a href="GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-header-register">
+        <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-header-register">
           <span>REGISTER NOW</span>
           <span class="arrow">↗</span>
         </a>
@@ -93,8 +116,9 @@
       <a href="#build-kit" class="mobile-nav-link hover:text-white py-1">BUILD KIT</a>
       <a href="#journey" class="mobile-nav-link hover:text-white py-1">JOURNEY</a>
       <a href="#rules" class="mobile-nav-link hover:text-white py-1">RULES</a>
+      <a href="#prizes" class="mobile-nav-link hover:text-white py-1">PRIZES</a>
       <a href="#contact" class="mobile-nav-link hover:text-white py-1">CONTACT</a>
-      <a href="GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="mobile-nav-link hover:text-blue py-1 font-bold">REGISTER VIA GOOGLE FORM ↗</a>
+      <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="mobile-nav-link hover:text-blue py-1 font-bold">REGISTER NOW ↗</a>
     </div>
   </header>
 
@@ -120,7 +144,7 @@
           <!-- Official Main Title -->
           <div class="space-y-2">
             <h1 class="font-heading text-4xl sm:text-6xl xl:text-7xl font-black text-white uppercase tracking-tight leading-[0.95]">
-              <span id="hero-title-1" class="hero-anim-item block hawkeye-title-gradient">PATH FINDER</span>
+              <span id="hero-title-1" class="hero-anim-item block hawkeye-title-gradient">LINE FOLLOWER HACKATHON</span>
             </h1>
             <div id="hero-title-2" class="hero-anim-item font-heading text-lg sm:text-2xl font-bold text-white/90 tracking-wider uppercase">
               LINE FOLLOWER HACKATHON
@@ -137,6 +161,17 @@
             A robotics hackathon where teams design, build, and program an autonomous line-following robot capable of navigating a predefined track with maximum speed and precision. Participants apply concepts of embedded systems, sensors, motor control, programming, and robotics to develop an efficient, real-time autonomous solution while showcasing innovation, teamwork, and engineering excellence.
           </p>
 
+          <!-- Hero Note Box: No Prior Knowledge Required -->
+          <div class="hero-note-box hero-anim-item max-w-[620px]">
+            <div class="text-blue text-xl font-bold shrink-0">💡</div>
+            <div>
+              <div class="font-mono text-[11px] font-bold text-blue tracking-widest uppercase">PARTICIPANT NOTE</div>
+              <div class="font-body text-xs sm:text-sm text-white font-medium leading-relaxed">
+                <strong class="text-blue">NO PRIOR KNOWLEDGE REQUIRED!</strong> A dedicated webinar session will be conducted to help participants learn all fundamentals step by step before the hackathon.
+              </div>
+            </div>
+          </div>
+
           <!-- Details Row -->
           <div id="hero-details" class="hero-anim-item event-details-row">
             <span>18–19 SEPTEMBER 2026</span>
@@ -148,7 +183,7 @@
 
           <!-- Buttons -->
           <div id="hero-buttons" class="hero-anim-item flex flex-wrap items-center gap-4 pt-2">
-            <a href="GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-primary-glow">
+            <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-primary-glow">
               <span>REGISTER NOW</span>
               <span class="arrow">↗</span>
             </a>
@@ -191,49 +226,49 @@
             ZERO ROOM FOR ERROR.
           </h2>
           <p class="font-body text-base sm:text-lg text-muted max-w-2xl leading-relaxed pt-1">
-            Path Finder is a 24-hour hardware-based engineering challenge where participants design, assemble, wire and program an autonomous line follower robot using components provided by the organizers.
+            Line Follower Hackathon is a 24-hour hardware-based engineering challenge where participants design, assemble, wire and program an autonomous line follower robot using components provided by the organizers.
           </p>
         </div>
 
         <!-- 7 Domain Pillars -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">01 / HARDWARE</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">EMBEDDED SYSTEMS</h3>
             <p class="font-body text-sm text-muted">Program Arduino Nano CH340 microcontrollers, configure pin routing, and optimize execution timing.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">02 / POWER</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">ELECTRONICS</h3>
             <p class="font-body text-sm text-muted">Wire L298N motor drivers, route 2S lithium battery power, and manage voltage regulation.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">03 / CONTROL</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">CONTROL SYSTEMS</h3>
             <p class="font-body text-sm text-muted">Implement Proportional-Integral-Derivative (PID) feedback loops to eliminate path oscillation.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">04 / FABRICATION</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">HARDWARE ASSEMBLY</h3>
             <p class="font-body text-sm text-muted">Mount motors, solder pin headers, attach castor wheels, and optimize chassis weight balance.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">05 / FIRMWARE</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">ROBOT PROGRAMMING</h3>
             <p class="font-body text-sm text-muted">Write C code to sample 5-channel IR reflection thresholds and translate error signals into PWM motor speeds.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal">
+          <div class="mission-pillar-card scroll-reveal">
             <div class="text-blue font-mono text-xs font-bold mb-3">06 / STRATEGY</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">TEAMWORK</h3>
             <p class="font-body text-sm text-muted">Collaborate within 4-member squad roles under high-stakes 24-hour sprint conditions.</p>
           </div>
 
-          <div class="p-8 rounded-2xl bg-[#080A14]/60 border border-white/10 hover:border-blue/40 transition-all scroll-reveal col-span-1 md:col-span-2 lg:col-span-1">
+          <div class="mission-pillar-card scroll-reveal col-span-1 md:col-span-2 lg:col-span-1">
             <div class="text-blue font-mono text-xs font-bold mb-3">07 / LOGIC</div>
             <h3 class="font-heading text-xl font-bold text-white mb-2">PROBLEM-SOLVING</h3>
             <p class="font-body text-sm text-muted">Debug real-time sensor reflections, surface reflectivity changes, and dynamic track turns.</p>
@@ -244,7 +279,7 @@
         <div class="mt-14 p-8 rounded-2xl bg-[#080A14] border border-white/10 flex flex-col md:flex-row justify-between gap-6 font-mono text-xs scroll-reveal">
           <div>
             <div class="text-dim uppercase text-[10px]">EVENT</div>
-            <div class="text-white font-bold text-sm mt-0.5">PATH FINDER — LINE FOLLOWER HACKATHON 2026</div>
+            <div class="text-white font-bold text-sm mt-0.5">LINE FOLLOWER HACKATHON 2026</div>
           </div>
           <div>
             <div class="text-dim uppercase text-[10px]">ORGANIZER</div>
@@ -269,7 +304,7 @@
         <div class="max-w-3xl mb-14 space-y-3">
           <div class="font-mono text-xs text-blue uppercase tracking-widest">MISSION STAGES</div>
           <h2 class="font-heading text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
-            PATH FINDER STAGES
+            LINE FOLLOWER HACKATHON STAGES
           </h2>
         </div>
 
@@ -459,6 +494,33 @@
 
         </div>
 
+        <!-- Required Items Participants Must Bring -->
+        <div class="mt-8 p-8 rounded-2xl bg-crimson/10 border border-crimson/30 scroll-reveal">
+          <div class="font-mono text-xs font-bold text-crimson uppercase tracking-widest mb-2">MANDATORY PARTICIPANT EQUIPMENT</div>
+          <h3 class="font-heading text-xl sm:text-2xl font-black text-white uppercase tracking-wide mb-3">
+            REQUIRED ITEMS (WHAT TO BRING)
+          </h3>
+          <p class="font-body text-sm text-gray-300 mb-4">
+            Participants must bring their own soldering machine and laptop.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
+            <div class="required-equipment-card">
+              <span class="w-10 h-10 rounded-xl bg-crimson/20 border border-crimson/40 text-crimson flex items-center justify-center font-bold text-base shrink-0">01</span>
+              <div>
+                <div class="text-white font-bold text-sm">SOLDERING MACHINE</div>
+                <div class="text-dim text-[11px]">Must bring own soldering machine</div>
+              </div>
+            </div>
+            <div class="required-equipment-card">
+              <span class="w-10 h-10 rounded-xl bg-crimson/20 border border-crimson/40 text-crimson flex items-center justify-center font-bold text-base shrink-0">02</span>
+              <div>
+                <div class="text-white font-bold text-sm">LAPTOP</div>
+                <div class="text-dim text-[11px]">Must bring own laptop for programming</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -498,32 +560,32 @@
         <!-- 5 Journey Nodes Flow -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 font-mono text-xs">
           
-          <div class="p-6 rounded-xl bg-[#080A14] border border-white/10 scroll-reveal">
+          <div class="journey-node-card scroll-reveal">
             <div class="text-blue font-bold text-[10px] mb-2">01</div>
             <div class="font-heading text-base font-bold text-white mb-2">REPORT</div>
             <p class="text-muted text-[11px]">Reporting before 9:00 AM, attendance check, and kit distribution.</p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#080A14] border border-white/10 scroll-reveal">
+          <div class="journey-node-card scroll-reveal">
             <div class="text-blue font-bold text-[10px] mb-2">02</div>
             <div class="font-heading text-base font-bold text-white mb-2">QUIZ</div>
             <p class="text-muted text-[11px]">Written technical assessment of embedded logic, sensors, and control.</p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#080A14] border border-white/10 scroll-reveal">
+          <div class="journey-node-card scroll-reveal">
             <div class="text-blue font-bold text-[10px] mb-2">03</div>
             <div class="font-heading text-base font-bold text-white mb-2">HARDWARE SETUP</div>
             <p class="text-muted text-[11px]">Chassis assembly, motor driver wiring, soldering, and Nano code flashing.</p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#080A14] border border-white/10 scroll-reveal">
+          <div class="journey-node-card scroll-reveal">
             <div class="text-blue font-bold text-[10px] mb-2">04</div>
             <div class="font-heading text-base font-bold text-white mb-2">PID CALIBRATION</div>
             <p class="text-muted text-[11px]">Overnight IR reflection sampling and PID gain tuning on basic track.</p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#080A14] border border-blue/40 scroll-reveal">
-            <div class="text-blue font-bold text-[10px] mb-2">05 — FINALS</div>
+          <div class="journey-node-card journey-node-final scroll-reveal">
+            <div class="text-crimson font-bold text-[10px] mb-2">05 — FINALS</div>
             <div class="font-heading text-base font-bold text-white mb-2">FINAL RACE</div>
             <p class="text-gray-300 text-[11px]">Unveiling of unannounced race track & head-to-head trials.</p>
           </div>
@@ -536,47 +598,98 @@
     <!-- ============================================================
          SECTION 6: SQUAD TEAM FORMAT & RULES PROTOCOL
          ============================================================ -->
+    <!-- ============================================================
+         SECTION 6: SQUAD TEAM FORMAT & RULES PROTOCOL
+         ============================================================ -->
     <section id="rules" class="section-padding border-t border-white/5 relative scroll-reveal">
       <div class="page-container">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          <div class="lg:col-span-5 space-y-6">
-            <div class="font-mono text-xs text-blue uppercase tracking-widest">SQUAD RULES</div>
-            <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight uppercase">
-              TEAM FORMAT
-            </h2>
-            <div class="inline-block px-4 py-2 rounded-lg bg-blue/10 border border-blue/40 font-mono text-base font-bold text-white">
-              STRICTLY 4 MEMBERS PER TEAM
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-14">
+          
+          <!-- Squad Rules Left Card -->
+          <div class="lg:col-span-5 squad-rules-card flex flex-col justify-between space-y-6">
+            <div>
+              <div class="font-mono text-xs text-blue uppercase tracking-widest font-bold mb-2">SQUAD PROTOCOL</div>
+              <h2 class="font-heading text-3xl sm:text-4xl font-black text-white tracking-tight uppercase mb-4">
+                TEAM FORMAT
+              </h2>
+              <div class="inline-block px-4 py-2 rounded-xl bg-blue/15 border border-blue/40 font-mono text-sm font-extrabold text-blue tracking-wider uppercase mb-6">
+                STRICTLY 4 MEMBERS PER TEAM
+              </div>
+              <div class="space-y-3 font-body text-sm text-muted leading-relaxed">
+                <p>▸ Each team must consist of <strong>4 members</strong>. Individual participation is not permitted.</p>
+                <p>▸ <strong class="text-white">TEAM COMPOSITION:</strong> All team members must belong to the same institution/college.</p>
+                <p>▸ Team compositions cannot be changed once registration is confirmed.</p>
+              </div>
             </div>
-            <div class="space-y-3 font-body text-sm text-muted">
-              <p>▸ Each team must consist of 4 members. Individual participation is not permitted.</p>
-              <p>▸ Team members cannot be changed after registration.</p>
+            <div class="pt-4 border-t border-white/10 font-mono text-xs text-dim">
+              PRE-EVENT VERIFICATION REQUIRED
             </div>
           </div>
 
-          <div class="lg:col-span-7">
-            <div class="p-8 rounded-2xl bg-[#080A14] border border-white/10 font-mono">
-              <div class="text-xs text-muted mb-6 text-center">SQUAD ARCHITECTURE: TEAM 01</div>
-              <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="p-4 rounded-xl bg-black/60 border border-white/10">
-                  <div class="text-blue font-bold text-sm mb-1">MEMBER 01</div>
-                  <div class="text-[10px] text-dim">EMBEDDED PROGRAMMER</div>
+          <!-- Squad Architecture Right Card -->
+          <div class="lg:col-span-7 squad-rules-card flex flex-col justify-between">
+            <div>
+              <div class="font-mono text-xs text-blue font-bold tracking-widest uppercase mb-4 text-center">
+                SQUAD ARCHITECTURE & RECOMMENDED ROLES
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="member-role-card">
+                  <div class="text-2xl mb-2">💻</div>
+                  <div class="font-mono text-xs font-bold text-blue tracking-wider mb-1">MEMBER 01</div>
+                  <div class="font-heading text-xs font-extrabold text-white uppercase">EMBEDDED PROGRAMMER</div>
+                  <div class="font-body text-[11px] text-dim mt-1">C Code & Sensor Logic</div>
                 </div>
-                <div class="p-4 rounded-xl bg-black/60 border border-white/10">
-                  <div class="text-blue font-bold text-sm mb-1">MEMBER 02</div>
-                  <div class="text-[10px] text-dim">HARDWARE & SOLDERING</div>
+
+                <div class="member-role-card">
+                  <div class="text-2xl mb-2">⚡</div>
+                  <div class="font-mono text-xs font-bold text-blue tracking-wider mb-1">MEMBER 02</div>
+                  <div class="font-heading text-xs font-extrabold text-white uppercase">HARDWARE & SOLDERING</div>
+                  <div class="font-body text-[11px] text-dim mt-1">Motor Driver & Pin Wiring</div>
                 </div>
-                <div class="p-4 rounded-xl bg-black/60 border border-white/10">
-                  <div class="text-blue font-bold text-sm mb-1">MEMBER 03</div>
-                  <div class="text-[10px] text-dim">PID ALGORITHM TUNER</div>
+
+                <div class="member-role-card">
+                  <div class="text-2xl mb-2">🎯</div>
+                  <div class="font-mono text-xs font-bold text-blue tracking-wider mb-1">MEMBER 03</div>
+                  <div class="font-heading text-xs font-extrabold text-white uppercase">PID ALGORITHM TUNER</div>
+                  <div class="font-body text-[11px] text-dim mt-1">Feedback Loop & Calibration</div>
                 </div>
-                <div class="p-4 rounded-xl bg-black/60 border border-white/10">
-                  <div class="text-blue font-bold text-sm mb-1">MEMBER 04</div>
-                  <div class="text-[10px] text-dim">MECHANICAL INTEGRATION</div>
+
+                <div class="member-role-card">
+                  <div class="text-2xl mb-2">🔧</div>
+                  <div class="font-mono text-xs font-bold text-blue tracking-wider mb-1">MEMBER 04</div>
+                  <div class="font-heading text-xs font-extrabold text-white uppercase">MECHANICAL INTEGRATION</div>
+                  <div class="font-body text-[11px] text-dim mt-1">Chassis Balance & Castor Setup</div>
                 </div>
+
               </div>
             </div>
+            <div class="mt-6 pt-4 border-t border-white/10 text-center font-mono text-xs text-dim">
+              EACH MEMBER CONTRIBUTES TO THE 24-HOUR AUTONOMOUS RUN
+            </div>
           </div>
+
+        </div>
+
+        <!-- Webinar Session & Prior Knowledge Card -->
+        <div class="mb-14 max-w-4xl mx-auto webinar-info-card scroll-reveal">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
+            <div class="font-mono text-xs font-bold text-blue uppercase tracking-widest flex items-center gap-2">
+              <span>🎓</span> PRE-EVENT PREPARATION WEBINAR
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full bg-blue/15 border border-blue/40 font-mono text-[10px] font-bold text-blue tracking-widest uppercase">
+              NO PRIOR KNOWLEDGE REQUIRED
+            </div>
+          </div>
+
+          <h3 class="font-heading text-2xl sm:text-3xl font-black text-white uppercase tracking-wide mb-3">
+            GUIDED WEBINAR & TRAINING SESSION
+          </h3>
+
+          <p class="font-body text-sm sm:text-base text-gray-300 leading-relaxed">
+            Prior knowledge is not required to participate. A dedicated webinar session will be conducted before the hackathon to teach all participants hardware assembly, sensor thresholds, C programming, and PID calibration step by step. Learning about the topic beforehand will be an added advantage!
+          </p>
         </div>
 
         <div class="space-y-4 max-w-4xl mb-14">
@@ -616,6 +729,17 @@
               <p>▸ Participants must follow organizer and volunteer instructions.</p>
             </div>
           </div>
+
+          <div class="accordion-item scroll-reveal">
+            <button class="accordion-trigger">
+              <span class="font-heading text-lg font-bold text-white">PANEL DECISION & JURY AUTHORITY</span>
+              <span class="accordion-icon font-mono text-xl text-blue">+</span>
+            </button>
+            <div class="accordion-content px-6 pb-6 pt-2 font-body text-sm text-muted space-y-2">
+              <p>▸ <strong class="text-white font-semibold">Panel decision will be final and further approach is not entertained.</strong></p>
+              <p>▸ All jury evaluations, lap timing determinations, and track rulings are absolute.</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -635,7 +759,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
-          <a href="tel:9698692750" class="p-6 rounded-2xl bg-[#080A14] border border-white/10 hover:border-blue transition-all block group scroll-reveal">
+          <a href="tel:9698692750" class="contact-coord-card group scroll-reveal">
             <div class="flex items-center justify-between">
               <div>
                 <div class="font-heading text-xl font-bold text-white group-hover:text-blue transition-colors">
@@ -647,7 +771,7 @@
             </div>
           </a>
 
-          <a href="tel:7810002013" class="p-6 rounded-2xl bg-[#080A14] border border-white/10 hover:border-blue transition-all block group scroll-reveal">
+          <a href="tel:7810002013" class="contact-coord-card group scroll-reveal">
             <div class="flex items-center justify-between">
               <div>
                 <div class="font-heading text-xl font-bold text-white group-hover:text-blue transition-colors">
@@ -668,7 +792,95 @@
     </section>
 
     <!-- ============================================================
-         SECTION 8: OFFICIAL GOOGLE FORM REGISTRATION CARD
+         SECTION 7.5: PRIZES & RECOGNITION MATRIX
+         ============================================================ -->
+    <section id="prizes" class="section-padding border-t border-white/5 relative scroll-reveal">
+      <div class="page-container">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="font-mono text-xs text-blue uppercase tracking-widest flex items-center justify-center gap-2">
+            <span>🏆</span> OFFICIAL REWARD MATRIX
+          </div>
+          <h2 class="font-heading text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
+            PRIZE <span class="text-blue">POOL</span>
+          </h2>
+          <p class="font-body text-base sm:text-lg text-muted max-w-xl mx-auto leading-relaxed">
+            Compete for a total cash prize pool of ₹10,000 awarded to top-performing line follower autonomous robotics teams.
+          </p>
+        </div>
+
+        <!-- 3 Prize Cards Grid -->
+        <div class="prize-grid">
+          
+          <!-- 1ST PRIZE -->
+          <div class="prize-card prize-card-gold scroll-reveal">
+            <div>
+              <div class="prize-icon-circle">🥇</div>
+              <span class="prize-position-badge badge-gold">1ST PLACE</span>
+              <h3 class="prize-card-title">CHAMPION</h3>
+              <p class="prize-card-desc">
+                Supreme triumph on the track with maximum speed and zero line departure.
+              </p>
+            </div>
+            <div class="prize-amount-container">
+              <span class="prize-amount-label">CASH AWARD</span>
+              <span class="prize-amount-val val-gold">₹5,000</span>
+            </div>
+          </div>
+
+          <!-- 2ND PRIZE -->
+          <div class="prize-card prize-card-silver scroll-reveal">
+            <div>
+              <div class="prize-icon-circle">🥈</div>
+              <span class="prize-position-badge badge-silver">2ND PLACE</span>
+              <h3 class="prize-card-title">RUNNER UP</h3>
+              <p class="prize-card-desc">
+                Excellence in PID tuning, sensor calibration, and rapid lap execution.
+              </p>
+            </div>
+            <div class="prize-amount-container">
+              <span class="prize-amount-label">CASH AWARD</span>
+              <span class="prize-amount-val val-silver">₹3,000</span>
+            </div>
+          </div>
+
+          <!-- 3RD PRIZE -->
+          <div class="prize-card prize-card-bronze scroll-reveal">
+            <div>
+              <div class="prize-icon-circle">🥉</div>
+              <span class="prize-position-badge badge-bronze">3RD PLACE</span>
+              <h3 class="prize-card-title">SECOND RUNNER UP</h3>
+              <p class="prize-card-desc">
+                Outstanding autonomous navigation and hardware stability.
+              </p>
+            </div>
+            <div class="prize-amount-container">
+              <span class="prize-amount-label">CASH AWARD</span>
+              <span class="prize-amount-val val-bronze">₹2,000</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Total Prize Pool Summary Banner -->
+        <div class="prize-summary-banner scroll-reveal">
+          <div class="flex items-center gap-4">
+            <div class="text-3xl">🎯</div>
+            <div>
+              <div class="font-mono text-xs text-blue font-bold tracking-widest uppercase">TOTAL REWARD POOL</div>
+              <div class="font-heading text-xl sm:text-2xl font-black text-white">TOTAL PRIZE POOL — ₹10,000</div>
+            </div>
+          </div>
+          <div class="prize-summary-badge">
+            1ST: ₹5,000 | 2ND: ₹3,000 | 3RD: ₹2,000
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8: OFFICIAL REGISTRATION CARD
          ============================================================ -->
     <section id="register" class="registration-section-wrapper section-padding border-t border-white/5 relative scroll-reveal">
       <div class="page-container">
@@ -683,12 +895,12 @@
           </h2>
           
           <p class="font-body text-base sm:text-lg text-muted max-w-xl mx-auto mb-8 leading-relaxed">
-            Form your squad and register through the official Google Form.
+            Form your squad and register through the official Ticket9 portal.
           </p>
           
           <div class="flex justify-center">
-            <a href="GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-google-form-cta">
-              <span>REGISTER VIA GOOGLE FORM</span>
+            <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" data-registration-cta="google-form" class="btn-google-form-cta">
+              <span>REGISTER NOW</span>
               <span class="arrow">↗</span>
             </a>
           </div>
@@ -707,11 +919,17 @@
   <!-- FOOTER -->
   <footer class="py-12 border-t border-white/5 font-mono text-xs text-dim bg-[#05050A]">
     <div class="page-container flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>PATH FINDER — LINE FOLLOWER HACKATHON 🎯</div>
+      <div>LINE FOLLOWER HACKATHON 🎯</div>
       <div>BUILD • TRACK • CALIBRATE • RACE</div>
       <div>IGNITRRON '26 • AVIATION & ROBOTICS CLUB</div>
     </div>
   </footer>
 
+
+<!-- IGNITRRON GLOBAL TOP-LEFT BACK BUTTON -->
+<a href="/" id="ignitrron-global-back-btn" style="position: fixed; top: 16px; left: 16px; z-index: 99999; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9999px; color: #ffffff; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.06)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.25)';">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  <span>Back</span>
+</a>
 </body>
 </html>

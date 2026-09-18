@@ -18,10 +18,10 @@ export const Prizes: React.FC<PrizesProps> = ({ event }) => {
       {/* RULE 9 BACKGROUND ENHANCEMENTS FOR PRIZES */}
       
       {/* 1. Far Left & Far Right Faint Suit Motifs */}
-      <div className="absolute top-[20%] left-[3%] text-[#8F26FF]/10 font-mono text-7xl select-none pointer-events-none">
+      <div className="absolute top-[20%] left-[3%] text-[#8F26FF]/10 font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl select-none pointer-events-none">
         ♠
       </div>
-      <div className="absolute top-[25%] right-[3%] text-[#FF3BE6]/10 font-mono text-7xl select-none pointer-events-none">
+      <div className="absolute top-[25%] right-[3%] text-[#FF3BE6]/10 font-mono text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl select-none pointer-events-none">
         ♦
       </div>
 
@@ -64,19 +64,19 @@ export const Prizes: React.FC<PrizesProps> = ({ event }) => {
           <span className="text-xs font-mono text-[#E626FF] uppercase tracking-widest block mb-2 font-bold">
             REWARDS & GRANTS
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
+          <h2 className="text-3xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
             THE FINAL HAND
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[#6B1FDB] to-[#FF3BE6] mt-4 rounded-full"></div>
         </div>
 
         {/* Podium Playing-Card Style Prize Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12 relative">
           
           {/* Faint Oversized Playing Card Silhouette Behind First-Place Card */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-[340px] h-[520px] border border-[#FF3BE6]/15 rounded-2xl opacity-10 pointer-events-none rotate-[-4deg] flex flex-col justify-between p-6">
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-full max-w-[340px] h-[520px] border border-[#FF3BE6]/15 rounded-2xl opacity-10 pointer-events-none rotate-[-4deg] flex flex-col justify-between p-6">
             <span className="font-mono text-3xl text-[#FF3BE6]">A</span>
-            <span className="font-mono text-8xl text-[#FF3BE6] self-center">♠</span>
+            <span className="font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-[#FF3BE6] self-center">♠</span>
             <span className="font-mono text-3xl text-[#FF3BE6] self-end rotate-180">A</span>
           </div>
 
@@ -122,7 +122,7 @@ export const Prizes: React.FC<PrizesProps> = ({ event }) => {
                     </div>
 
                     {/* Reward Amount (First Place Receives Strongest Emphasis) */}
-                    <div className={`text-4xl md:text-5xl font-extrabold font-mono my-4 tracking-tight ${
+                    <div className={`text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-mono my-4 tracking-tight ${
                       isFirst ? 'text-[#FF3BE6] glow-pink' : 'text-white'
                     }`}>
                       {prize.reward}
@@ -144,7 +144,7 @@ export const Prizes: React.FC<PrizesProps> = ({ event }) => {
         </div>
 
         {/* Secondary Opportunities: InZeros Mentorship & Certificates */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

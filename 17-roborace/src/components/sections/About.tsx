@@ -11,7 +11,7 @@ export const About: React.FC = () => {
     <section id="about" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-racing opacity-5 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-full max-w-[400px] h-[400px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -66,7 +66,7 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
-              className="w-full max-w-[480px] aspect-[4/3] border border-zinc-800/80 rounded-xl flex flex-col justify-center items-center p-6 bg-zinc-900/10 backdrop-blur-md relative overflow-hidden shadow-2xl"
+              className="w-full max-w-full max-w-[480px] aspect-[4/3] border border-zinc-800/80 rounded-xl flex flex-col justify-center items-center p-6 bg-zinc-900/10 backdrop-blur-md relative overflow-hidden shadow-2xl"
             >
               {/* Corner HUD markers */}
               <div className="absolute top-4 left-4 text-[8px] font-mono text-slate-600">// SCANNING_CIRCUIT: ACTIVE</div>
@@ -147,7 +147,7 @@ export const About: React.FC = () => {
                   RC CAR RACING SCHEMATIC
                 </span>
                 <div className="h-[1px] w-24 bg-zinc-800 mx-auto mb-3" />
-                <p className="text-[10px] text-sky-400 font-bold leading-relaxed max-w-[320px] mx-auto flex items-center justify-center gap-1.5">
+                <p className="text-[10px] text-sky-400 font-bold leading-relaxed max-w-full max-w-[320px] mx-auto flex items-center justify-center gap-1.5">
                   <Gauge className="h-3 w-3 animate-spin" style={{ animationDuration: '3s' }} />
                   SPEED TRAIL • 17 OBSTACLE CORRIDORS • 2 ROUNDS
                 </p>

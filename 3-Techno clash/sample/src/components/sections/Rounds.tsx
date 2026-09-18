@@ -37,7 +37,7 @@ export const Rounds: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-400 font-mono text-xs mb-3 shadow-[0_0_15px_rgba(112,0,255,0.2)]">
             <Sparkles className="w-3.5 h-3.5" /> STAGE 01
           </div>
-          <h2 className="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h2 className="font-mono text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {r1.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-500">— {r1.mainTitle}</span>
           </h2>
           <p className="text-slate-300 text-sm font-mono mt-3 leading-relaxed max-w-2xl mx-auto">
@@ -76,7 +76,7 @@ export const Rounds: React.FC = () => {
         </div>
 
         {/* 6 INTERACTIVE CHALLENGE MODULES */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-3 gap-6">
           {r1.challenges.map((challenge) => {
             const isExpanded = expandedId === challenge.id;
 

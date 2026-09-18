@@ -7,7 +7,7 @@ export const Judging: React.FC = () => {
   return (
     <section id="judging" className="py-24 bg-transparent relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-racing opacity-[0.02] pointer-events-none" />
-      <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-full max-w-[350px] h-[350px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader

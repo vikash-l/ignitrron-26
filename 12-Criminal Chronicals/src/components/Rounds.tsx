@@ -12,7 +12,7 @@ export const Rounds: React.FC = () => {
     <section id="rounds" className="relative py-24 bg-[#050505] overflow-hidden">
       {/* Background Grid & Red Glow */}
       <div className="absolute inset-0 bg-forensic-grid opacity-20 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[500px] bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -23,7 +23,7 @@ export const Rounds: React.FC = () => {
             <span>INVESTIGATION PROGRESSION</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-white uppercase">
             THREE ROUNDS. <span className="text-[#e31b23]">ONE CASE.</span>
           </h2>
 
@@ -89,7 +89,7 @@ export const Rounds: React.FC = () => {
 
                     {/* Round Title */}
                     <div>
-                      <h3 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
+                      <h3 className="font-heading font-black text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight">
                         # {round.title}
                       </h3>
                       <p className="text-[#e31b23] font-mono text-xs italic mt-1">

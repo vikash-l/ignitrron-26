@@ -44,9 +44,9 @@ export const AIGuideAssistant: React.FC = () => {
       if (lower.includes('round') || lower.includes('stage')) {
         reply = "We have 4 intense rounds: Round 1 (Rapid Fire), Round 2 (Visual Schematic Scan), Round 3 (Live Buzzer Battle), and Round 4 (Grand Tech Puzzle).";
       } else if (lower.includes('prize') || lower.includes('win') || lower.includes('cash')) {
-        reply = "The prize pool is ₹1,00,000! Grand Champions receive ₹50,000 + Trophy + Incubation Vouchers!";
-      } else if (lower.includes('register') || lower.includes('sign up') || lower.includes('fee')) {
-        reply = "Registration is completely FREE for college student teams (2-3 members). Click 'REGISTER NOW' to get your holographic pass!";
+        reply = "Total cash prize pool is ₹6,000! 1st Prize: ₹3,000, 2nd Prize: ₹2,000, and 3rd Prize: ₹1,000!";
+      } else if (lower.includes('register') || lower.includes('sign up') || lower.includes('fee') || lower.includes('team')) {
+        reply = "Registration is completely FREE for college student teams (2 members). Click 'REGISTER NOW' to get your holographic pass!";
       } else if (lower.includes('who') || lower.includes('nexa') || lower.includes('you')) {
         reply = "I'm NEXA, a futuristic tech prodigy and the lead engineer who built the TECHNO CLASH evaluation neural grid!";
       }
@@ -84,7 +84,7 @@ export const AIGuideAssistant: React.FC = () => {
 
       {/* Interactive AI Guide Modal/Drawer */}
       {isOpen && (
-        <div className="w-[92vw] sm:w-[400px] h-[520px] bg-[#070c20]/95 border border-cyan-500/40 rounded-2xl shadow-[0_0_50px_rgba(0,240,255,0.25)] backdrop-blur-xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5">
+        <div className="w-[92vw] sm:w-full max-w-[400px] h-[520px] bg-[#070c20]/95 border border-cyan-500/40 rounded-2xl shadow-[0_0_50px_rgba(0,240,255,0.25)] backdrop-blur-xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5">
           {/* Header */}
           <div className="bg-slate-900/90 border-b border-cyan-500/30 p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">

@@ -42,17 +42,21 @@ export function MainCanvas({
     scene.fog = new THREE.FogExp2('#020605', 0.012);
     sceneRef.current = scene;
 
-    const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 200);
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+    const fov = isMobile ? 70 : (isTablet ? 65 : 55);
+
+    const camera = new THREE.PerspectiveCamera(fov, width / height, 0.1, 200);
     camera.position.set(0, 2, 28);
     cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({
-      antialias: true,
+      antialias: !isMobile,
       alpha: false,
       powerPreference: 'high-performance'
     });
     renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.3;
     rendererRef.current = renderer;
@@ -74,6 +78,10 @@ export function MainCanvas({
       if (!containerRef.current || !rendererRef.current || !cameraRef.current) return;
       const w = containerRef.current.clientWidth;
       const h = containerRef.current.clientHeight;
+      const isMobileNow = w <= 768;
+      const isTabletNow = w > 768 && w <= 1024;
+      
+      cameraRef.current.fov = isMobileNow ? 70 : (isTabletNow ? 65 : 55);
       cameraRef.current.aspect = w / h;
       cameraRef.current.updateProjectionMatrix();
       rendererRef.current.setSize(w, h);

@@ -48,10 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Logo & Name */}
-          <a
-            href="#hero"
-            onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-red-500/50 rounded-lg p-1"
+          <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-red-500/50 rounded-lg p-1 no-underline"
           >
             <div className="relative w-9 h-9 rounded-lg bg-black border border-red-900/40 flex items-center justify-center group-hover:border-[#e31b23] group-hover:shadow-[0_0_15px_rgba(227,27,35,0.4)] transition-all">
               <Radio className="w-5 h-5 text-[#e31b23] group-hover:scale-110 transition-transform" />
@@ -92,6 +89,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           <div className="hidden md:flex items-center gap-3">
             <a
               href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-mono font-bold tracking-wider text-white bg-gradient-to-r from-[#8b0000] via-[#c1121f] to-[#e31b23] hover:from-[#c1121f] hover:to-[#e31b23] transition-all duration-300 shadow-[0_0_20px_rgba(227,27,35,0.4)] hover:shadow-[0_0_30px_rgba(227,27,35,0.7)] hover:scale-102 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               <span>REGISTER NOW</span>

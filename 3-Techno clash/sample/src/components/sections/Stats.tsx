@@ -7,7 +7,7 @@ export const Stats: React.FC = () => {
   return (
     <section id="stats" className="py-16 bg-slate-950 relative border-y border-cyan-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {eventData.stats.map((stat, index) => (
             <div 
               key={index}

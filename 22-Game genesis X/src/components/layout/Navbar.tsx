@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { EventConfig, SectionKey } from '../../types/event';
+import inZerosLogo from '../../assets/inzeros_logo.png';
 
 interface NavbarProps {
   event: EventConfig;
@@ -43,13 +44,17 @@ export const Navbar: React.FC<NavbarProps> = ({ event }) => {
         <div className="flex items-center justify-between">
           
           {/* Left: Event Identity */}
-          <a href="#hero" className="flex items-center gap-2 group">
-            <span className="font-display font-extrabold text-lg md:text-xl tracking-tight text-white uppercase">
+          <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" className="flex items-center gap-2.5 sm:gap-3 group no-underline">
+            <span className="font-display font-extrabold text-base sm:text-lg md:text-xl tracking-tight text-white uppercase">
               GAME GENESIS X
             </span>
-            <span className="text-[#E626FF] font-mono text-[11px] font-bold px-2 py-0.5 rounded bg-[#140A15]">
-              IN.ZEROS
-            </span>
+            <div className="border-l border-[#8F26FF]/40 pl-2.5 sm:pl-3 flex items-center">
+              <img 
+                src={inZerosLogo} 
+                alt="IN.ZEROS Logo" 
+                className="h-6 sm:h-7 md:h-8 w-auto object-contain max-w-[120px] sm:max-w-[150px]"
+              />
+            </div>
           </a>
 
           {/* Center: Clean Nav Links */}
@@ -70,6 +75,8 @@ export const Navbar: React.FC<NavbarProps> = ({ event }) => {
             <div className="hidden sm:block">
               <a
                 href={event.registration.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 bg-[#140A15] text-[#F8F5FC] hover:text-[#FF3BE6] font-mono font-bold text-xs rounded border border-[#8F26FF]/40 hover:border-[#E626FF] transition-all inline-flex items-center gap-1 cursor-pointer"
               >
                 <span>REGISTER</span>
@@ -116,6 +123,8 @@ export const Navbar: React.FC<NavbarProps> = ({ event }) => {
                 <div className="pt-3">
                   <a
                     href={event.registration.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
                     className="w-full py-2.5 bg-[#140A15] text-[#FF3BE6] border border-[#8F26FF]/40 font-mono font-bold text-xs rounded flex items-center justify-center gap-2 cursor-pointer"
                   >

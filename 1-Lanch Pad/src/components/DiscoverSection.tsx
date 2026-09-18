@@ -40,14 +40,14 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6 border-b-2 border-white/10 pb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-anton text-6xl md:text-8xl text-[#ff003c] leading-none drop-shadow-[4px_4px_0px_#00f0ff]">
+              <span className="font-anton text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-[#ff003c] leading-none drop-shadow-[4px_4px_0px_#00f0ff]">
                 01
               </span>
               <div className="flex flex-col">
                 <span className="font-space text-xs tracking-widest text-[#00f0ff] uppercase font-bold">
                   PHASE 01 — THE CREATIVE DOMAINS
                 </span>
-                <h2 className="font-anton text-4xl sm:text-6xl text-white tracking-wider uppercase">
+                <h2 className="font-anton text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-white tracking-wider uppercase">
                   DISCOVER
                 </h2>
               </div>
@@ -63,7 +63,7 @@ export const DiscoverSection: React.FC<DiscoverSectionProps> = ({
         </div>
 
         {/* Floating Comic Panels Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {DOMAINS_DATA.map((domain, index) => {
             const isSelected = selectedDomain?.id === domain.id;
             const isHovered = hoveredId === domain.id;

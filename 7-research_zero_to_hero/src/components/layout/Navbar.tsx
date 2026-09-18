@@ -49,9 +49,9 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo / Icon 'E' next to Event Name */}
-          <div
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-3 cursor-pointer group"
+          <a
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+            className="flex items-center gap-3 cursor-pointer group no-underline"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-600 font-extrabold text-white text-lg transition-transform duration-200 group-hover:scale-105">
               🔬
@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
             <span className="text-lg sm:text-xl font-bold tracking-wider text-white">
               {eventData.name}
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -79,7 +79,9 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
             <div className="hidden lg:block">
               <a
                 href={eventData.registration.url}
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/25 transition-all active:scale-[0.98] cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/25 transition-all active:scale-[0.98] cursor-pointer no-underline"
               >
                 {eventData.registration.label} &nbsp; ↗
               </a>
@@ -123,7 +125,9 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
                 <div className="pt-4 px-3">
                   <a
                     href={eventData.registration.url}
-                    className="flex w-full items-center justify-center px-4 py-3 text-base font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center px-4 py-3 text-base font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all cursor-pointer no-underline"
                   >
                     {eventData.registration.label} &nbsp; ↗
                   </a>

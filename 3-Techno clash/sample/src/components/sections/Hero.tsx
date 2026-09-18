@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
 
             {/* Main Title */}
             <div>
-              <h1 className="font-mono text-5xl sm:text-6xl xl:text-7xl font-black tracking-tight text-white leading-none">
+              <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl xl:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
                 TECHNO <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 text-glow-cyan">
                   CLASH
@@ -99,17 +99,17 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={() => {
-                  sound.playClick();
-                  onRegisterClick();
-                }}
+              <a
+                href="https://www.theticket9.com/event/ignitrron-26"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => sound.playClick()}
                 onMouseEnter={() => sound.playHover()}
-                className="group relative px-7 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-slate-950 font-mono font-black text-sm shadow-[0_0_35px_rgba(0,240,255,0.4)] transition-all transform hover:scale-105 flex items-center gap-3"
+                className="group relative px-7 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-slate-950 font-mono font-black text-sm shadow-[0_0_35px_rgba(0,240,255,0.4)] transition-all transform hover:scale-105 flex items-center gap-3 no-underline"
               >
                 <span className="text-white">REGISTER NOW</span>
                 <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition" />
-              </button>
+              </a>
 
               <button
                 onClick={() => {
@@ -129,7 +129,7 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             
             {/* TECHNO CORE */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <svg className="w-[480px] h-[480px] opacity-70 animate-spin-slow" viewBox="0 0 500 500">
+              <svg className="w-full max-w-[480px] h-[480px] opacity-70 animate-spin-slow" viewBox="0 0 500 500">
                 <circle cx="250" cy="250" r="230" stroke="#00F0FF" strokeWidth="1.5" fill="none" strokeDasharray="12 8" />
                 <circle cx="250" cy="250" r="180" stroke="#7000FF" strokeWidth="2" fill="none" strokeDasharray="40 15" className="animate-spin-reverse" />
                 <circle cx="250" cy="250" r="130" stroke="#00F0FF" strokeWidth="1" fill="none" strokeDasharray="6 4" />
@@ -143,7 +143,7 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             {/* Character Image Box */}
             <motion.div 
               style={{ x: mousePos.x, y: mousePos.y }}
-              className="relative z-20 w-full max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden border-2 border-cyan-400/60 shadow-[0_0_60px_rgba(0,240,255,0.35)] glass-hud group"
+              className="relative z-20 w-full max-w-full max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden border-2 border-cyan-400/60 shadow-[0_0_60px_rgba(0,240,255,0.35)] glass-hud group"
             >
               <img 
                 src={eventData.character.avatar} 

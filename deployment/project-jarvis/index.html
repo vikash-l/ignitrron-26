@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>PROJECT J.A.R.V.I.S. — IGNITRRON'26 | 24-Hour Software Hackathon</title>
+  <meta name="description" content="IGNITRRON'26 presents PROJECT J.A.R.V.I.S. — 24-Hour Software Hackathon on 18–19 September 2026 at KPR Institute of Engineering and Technology with ₹50,000 Total Bounty.">
+  
+  <!-- Premium Cinematic Stark Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Caveat:wght@600;700&family=Bebas+Neue&family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800;900&family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=20260824_15">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  STARK CURSOR SYSTEM (MODEL: S.C.S v2.0.26 - 3D METALLIC)      -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="stark-cursor" aria-hidden="true">
+    <!-- Authentic 3D Metallic Titanium Gold & Obsidian Stark Arrowhead -->
+    <img src="stark_arrowhead.png" alt="Stark Cursor" class="sc-pointer-3d" />
+
+    <!-- Biometric Fingerprint Cursor Mode -->
+    <svg class="sc-fingerprint-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+      <path d="M32 8 C20 8 12 16 12 28 C12 38 18 48 24 56" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 14 C23 14 17 21 17 30 C17 40 22 48 28 54" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 20 C26 20 22 25 22 32 C22 40 26 46 30 50" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 26 C28 26 26 29 26 34 C26 40 29 44 32 46" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 8 C44 8 52 16 52 28 C52 38 46 48 40 56" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 14 C41 14 47 21 47 30 C47 40 42 48 36 54" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 20 C38 20 42 25 42 32 C42 40 38 46 34 50" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M32 26 C36 26 38 29 38 34 C38 40 35 44 32 46" stroke-width="2.6" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Adaptive Hologram Reticle & Circuit HUD Ring -->
+    <div class="sc-energy-frame">
+      <div class="sc-reticle-ring"></div>
+      <div class="sc-reticle-dashed"></div>
+      <div class="sc-brackets">
+        <span class="sc-b sc-b-tl"></span>
+        <span class="sc-b sc-b-tr"></span>
+        <span class="sc-b sc-b-br"></span>
+        <span class="sc-b sc-b-bl"></span>
+      </div>
+    </div>
+
+    <!-- Dynamic HUD Label Badge -->
+    <div class="sc-hud-label" id="sc-hud-label">
+      <span class="sc-hud-dot"></span>
+      <span class="sc-hud-text" id="sc-hud-text">TARGET ACQUIRED</span>
+    </div>
+
+    <!-- Click Shockwave Bloom -->
+    <div class="sc-click-shockwave"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  CINEMATIC LANDING: "PROOF THAT TONY STARK HAS A HEART"        -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="stark-heart-landing" class="stark-heart-landing" role="dialog" aria-label="Intro Sequence">
+    <!-- Top Experience Recommendation Notice (Pure Text) -->
+    <div class="shl-top-notice" id="shl-top-notice">USE LAPTOP FOR THE BEST EXPERIENCE</div>
+
+    <!-- Left Split Shutter -->
+    <div class="shl-shutter shl-shutter-left" id="shl-shutter-left">
+      <div class="shl-half-image-wrap shl-left-wrap">
+        <img src="assets/stark_heart_arc_reactor.jpg" alt="Proof that Tony Stark has a Heart - Left" class="shl-arc-img" />
+      </div>
+    </div>
+    
+    <!-- Right Split Shutter -->
+    <div class="shl-shutter shl-shutter-right" id="shl-shutter-right">
+      <div class="shl-half-image-wrap shl-right-wrap">
+        <img src="assets/stark_heart_arc_reactor.jpg" alt="Proof that Tony Stark has a Heart - Right" class="shl-arc-img" />
+      </div>
+    </div>
+
+    <!-- Center Laser Slicing Beam -->
+    <div class="shl-laser-cut" id="shl-laser-cut">
+      <div class="shl-laser-beam"></div>
+      <div class="shl-laser-flare"></div>
+    </div>
+
+    <!-- Ambient Heart Pulse & Atmospheric Vignette -->
+    <div class="shl-heart-pulse" id="shl-heart-pulse"></div>
+
+    <!-- Subtle HUD Initialization Prompt -->
+    <div class="shl-prompt-container font-mono" id="shl-prompt-container">
+      <div class="shl-pulse-ring"></div>
+      <span class="shl-prompt-label">CLICK OR PRESS ANY KEY TO INITIALIZE // J.A.R.V.I.S. PROTOCOL</span>
+    </div>
+  </div>
+
+  <!-- Dedicated High-Speed Red Energy Trail Canvas -->
+  <canvas id="cursor-trail-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  INTERACTIVE CANVAS BACKGROUND (PARTICLES + CURSOR REPULSION)  -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <canvas id="interactive-canvas" aria-hidden="true"></canvas>
+  <div class="cinema-spotlight-top" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  TOP NAVIGATION BAR                                            -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <header class="cinema-header">
+    <div class="ch-container">
+      <a href="#scene-hero" class="ch-brand">
+        <div class="ch-brand-text">
+          <span class="cbt-title">PROJECT <span class="text-gold">J.A.R.V.I.S.</span></span>
+          <span class="cbt-sub">IGNITRRON'26 · 24-HOUR HACKATHON</span>
+        </div>
+      </a>
+
+      <nav class="ch-nav" aria-label="Main Navigation">
+        <a href="#scene-hero" class="ch-link is-active">PROLOGUE</a>
+        <a href="#scene-about" class="ch-link">DOSSIER</a>
+        <a href="#scene-domains" class="ch-link">DOMAINS</a>
+        <a href="#scene-timeline" class="ch-link">TIMELINE</a>
+        <a href="#scene-vault" class="ch-link">HALL OF ARMOR</a>
+        <a href="#scene-mission-id" class="ch-link">MISSION ID</a>
+        <a href="#scene-ask-jarvis" class="ch-link">ASK J.A.R.V.I.S.</a>
+        <a href="#scene-coordinators" class="ch-link">COORDINATORS</a>
+      </nav>
+
+      <div class="ch-actions">
+        <button class="btn-audio-icon" id="btn-audio" title="Toggle Sound FX" aria-label="Toggle Sound FX">
+          <span id="audio-icon">🔊</span>
+        </button>
+        <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-ch-suitup">
+          <span>SUIT UP ↗</span>
+        </a>
+        <button class="ch-hamburger" id="ch-hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="ch-bar"></span>
+          <span class="ch-bar"></span>
+          <span class="ch-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Drawer Navigation -->
+    <div class="ch-mobile-drawer" id="ch-mobile-drawer" aria-hidden="true">
+      <div class="ch-drawer-backdrop" id="ch-drawer-backdrop"></div>
+      <div class="ch-drawer-panel">
+        <div class="ch-drawer-header">
+          <div class="ch-brand-text">
+            <span class="cbt-title">PROJECT <span class="text-gold">J.A.R.V.I.S.</span></span>
+            <span class="cbt-sub">TACTICAL NAVIGATION</span>
+          </div>
+          <button class="ch-drawer-close" id="ch-drawer-close" aria-label="Close Menu">✕</button>
+        </div>
+        <nav class="ch-drawer-nav font-mono">
+          <a href="#scene-hero" class="ch-drawer-link is-active"><span class="cdl-num">01</span> PROLOGUE</a>
+          <a href="#scene-about" class="ch-drawer-link"><span class="cdl-num">02</span> DOSSIER</a>
+          <a href="#scene-domains" class="ch-drawer-link"><span class="cdl-num">03</span> DOMAINS</a>
+          <a href="#scene-timeline" class="ch-drawer-link"><span class="cdl-num">04</span> TIMELINE</a>
+          <a href="#scene-vault" class="ch-drawer-link"><span class="cdl-num">05</span> HALL OF ARMOR</a>
+          <a href="#scene-mission-id" class="ch-drawer-link"><span class="cdl-num">06</span> MISSION ID</a>
+          <a href="#scene-ask-jarvis" class="ch-drawer-link"><span class="cdl-num">07</span> ASK J.A.R.V.I.S.</a>
+          <a href="#scene-coordinators" class="ch-drawer-link"><span class="cdl-num">08</span> COORDINATORS</a>
+        </nav>
+        <div class="ch-drawer-footer">
+          <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-drawer-suitup font-cinzel">
+            SUIT UP FOR BATTLE ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SCENE PAGINATION DOCK -->
+  <aside class="scene-pagination-dock" aria-label="Scene Pagination">
+    <a href="#scene-hero" class="spd-dot is-active" data-scene="hero" title="01 // Prologue"><span class="spd-label">01 PROLOGUE</span></a>
+    <a href="#scene-about" class="spd-dot" data-scene="about" title="02 // Dossier"><span class="spd-label">02 DOSSIER</span></a>
+    <a href="#scene-domains" class="spd-dot" data-scene="domains" title="03 // Domains"><span class="spd-label">03 DOMAINS</span></a>
+    <a href="#scene-timeline" class="spd-dot" data-scene="timeline" title="04 // Timeline"><span class="spd-label">04 TIMELINE</span></a>
+    <a href="#scene-vault" class="spd-dot" data-scene="vault" title="05 // Hall of Armor"><span class="spd-label">05 HALL OF ARMOR</span></a>
+    <a href="#scene-mission-id" class="spd-dot" data-scene="mission-id" title="06 // Mission ID"><span class="spd-label">06 MISSION ID</span></a>
+    <a href="#scene-ask-jarvis" class="spd-dot" data-scene="ask-jarvis" title="07 // Ask JARVIS"><span class="spd-label">07 ASK J.A.R.V.I.S.</span></a>
+    <a href="#scene-coordinators" class="spd-dot" data-scene="coordinators" title="08 // Coordinators"><span class="spd-label">08 COMMS</span></a>
+  </aside>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  MAIN SCENES WRAPPER                                           -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <main class="cinema-scenes-wrapper">
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 01: PROLOGUE (HERO OPENING - IRON MAN ARMOR GANTRY)     -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-hero" id="scene-hero">
+      <div class="hero-cinematic-bg-layer" id="hero-bg-layer"></div>
+      <div class="hero-reactor-glow-lens" id="hero-reactor-glow"></div>
+      <canvas id="hero-energy-canvas" class="hero-energy-canvas"></canvas>
+      <div class="hero-cursor-energy-light" id="hero-cursor-light"></div>
+      <div class="hero-atmospheric-fog"></div>
+      <div class="hero-reactor-bg-overlay"></div>
+
+      <div class="scene-container hero-stark-layout" id="hero-interactive-stage">
+        
+        <!-- LEFT DOCK: High-Budget Stark Technology Console -->
+        <div class="hero-left-dock" id="hero-left-dock">
+          
+          <!-- Small Elegant Status Line -->
+          <div class="hero-status-line">
+            <span class="hsl-dot"></span>
+            <span class="hsl-label">IGNITRRON'26 PRESENTS</span>
+            <span class="hsl-sep">//</span>
+            <span class="hsl-code">STARK OS v2.0.26</span>
+          </div>
+
+          <!-- Main Title Hub with Minimal Futuristic Reticle -->
+          <div class="hero-title-hud-box" id="hero-title-hud">
+            <div class="hth-bracket hth-bracket--tl"></div>
+            <div class="hth-bracket hth-bracket--tr"></div>
+            <div class="hth-bracket hth-bracket--bl"></div>
+            <div class="hth-bracket hth-bracket--br"></div>
+            <div class="hth-reticle-crosshair"></div>
+            
+            <h1 class="hero-brand-project">PROJECT</h1>
+            <div class="hero-brand-jarvis">J.A.R.V.I.S.</div>
+          </div>
+
+          <div class="hero-brand-sub">24-HOUR SOFTWARE HACKATHON</div>
+
+          <!-- 3 Compact Interactive Stark HUD Modules -->
+          <div class="hero-hud-modules" id="hero-hud-modules">
+            
+            <!-- Module 1: Date -->
+            <div class="stark-hud-mod" data-mod="date">
+              <div class="shm-scan-sweep"></div>
+              <div class="shm-bracket shm-bracket--tl"></div>
+              <div class="shm-bracket shm-bracket--br"></div>
+              <div class="shm-header">
+                <span class="shm-tag">TIMEFRAME</span>
+                <span class="shm-status">SYNCHRONIZED</span>
+              </div>
+              <div class="shm-main">
+                <span class="shm-icon">📅</span>
+                <span class="shm-value">18–19 SEPT 2026</span>
+              </div>
+              <div class="shm-expanded">24-HOUR NON-STOP SPRINT</div>
+            </div>
+
+            <!-- Module 2: Venue -->
+            <div class="stark-hud-mod" data-mod="venue">
+              <div class="shm-scan-sweep"></div>
+              <div class="shm-bracket shm-bracket--tl"></div>
+              <div class="shm-bracket shm-bracket--br"></div>
+              <div class="shm-header">
+                <span class="shm-tag">SECTOR // LOC</span>
+                <span class="shm-status">SECURE FACILITY</span>
+              </div>
+              <div class="shm-main">
+                <span class="shm-icon">📍</span>
+                <span class="shm-value">KPRIET · CBE</span>
+              </div>
+              <div class="shm-expanded">KPR INSTITUTE OF ENGG &amp; TECH</div>
+            </div>
+
+            <!-- Module 3: Prize Pool -->
+            <div class="stark-hud-mod stark-hud-mod--bounty" data-mod="bounty">
+              <div class="shm-scan-sweep"></div>
+              <div class="shm-bracket shm-bracket--tl"></div>
+              <div class="shm-bracket shm-bracket--br"></div>
+              <div class="shm-header">
+                <span class="shm-tag">BOUNTY VAULT</span>
+                <span class="shm-status text-gold">CONFIRMED</span>
+              </div>
+              <div class="shm-main">
+                <span class="shm-icon">🏆</span>
+                <span class="shm-value text-gold">₹50,000 PRIZE POOL</span>
+              </div>
+              <div class="shm-expanded">4 REWARD BOUNTY TIERS</div>
+            </div>
+
+          </div>
+
+          <!-- Actions CTA Group -->
+          <div class="hero-cta-group">
+            <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-stark-suitup" id="btn-hero-suitup">
+              <span class="btn-suitup-flare"></span>
+              <span class="btn-suitup-text">SUIT UP →</span>
+            </a>
+            <a href="#scene-about" class="btn-stark-mission" id="btn-hero-mission">
+              <span class="btn-mission-scan"></span>
+              <span class="btn-mission-text">ENTER THE MISSION</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 02: THE MISSION DOSSIER (GARBLED -> DECRYPT ON CLICK)   -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-about" id="scene-about">
+      <div class="dossier-cinematic-bg-layer" id="dossier-bg-layer"></div>
+      <div class="dossier-atmospheric-fog"></div>
+      <div class="dossier-cursor-spotlight" id="dossier-cursor-spotlight"></div>
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 02 // CLEARANCE LEVEL 10 PROTOCOL</div>
+          <h2 class="sh-title">MISSION DOSSIER</h2>
+          <div class="sh-gold-bar"></div>
+        </div>
+
+        <!-- Modular Decryption Security Control Bar -->
+        <div class="auth-terminal-header" id="auth-terminal-header">
+          <div class="ath-status">
+            <span class="ath-dot" id="auth-status-dot"></span>
+            <span id="auth-status-text">SECURITY PROTOCOL: ENCRYPTED // CLICK TO DECRYPT</span>
+          </div>
+          <button class="btn-auth-trigger" id="btn-auth-trigger">
+            <span id="auth-btn-icon">⚡</span> <span id="auth-btn-text">INITIALIZE DECRYPTION</span>
+          </button>
+        </div>
+
+        <!-- Modular Standalone Small Boxes Grid (No Big Outer Box!) -->
+        <div class="dossier-modular-grid" id="auth-dossier">
+          
+          <!-- Box 1: The Mission Brief Narrative Card -->
+          <div class="dossier-narrative-card">
+            <div class="dnc-corner-accent"></div>
+            <div class="dnc-clearance-tag text-gold" id="decrypt-tag">PROTOCOL J.A.R.V.I.S. // [ENCRYPTED]</div>
+            <h3 class="dnc-heading" id="decrypt-heading">THE MISSION BRIEF</h3>
+            <p class="dnc-paragraph decrypt-target is-garbled" id="decrypt-p1">
+              0x7F4A9C82 E10B94A7 88D3F921 CC4019AE 4B82AA10 99DF2104 38BF119C 00A7EC89 FB330214 77AC8901 22BE1089 54EF0012 99AA48BC 77DE1200 48CA9102 38AB8102 FF881023 BB108234 AA771092 55EE0019 11BC8840 99EF1120 77CA8821 44AB0019
+            </p>
+            <p class="dnc-paragraph decrypt-target is-garbled" id="decrypt-p2">
+              48FA0012 99CC77A1 33BE0019 77DE1200 11AC9902 FF441098 55EE0019 BB882104 22BE1089 77AC8901 00A7EC89 CC4019AE 88D3F921 4B82AA10 99DF2104 38BF119C 00A7EC89 FB330214 77AC8901 22BE1089 54EF0012 99AA48BC 77DE1200 48CA9102
+            </p>
+            <div class="dnc-stark-quote decrypt-target is-garbled" id="decrypt-quote">
+              “0x88FE10AA 99BC44A1 22DE0019 77AA0014 38BC1190”
+            </div>
+          </div>
+
+          <!-- Small Pillar Boxes (2x2 Standalone Glass Tiles) -->
+          <div class="dossier-pillars-grid">
+            <div class="pillar-card">
+              <div class="pc-icon">⚡</div>
+              <h4 class="pc-title decrypt-target is-garbled" id="p-title-1">0x7F // 24H_NONSTOP</h4>
+              <p class="pc-desc decrypt-target is-garbled" id="p-desc-1">0x88FE10AA 99BC44A1 22DE0019 77AA0014 38BC1190 55EE0019 BB108234 11AC9902 FF441098 77DE1200 48CA9102 38AB8102</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pc-icon">🛡️</div>
+              <h4 class="pc-title decrypt-target is-garbled" id="p-title-2">0x4B // SOFT_PURITY</h4>
+              <p class="pc-desc decrypt-target is-garbled" id="p-desc-2">48FA0012 99CC77A1 33BE0019 77DE1200 11AC9902 FF441098 55EE0019 BB882104 22BE1089 77AC8901 00A7EC89 CC4019AE</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pc-icon">🏆</div>
+              <h4 class="pc-title decrypt-target is-garbled" id="p-title-3">0x99 // BOUNTY_VAULT</h4>
+              <p class="pc-desc decrypt-target is-garbled" id="p-desc-3">CC4019AE 88D3F921 4B82AA10 99DF2104 38BF119C 00A7EC89 FB330214 77AC8901 22BE1089 54EF0012 99AA48BC 77DE1200</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pc-icon">👥</div>
+              <h4 class="pc-title decrypt-target is-garbled" id="p-title-4">0x33 // SQUAD_ARCH</h4>
+              <p class="pc-desc decrypt-target is-garbled" id="p-desc-4">99AA48BC 77DE1200 48CA9102 38AB8102 FF881023 BB108234 AA771092 55EE0019 11BC8840 99EF1120 77CA8821 44AB0019</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 03: J.A.R.V.I.S. // CORE SYSTEMS (SIDE BY SIDE)         -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-domains" id="scene-domains">
+      <div class="command-cinematic-bg-layer"></div>
+      <div class="command-atmospheric-fog"></div>
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 03 // BATTLEFIELD SECTORS</div>
+          <h2 class="sh-title">J.A.R.V.I.S. // CORE SYSTEMS</h2>
+          <div class="sh-gold-bar"></div>
+          <p class="sh-subtitle">
+            Five domains. Five systems. One mission. Select any domain on the left to stream sector telemetry on the right.
+          </p>
+        </div>
+
+        <!-- Side-by-Side Cockpit: 5 Domains Stack (Left) + Telemetry Workstation (Right) -->
+        <div class="core-systems-dual-cockpit">
+          
+          <!-- LEFT COLUMN: 5 Interactive Stark Domain Modules -->
+          <div class="cs-left-nav-stack">
+            
+            <!-- Domain 01 -->
+            <button class="cs-domain-btn is-active" data-domain-idx="0">
+              <div class="csb-glow-bar"></div>
+              <div class="csb-left">
+                <span class="csb-num text-gold">01</span>
+                <div class="csb-info">
+                  <span class="csb-title">AI &amp; AGENTS</span>
+                  <span class="csb-sub">AUTONOMOUS NEURAL MATRIX</span>
+                </div>
+              </div>
+              <div class="csb-status">
+                <span class="csb-dot"></span>
+                <span class="csb-status-text">ONLINE</span>
+              </div>
+            </button>
+
+            <!-- Domain 02 -->
+            <button class="cs-domain-btn" data-domain-idx="1">
+              <div class="csb-glow-bar"></div>
+              <div class="csb-left">
+                <span class="csb-num text-gold">02</span>
+                <div class="csb-info">
+                  <span class="csb-title">SMART INDUSTRY</span>
+                  <span class="csb-sub">ROBOTICS &amp; INDUSTRY 4.0</span>
+                </div>
+              </div>
+              <div class="csb-status">
+                <span class="csb-dot"></span>
+                <span class="csb-status-text">ONLINE</span>
+              </div>
+            </button>
+
+            <!-- Domain 03 -->
+            <button class="cs-domain-btn" data-domain-idx="2">
+              <div class="csb-glow-bar"></div>
+              <div class="csb-left">
+                <span class="csb-num text-gold">03</span>
+                <div class="csb-info">
+                  <span class="csb-title">SUSTAINABILITY</span>
+                  <span class="csb-sub">QUANTUM ECO-ENERGY GRID</span>
+                </div>
+              </div>
+              <div class="csb-status">
+                <span class="csb-dot"></span>
+                <span class="csb-status-text">ONLINE</span>
+              </div>
+            </button>
+
+            <!-- Domain 04 -->
+            <button class="cs-domain-btn" data-domain-idx="3">
+              <div class="csb-glow-bar"></div>
+              <div class="csb-left">
+                <span class="csb-num text-gold">04</span>
+                <div class="csb-info">
+                  <span class="csb-title">HEALTHCARE</span>
+                  <span class="csb-sub">BIOMETRIC &amp; MEDICAL AI</span>
+                </div>
+              </div>
+              <div class="csb-status">
+                <span class="csb-dot"></span>
+                <span class="csb-status-text">ONLINE</span>
+              </div>
+            </button>
+
+            <!-- Domain 05 -->
+            <button class="cs-domain-btn" data-domain-idx="4">
+              <div class="csb-glow-bar"></div>
+              <div class="csb-left">
+                <span class="csb-num text-gold">05</span>
+                <div class="csb-info">
+                  <span class="csb-title">FINTECH &amp; CYBER</span>
+                  <span class="csb-sub">QUANTUM CRYPTO VAULT</span>
+                </div>
+              </div>
+              <div class="csb-status">
+                <span class="csb-dot"></span>
+                <span class="csb-status-text">ONLINE</span>
+              </div>
+            </button>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Dynamic Telemetry Workstation Panel -->
+          <div class="cs-right-telemetry-dock">
+            <div class="stark-telemetry-workstation" id="stark-telemetry-workstation">
+              
+              <!-- Corner Brackets -->
+              <div class="ssc-bracket ssc-bracket--tl"></div>
+              <div class="ssc-bracket ssc-bracket--tr"></div>
+              <div class="ssc-bracket ssc-bracket--bl"></div>
+              <div class="ssc-bracket ssc-bracket--br"></div>
+              <div class="ssc-scanlines"></div>
+
+              <!-- Header Bar -->
+              <div class="stw-header">
+                <div class="stw-tag-group">
+                  <span class="stw-sector-badge text-gold" id="stw-sector-badge">SECTOR 01 // TELEMETRY ACTIVE</span>
+                  <span class="stw-tag text-cyan" id="stw-tag">AI &amp; AGENTS</span>
+                </div>
+                <div class="ssc-status-badge">
+                  <span class="ssc-pulse-dot ssc-pulse-dot--cyan"></span>
+                  <span id="stw-status-label">SYSTEM STATUS // ONLINE</span>
+                </div>
+              </div>
+
+
+
+              <!-- Domain Info -->
+              <div class="stw-body">
+                <h3 class="stw-title" id="stw-title">AI &amp; AGENTIC ARCHITECTURES</h3>
+                <p class="stw-desc" id="stw-desc">
+                  Autonomous multi-agent networks, computer vision pipelines, LLM reasoning engines, and self-orchestrating intelligent software systems that perceive, reason, and act.
+                </p>
+
+                <!-- Technical Telemetry Data Strip -->
+                <div class="ssc-telemetry-strip" id="stw-metrics">
+                  <div class="ssc-metric">
+                    <span class="sscm-label" id="m-lbl-1">LATENCY</span>
+                    <span class="sscm-val text-cyan" id="m-val-1">0.14ms</span>
+                  </div>
+                  <div class="ssc-metric">
+                    <span class="sscm-label" id="m-lbl-2">WEIGHTS</span>
+                    <span class="sscm-val text-gold" id="m-val-2">4.8B SWARM</span>
+                  </div>
+                  <div class="ssc-metric">
+                    <span class="sscm-label" id="m-lbl-3">CLEARANCE</span>
+                    <span class="sscm-val text-white" id="m-val-3">LVL-9 SECURE</span>
+                  </div>
+                </div>
+
+                <!-- Problem Statement Notice Box -->
+                <div class="stw-notice-box">
+                  <div class="snb-row">
+                    <span class="text-gold font-bold">CORE FOCUS:</span>
+                    <span id="stw-focus" class="text-silver">LLMs, Multi-Agent Swarms, Vision AI, Intelligent Automation</span>
+                  </div>
+                  <div class="snb-row">
+                    <span class="text-cyan font-bold">PS STATUS:</span>
+                    <span class="text-cyan">Sealed until 11:00 AM · 18 September 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Notice -->
+              <div class="stw-footer">
+                <div class="stw-directive">
+                  <span>PREFERENCE DIRECTIVE: Submit your 1st, 2nd, and 3rd domain preferences via the official Google Form provided after registration.</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 04: 24-HOUR MISSION TACTICAL MAP & INVESTIGATION LOG    -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-timeline" id="scene-timeline">
+      <div class="timeline-sticky-frame">
+        <div class="scene-container">
+          
+          <!-- Phase Jump HUD Navigation Bar -->
+          <div class="tmb-top-hud-bar">
+            <div class="tmb-status-badge">
+              <span class="tsb-pulse"></span>
+              <span class="tsb-text font-mono text-cyan" id="tmb-hud-status">24-HOUR MISSION ACTIVE // 09:00 AM</span>
+            </div>
+            
+            <div class="tmb-phase-tabs" role="tablist">
+              <button class="btn-tmb-tab is-active" data-phase-filter="all">ALL ROUTE</button>
+              <button class="btn-tmb-tab" data-phase-filter="day1">DAY 01</button>
+              <button class="btn-tmb-tab" data-phase-filter="night">NIGHT OPS</button>
+              <button class="btn-tmb-tab" data-phase-filter="day2">DAY 02</button>
+            </div>
+
+            <div class="tmb-progress-counter font-mono text-gold" id="tmb-progress-counter">
+              STOP 01 / 18
+            </div>
+          </div>
+
+          <!-- Framed Tactical Mission Board Box with Outside Flanks -->
+          <div class="tactical-board-outer-wrapper">
+            
+            <!-- OUTSIDE Left: IRON (Official 3D Metallic Title Font) -->
+            <div class="tmb-flank-label tmb-flank-left" aria-hidden="true">
+              <img src="assets/letters/ironman_letter_I.png" alt="I" class="im-title-letter" />
+              <img src="assets/letters/ironman_letter_R.png" alt="R" class="im-title-letter" />
+              <img src="assets/letters/ironman_letter_O.png" alt="O" class="im-title-letter" />
+              <img src="assets/letters/ironman_letter_N.png" alt="N" class="im-title-letter" />
+            </div>
+
+            <!-- Framed Tactical Mission Board Box (With Rotated Iron Man Background) -->
+            <div class="tactical-mission-board" id="tactical-mission-board">
+              
+              <!-- Metallic Frame Bezel & Corner Brackets -->
+              <div class="tmb-bezel-border"></div>
+              <div class="tmb-corner tmb-corner--tl"></div>
+              <div class="tmb-corner tmb-corner--tr"></div>
+              <div class="tmb-corner tmb-corner--bl"></div>
+              <div class="tmb-corner tmb-corner--br"></div>
+
+              <!-- Background Rotated Iron Man Split Artwork & Tactical Grid -->
+              <div class="tmb-map-backdrop" style="background-image: url('stark_timeline_map_bg.jpg');"></div>
+              <div class="tmb-grid-overlay"></div>
+              <div class="tmb-vignette-overlay"></div>
+
+              <!-- Header Title: MISSION LOG (Matching Reference Investigation Log Style) -->
+              <div class="tmb-header-block">
+                <h2 class="tmb-log-title">MISSION LOG</h2>
+                <div class="tmb-log-sub">24-HOUR SPRINT TRAJECTORY</div>
+                <div class="tmb-red-bar"></div>
+              </div>
+
+              <!-- Floating Active Milestone Card (Top Right, Matching Reference) -->
+              <div class="tmb-milestone-card" id="tmb-milestone-card">
+                <div class="tmc-header">
+                  <span class="tmc-stop-tag font-mono text-gold" id="tmc-stop-tag">STOP 1 OF 18</span>
+                  <span class="tmc-date-tag font-mono text-dim" id="tmc-date-tag">18 SEPT 2026</span>
+                </div>
+                <h3 class="tmc-title" id="tmc-title">Participant Arrival &amp; Registration</h3>
+                <div class="tmc-time-chip font-mono text-cyan" id="tmc-time-chip">09:00 AM</div>
+              </div>
+
+              <!-- Scroll Prompt Pill (Bottom Center, Matching Reference) -->
+              <div class="tmb-scroll-hint" id="tmb-scroll-hint">
+                <span class="tsh-text font-cinzel">scroll to trace the mission</span>
+                <span class="tsh-arrow">↓</span>
+              </div>
+
+              <!-- Continuous Flight Route SVG Canvas -->
+              <svg class="tmb-route-svg" id="tmb-route-svg" viewBox="0 0 1000 650" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="tmb-laser-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00D9FF" stop-opacity="1" />
+                    <stop offset="50%" stop-color="#fbbf24" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="1" />
+                  </linearGradient>
+                  <filter id="tmb-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3.5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path class="tmb-route-base" d="M 110 150 C 155.0 150.0, 155.0 120.0, 200 120 C 250.0 120.0, 250.0 160.0, 300 160 C 355.0 160.0, 355.0 125.0, 410 125 C 460.0 125.0, 460.0 175.0, 510 175 C 560.0 175.0, 560.0 240.0, 610 240 C 675.0 240.0, 675.0 310.0, 740 310 C 800.0 310.0, 800.0 330.0, 860 330 C 885.0 330.0, 885.0 420.0, 910 420 C 860.0 420.0, 860.0 445.0, 810 445 C 750.0 445.0, 750.0 410.0, 690 410 C 625.0 410.0, 625.0 370.0, 560 370 C 490.0 370.0, 490.0 420.0, 420 420 C 350.0 420.0, 350.0 375.0, 280 375 C 220.0 375.0, 220.0 420.0, 160 420 C 140.0 420.0, 140.0 540.0, 120 540 C 185.0 540.0, 185.0 565.0, 250 565 C 335.0 565.0, 335.0 560.0, 420 560" fill="none" stroke="rgba(255, 255, 255, 0.22)" stroke-width="2.5" stroke-dasharray="6, 6" />
+                <path id="tmb-route-active" class="tmb-route-active" d="M 110 150 C 155.0 150.0, 155.0 120.0, 200 120 C 250.0 120.0, 250.0 160.0, 300 160 C 355.0 160.0, 355.0 125.0, 410 125 C 460.0 125.0, 460.0 175.0, 510 175 C 560.0 175.0, 560.0 240.0, 610 240 C 675.0 240.0, 675.0 310.0, 740 310 C 800.0 310.0, 800.0 330.0, 860 330 C 885.0 330.0, 885.0 420.0, 910 420 C 860.0 420.0, 860.0 445.0, 810 445 C 750.0 445.0, 750.0 410.0, 690 410 C 625.0 410.0, 625.0 370.0, 560 370 C 490.0 370.0, 490.0 420.0, 420 420 C 350.0 420.0, 350.0 375.0, 280 375 C 220.0 375.0, 220.0 420.0, 160 420 C 140.0 420.0, 140.0 540.0, 120 540 C 185.0 540.0, 185.0 565.0, 250 565 C 335.0 565.0, 335.0 560.0, 420 560" fill="none" stroke="url(#tmb-laser-grad)" stroke-width="4" stroke-linecap="round" filter="url(#tmb-glow-filter)" />
+              </svg>
+
+              <!-- Particle Pulse Canvas Layer -->
+              <canvas id="tmb-particle-canvas" class="tmb-particle-canvas"></canvas>
+              <!-- Red Sparks & Confetti Celebration Canvas Layer -->
+              <canvas id="tmb-confetti-canvas" class="tmb-confetti-canvas"></canvas>
+
+              <!-- 18 Tactical Milestone Pins Layer -->
+              <div class="tmb-pins-layer" id="tmb-pins-layer">
+                <!-- Dynamically populated 18 pins with metallic finish & radar pulse -->
+              </div>
+
+            </div>
+
+            <!-- OUTSIDE Right: MAN (Official 3D Metallic Title Font) -->
+            <div class="tmb-flank-label tmb-flank-right" aria-hidden="true">
+              <img src="assets/letters/ironman_letter_M.png" alt="M" class="im-title-letter" />
+              <img src="assets/letters/ironman_letter_A.png" alt="A" class="im-title-letter" />
+              <img src="assets/letters/ironman_letter_N2.png" alt="N" class="im-title-letter" />
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  MISSION LOG CHRONICLES: NEXHACK-STYLE REFLECTIVE RIBBON        -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="scene-chronicles-gallery" id="scene-chronicles-gallery">
+      <!-- Living Shadow / Memory Vault Background System -->
+      <div class="gallery-vault-bg" id="gallery-vault-bg" aria-hidden="true">
+        <canvas class="gvb-canvas" id="gallery-vault-canvas"></canvas>
+        <div class="gvb-ambient-sheen" id="gvb-ambient-sheen"></div>
+        <div class="gvb-vignette-depth"></div>
+      </div>
+      
+      <!-- Infinite Floating Moving Character / Image Stream with Reflective Floor -->
+      <div class="nexhack-gallery-stage">
+        <div class="nexhack-marquee-viewport" id="nexhack-marquee-viewport">
+          <div class="nexhack-marquee-track" id="nexhack-marquee-track">
+            
+            <!-- SET 1 (10 Enhanced Operative Feeds) -->
+            <!-- 01: Mark I Cave Origin -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_10.png" alt="Mark I Cave Breakout" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 02: Mark IV Sunset -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_01.png" alt="Mark IV Sunset Deployment" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 03: Malibu R&D Workshop -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_02.png" alt="Malibu R&D Workshop" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 04: The Final Stand (Nano Gauntlet) -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_03.png" alt="Infinity Gauntlet Final Stand" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 05: Bleeding Edge Mark 50 -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_04.jpg" alt="Mark L Nanotech Battle" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 06: Repulsor Calibration -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_05.png" alt="Prototype Repulsor Calibration" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 07: Press Conference Declaration -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_06.png" alt="The Press Conference" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 08: Holographic Blueprint HUD -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_07.png" alt="Holographic Suit Interface" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 09: Gulmira Tactical Strike -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_08.png" alt="Gulmira Tactical Strike" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 10: Supersonic Raptor Intercept -->
+            <div class="nh-item">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_09.png" alt="Supersonic Flight Intercept" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- SET 2 (Duplicate for Seamless Infinite Marquee Loop) -->
+            <!-- 01: Mark I Cave Origin -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_10.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 02: Mark IV Sunset -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_01.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 03: Malibu R&D Workshop -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_02.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 04: The Final Stand (Nano Gauntlet) -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_03.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 05: Bleeding Edge Mark 50 -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_04.jpg" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 06: Repulsor Calibration -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_05.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 07: Press Conference Declaration -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_06.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 08: Holographic Blueprint HUD -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_07.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 09: Gulmira Tactical Strike -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_08.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- 10: Supersonic Raptor Intercept -->
+            <div class="nh-item" aria-hidden="true">
+              <div class="nh-image-wrap">
+                <img src="assets/gallery/gallery_09.png" alt="" class="nh-img" loading="lazy" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Reflective Floor Gradient Overlay -->
+        <div class="nexhack-floor-reflection" aria-hidden="true"></div>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 05: STARK SECURITY VAULT (HALL OF ARMOR BACKGROUND)    -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-vault" id="scene-vault">
+      <!-- Hall of Armor Cinematic Background Layer & Vignette Overlay -->
+      <div class="vault-cinematic-bg-layer" style="background-image: url('stark_vault_hall_of_armor_bg.jpg');"></div>
+      <div class="vault-atmospheric-fog"></div>
+
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 05 // ARMORY BOUNTY TIERS</div>
+          <h2 class="sh-title">STARK HALL OF ARMOR</h2>
+          <div class="sh-gold-bar"></div>
+        </div>
+
+        <!-- Monumental Prize Banner -->
+        <div class="bounty-monument-wrap">
+          <div class="bmw-sub">IGNITRRON'26 TOTAL PRIZE POOL</div>
+          <div class="bmw-amount">₹50,000</div>
+          <div class="bmw-tag">DISTRIBUTED ACROSS 4 REWARD TIERS</div>
+        </div>
+
+        <!-- 4 Armor Bounty Tier Cards (Directly Revealed with Structured Visual Hierarchy) -->
+        <div class="bounty-tiers-grid">
+          
+          <!-- 01 — STARK PRIME (Champion // 1st Place) -->
+          <div class="bounty-tier-card btc-card--prime" data-tier="1">
+            <div class="btc-card-inner">
+              <div class="btc-category font-mono text-cyan">CHAMPION // 1ST PLACE</div>
+              <h3 class="btc-title">STARK PRIME</h3>
+              <div class="btc-mission-tag font-mono text-gold">THE PRIME DIRECTIVE</div>
+              
+              <div class="btc-desc-wrap">
+                <p class="btc-desc">For the squad that went beyond solving the problem — delivering the strongest combination of bold innovation, technical execution, thoughtful design, and measurable real-world impact.</p>
+                <div class="btc-distinction font-mono text-cyan">This is the highest distinction of the mission.</div>
+              </div>
+              
+              <div class="btc-prize-block btc-prize--prime">
+                <div class="bpb-amount">₹15,000</div>
+                <div class="bpb-label font-mono">CASH BOUNTY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 — STARK ASCEND (Runner-Up // 2nd Place) -->
+          <div class="bounty-tier-card btc-card--ascend" data-tier="2">
+            <div class="btc-card-inner">
+              <div class="btc-category font-mono text-gold">RUNNER-UP // 2ND PLACE</div>
+              <h3 class="btc-title">STARK ASCEND</h3>
+              <div class="btc-mission-tag font-mono text-amber">SYSTEMS EXCELLENCE</div>
+              
+              <div class="btc-desc-wrap">
+                <p class="btc-desc">For the squad that demonstrated exceptional engineering depth — building a robust, scalable, and well-architected solution with the discipline to turn a prototype into something that could genuinely go further.</p>
+              </div>
+              
+              <div class="btc-prize-block btc-prize--ascend">
+                <div class="bpb-amount">₹10,000</div>
+                <div class="bpb-label font-mono">CASH BOUNTY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 — STARK FORGE (2nd Runner-Up // 3rd Place) -->
+          <div class="bounty-tier-card btc-card--forge" data-tier="3">
+            <div class="btc-card-inner">
+              <div class="btc-category font-mono text-cyan">2ND RUNNER-UP // 3RD PLACE</div>
+              <h3 class="btc-title">STARK FORGE</h3>
+              <div class="btc-mission-tag font-mono text-cyan">THE FORGE AWARD</div>
+              
+              <div class="btc-desc-wrap">
+                <p class="btc-desc">For the squad that transformed a complex challenge into an elegant solution — combining sharp problem-solving, intuitive experience, creative thinking, and seamless technical execution.</p>
+              </div>
+              
+              <div class="btc-prize-block btc-prize--forge">
+                <div class="bpb-amount">₹5,000</div>
+                <div class="bpb-label font-mono">CASH BOUNTY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 — STARK ELITE (Special Honors // 10 Winning Teams) -->
+          <div class="bounty-tier-card btc-card--elite" data-tier="4">
+            <div class="btc-card-inner">
+              <div class="btc-category font-mono text-gold">SPECIAL HONORS</div>
+              <h3 class="btc-title">STARK ELITE</h3>
+              
+              <!-- Prominent Feature: 10 WINNING TEAMS -->
+              <div class="btc-multi-team-feature">
+                <span class="bmtf-num font-cinzel">10</span>
+                <span class="bmtf-label font-mono">WINNING TEAMS</span>
+              </div>
+              
+              <div class="btc-mission-tag font-mono text-gold-dim">THE ELITE 10</div>
+              
+              <div class="btc-desc-wrap">
+                <p class="btc-desc">Ten exceptional squads will be recognised for achievements that stand apart across the mission — including AI Innovation, UI/UX, CleanTech, Cybersecurity, and Domain Excellence.</p>
+                <div class="btc-sub-prompt font-mono">Every recognised squad earns:</div>
+              </div>
+              
+              <div class="btc-prize-block btc-prize--elite">
+                <div class="bpb-amount">₹2,000</div>
+                <div class="bpb-label font-mono">CASH BOUNTY / TEAM</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Standard Operating Protocols -->
+        <div class="bounty-protocols-card">
+          <h3 class="bpc-title">HACKATHON PROTOCOLS &amp; EVALUATION CRITERIA</h3>
+          <div class="bpc-grid">
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">01</span>
+              <div><strong>Squad Size:</strong> 2 to 4 members. Solo participation is prohibited.</div>
+            </div>
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">02</span>
+              <div><strong>Software Only:</strong> 100% digital builds (Web, mobile, AI, APIs, cloud).</div>
+            </div>
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">03</span>
+              <div><strong>24-Hour Window:</strong> Development strictly within the 24-hour sprint.</div>
+            </div>
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">04</span>
+              <div><strong>Sealed PS:</strong> Problem statements remain sealed until 11:00 AM on 18 Sept.</div>
+            </div>
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">05</span>
+              <div><strong>Deliverables:</strong> Source code repository + live working demonstration.</div>
+            </div>
+            <div class="bpc-item">
+              <span class="bpc-num text-gold">06</span>
+              <div><strong>Judging:</strong> Innovation, Feasibility, Functionality, Architecture. Judges' decision final.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 06: MISSION ID // IDENTITY CONSOLE                      -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-mission-id" id="scene-mission-id">
+      <!-- J.A.R.V.I.S. Liquid Glass Interactive Background Engine -->
+      <div class="mid-liquid-glass-bg" id="mid-liquid-glass-bg" aria-hidden="true">
+        <!-- Layer 1 & 2: Dark Glass Texture Base -->
+        <div class="mlg-glass-base"></div>
+        <!-- Layer 3, 4, 6 & 7: Dynamic Canvas for Hidden Circuitry, Liquid Light Field & Trail -->
+        <canvas id="mid-liquid-glass-canvas" class="mlg-canvas"></canvas>
+        <!-- Layer 5: Large Abstract J.A.R.V.I.S. Identity Core Behind ID Card -->
+        <div class="mlg-identity-core" id="mlg-identity-core">
+          <div class="mlg-core-ring mlg-core-ring--outer"></div>
+          <div class="mlg-core-ring mlg-core-ring--mid"></div>
+          <div class="mlg-core-ring mlg-core-ring--inner"></div>
+          <div class="mlg-core-reticle"></div>
+          <div class="mlg-core-glow"></div>
+        </div>
+        <!-- Vignette & Depth Mask -->
+        <div class="mlg-vignette-layer"></div>
+      </div>
+
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 06 // IDENTITY CONSOLE</div>
+          <h2 class="sh-title">PARTICIPANT CREDENTIAL</h2>
+          <div class="sh-gold-bar"></div>
+          <p class="sh-subtitle">
+            Configure your participant profile, generate your official hackathon credential, and share your verified achievement on LinkedIn.
+          </p>
+        </div>
+
+        <!-- Dual Workspace: Details Entry (Left) + Big ID Credential & Guide (Right) -->
+        <div class="mission-id-cockpit">
+          
+          <!-- LEFT: Details Entry Form Terminal -->
+          <div class="mid-form-panel">
+            <div class="mid-panel-header">
+              <div class="mph-left">
+                <span class="mph-dot"></span>
+                <span class="mph-title font-mono text-cyan">PARTICIPANT CREDENTIAL</span>
+              </div>
+              <div class="mph-sync-badge font-mono" id="mid-sync-badge">
+                <span class="msb-dot"></span>
+                <span id="mid-sync-text">LIVE SYNC READY</span>
+              </div>
+            </div>
+
+            <form class="mid-form-body" id="mid-form" onsubmit="return false;">
+              
+              <!-- 01: Profile Photo Upload -->
+              <div class="mid-field-group">
+                <label class="mid-label font-mono">
+                  <span>01 // PARTICIPANT PHOTO</span>
+                  <span class="text-silver font-normal">(PORTRAIT 3:4 OR 1:1)</span>
+                </label>
+                <div class="mid-photo-upload-zone" id="mid-photo-zone">
+                  <input type="file" id="mid-photo-input" accept="image/*" class="mid-file-input" style="display:none;" aria-label="Upload Participant Photo">
+                  <div class="mpz-actions">
+                    <button type="button" class="btn-mpz-action" id="btn-upload-trigger">📷 CHOOSE PHOTO</button>
+                    <span class="mpz-filename font-mono" id="mpz-filename">NO FILE CHOSEN</span>
+                    <button type="button" class="btn-mpz-action btn-mpz-remove is-hidden" id="btn-remove-photo">✕ REMOVE</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 02: Full Name -->
+              <div class="mid-field-group">
+                <label class="mid-label font-mono" for="mid-input-name">02 // FULL NAME *</label>
+                <input type="text" id="mid-input-name" class="mid-input" placeholder="ENTER YOUR FULL NAME" maxlength="28" value="TONY STARK" required>
+              </div>
+
+              <!-- 03: Squad Name -->
+              <div class="mid-field-group">
+                <label class="mid-label font-mono" for="mid-input-team">03 // TEAM NAME *</label>
+                <input type="text" id="mid-input-team" class="mid-input" placeholder="ENTER YOUR TEAM NAME" maxlength="26" value="AVENGERS PRIME" required>
+              </div>
+
+              <!-- 04: Institution -->
+              <div class="mid-field-group">
+                <label class="mid-label font-mono" for="mid-input-inst">04 // INSTITUTION / ORGANIZATION *</label>
+                <input type="text" id="mid-input-inst" class="mid-input" placeholder="ENTER COLLEGE / ORGANIZATION" maxlength="42" value="STARK INDUSTRIES" required>
+              </div>
+
+              <!-- 05: Role -->
+              <div class="mid-field-group">
+                <label class="mid-label font-mono" for="mid-select-role">05 // PARTICIPANT ROLE *</label>
+                <select id="mid-select-role" class="mid-select">
+                  <option value="Participant" selected>Participant</option>
+                  <option value="Team Lead">Team Lead</option>
+                </select>
+              </div>
+
+              <!-- Action Bar -->
+              <div class="mid-form-actions">
+                <button type="button" class="btn-mid-generate font-mono" id="btn-generate-mission-id">
+                  <span class="bmg-icon">⚡</span>
+                  <span id="bmg-text">GENERATE CREDENTIAL</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- RIGHT: Big ID Section + Download + Create Credential Guide -->
+          <div class="mid-right-column">
+            
+            <!-- Large Holographic Ticket Credential Stage -->
+            <div class="mid-preview-wrapper" id="mid-preview-wrapper">
+              
+              <!-- Laser Scanner Line on Generation -->
+              <div class="mid-laser-sweep" id="mid-card-laser" aria-hidden="true"></div>
+
+              <!-- The Real-time Rendered Official Credential Card (Full Width Landscape Layout) -->
+              <div class="jarvis-mission-card jarvis-credential-landscape jarvis-ticket-card" id="jarvis-mission-card">
+                
+                <div class="jmc-corner-bracket jmc-cb--tl"></div>
+                <div class="jmc-corner-bracket jmc-cb--tr"></div>
+                <div class="jmc-corner-bracket jmc-cb--bl"></div>
+                <div class="jmc-corner-bracket jmc-cb--br"></div>
+
+                <!-- Card Body (Full Width) -->
+                <div class="jmc-card-body-full">
+                  
+                  <!-- Top Brand Header Bar with Verified Badge on Right -->
+                  <div class="jmc-top-bar">
+                    <div class="jmc-brand-header">
+                      <div class="jmc-brand-title font-cinzel">PROJECT <span class="text-gold">J.A.R.V.I.S.</span></div>
+                      <div class="jmc-brand-sub font-montserrat">IGNITRRON'26 · 24-HOUR SOFTWARE HACKATHON</div>
+                    </div>
+                    <div class="jmc-verified-badge font-montserrat">
+                      <span class="jmc-badge-dot"></span>
+                      <span>VERIFIED</span>
+                    </div>
+                  </div>
+
+                  <!-- Main Content Row: Large Photo (Left) + Event Hero & Identity (Right) -->
+                  <div class="jmc-main-row">
+                    
+                    <!-- Left: Large Rounded Photo Frame -->
+                    <div class="jmc-photo-col">
+                      <div class="jmc-photo-frame-landscape">
+                        <img id="jmc-display-photo" class="jmc-photo-img is-hidden" alt="Participant Headshot" src="">
+                        <!-- Default Professional Silhouette -->
+                        <div class="jmc-default-avatar-pro" id="jmc-default-avatar">
+                          <svg viewBox="0 0 100 100" class="jda-svg-pro" aria-hidden="true">
+                            <circle cx="50" cy="35" r="22" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M16 88 C16 63, 30 57, 50 57 C70 57, 84 63, 84 88" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="50" cy="35" r="8" fill="currentColor" opacity="0.25"/>
+                          </svg>
+                          <span class="jda-tag-pro font-montserrat">PARTICIPANT PHOTO</span>
+                        </div>
+                      </div>
+                      <div class="jmc-photo-subtag font-montserrat">OFFICIAL PARTICIPATION CARD</div>
+                    </div>
+
+                    <!-- Right: Event Hero + Participant Stack (Fills the rest of the ID) -->
+                    <div class="jmc-center-col">
+                      
+                      <!-- Event Hero Statement -->
+                      <div class="jmc-event-statement">
+                        <div class="jmc-script-tag">I'm Participating in</div>
+                        <h2 class="jmc-event-hero font-montserrat">IGNITRRON'26</h2>
+                        <div class="jmc-proj-hero font-cinzel">PROJECT <span class="text-gold">J.A.R.V.I.S.</span></div>
+                        <div class="jmc-hack-sub font-montserrat">24-HOUR SOFTWARE HACKATHON</div>
+                      </div>
+
+                      <!-- Cyan HUD Divider Line -->
+                      <div class="jmc-center-divider"></div>
+
+                      <!-- Participant Info -->
+                      <div class="jmc-center-identity">
+                        <h3 class="jmc-hero-name font-cinzel" id="jmc-card-name">TONY STARK</h3>
+                        
+                        <div class="jmc-role-badge-wrap">
+                          <span class="jmc-role-tag font-montserrat" id="jmc-card-role">PARTICIPANT</span>
+                        </div>
+
+                        <div class="jmc-team-line font-montserrat">
+                          <span class="jmc-team-prefix">TEAM:</span>
+                          <strong class="jmc-team-val text-gold" id="jmc-card-team">AVENGERS PRIME</strong>
+                        </div>
+
+                        <div class="jmc-inst-line font-montserrat" id="jmc-card-inst">
+                          STARK INDUSTRIES
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- Card Footer (Full Width with Reactor Centerpiece) -->
+                <div class="jmc-ticket-footer font-montserrat">
+                  <div class="jtf-left">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="jtf-building-svg">
+                      <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                      <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
+                      <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
+                      <path d="M10 6h4"></path>
+                      <path d="M10 10h4"></path>
+                      <path d="M10 14h4"></path>
+                      <path d="M10 18h4"></path>
+                    </svg>
+                    <div class="jtf-venue-info">
+                      <div class="jtf-date">18–19 SEPTEMBER 2026</div>
+                      <div class="jtf-inst">KPR INSTITUTE OF ENGINEERING AND TECHNOLOGY</div>
+                    </div>
+                  </div>
+
+                  <div class="jtf-center" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" class="jtf-reactor-svg">
+                      <circle cx="50" cy="50" r="44" fill="none" stroke="#00f0ff" stroke-width="3" opacity="0.8"/>
+                      <circle cx="50" cy="50" r="34" fill="none" stroke="#00f0ff" stroke-width="2" stroke-dasharray="6 4" opacity="0.9"/>
+                      <circle cx="50" cy="50" r="22" fill="#03152d" stroke="#00f0ff" stroke-width="3"/>
+                      <circle cx="50" cy="50" r="14" fill="#ffffff" stroke="#00f0ff" stroke-width="2"/>
+                      <g stroke="#00f0ff" stroke-width="2" opacity="0.85">
+                        <line x1="50" y1="16" x2="50" y2="28" />
+                        <line x1="50" y1="72" x2="50" y2="84" />
+                        <line x1="16" y1="50" x2="28" y2="50" />
+                        <line x1="72" y1="50" x2="84" y2="50" />
+                        <line x1="26" y1="26" x2="35" y2="35" />
+                        <line x1="65" y1="65" x2="74" y2="74" />
+                        <line x1="26" y1="74" x2="35" y2="65" />
+                        <line x1="65" y1="35" x2="74" y2="26" />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div class="jtf-right">
+                    <span class="text-cyan">PROJECT J.A.R.V.I.S.</span>
+                    <span class="jtf-slash"> // </span>
+                    <span class="text-gold">IGNITRRON'26</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Single Download Credential Action Button -->
+            <div class="mid-share-deck mid-share-single">
+              <button type="button" class="btn-mid-export btn-mid-download btn-mid-download-prominent" id="btn-mid-download">
+                <span class="bme-icon">📥</span>
+                <span class="font-mono">DOWNLOAD CREDENTIAL</span>
+              </button>
+            </div>
+
+            <!-- J.A.R.V.I.S. // CREATE YOUR CREDENTIAL Guide Below ID -->
+            <div class="mid-instructions-card">
+              <div class="mic-header font-mono">
+                <span class="mic-dot"></span>
+                <span class="mic-title">J.A.R.V.I.S. // CREATE YOUR CREDENTIAL</span>
+              </div>
+              
+              <div class="mic-steps-grid font-mono">
+                <div class="mic-step-item">
+                  <div class="mic-step-tag text-cyan font-bold">01 // UPLOAD</div>
+                  <div class="mic-step-desc">Add your profile photo and enter your participant details.</div>
+                </div>
+
+                <div class="mic-step-item">
+                  <div class="mic-step-tag text-cyan font-bold">02 // PERSONALIZE</div>
+                  <div class="mic-step-desc">Add your team name and select your participant role.</div>
+                </div>
+
+                <div class="mic-step-item">
+                  <div class="mic-step-tag text-cyan font-bold">03 // GENERATE</div>
+                  <div class="mic-step-desc">Create your official IGNITRRON'26 · Project J.A.R.V.I.S. participation card.</div>
+                </div>
+
+                <div class="mic-step-item">
+                  <div class="mic-step-tag text-cyan font-bold">04 // SHARE</div>
+                  <div class="mic-step-desc">Post your credential on LinkedIn and tag the official @Ignitrron KPRIET page to share your participation.</div>
+                </div>
+              </div>
+
+              <div class="mic-tagline font-mono text-gold">
+                YOUR MISSION. YOUR IDENTITY. YOUR BUILD.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 07: ASK J.A.R.V.I.S. (INTELLIGENCE & QUERY CONSOLE)     -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-ask-jarvis" id="scene-ask-jarvis">
+      <!-- Dedicated Cursor-Connected Constellation Particles Canvas -->
+      <canvas id="ask-jarvis-constellation-canvas" class="scene-constellation-canvas" aria-hidden="true"></canvas>
+
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 07 // INTELLIGENCE &amp; QUERY CONSOLE</div>
+          <h2 class="sh-title">ASK J.A.R.V.I.S.</h2>
+          <div class="sh-gold-bar"></div>
+          <p class="sh-subtitle">
+            Select any query chip below to initialize the audio waveform and stream intelligence.
+          </p>
+        </div>
+
+        <div class="voice-jarvis-terminal" id="voice-jarvis-terminal">
+          
+          <!-- Subtle Floating Mainframe Telemetry Particle Canvas -->
+          <canvas id="vjt-particles-canvas" class="vjt-particles-canvas" aria-hidden="true"></canvas>
+
+          <!-- Audio Waveform Visualizer Bar -->
+          <div class="vjt-voice-hud">
+            <div class="vjt-status-label">
+              <span class="vjt-pulse-dot" id="vjt-pulse-dot"></span>
+              <span id="voice-status-text" class="font-mono">J.A.R.V.I.S. AUDIO MAINFRAME // SELECT QUERY TO STREAM</span>
+            </div>
+
+            <!-- Dynamic Equalizer Waves (24 Bars) -->
+            <div class="vjt-waveform" id="voice-waveform">
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+              <span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span><span class="vw-bar"></span>
+            </div>
+          </div>
+
+          <!-- Query Chips (12 Clean Tactical Categories in 4x3 Grid) -->
+          <div class="vjt-chips-row" role="group" aria-label="J.A.R.V.I.S. Inquiry Categories">
+            <button class="f-chip is-active" data-query="team" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('team')">👥 Team Size &amp; Composition</button>
+            <button class="f-chip" data-query="eligibility" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('eligibility')">🎓 Eligibility Criteria</button>
+            <button class="f-chip" data-query="fee" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('fee')">🎟️ Registration &amp; Passes</button>
+            <button class="f-chip" data-query="ps" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('ps')">🔒 Problem Statements</button>
+            <button class="f-chip" data-query="venue" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('venue')">🏛️ Physical Venue &amp; Labs</button>
+            <button class="f-chip" data-query="food" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('food')">🍕 Catering &amp; Power</button>
+            <button class="f-chip" data-query="domains" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('domains')">🌐 Sector Allocations</button>
+            <button class="f-chip" data-query="tools" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('tools')">⚙️ Open-Source &amp; AI Tools</button>
+            <button class="f-chip" data-query="nightops" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('nightops')">🌙 Night Ops Sprint</button>
+            <button class="f-chip" data-query="shortlist" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('shortlist')">⚖️ Judging &amp; Criteria</button>
+            <button class="f-chip" data-query="certificates" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('certificates')">📜 Certificates &amp; OD</button>
+            <button class="f-chip" data-query="submit" onclick="window.handleAskJarvisQuery && window.handleAskJarvisQuery('submit')">🚀 Submission &amp; Live Demo</button>
+          </div>
+
+          <!-- Dialogue Console Output -->
+          <div class="vjt-console-box">
+            <div class="vcb-header-bar">
+              <div class="vcb-query-wrap">
+                <div class="vcb-query">
+                  <span class="text-gold font-bold">&gt; TRANSMISSION QUERY:</span>
+                  <span id="jarvis-voice-query" class="vcb-q-text">What is the team size and composition?</span>
+                </div>
+                <!-- Status Sequence Badge -->
+                <div class="vcb-status-badge font-mono" id="vcb-status-badge">
+                  <span class="vsb-dot"></span>
+                  <span id="vcb-status-text">QUERY RECEIVED</span>
+                </div>
+              </div>
+
+              <!-- Console Voice Controls -->
+              <div class="vcb-controls-wrap">
+                <button class="btn-voice-mute" id="btn-voice-mute" title="Mute/Unmute Console Voice" aria-label="Toggle Voice Mute">
+                  <span id="vbm-icon">🔊</span>
+                </button>
+                <button class="btn-voice-replay" id="btn-jarvis-speak" title="Trigger or Replay J.A.R.V.I.S. Voice Response">
+                  <span class="bvr-icon">🔊</span>
+                  <span class="bvr-label font-mono" id="bvr-label">SPEAK J.A.R.V.I.S.</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="vcb-response">
+              <span class="vcb-speaker-tag text-cyan font-bold font-mono">[J.A.R.V.I.S.]:</span>
+              <p id="jarvis-voice-response" class="vcb-r-text">
+                Squads must consist of 2 to 4 engineers. Interdisciplinary skill sets across full-stack engineering, AI/ML, cloud architecture, cybersecurity, and UI/UX are heavily encouraged. Solo participation is prohibited.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  SCENE 08: COORDINATORS (2 FACULTY + 3 STUDENTS)               -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <section class="cinema-scene scene-coordinators" id="scene-coordinators">
+      <!-- Dedicated Cursor-Connected Constellation Particles Canvas -->
+      <canvas id="coordinators-constellation-canvas" class="scene-constellation-canvas" aria-hidden="true"></canvas>
+
+      <div class="scene-container">
+        
+        <div class="scene-header">
+          <div class="sh-tag">SCENE 08 // MISSION DIRECTORY &amp; COMMS</div>
+          <h2 class="sh-title">MISSION COORDINATORS</h2>
+          <div class="sh-gold-bar"></div>
+          <p class="sh-subtitle">
+            Direct communication channels for faculty supervision and student organizing command.
+          </p>
+        </div>
+
+        <div class="coordinators-dual-grid">
+          
+          <!-- Faculty Coordinators Column (2 Members) -->
+          <div class="coord-column-card">
+            <div class="ccc-header">
+              <span class="text-gold font-bold">🏛️ FACULTY ADVISORY &amp; SUPERVISION</span>
+              <span class="ccc-pill text-gold">2 FACULTY LEADS</span>
+            </div>
+            <div class="ccc-body">
+              <div class="coord-person-row">
+                <div class="cpr-info">
+                  <h4 class="cpr-name">DR. PRIMYA T</h4>
+                </div>
+                <a href="tel:+919940807433" class="cpr-phone text-gold">+91 99408 07433</a>
+              </div>
+
+              <div class="coord-person-row">
+                <div class="cpr-info">
+                  <h4 class="cpr-name">MRS. JEEVITHA R</h4>
+                </div>
+                <a href="tel:+919786943885" class="cpr-phone text-gold">+91 97869 43885</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Coordinators Column (3 Members) -->
+          <div class="coord-column-card">
+            <div class="ccc-header">
+              <span class="text-cyan font-bold">⚡ STUDENT ORGANIZING COMMAND</span>
+              <span class="ccc-pill text-cyan">3 STUDENT LEADS</span>
+            </div>
+            <div class="ccc-body">
+              <div class="coord-person-row">
+                <div class="cpr-info">
+                  <h4 class="cpr-name">MS. MITHUNA KAMALANATHAN</h4>
+                </div>
+                <a href="tel:+916369391539" class="cpr-phone text-cyan">+91 63693 91539</a>
+              </div>
+
+              <div class="coord-person-row">
+                <div class="cpr-info">
+                  <h4 class="cpr-name">MR. VIKASH L</h4>
+                </div>
+                <a href="tel:+919342606806" class="cpr-phone text-cyan">+91 93426 06806</a>
+              </div>
+
+              <div class="coord-person-row">
+                <div class="cpr-info">
+                  <h4 class="cpr-name">MS. KASHNIKA M</h4>
+                </div>
+                <a href="tel:+917845627827" class="cpr-phone text-cyan">+91 78456 27827</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Finale Dual Boxes Grid (Separate CTA Box & Separate Poster Box) -->
+        <div class="finale-dual-boxes-grid">
+          
+          <!-- Box 1: Master Suit Up Finale CTA Box -->
+          <div class="cinema-final-gantry">
+            <div class="cfg-overlay"></div>
+            <div class="cfg-content">
+              <h2 class="cfg-title">ARE YOU READY TO BUILD THE NEXT J.A.R.V.I.S.?</h2>
+              <div class="cfg-subtitle">IGNITRRON'26 · 24-HOUR NATIONAL SOFTWARE HACKATHON</div>
+              <p class="cfg-desc">Secure your squad's slot now. Problem statements release 11:00 AM on 18 September 2026.</p>
+              <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-gantry-master">
+                <span>⚡ SUIT UP &amp; REGISTER ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Box 2: Dedicated Iron Man Poster Box -->
+          <div class="finale-poster-card">
+            <div class="fpc-corner-bracket fpc-cb--tl"></div>
+            <div class="fpc-corner-bracket fpc-cb--tr"></div>
+            <div class="fpc-corner-bracket fpc-cb--bl"></div>
+            <div class="fpc-corner-bracket fpc-cb--br"></div>
+            <img src="ironman_finale_poster.png" alt="Iron Man - Never Lose Either I Win Or I Learn" class="fpc-img" />
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!--  FOOTER                                                        -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <footer class="cinema-footer">
+    <div class="ch-container">
+      <div class="cf-content">
+        <div class="cf-brand"><span class="text-gold font-bold">IGNITRRON'26</span> · PROJECT J.A.R.V.I.S. // 24-HOUR SOFTWARE HACKATHON</div>
+        <div class="cf-venue">18–19 SEPTEMBER 2026 · KPR INSTITUTE OF ENGINEERING AND TECHNOLOGY</div>
+        <div class="cf-link"><a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="text-cyan font-bold">REGISTER NOW ↗</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="html2canvas.min.js"></script>
+  <script src="main.js?v=20260824_15"></script>
+
+<!-- IGNITRRON GLOBAL TOP-LEFT BACK BUTTON -->
+<a href="/" id="ignitrron-global-back-btn" style="position: fixed; top: 16px; left: 16px; z-index: 99999; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9999px; color: #ffffff; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.06)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.25)';">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  <span>Back</span>
+</a>
+</body>
+</html>

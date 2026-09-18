@@ -17,16 +17,16 @@ export const TeamSizeSection: React.FC = () => {
           TEAM COMPOSITION
         </div>
 
-        <h2 className="font-anton text-5xl sm:text-7xl text-white tracking-wider uppercase mb-2">
+        <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-white tracking-wider uppercase mb-2">
           BUILD YOUR CREW
         </h2>
 
-        <h3 className="font-bebas text-3xl sm:text-5xl text-[#00f0ff] tracking-wider uppercase mb-12">
+        <h3 className="font-bebas text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00f0ff] tracking-wider uppercase mb-12">
           2–4 MEMBERS PER TEAM
         </h3>
 
         {/* 4 Stylized Silhouettes Connected by Web Lines */}
-        <div className="relative w-full max-w-4xl grid grid-cols-2 sm:grid-cols-4 gap-6 my-4">
+        <div className="relative w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-4">
           {/* SVG Web Connection Lines across members */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-[#ff003c]/40 hidden sm:block">
             <line x1="12.5%" y1="50%" x2="87.5%" y2="50%" strokeWidth="2" strokeDasharray="6 6" />

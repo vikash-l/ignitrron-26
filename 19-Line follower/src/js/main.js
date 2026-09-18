@@ -1,3 +1,4 @@
+import '../../style.css';
 import { initLoadingSequence } from './loading.js';
 import { initTelemetrySystem } from './telemetry.js';
 import { initCursor } from './cursor.js';

@@ -10,7 +10,7 @@ export const RegistrationCTA: React.FC = () => {
   return (
     <section id="registration" className="py-24 bg-transparent relative overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-sky-500/5 blur-[100px] pointer-events-none animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] h-[400px] rounded-full bg-sky-500/5 blur-[100px] pointer-events-none animate-pulse" />
       
       {/* Speed lines */}
       <div className="speed-streak-fast top-10 right-5" />
@@ -40,7 +40,7 @@ export const RegistrationCTA: React.FC = () => {
                 // GRAND FINALE REGISTRATION
               </div>
 
-              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6 leading-none font-display uppercase">
+              <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-6 leading-none font-display uppercase">
                 CAN YOU KEEP UP?
               </h2>
               
@@ -57,7 +57,7 @@ export const RegistrationCTA: React.FC = () => {
               </div>
 
               <div className="flex justify-center md:justify-start">
-                <a href={eventData.registration.url} className="w-full sm:w-auto">
+                <a href={eventData.registration.url} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button 
                     variant="primary" 
                     size="lg" 

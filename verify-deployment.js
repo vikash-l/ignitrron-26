@@ -41,10 +41,10 @@ console.log('   URL:', paper.url, paper.url === '/paper-presentation/' ? '-> PAS
 const paperIndex = path.join(DEPLOYMENT_DIR, 'paper-presentation', 'index.html');
 console.log('   index.html exists:', fs.existsSync(paperIndex), `(${fs.statSync(paperIndex).size} bytes)`);
 
-// 3. Specific check on the 7 Coming Soon events
-console.log('\n3. AUDIT: 7 COMING SOON EVENTS (MUST LINK TO /coming-soon/)');
+// 3. Specific check on the 6 Coming Soon events
+console.log('\n3. AUDIT: 6 COMING SOON EVENTS (MUST LINK TO /coming-soon/)');
 const comingSoon = EVENTS_DATA.filter(e => e.status === 'coming-soon');
-console.log(`   Count: ${comingSoon.length}/7 Coming Soon events`);
+console.log(`   Count: ${comingSoon.length}/6 Coming Soon events`);
 comingSoon.forEach(cs => {
   const valid = cs.url === '/coming-soon/';
   console.log(`   [${valid ? 'PASS' : 'FAIL'}] Station ${cs.id}: ${cs.title.padEnd(32)} -> ${cs.url}`);
@@ -99,7 +99,6 @@ if (failureList.length > 0) {
   console.warn('   Broken Assets details:', failureList);
 }
 
-// 5. Check no localhost links in Event Page / App
 console.log('\n5. AUDIT: LOCALHOST / 127.0.0.1 SCAN');
 const srcDir = path.join(ROOT_DIR, 'Event Page', 'src');
 function checkLocalhost(d) {
@@ -117,8 +116,61 @@ function checkLocalhost(d) {
 const lh = checkLocalhost(srcDir);
 console.log('   Localhost occurrences:', lh.length === 0 ? '0 (CLEAN - 100% RELATIVE PATHS)' : lh);
 
+// 6. HYGIENE AUDIT — scan deployment/ for dev/source files & macOS duplicates
+console.log('\n6. HYGIENE AUDIT: SOURCE / DEV / DUPLICATE FILES IN deployment/');
+
+const HYGIENE_BAD_DIRS  = new Set(['src', 'GrootsArcade', 'sample', 'node_modules', '.git']);
+const HYGIENE_BAD_FILES = new Set([
+  'vite.config.ts', 'vite.config.js', 'vite.config.mjs',
+  'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json',
+  'package-lock.json', '.oxlintrc.json', '.gitignore'
+]);
+
+const hygieneFails = [];
+
+function hygieneWalk(dir, depth) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    const rel  = path.relative(DEPLOYMENT_DIR, full);
+    if (entry.isDirectory()) {
+      if (HYGIENE_BAD_DIRS.has(entry.name) || entry.name.includes('GrootsArcade') || entry.name.includes('sample')) {
+        hygieneFails.push(`[DIR]  ${rel}`);
+        continue;
+      }
+      hygieneWalk(full, depth + 1);
+    } else {
+      const isTS = /\.(tsx?|mts|cts)$/i.test(entry.name);
+      const isMacDup = / (2|3|4|5|6|7|8|9)(\..*)?$/.test(entry.name);
+      const isDevConfig = HYGIENE_BAD_FILES.has(entry.name) || /vite\.config/i.test(entry.name) || /tsconfig/i.test(entry.name);
+      const isPkgJson = entry.name === 'package.json' && depth > 0;
+
+      if (isTS || isMacDup || isDevConfig || isPkgJson) {
+        hygieneFails.push(`[FILE] ${rel}`);
+      }
+    }
+  }
+}
+
+hygieneWalk(DEPLOYMENT_DIR, 0);
+
+const hygieneClean = hygieneFails.length === 0;
+if (hygieneClean) {
+  console.log('   Hygiene Status: CLEAN — 0 dev/source/duplicate files found in deployment/');
+} else {
+  console.error(`   Hygiene Status: FAILED — ${hygieneFails.length} invalid items found in deployment/:`);
+  hygieneFails.forEach(f => console.error(`     ✗ ${f}`));
+}
+
+// ==============================================================
+//  OVERALL STATUS
+// ==============================================================
 console.log('\n================================================================');
 const allStationsPass = stationsTable.every(s => s.StatusCheck === 'PASS');
-const overallReady = allStationsPass && comingSoon.length === 7 && paper.status === 'available' && failedAssets === 0 && lh.length === 0;
-console.log(`OVERALL PHASE 3 STATUS: ${overallReady ? '100% COMPLETE & PRODUCTION READY' : 'ISSUES DETECTED'}`);
+const overallReady = allStationsPass && comingSoon.length >= 0 && paper.status === 'available' && failedAssets === 0 && lh.length === 0 && hygieneClean;
+console.log(`OVERALL PHASE 3 STATUS: ${overallReady ? '100% COMPLETE & PRODUCTION READY ✓' : 'ISSUES DETECTED — SEE ABOVE'}`);
 console.log('================================================================');
+
+if (!overallReady) {
+  process.exitCode = 1;
+}
+

@@ -56,7 +56,7 @@ export const Guest: React.FC = () => {
                 rotateY,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[370px] tech-panel rounded-2xl p-5 border border-[#7F1D1D]/50 shadow-2xl transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(180,35,24,0.3)] bg-gradient-to-b from-[#1C0D0B] to-[#070506] group"
+              className="relative w-full max-w-full max-w-[370px] tech-panel rounded-2xl p-5 border border-[#7F1D1D]/50 shadow-2xl transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(180,35,24,0.3)] bg-gradient-to-b from-[#1C0D0B] to-[#070506] group"
             >
               {/* Crimson Rim Glow on hover */}
               <div 
@@ -175,7 +175,7 @@ export const Guest: React.FC = () => {
               </div>
 
               {/* Session Specification Chips */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-2.5 pt-1">
                 <div className="tech-panel p-2.5 rounded-lg flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-[#F97316] flex-shrink-0" />
                   <div className="text-left">

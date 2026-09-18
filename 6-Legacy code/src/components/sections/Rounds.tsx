@@ -65,7 +65,7 @@ export const Rounds: React.FC<RoundsProps> = ({ event }) => {
                 </p>
 
                 {(round.scoring || (round.rules && round.rules.length > 0)) && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+                  <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
                     {round.scoring && (
                       <div className="bg-[#171A21] p-3 border border-[#2B2F38] text-[#9CA3AA] space-y-1">
                         <div className="font-bold text-[#E8EAED] flex items-center gap-1.5 uppercase text-[11px]">

@@ -56,7 +56,7 @@ export const Highlights: React.FC<HighlightsProps> = ({ event }) => {
           subtitle="Key engineering domains evaluated during the rescue protocol."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((highlight, idx) => (
             <motion.div
               key={idx}

@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
     <section id="hero" className="relative min-h-[92vh] pt-28 pb-16 flex items-center justify-center overflow-hidden bg-transparent">
       
       {/* DEPTH LAYER 1: BACKGROUND - Faint Dark Suit Watermarks & Subtle Radial Atmospheric Atmosphere */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04] flex items-center justify-around font-mono text-9xl text-[#8F26FF] select-none">
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04] flex items-center justify-around font-mono text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl lg:text-9xl text-[#8F26FF] select-none">
         <span>♠</span>
         <span>♥</span>
         <span>♦</span>
@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
       </div>
 
       {/* Atmospheric Soft Purple/Magenta Radial Haze behind Character (Following Silhouette, NO giant circle!) */}
-      <div className="absolute top-1/4 right-0 w-[550px] h-[650px] bg-gradient-to-br from-[#6B1FDB]/20 via-[#E626FF]/15 to-transparent rounded-full blur-[160px] pointer-events-none"></div>
+      <div className="absolute top-1/4 right-0 w-full max-w-[550px] h-[650px] bg-gradient-to-br from-[#6B1FDB]/20 via-[#E626FF]/15 to-transparent rounded-full blur-[160px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -37,16 +37,14 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
               transition={{ duration: 0.6 }}
               className="space-y-2"
             >
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight font-display uppercase leading-tight">
-                GAME GENESIS X
+              <h1 className="text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-extrabold text-white tracking-tight font-display uppercase leading-tight">
+                GAME GENESIS X <br className="hidden sm:inline" />
+                <span className="text-[#E626FF]">IN.ZEROS</span>
               </h1>
 
               <div className="flex items-center justify-center lg:justify-start gap-3 pt-1">
-                <span className="text-xl sm:text-2xl font-mono font-bold text-[#E626FF] tracking-wider uppercase">
-                  IN.ZEROS
-                </span>
-                <span className="text-xs font-mono text-[#B8B0C4] uppercase">
-                  • GAME DEVELOPMENT CLUB
+                <span className="text-xs sm:text-sm font-mono text-[#B8B0C4] uppercase">
+                  GAME DEVELOPMENT CLUB
                 </span>
               </div>
             </motion.div>
@@ -92,6 +90,8 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
               >
                 <a
                   href={event.registration.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative w-full sm:w-auto px-8 py-3.5 bg-[#140A15] text-white font-mono font-bold text-sm rounded border border-[#E626FF]/60 shadow-[0_0_20px_rgba(230,38,255,0.35)] hover:border-[#FF3BE6] hover:shadow-[0_0_35px_rgba(255,59,230,0.85)] transition-all flex items-center justify-center gap-2 cursor-pointer overflow-hidden"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#6B1FDB]/0 via-[#E626FF]/30 to-[#6B1FDB]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
@@ -115,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
           {/* RIGHT COLUMN: GAMBIT CHARACTER ARTWORK (45-50% Desktop Visual Area - NO RECTANGULAR CARD BOX!) */}
           <div className="lg:col-span-6 relative flex items-center justify-center py-2">
             
-            <div className="relative w-full max-w-[620px] flex items-center justify-center">
+            <div className="relative w-full max-w-full max-w-[620px] flex items-center justify-center">
               
               {/* DEPTH LAYER 3: FOREGROUND - EXACT 3 STRATEGIC CARDS & THIN ENERGY TRAILS */}
 
@@ -184,7 +184,7 @@ export const Hero: React.FC<HeroProps> = ({ event }) => {
                     <img
                       src={gambitImg}
                       alt="Gambit Character"
-                      className="w-full max-w-[560px] h-auto object-contain filter drop-shadow-[0_15px_40px_rgba(230,38,255,0.4)]"
+                      className="w-full max-w-full max-w-[560px] h-auto object-contain filter drop-shadow-[0_15px_40px_rgba(230,38,255,0.4)]"
                       onError={() => setImageError(true)}
                     />
 

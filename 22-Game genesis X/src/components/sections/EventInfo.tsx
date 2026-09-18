@@ -64,7 +64,7 @@ export const EventInfo: React.FC<EventInfoProps> = ({ event }) => {
   return (
     <section id="event-info" className="py-12 bg-[#07060A] relative border-b border-[#231538]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {infoCards.map((card, index) => {
             const Icon = card.icon;
             return (

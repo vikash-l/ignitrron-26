@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { COORDINATORS_DATA } from '../utils/domainsData';
-import { Shield, User } from 'lucide-react';
+import { COORDINATORS_DATA, STAFF_COORDINATOR_DATA } from '../utils/domainsData';
+import { Shield, User, Phone, Award } from 'lucide-react';
 import { soundFx } from '../utils/soundFx';
-
 
 export const CrewSection: React.FC = () => {
   return (
@@ -15,19 +14,49 @@ export const CrewSection: React.FC = () => {
         {/* Header Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#121216] border border-[#00f0ff] text-[#00f0ff] font-space text-xs tracking-widest uppercase font-bold mb-4 shadow-spider-blue">
           <Shield className="w-4 h-4 text-[#ff003c]" />
-          DESIGN CLUB LEADERSHIP
+          EVENT LEADERSHIP
         </div>
 
-        <h2 className="font-anton text-5xl sm:text-7xl md:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[4px_4px_0px_#00f0ff]">
-          YOUR MISSION CREW
+        <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[4px_4px_0px_#00f0ff]">
+          EVENT COORDINATORS
         </h2>
 
-        <p className="font-space text-base text-gray-400 max-w-xl mb-16">
-          The event coordinators guiding your brand-building adventure throughout Launchpad.
+        <p className="font-space text-base text-gray-400 max-w-xl mb-12">
+          The official faculty and student organizing commanders guiding your brand-building adventure throughout Launchpad.
         </p>
 
-        {/* Coordinator Comic Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        {/* Staff Coordinator Spotlight Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          onMouseEnter={() => soundFx.playClick()}
+          className="mb-10 w-full max-w-xl p-6 sm:p-8 bg-[#121216] border-2 border-[#ff00aa]/40 hover:border-[#ff00aa] rounded-2xl flex flex-col sm:flex-row items-center gap-6 group transition-all duration-300 transform hover:scale-[1.02] hover:shadow-spider-red overflow-hidden relative"
+        >
+          <div className="absolute top-4 right-4 font-space text-[10px] text-gray-400 tracking-widest uppercase">
+            {STAFF_COORDINATOR_DATA.spiderCode}
+          </div>
+
+          <div className={`w-20 h-20 rounded-full bg-gradient-to-tr ${STAFF_COORDINATOR_DATA.avatarBg} border-2 border-white flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform flex-shrink-0`}>
+            <Award className="w-10 h-10 text-white" />
+          </div>
+
+          <div className="text-center sm:text-left">
+            <span className="font-space text-xs text-[#ff00aa] tracking-widest uppercase font-bold block mb-1">
+              {STAFF_COORDINATOR_DATA.role}
+            </span>
+            <h3 className="font-anton text-3xl sm:text-4xl text-white tracking-wide uppercase">
+              {STAFF_COORDINATOR_DATA.name}
+            </h3>
+            <p className="font-space text-xs text-gray-400 font-semibold uppercase mt-1">
+              {STAFF_COORDINATOR_DATA.designation}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Student Coordinators Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {COORDINATORS_DATA.map((coord, index) => (
             <motion.div
               key={coord.id}
@@ -56,9 +85,18 @@ export const CrewSection: React.FC = () => {
                 {coord.name}
               </h3>
 
-              <p className="font-space text-xs text-gray-400 font-semibold uppercase">
+              <p className="font-space text-xs text-gray-400 font-semibold uppercase mb-4">
                 {coord.designation}
               </p>
+
+              <a
+                href={`tel:${coord.phone.replace(/\s+/g, '')}`}
+                onClick={(e) => e.stopPropagation()}
+                className="mt-auto px-4 py-2 rounded-lg bg-black/60 border border-[#00f0ff]/40 hover:border-[#00f0ff] hover:bg-[#00f0ff]/10 text-[#00f0ff] font-space text-xs font-bold tracking-wider inline-flex items-center gap-2 transition-all no-underline cursor-pointer hover:shadow-spider-blue"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#ff003c]" />
+                <span>{coord.phone}</span>
+              </a>
             </motion.div>
           ))}
         </div>

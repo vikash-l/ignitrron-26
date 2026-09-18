@@ -296,7 +296,7 @@ export const eventData: EventConfig = {
 
   registration: {
     label: "ENTER THE RACE",
-    url: "#registration"
+    url: "https://www.theticket9.com/event/ignitrron-26"
   },
 
   contact: {

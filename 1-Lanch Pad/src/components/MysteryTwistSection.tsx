@@ -43,11 +43,11 @@ export const MysteryTwistSection: React.FC = () => {
         </div>
 
         {/* Dynamic Title */}
-        <h2 className="font-anton text-5xl sm:text-7xl md:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[5px_5px_0px_#ff003c]">
+        <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[5px_5px_0px_#ff003c]">
           BUT THERE'S A TWIST.
         </h2>
 
-        <h3 className="font-bebas text-3xl sm:text-5xl text-[#00f0ff] tracking-wide mb-6 uppercase">
+        <h3 className="font-bebas text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00f0ff] tracking-wide mb-6 uppercase">
           THE MYSTERY BOX TWIST
         </h3>
 

@@ -167,10 +167,27 @@ export const DELIVERABLES_DATA: DeliverableItem[] = [
   }
 ];
 
+export interface StaffCoordinator {
+  role: string;
+  name: string;
+  designation: string;
+  avatarBg: string;
+  spiderCode: string;
+}
+
+export const STAFF_COORDINATOR_DATA: StaffCoordinator = {
+  role: 'STAFF COORDINATOR',
+  name: 'Mr. Manikandan P',
+  designation: 'Faculty / Staff Coordinator',
+  avatarBg: 'from-[#ff00aa] to-[#770044]',
+  spiderCode: 'COMMAND-LEAD-01'
+};
+
 export interface Coordinator {
   id: string;
   role: string;
   name: string;
+  phone: string;
   designation: string;
   avatarBg: string;
   spiderCode: string;
@@ -179,24 +196,27 @@ export interface Coordinator {
 export const COORDINATORS_DATA: Coordinator[] = [
   {
     id: '01',
-    role: 'COORDINATOR 01',
-    name: 'Sanjeev A',
+    role: 'STUDENT COORDINATOR',
+    name: 'Dharineesh',
+    phone: '+91 97918 09967',
     designation: 'Lead Mission Ops',
     avatarBg: 'from-[#ff003c] to-[#990024]',
     spiderCode: 'CREW-ALPHA-01'
   },
   {
     id: '02',
-    role: 'COORDINATOR 02',
+    role: 'STUDENT COORDINATOR',
     name: 'Madhu Rithanya V',
+    phone: '+91 81483 04078',
     designation: 'Brand & Design Strategist',
     avatarBg: 'from-[#00f0ff] to-[#006699]',
     spiderCode: 'CREW-BETA-02'
   },
   {
     id: '03',
-    role: 'COORDINATOR 03',
-    name: 'Mahima Pratibha -',
+    role: 'STUDENT COORDINATOR',
+    name: 'Arunachalam',
+    phone: '+91 76763 55346',
     designation: 'Creative Operations Lead',
     avatarBg: 'from-[#bf00ff] to-[#550088]',
     spiderCode: 'CREW-GAMMA-03'

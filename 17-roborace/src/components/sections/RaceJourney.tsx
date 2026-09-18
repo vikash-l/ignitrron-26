@@ -29,7 +29,7 @@ export const RaceJourney: React.FC = () => {
     <section id="raceJourney" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background Racing HUD Grids */}
       <div className="absolute inset-0 bg-grid-racing opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[500px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
 
       {/* Speed lines */}
       <div className="speed-streak top-1/4 left-5" />

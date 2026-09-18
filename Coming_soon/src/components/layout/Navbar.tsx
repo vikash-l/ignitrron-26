@@ -34,9 +34,9 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           
           {/* Brand Identity */}
-          <div
-            className="flex items-center gap-3 cursor-pointer group flex-shrink-0"
-            onClick={scrollToTop}
+          <a
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+            className="flex items-center gap-3 cursor-pointer group flex-shrink-0 no-underline"
           >
             {/* Mystic Emblem */}
             <div 
@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
                 OFFICIAL PORTAL
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Center Minimal Indicator */}
           <div className="hidden md:flex items-center gap-6">

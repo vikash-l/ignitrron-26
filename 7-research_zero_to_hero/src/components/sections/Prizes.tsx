@@ -26,7 +26,7 @@ export const Prizes: React.FC = () => {
   return (
     <section id="prizes" className="py-24 bg-slate-950/40 relative">
       {/* Subtle Gamma-Energy glow background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-emerald-500/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[400px] h-[400px] rounded-full bg-emerald-500/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
@@ -35,7 +35,7 @@ export const Prizes: React.FC = () => {
           badge="REWARDS"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
           {eventData.prizes.map((prize, index) => {
             const isWinner = index === 0;
 

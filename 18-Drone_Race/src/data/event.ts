@@ -13,7 +13,8 @@ export const navSections: NavSection[] = [
   { id: 'format', index: '02', label: 'FORMAT', title: 'RACE FORMAT', badge: 'FLIGHT PROGRESSION' },
   { id: 'specs', index: '03', label: 'SPECS', title: 'DRONE SPECIFICATIONS', badge: 'TELEMETRY MATRIX' },
   { id: 'rules', index: '04', label: 'RULES', title: 'THE RULEBOOK', badge: 'OFFICIAL PROTOCOLS' },
-  { id: 'faq', index: '05', label: 'FAQ', title: 'FREQUENTLY ASKED QUESTIONS', badge: 'FLIGHT CONTROL' },
+  { id: 'prizes', index: '05', label: 'PRIZES', title: 'PRIZE POOL', badge: 'TACTICAL REWARDS' },
+  { id: 'faq', index: '06', label: 'FAQ', title: 'FREQUENTLY ASKED QUESTIONS', badge: 'FLIGHT CONTROL' },
 ];
 
 export interface SpecModule {

@@ -14,14 +14,14 @@ export const Round1LensVisual: React.FC = () => {
   return (
     <div className="relative w-full h-full min-h-[320px] bg-[#000000] rounded-xl overflow-hidden border border-red-900/40 p-4 flex flex-col justify-between group">
       {/* Header bar */}
-      <div className="flex items-center justify-between text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
-        <div className="flex items-center gap-2">
-          <Camera className="w-4 h-4 text-[#e31b23] animate-pulse" />
-          <span>OPTICAL_ANALYSIS_RED_GRID_V2.0</span>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
+        <div className="flex items-center gap-2 max-w-full overflow-hidden">
+          <Camera className="w-4 h-4 shrink-0 text-[#e31b23] animate-pulse" />
+          <span className="truncate">OPTICAL_ANALYSIS_RED_GRID_V2.0</span>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="text-slate-400">RES: 4K UHD</span>
-          <span className="px-1.5 py-0.5 rounded bg-red-950 text-[#e31b23] text-[10px] border border-red-600/40 font-bold">
+        <div className="flex items-center gap-2 text-[10px] shrink-0">
+          <span className="text-slate-400 hidden sm:inline">RES: 4K UHD</span>
+          <span className="px-1.5 py-0.5 rounded bg-red-950 text-[#e31b23] border border-red-600/40 font-bold whitespace-nowrap">
             {zoomLevel.toFixed(1)}X MAG
           </span>
         </div>

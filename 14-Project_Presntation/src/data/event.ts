@@ -9,8 +9,8 @@ export interface NavSection {
 }
 
 export const navSections: NavSection[] = [
-  { id: 'about', index: '01', label: 'ABOUT', title: 'SCIENTIFIC INNOVATION & PRESENTATION', badge: 'EVENT OVERVIEW' },
-  { id: 'categories', index: '02', label: 'DOMAINS', title: '05 DOMAINS. ONE ARENA.', badge: 'DOMAIN SPECIFICATION' },
+  { id: 'categories', index: '01', label: 'DOMAINS', title: '05 DOMAINS. ONE ARENA.', badge: 'DOMAIN SPECIFICATION' },
+  { id: 'about', index: '02', label: 'ABOUT', title: 'SCIENTIFIC INNOVATION & PRESENTATION', badge: 'EVENT OVERVIEW' },
   { id: 'rounds', index: '03', label: 'FORMAT', title: 'PRESENTATION FORMAT', badge: 'TIMED FORMAT' },
   { id: 'rules', index: '04', label: 'RULES', title: 'RULES & REGULATIONS', badge: 'OFFICIAL PROTOCOLS' },
   { id: 'faq', index: '05', label: 'FAQ', title: 'FREQUENTLY ASKED QUESTIONS', badge: 'INQUIRY & SUPPORT' },
@@ -88,12 +88,17 @@ export interface EventConfig {
   }[];
 
   prizes: {
-    position: string;
-    title: string;
-    description: string;
-    scope: string;
-    icon: string;
-  }[];
+    totalPool: string;
+    breakdown: string;
+    tiers: {
+      position: string;
+      title: string;
+      amount: string;
+      description: string;
+      scope: string;
+      icon: string;
+    }[];
+  };
 
   faq: {
     question: string;
@@ -131,10 +136,10 @@ export const eventData: EventConfig = {
   category: "IGNITRRON 26",
   date: "September 18, 2026",
   dateShort: "18 / 09 / 2026",
-  time: "10:00 AM - 5:00 PM",
+  time: "9:00 AM – 4:00 PM",
   venue: "KPRIET ECE Classroom",
   mode: "OFFLINE",
-  teamSize: "3-4 Members",
+  teamSize: "1–4 MEMBERS",
   presentationFormat: "8 Minutes Total (5 Min Presentation + 3 Min Q&A)",
   presentationTime: "05 MINUTES",
   qaTime: "03 MINUTES",
@@ -233,7 +238,7 @@ export const eventData: EventConfig = {
 
   timeline: [
     {
-      time: "10:00 AM - 2:00 PM",
+      time: "9:00 AM - 2:00 PM",
       title: "Project Presentations",
       description: "Teams present their projects to the evaluation panel across all five domain categories."
     },
@@ -243,7 +248,7 @@ export const eventData: EventConfig = {
       description: "Panel evaluates shortlisted entries. Teams take a well-deserved break."
     },
     {
-      time: "4:00 PM - 5:00 PM",
+      time: "4:00 PM - 4:00 PM",
       title: "Winners & Prize Distribution",
       description: "Category winners announced and official recognition awarded on stage."
     },
@@ -253,7 +258,7 @@ export const eventData: EventConfig = {
     {
       index: "01",
       title: "TEAM COMPOSITION",
-      description: "Team size is strictly 3 to 4 members per team. All registered team members must be present during their scheduled presentation slot."
+      description: "Team size is strictly 1 to 4 members per team. All registered team members must be present during their scheduled presentation slot."
     },
     {
       index: "02",
@@ -321,22 +326,28 @@ export const eventData: EventConfig = {
     },
   ],
 
-  prizes: [
-    {
-      position: "WINNER 01",
-      title: "1ST POSITION PER CATEGORY",
-      description: "Top-ranked project presentation awarded in each of the 5 official domains.",
-      scope: "5 Positions Across Domains",
-      icon: "Trophy"
-    },
-    {
-      position: "WINNER 02",
-      title: "2ND POSITION PER CATEGORY",
-      description: "Distinguished project presentation awarded in each of the 5 official domains.",
-      scope: "5 Positions Across Domains",
-      icon: "Award"
-    }
-  ],
+  prizes: {
+    totalPool: "₹45,000",
+    breakdown: "5 × ₹5,000 = ₹25,000 | 5 × ₹4,000 = ₹20,000",
+    tiers: [
+      {
+        position: "WINNER 01",
+        title: "1ST POSITION PER CATEGORY",
+        amount: "₹5,000",
+        description: "Premier project presentation awarded across each of the 5 official domains.",
+        scope: "5 Positions Across Domains (5 × ₹5,000 = ₹25,000)",
+        icon: "Trophy"
+      },
+      {
+        position: "WINNER 02",
+        title: "2ND POSITION PER CATEGORY",
+        amount: "₹4,000",
+        description: "Distinguished project presentation awarded across each of the 5 official domains.",
+        scope: "5 Positions Across Domains (5 × ₹4,000 = ₹20,000)",
+        icon: "Award"
+      }
+    ]
+  },
 
   faq: [
     {
@@ -345,7 +356,7 @@ export const eventData: EventConfig = {
     },
     {
       question: "What is the team size for this event?",
-      answer: "Each team must consist of 3 to 4 members. All team members must be present during the scheduled presentation."
+      answer: "Each team must consist of 1 to 4 members. All team members must be present during the scheduled presentation."
     },
     {
       question: "What are the 5 official domains?",
@@ -356,12 +367,12 @@ export const eventData: EventConfig = {
       answer: "Each team gets exactly 8 minutes total: 5 minutes for the project presentation and 3 minutes for the judges' Q&A session."
     },
     {
-      question: "How are winners recognized?",
-      answer: "There are 2 winners per category (WINNER 01 and WINNER 02), totaling 10 winning positions recognized across the 5 domains."
+      question: "How are winners recognized and what are the prizes?",
+      answer: "There are 2 winners per category across the 5 domains (10 winning positions total). 1st Position per category receives ₹5,000 (5 × ₹5,000 = ₹25,000) and 2nd Position per category receives ₹4,000 (5 × ₹4,000 = ₹20,000), making a Total Prize Pool of ₹45,000."
     },
     {
       question: "When and where is the event scheduled?",
-      answer: "The event is scheduled for September 18, 2026, from 10:00 AM to 5:00 PM at KPRIET ECE Classroom."
+      answer: "The event is scheduled for September 18, 2026, from 9:00 AM to 4:00 PM at KPRIET ECE Classroom."
     },
     {
       question: "How do we register for the event?",

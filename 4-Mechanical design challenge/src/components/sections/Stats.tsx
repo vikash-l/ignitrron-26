@@ -28,12 +28,12 @@ export const Stats: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {eventData.stats.map((stat, index) => (
             <motion.div key={index} variants={itemVariants}>
               <Card className="flex flex-col items-center justify-center p-8 text-center bg-slate-900/30 backdrop-blur-sm border-slate-900 hover:border-slate-800 transition-all duration-300 h-full">
-                <div className="text-4xl sm:text-5xl font-black text-blue-500 font-mono tracking-tight mb-2">
+                <div className="text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-blue-500 font-mono tracking-tight mb-2">
                   {stat.value}
                 </div>
                 <div className="text-xs font-bold uppercase tracking-widest text-slate-400">

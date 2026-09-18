@@ -20,7 +20,7 @@ export const Prizes: React.FC = () => {
             <span>REWARDS & RECOGNITION</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl tracking-tight text-white uppercase">
             CRACK THE CASE. <span className="text-[#e31b23]">CLAIM THE PRIZE.</span>
           </h2>
 
@@ -30,7 +30,7 @@ export const Prizes: React.FC = () => {
         </div>
 
         {/* 3 Prize Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
           {EVENT_DATA.prizes.map((prize, idx) => {
             const isFirst = prize.colorTheme === 'gold';
             return (
@@ -70,7 +70,7 @@ export const Prizes: React.FC = () => {
                     {prize.title}
                   </h3>
 
-                  <div className="font-heading font-black text-5xl sm:text-6xl text-white my-4 tracking-tight">
+                  <div className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-white my-4 tracking-tight">
                     <span className={isFirst ? 'text-[#e31b23]' : 'text-white'}>
                       {prize.amount}
                     </span>

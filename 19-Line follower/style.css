@@ -881,3 +881,528 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+   5. PRIZES & RECOGNITION MATRIX STYLES
+   ============================================================ */
+
+.prize-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .prize-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.prize-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 300ms ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.prize-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 300ms ease;
+}
+
+.prize-card-gold {
+  border-color: rgba(110, 168, 255, 0.45);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(110, 168, 255, 0.18);
+}
+
+.prize-card-gold::before {
+  background: linear-gradient(90deg, var(--blue-main), var(--purple-main), var(--magenta-main));
+}
+
+.prize-card-gold:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue-electric);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(110, 168, 255, 0.35);
+}
+
+.prize-card-silver::before {
+  background: linear-gradient(90deg, var(--purple-main), #C084FC);
+}
+
+.prize-card-silver:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple-main);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.prize-card-bronze::before {
+  background: linear-gradient(90deg, var(--magenta-main), #F472B6);
+}
+
+.prize-card-bronze:hover {
+  transform: translateY(-5px);
+  border-color: var(--magenta-main);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(217, 70, 239, 0.3);
+}
+
+.prize-icon-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  transition: transform 300ms ease;
+}
+
+.prize-card:hover .prize-icon-circle {
+  transform: scale(1.1);
+}
+
+.prize-position-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.badge-gold {
+  background: rgba(110, 168, 255, 0.12);
+  border: 1px solid rgba(110, 168, 255, 0.35);
+  color: var(--blue-electric);
+}
+
+.badge-silver {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #C084FC;
+}
+
+.badge-bronze {
+  background: rgba(217, 70, 239, 0.12);
+  border: 1px solid rgba(217, 70, 239, 0.35);
+  color: var(--magenta-main);
+}
+
+.prize-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.prize-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.prize-amount-container {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prize-amount-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-dim);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.prize-amount-val {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.val-gold { color: var(--blue-electric); }
+.val-silver { color: #C084FC; }
+.val-bronze { color: var(--magenta-main); }
+
+.prize-summary-banner {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(110, 168, 255, 0.3);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 640px) {
+  .prize-summary-banner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.prize-summary-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue-electric);
+  background: rgba(110, 168, 255, 0.1);
+  border: 1px solid rgba(110, 168, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   6. HERO NOTE BOX & RULES SECTION REDESIGN STYLES
+   ============================================================ */
+
+.hero-note-box {
+  background: rgba(12, 20, 42, 0.85);
+  border: 1px solid rgba(110, 168, 255, 0.4);
+  border-left: 4px solid var(--blue-electric);
+  border-radius: 0.875rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(110, 168, 255, 0.15);
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.squad-rules-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.squad-rules-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-electric), var(--purple-main));
+}
+
+.member-role-card {
+  background: rgba(6, 8, 16, 0.75);
+  border: 1px solid rgba(110, 168, 255, 0.25);
+  border-radius: 0.875rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.member-role-card:hover {
+  border-color: var(--blue-electric);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(110, 168, 255, 0.2);
+}
+
+.webinar-info-card {
+  background: linear-gradient(135deg, rgba(12, 20, 42, 0.9) 0%, rgba(20, 15, 35, 0.9) 100%);
+  border: 1px solid rgba(110, 168, 255, 0.4);
+  border-radius: 1.25rem;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(110, 168, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.webinar-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-electric), var(--magenta-main));
+}
+
+.accordion-item {
+  background: rgba(10, 12, 24, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 300ms ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.accordion-item:hover, .accordion-item.active {
+  border-color: rgba(110, 168, 255, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(110, 168, 255, 0.15);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1.25rem 1.75rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-trigger span {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 0.03em;
+}
+
+.accordion-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(110, 168, 255, 0.1);
+  border: 1px solid rgba(110, 168, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--blue-electric);
+  transition: all 300ms ease;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+  background: rgba(217, 70, 239, 0.2);
+  border-color: var(--magenta-main);
+  color: var(--magenta-main);
+}
+
+/* ============================================================
+   7. COMPLETE MASTER CARD & SECTION STYLING OVERHAUL
+   ============================================================ */
+
+/* Mission Domain Pillar Cards */
+.mission-pillar-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 300ms ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-pillar-card:hover {
+  border-color: rgba(110, 168, 255, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(110, 168, 255, 0.2);
+}
+
+/* Round Panels & Banners */
+.round-panel {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease;
+}
+
+@media (min-width: 768px) {
+  .round-panel {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.round-panel:hover {
+  border-color: rgba(110, 168, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(110, 168, 255, 0.15);
+}
+
+.round-panel-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  shrink: 0;
+  min-width: 110px;
+}
+
+.round-number-lg {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--blue-electric);
+  line-height: 1;
+}
+
+.round-panel-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.round-3-banner {
+  background: linear-gradient(135deg, rgba(30, 8, 16, 0.9) 0%, rgba(18, 10, 24, 0.9) 100%);
+  border: 1px solid rgba(225, 29, 72, 0.45);
+  border-radius: 1.25rem;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(225, 29, 72, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Build Kit Accordion Buttons */
+.build-kit-category {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 300ms ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.build-kit-category:hover, .build-kit-category.active {
+  border-color: rgba(110, 168, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(110, 168, 255, 0.12);
+}
+
+.build-kit-category-btn {
+  width: 100%;
+  padding: 1.25rem 1.75rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+}
+
+.required-equipment-card {
+  background: rgba(8, 10, 20, 0.9);
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 300ms ease;
+}
+
+.required-equipment-card:hover {
+  border-color: rgba(225, 29, 72, 0.7);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(225, 29, 72, 0.2);
+}
+
+/* Hackathon Journey Nodes */
+.journey-node-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 300ms ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.journey-node-card:hover {
+  border-color: rgba(110, 168, 255, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(110, 168, 255, 0.2);
+}
+
+.journey-node-final {
+  border-color: rgba(225, 29, 72, 0.45);
+  background: linear-gradient(145deg, rgba(20, 10, 24, 0.9) 0%, rgba(10, 12, 24, 0.9) 100%);
+}
+
+.journey-node-final:hover {
+  border-color: rgba(225, 29, 72, 0.8);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(225, 29, 72, 0.3);
+}
+
+/* Contact Coordinator Cards */
+.contact-coord-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 1.75rem 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 300ms ease;
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-coord-card:hover {
+  border-color: var(--blue-electric);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(110, 168, 255, 0.25);
+}

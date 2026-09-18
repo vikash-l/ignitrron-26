@@ -20,7 +20,7 @@ export const About: React.FC = () => {
             <Compass className="w-3.5 h-3.5" />
             <span>Event Briefing</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             {cadForgeData.event.aboutTitle}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#ff0055] via-[#9d4edd] to-[#00f0ff] mx-auto rounded-full" />
@@ -54,7 +54,7 @@ export const About: React.FC = () => {
             </div>
 
             {/* Quick Highlights Summary */}
-            <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
                   <PenTool className="w-4 h-4" />

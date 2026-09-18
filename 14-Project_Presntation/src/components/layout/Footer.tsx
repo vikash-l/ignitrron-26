@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-start gap-2">
                 <Clock className="h-3.5 w-3.5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span>10:00 AM - 5:00 PM</span>
+                <span>{eventData.time}</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="h-3.5 w-3.5 text-cyan-400 flex-shrink-0 mt-0.5" />

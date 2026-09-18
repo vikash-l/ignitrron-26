@@ -4,19 +4,73 @@ import { ArcReactorLoadingHUD } from './components/ui/ArcReactorLoadingHUD';
 import { IgnitrronIntroOverlay } from './components/ui/IgnitrronIntroOverlay';
 import { HolographicHUD } from './components/ui/HolographicHUD';
 import { EventDetailModal } from './components/ui/EventDetailModal';
+import { EventNavigator } from './components/ui/EventNavigator';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { EVENTS_DATA } from './data/eventsData';
 import { soundEngine } from './utils/soundEngine';
 
 export default function App() {
+  // Check if participant already completed intro in this session or navigated back
+  const hasEnteredBefore = typeof window !== 'undefined' && (
+    sessionStorage.getItem('ignitrron_entered_system') === 'true' ||
+    Boolean(window.location.hash && window.location.hash.startsWith('#station-')) ||
+    Boolean(new URLSearchParams(window.location.search).get('event'))
+  );
+
+  // Compute initial active event index (from URL parameter, hash, or sessionStorage)
+  const getInitialActiveIndex = () => {
+    if (typeof window === 'undefined') return 26;
+
+    try {
+      // 1. Check URL query param e.g. ?event=12
+      const params = new URLSearchParams(window.location.search);
+      const queryEvent = params.get('event');
+      if (queryEvent) {
+        const found = EVENTS_DATA.findIndex(e => e.id === queryEvent || e.id === queryEvent.padStart(2, '0'));
+        if (found !== -1) return found;
+      }
+
+      // 2. Check URL hash e.g. #station-12
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#station-')) {
+        const id = hash.replace('#station-', '');
+        const found = EVENTS_DATA.findIndex(e => e.id === id || e.id === id.padStart(2, '0'));
+        if (found !== -1) return found;
+      }
+
+      // 3. Check sessionStorage
+      const savedIdx = sessionStorage.getItem('ignitrron_last_event_idx');
+      if (savedIdx !== null) {
+        const parsed = parseInt(savedIdx, 10);
+        if (!isNaN(parsed) && parsed >= 0 && parsed < EVENTS_DATA.length) {
+          return parsed;
+        }
+      }
+    } catch (e) {
+      console.warn('Could not read session state', e);
+    }
+
+    return 26; // Default to Flagship Hero Event (Station 27)
+  };
+
   // Stages: 1 = Arc Reactor, 2 = Intro, 4 = Spatial Environment & Archive
-  const [currentStage, setCurrentStage] = useState(1);
-  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [currentStage, setCurrentStage] = useState(() => (hasEnteredBefore ? 4 : 1));
+  const [loadingProgress, setLoadingProgress] = useState(() => (hasEnteredBefore ? 100 : 0));
 
   // 3D Spatial State
-  const [activeEventIndex, setActiveEventIndex] = useState(15); // Index 15 = 24-Hour Hackathon (Event 16)
+  const [activeEventIndex, setActiveEventIndex] = useState(getInitialActiveIndex);
   const [hoveredEventIndex, setHoveredEventIndex] = useState(null);
-  const [isEventFocused, setIsEventFocused] = useState(false);
+  const [isEventFocused, setIsEventFocused] = useState(() => {
+    if (hasEnteredBefore) {
+      try {
+        const focused = sessionStorage.getItem('ignitrron_event_focused');
+        return focused !== 'false';
+      } catch (e) {
+        return true;
+      }
+    }
+    return false;
+  });
   const [isMuted, setIsMuted] = useState(false);
 
   // Modal State (Preserved for future event registration/details integration)
@@ -48,6 +102,9 @@ export default function App() {
 
   const handleEnterSystem = () => {
     setCurrentStage(4);
+    try {
+      sessionStorage.setItem('ignitrron_entered_system', 'true');
+    } catch (e) {}
   };
 
   const handleToggleSound = () => {
@@ -58,11 +115,22 @@ export default function App() {
   const handleSelectEvent = (idx) => {
     setActiveEventIndex(idx);
     setIsEventFocused(true);
+    try {
+      sessionStorage.setItem('ignitrron_entered_system', 'true');
+      sessionStorage.setItem('ignitrron_last_event_idx', idx.toString());
+      sessionStorage.setItem('ignitrron_event_focused', 'true');
+    } catch (e) {}
   };
 
   const handleOpenEvent = (evt) => {
     const targetEvent = evt || EVENTS_DATA[activeEventIndex];
     if (!targetEvent) return;
+
+    try {
+      sessionStorage.setItem('ignitrron_entered_system', 'true');
+      sessionStorage.setItem('ignitrron_last_event_idx', activeEventIndex.toString());
+      sessionStorage.setItem('ignitrron_event_focused', 'true');
+    } catch (e) {}
 
     if (targetEvent.url) {
       window.location.href = targetEvent.url;
@@ -73,6 +141,9 @@ export default function App() {
 
   const handleBackToArchive = () => {
     setIsEventFocused(false);
+    try {
+      sessionStorage.setItem('ignitrron_event_focused', 'false');
+    } catch (e) {}
   };
 
   // 2. Keyboard & Scroll Handlers
@@ -92,6 +163,13 @@ export default function App() {
     };
 
     const handleWheel = (e) => {
+      // Ignore scroll events originating from inside interactive scroll containers (e.g. right-side navigator)
+      if (e.target && typeof e.target.closest === 'function') {
+        if (e.target.closest('aside, .custom-navigator-scroll, [data-no-wheel-cycle]')) {
+          return;
+        }
+      }
+
       if (scrollCooldownRef.current) return;
       scrollCooldownRef.current = true;
 
@@ -152,19 +230,27 @@ export default function App() {
 
       {/* STAGE 03 & 04: Immersive Doomsday Spatial Workspace HUD */}
       {(currentStage === 3 || currentStage === 4) && (
-        <HolographicHUD
-          activeEventIndex={activeEventIndex}
-          hoveredEventIndex={hoveredEventIndex}
-          isEventFocused={isEventFocused}
-          onSelectEvent={handleSelectEvent}
-          onBackToArchive={handleBackToArchive}
-          onOpenDetails={() => handleOpenEvent(EVENTS_DATA[activeEventIndex])}
-          onOpenRegister={() => {
-            // Placeholder: Registration action disabled for now
-          }}
-          onToggleSound={handleToggleSound}
-          isMuted={isMuted}
-        />
+        <>
+          <HolographicHUD
+            activeEventIndex={activeEventIndex}
+            hoveredEventIndex={hoveredEventIndex}
+            isEventFocused={isEventFocused}
+            onSelectEvent={handleSelectEvent}
+            onBackToArchive={handleBackToArchive}
+            onOpenDetails={() => handleOpenEvent(EVENTS_DATA[activeEventIndex])}
+            onOpenRegister={() => {
+              // Placeholder: Registration action disabled for now
+            }}
+            onToggleSound={handleToggleSound}
+            isMuted={isMuted}
+          />
+          <EventNavigator
+            activeEventIndex={activeEventIndex}
+            onSelectEvent={handleSelectEvent}
+            onOpenEvent={handleOpenEvent}
+            isEventFocused={isEventFocused}
+          />
+        </>
       )}
 
       {/* Event Details & Registration Modal (Preserved intact in codebase) */}

@@ -65,8 +65,8 @@ export const EVENT_DATA = {
   edition: "2.0",
   organizer: "IGNITRRON'26",
   day: "DAY 01",
-  timing: "10:00 AM – 5:00 PM",
-  venue: "Veena, IGN",
+  timing: "9:00 AM – 4:00 PM",
+  venue: "Thanam Hall, Classrooms",
   primaryTagline: "INVESTIGATE • DEDUCE • SOLVE",
   secondaryTagline: "Three stages. One case. Can you uncover the truth?",
   description: "A forensic investigation challenge inspired by real investigative techniques and civil service aptitude examinations. Participants analyze crime scenes, evidence, images, witness statements, and logical clues to solve complex criminal cases.",
@@ -74,7 +74,7 @@ export const EVENT_DATA = {
   stats: [
     { label: "EXPECTED PARTICIPANTS", value: "70+", numericValue: 70, suffix: "+" },
     { label: "EVENT DAY", value: "DAY 01", isText: true },
-    { label: "EVENT TIMING", value: "10:00–5:00", isText: true },
+    { label: "EVENT TIMING", value: "9:00–4:00", isText: true },
     { label: "TOTAL PRIZE POOL", value: "₹6,000", numericValue: 6000, prefix: "₹" }
   ],
 
@@ -181,15 +181,15 @@ export const EVENT_DATA = {
     {
       id: "check-in",
       phase: "PHASE 01",
-      time: "10:00 AM",
+      time: "9:00 AM",
       title: "CHECK-IN & REGISTRATION",
-      description: "Participant identity verification, distribution of investigation kits, badge issuance, and initial seating at Veena, IGN.",
+      description: "Participant identity verification, distribution of investigation kits, badge issuance, and initial seating at Thanam Hall, Classrooms.",
       status: "upcoming"
     },
     {
       id: "briefing",
       phase: "PHASE 02",
-      time: "10:30 AM",
+      time: "9:30 AM",
       title: "CASE BRIEFING",
       description: "Official event inauguration, explanation of forensic guidelines, evaluation criteria, and case scenario outline.",
       status: "upcoming"
@@ -221,7 +221,7 @@ export const EVENT_DATA = {
     {
       id: "verdict",
       phase: "PHASE 06",
-      time: "4:30 PM – 5:00 PM",
+      time: "3:30 PM – 4:00 PM",
       title: "FINAL VERDICT & PRIZE CEREMONY",
       description: "Evaluation review by jury, presentation of final case breakdown, announcement of winners, and ₹6,000 prize distribution.",
       status: "upcoming"
@@ -298,21 +298,34 @@ export const EVENT_DATA = {
 
   totalPrizePool: "₹6,000",
 
-  contacts: [
+  facultyContacts: [
     {
-      name: "DHIVYA BHARATHI V",
-      role: "Event Coordinator",
-      phone: "7810002013"
+      name: "Ms. SUSHMITHA RAJA",
+      role: "Faculty Coordinator",
+      phone: ""
     },
     {
-      name: "THYANICA V",
-      role: "Event Coordinator",
-      phone: "9566759995"
+      name: "Lt. Dr. CHARLY JEROME",
+      role: "Faculty Coordinator",
+      phone: ""
+    }
+  ] as ContactInfo[],
+
+  contacts: [
+    {
+      name: "VISHAL B S",
+      role: "Student Coordinator",
+      phone: "7397508211"
+    },
+    {
+      name: "MAHIMA P",
+      role: "Student Coordinator",
+      phone: "7305635749"
     },
     {
       name: "DINAKAR S",
-      role: "Event Coordinator",
-      phone: "9677595454"
+      role: "Student Coordinator",
+      phone: "9677559454"
     }
   ] as ContactInfo[],
 
@@ -332,13 +345,13 @@ export const EVENT_DATA = {
     {
       id: "faq-3",
       question: "WHEN IS THE EVENT?",
-      answer: "Criminal Chronicles 2.0 takes place on Day 1 from 10:00 AM to 5:00 PM.",
+      answer: "Criminal Chronicles 2.0 takes place on Day 1 from 9:00 AM to 4:00 PM.",
       category: "Schedule"
     },
     {
       id: "faq-4",
       question: "WHERE IS THE EVENT VENUE?",
-      answer: "The event will be conducted at venue Veena, IGN.",
+      answer: "The event will be conducted at venue Thanam Hall, Classrooms.",
       category: "Schedule"
     },
     {

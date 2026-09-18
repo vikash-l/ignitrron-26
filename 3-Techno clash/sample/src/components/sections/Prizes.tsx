@@ -23,18 +23,18 @@ export const Prizes: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs mb-3 shadow-[0_0_15px_rgba(255,184,0,0.2)]">
-            <Trophy className="w-3.5 h-3.5" /> REWARDS & HONORS
+            <Trophy className="w-3.5 h-3.5" /> CASH PRIZES
           </div>
-          <h2 className="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight">
-            PRIZE <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-violet-500">POOL & PERKS</span>
+          <h2 className="font-mono text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            CASH <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-violet-500">PRIZES</span>
           </h2>
           <p className="text-slate-400 text-sm font-mono mt-2">
-            ₹1,00,000 Total Prize Pool plus direct incubation vouchers and national citations.
+            ₹6,000 Total Cash Prize pool awarded to the top 3 finalists.
           </p>
         </div>
 
         {/* Prize Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {eventData.prizes.map((prize, idx) => {
             const isChampion = idx === 0;
 
@@ -44,13 +44,13 @@ export const Prizes: React.FC = () => {
                 onMouseEnter={() => sound.playHover()}
                 className={`relative rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 font-mono ${
                   isChampion
-                    ? 'bg-[#0a0f2e] border-2 border-amber-400/80 shadow-[0_0_50px_rgba(255,184,0,0.3)] scale-105 z-20'
+                    ? 'bg-[#0a0f2e] border-2 border-amber-400/80 shadow-[0_0_50px_rgba(255,184,0,0.3)] md:scale-105 z-20'
                     : 'bg-[#080d24]/90 border border-cyan-500/30 hover:border-cyan-400 shadow-xl'
                 }`}
               >
                 {isChampion && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950 text-[10px] font-bold px-3 py-0.5 rounded-full shadow-lg">
-                    GRAND CHAMPION
+                    1ST PRIZE
                   </div>
                 )}
 
@@ -63,16 +63,16 @@ export const Prizes: React.FC = () => {
                   <h3 className="text-xl font-black text-white mb-2">{prize.title}</h3>
                   <p className="text-xs text-slate-400 font-sans mb-4">{prize.description}</p>
 
-                  <div className="bg-slate-950/80 border border-cyan-500/20 p-3 rounded-xl mb-4">
-                    <span className="text-[10px] text-slate-500 block">CASH AWARD</span>
-                    <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-300">
+                  <div className="bg-slate-950/80 border border-cyan-500/20 p-4 rounded-xl mb-4">
+                    <span className="text-[10px] text-slate-500 block mb-1 font-bold">CASH AWARD</span>
+                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-300">
                       {prize.amount}
                     </span>
                   </div>
 
                   {/* Perks Bullet List */}
                   <div className="space-y-2">
-                    <span className="text-[10px] text-cyan-400 font-bold block">INCLUDED PERKS:</span>
+                    <span className="text-[10px] text-cyan-400 font-bold block">INCLUDED BENEFITS:</span>
                     {prize.perks.map((perk, pIdx) => (
                       <div key={pIdx} className="flex items-center gap-2 text-xs text-slate-300 font-sans">
                         <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
@@ -86,7 +86,6 @@ export const Prizes: React.FC = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

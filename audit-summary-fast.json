@@ -1,0 +1,226 @@
+[
+  {
+    "id": "dashboard",
+    "name": "Main Dashboard",
+    "files": 21,
+    "fixedWidths": 1,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "coming-soon",
+    "name": "Coming Soon Portal",
+    "files": 17,
+    "fixedWidths": 4,
+    "giantFonts": 1,
+    "rigidGrids": 0
+  },
+  {
+    "id": "launchpad",
+    "name": "Launchpad",
+    "files": 25,
+    "fixedWidths": 7,
+    "giantFonts": 13,
+    "rigidGrids": 1
+  },
+  {
+    "id": "mun-conference",
+    "name": "MUN Conference",
+    "files": 8,
+    "fixedWidths": 5,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "techno-clash",
+    "name": "Techno Clash",
+    "files": 36,
+    "fixedWidths": 7,
+    "giantFonts": 2,
+    "rigidGrids": 3
+  },
+  {
+    "id": "mechanical-design-challenge",
+    "name": "CAD Forge",
+    "files": 36,
+    "fixedWidths": 8,
+    "giantFonts": 1,
+    "rigidGrids": 2
+  },
+  {
+    "id": "legacy-code",
+    "name": "Legacy Code",
+    "files": 32,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 4
+  },
+  {
+    "id": "research-zero-to-hero",
+    "name": "Research Zero to Hero",
+    "files": 29,
+    "fixedWidths": 9,
+    "giantFonts": 1,
+    "rigidGrids": 2
+  },
+  {
+    "id": "ipl-mega-auction",
+    "name": "IPL Mega Auction",
+    "files": 4,
+    "fixedWidths": 3,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "e-sports-arcade",
+    "name": "E-Sports Arcade",
+    "files": 40,
+    "fixedWidths": 8,
+    "giantFonts": 2,
+    "rigidGrids": 2
+  },
+  {
+    "id": "criminal-chronicles",
+    "name": "Criminal Chronicles 2.0",
+    "files": 25,
+    "fixedWidths": 5,
+    "giantFonts": 4,
+    "rigidGrids": 4
+  },
+  {
+    "id": "milan-26",
+    "name": "MILAN 26",
+    "files": 46,
+    "fixedWidths": 12,
+    "giantFonts": 2,
+    "rigidGrids": 2
+  },
+  {
+    "id": "project-presentation",
+    "name": "Project Presentation",
+    "files": 26,
+    "fixedWidths": 3,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "paper-presentation",
+    "name": "Paper Presentation",
+    "files": 16,
+    "fixedWidths": 7,
+    "giantFonts": 2,
+    "rigidGrids": 1
+  },
+  {
+    "id": "robo-race",
+    "name": "Robo Race",
+    "files": 30,
+    "fixedWidths": 13,
+    "giantFonts": 1,
+    "rigidGrids": 3
+  },
+  {
+    "id": "drone-race",
+    "name": "Drone Race",
+    "files": 23,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "line-follower",
+    "name": "Line Follower",
+    "files": 11,
+    "fixedWidths": 2,
+    "giantFonts": 1,
+    "rigidGrids": 0
+  },
+  {
+    "id": "marvel-quiz",
+    "name": "Marvel Quiz",
+    "files": 40,
+    "fixedWidths": 2,
+    "giantFonts": 5,
+    "rigidGrids": 2
+  },
+  {
+    "id": "game-genesis-x",
+    "name": "Game Genesis X",
+    "files": 32,
+    "fixedWidths": 6,
+    "giantFonts": 5,
+    "rigidGrids": 2
+  },
+  {
+    "id": "breaking-the-build",
+    "name": "Breaking the Build",
+    "files": 24,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "japanese-street",
+    "name": "Japanese Street",
+    "files": 23,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "auto-show",
+    "name": "Auto Show",
+    "files": 25,
+    "fixedWidths": 2,
+    "giantFonts": 2,
+    "rigidGrids": 0
+  },
+  {
+    "id": "corporate-walk",
+    "name": "Corporate Walk",
+    "files": 8,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "structure-x",
+    "name": "StructureX",
+    "files": 32,
+    "fixedWidths": 2,
+    "giantFonts": 1,
+    "rigidGrids": 2
+  },
+  {
+    "id": "business-model-canvas",
+    "name": "Business Model Canvas",
+    "files": 56,
+    "fixedWidths": 13,
+    "giantFonts": 3,
+    "rigidGrids": 3
+  },
+  {
+    "id": "project-jarvis",
+    "name": "Project JARVIS",
+    "files": 5,
+    "fixedWidths": 1,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "path-pilot",
+    "name": "Path Pilot",
+    "files": 23,
+    "fixedWidths": 2,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  },
+  {
+    "id": "hire-code",
+    "name": "Workshop 2 (Hire Code)",
+    "files": 24,
+    "fixedWidths": 4,
+    "giantFonts": 0,
+    "rigidGrids": 0
+  }
+]

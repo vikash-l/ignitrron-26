@@ -4,7 +4,7 @@ import { soundEngine } from './sound.js';
 // OFFICIAL GOOGLE FORM REGISTRATION LINK (SINGLE LOCATION CONFIG)
 // Replace "GOOGLE_FORM_LINK_HERE" with your actual Google Form URL
 // ============================================================
-export const GOOGLE_FORM_URL = "GOOGLE_FORM_LINK_HERE";
+export const GOOGLE_FORM_URL = "https://www.theticket9.com/event/ignitrron-26";
 
 export function initModalsAndControls() {
   // Mobile Nav Drawer Toggle

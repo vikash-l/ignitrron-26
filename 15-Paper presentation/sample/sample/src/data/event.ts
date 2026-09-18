@@ -48,7 +48,7 @@ export const eventData = {
   supportingText: "Where innovation meets presentation.",
   organizedBy: "Ignitrron",
   day: "Day 2",
-  time: "10:00 AM – 5:00 PM",
+  time: "10:00 AM – 4:00 PM",
   venue: "ECE Class",
   expectedParticipants: 100,
   expectedTeams: 25,

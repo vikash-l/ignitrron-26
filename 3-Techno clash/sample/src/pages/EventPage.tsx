@@ -10,6 +10,7 @@ import { FinalBoss } from '../components/sections/FinalBoss';
 import { Requirements } from '../components/sections/Requirements';
 import { Rules } from '../components/sections/Rules';
 import { Prizes } from '../components/sections/Prizes';
+import { Coordinators } from '../components/sections/Coordinators';
 import { FAQ } from '../components/sections/FAQ';
 import { Winners } from '../components/sections/Winners';
 import { RegistrationCTA } from '../components/sections/RegistrationCTA';
@@ -45,6 +46,7 @@ export const EventPage: React.FC = () => {
         {sections.requirements && <Requirements />}
         {sections.rules && <Rules />}
         {sections.prizes && <Prizes />}
+        {sections.coordinators && <Coordinators />}
         {sections.faq && <FAQ />}
         {sections.winners && <Winners />}
         {sections.registration && <RegistrationCTA onRegisterClick={handleOpenRegister} />}
@@ -55,12 +57,6 @@ export const EventPage: React.FC = () => {
 
       {/* Floating AI Guide Chat Widget (NEXA) */}
       <AIGuideAssistant />
-
-      {/* Registration & Holographic Pass Generator Modal */}
-      <RegistrationModal 
-        isOpen={isRegisterModalOpen} 
-        onClose={() => setIsRegisterModalOpen(false)} 
-      />
     </div>
   );
 };

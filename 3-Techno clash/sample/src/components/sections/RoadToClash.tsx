@@ -14,7 +14,7 @@ export const RoadToClash: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs mb-3 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
             <Sparkles className="w-3.5 h-3.5" /> COMPETITION ROADMAP
           </div>
-          <h2 className="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h2 className="font-mono text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
             THE ROAD TO THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500">CLASH</span>
           </h2>
           <p className="text-slate-400 text-sm font-mono mt-2">

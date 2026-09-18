@@ -10,8 +10,8 @@ export const RegistrationCTA: React.FC = () => {
   return (
     <section id="registration" className="py-24 bg-slate-950/20 relative overflow-hidden">
       {/* Decorative background glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-cyan-500/10 blur-[90px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-purple-500/10 blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] h-[350px] rounded-full bg-cyan-500/10 blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] h-[350px] rounded-full bg-purple-500/10 blur-[90px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -29,7 +29,7 @@ export const RegistrationCTA: React.FC = () => {
               <Sparkles className="h-8 w-8 text-glow-cyan animate-pulse" />
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
               Ready to Shape the Future?
             </h2>
             

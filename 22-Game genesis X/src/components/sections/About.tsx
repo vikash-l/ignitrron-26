@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { EventConfig } from '../../types/event';
 import { Card } from '../ui/Card';
 
@@ -15,7 +15,7 @@ export const About: React.FC<AboutProps> = ({ event }) => {
     <section id="about" className="py-24 bg-transparent relative z-10 overflow-hidden">
       {/* Subtle Playing-Card Graphic at Section Edge */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none hidden lg:block">
-        <div className="w-64 h-96 border-2 border-[#8F26FF] rounded-2xl rotate-12 flex items-center justify-center text-8xl font-mono text-[#E626FF]">
+        <div className="w-64 h-96 border-2 border-[#8F26FF] rounded-2xl rotate-12 flex items-center justify-center text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl font-mono text-[#E626FF]">
           ♠
         </div>
       </div>
@@ -27,7 +27,7 @@ export const About: React.FC<AboutProps> = ({ event }) => {
           <span className="text-xs font-mono text-[#E626FF] uppercase tracking-widest block mb-2 font-bold">
             ABOUT THE ARENA
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
+          <h2 className="text-3xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-display uppercase tracking-tight">
             THE GAME BEGINS HERE
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[#6B1FDB] to-[#FF3BE6] mt-4 rounded-full"></div>
@@ -49,19 +49,6 @@ export const About: React.FC<AboutProps> = ({ event }) => {
                 {paragraph}
               </motion.p>
             ))}
-
-            {/* Prototype Recommendation Note */}
-            <div className="p-4 rounded-lg bg-[#160814] border border-[#E626FF]/40 flex items-start gap-3 shadow-[0_0_20px_rgba(230,38,255,0.15)]">
-              <Sparkles className="w-5 h-5 text-[#FF3BE6] flex-shrink-0 mt-0.5" />
-              <div>
-                <span className="font-mono text-xs text-[#FF3BE6] font-bold uppercase tracking-wider block">
-                  RECOMMENDED FOR PARTICIPANTS:
-                </span>
-                <p className="text-sm text-[#F8F5FC] font-medium">
-                  Prototypes & Concept Art are highly recommended to demonstrate core game feel and visual lore.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Editorial Card */}

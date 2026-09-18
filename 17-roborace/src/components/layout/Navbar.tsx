@@ -55,9 +55,9 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Logo / Title */}
-          <div
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-3 cursor-pointer group"
+          <a
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+            className="flex items-center gap-3 cursor-pointer group no-underline"
           >
             <div className="flex h-9 w-9 items-center justify-center rounded bg-sky-950/60 border border-sky-850 font-black text-white text-base transition-transform duration-120 group-hover:scale-105">
               🏎️
@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
             <span className="text-base sm:text-lg font-black tracking-widest text-white font-display uppercase">
               {eventData.name}
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 font-mono">
@@ -84,12 +84,14 @@ export const Navbar: React.FC<NavbarProps> = ({ sections }) => {
           {/* Registration CTA (Desktop) */}
           {sections.registration && eventData.registration && (
             <div className="hidden lg:block">
-              <button
-                onClick={() => scrollToSection('registration')}
-                className="inline-flex items-center justify-center px-4 py-2 text-xs font-black rounded bg-gradient-to-r from-slate-200 to-zinc-400 hover:from-white hover:to-slate-250 text-zinc-950 transition-all active:scale-[0.98] cursor-pointer font-display tracking-widest"
+              <a
+                href={eventData.registration.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 text-xs font-black rounded bg-gradient-to-r from-slate-200 to-zinc-400 hover:from-white hover:to-slate-250 text-zinc-950 transition-all active:scale-[0.98] cursor-pointer font-display tracking-widest no-underline"
               >
                 {eventData.registration.label}
-              </button>
+              </a>
             </div>
           )}
 

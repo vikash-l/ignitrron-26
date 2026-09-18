@@ -23,7 +23,7 @@ export const FAQ: React.FC = () => {
             <span>HELP & INFORMATION</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl tracking-tight text-white uppercase">
             CASE FILE <span className="text-[#e31b23]">FAQ</span>
           </h2>
 

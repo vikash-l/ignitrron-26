@@ -38,7 +38,7 @@ export const Rules: React.FC = () => {
             <Shield className="w-3.5 h-3.5" />
             <span>Guidelines & Directives</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             RULES & REGULATIONS
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -48,7 +48,7 @@ export const Rules: React.FC = () => {
         </div>
 
         {/* 4 Stylish Futuristic Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           {cadForgeData.rules.map((rule) => (
             <div
               key={rule.id}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, Shield, Users, Clock, ArrowRight } from 'lucide-react';
 import { eventData } from '../../data/event';
 import { Button } from '../ui/Button';
+import bruceBannerImg from '../../assets/bruce_banner.jpg';
 
 export const Hero: React.FC = () => {
   const handleScrollTo = (id: string) => {
@@ -15,8 +16,8 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-[#04080F]">
       {/* Background Gamma-Energy Accents */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] rounded-full bg-green-600/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] h-[350px] sm:w-full max-w-[600px] sm:h-[600px] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-full max-w-[350px] h-[350px] sm:w-full max-w-[600px] sm:h-[600px] rounded-full bg-green-600/5 blur-[120px] pointer-events-none" />
       
       {/* Grid background overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
@@ -38,7 +39,7 @@ export const Hero: React.FC = () => {
               </span>
               
               {/* Event Name */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-4 leading-none">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 leading-none">
                 {eventData.name}
               </h1>
               
@@ -112,13 +113,13 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="relative w-full max-w-[380px] sm:max-w-[420px] aspect-square rounded-2xl border border-slate-900 bg-slate-900/40 backdrop-blur-md overflow-hidden shadow-2xl flex items-center justify-center group"
+              className="relative w-full max-w-full max-w-[380px] sm:max-w-full max-w-[420px] aspect-square rounded-2xl border border-slate-900 bg-slate-900/40 backdrop-blur-md overflow-hidden shadow-2xl flex items-center justify-center group"
             >
               {/* Subtle green ambient lighting grid */}
               <div className="absolute inset-0 bg-radial-gradient from-emerald-500/10 via-transparent to-transparent opacity-50 z-10 pointer-events-none" />
               
               <img 
-                src="https://i.pinimg.com/736x/7e/c7/ab/7ec7ab6756c83179f82aa82e6cb97316.jpg" 
+                src={bruceBannerImg} 
                 alt="Bruce Banner - The Researcher" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

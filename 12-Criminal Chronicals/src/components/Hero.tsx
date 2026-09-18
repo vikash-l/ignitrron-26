@@ -18,8 +18,8 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-forensic-grid opacity-25 pointer-events-none" />
 
       {/* Red Atmospheric Fog */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-[#e31b23]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-full max-w-[500px] h-[500px] bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-full max-w-[600px] h-[600px] bg-[#e31b23]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
@@ -37,10 +37,10 @@ export const Hero: React.FC = () => {
 
             {/* Main Headline */}
             <div className="space-y-1">
-              <h1 className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-wider text-white leading-none">
+              <h1 className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl tracking-wider text-white leading-none">
                 CRIMINAL
               </h1>
-              <h1 className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-wider leading-none bg-gradient-to-r from-white via-slate-200 to-[#e31b23] bg-clip-text text-transparent">
+              <h1 className="font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl tracking-wider leading-none bg-gradient-to-r from-white via-slate-200 to-[#e31b23] bg-clip-text text-transparent">
                 CHRONICLES <span className="text-[#e31b23]">2.0</span>
               </h1>
             </div>

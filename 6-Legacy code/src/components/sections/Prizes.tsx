@@ -24,7 +24,7 @@ export const Prizes: React.FC<PrizesProps> = ({ event }) => {
           subtitle="Financial awards and honors for top-performing code rescue units."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {prizes.map((prize, idx) => {
             const isFirst = idx === 0 || prize.highlight;
 

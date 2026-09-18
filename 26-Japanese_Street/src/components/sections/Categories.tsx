@@ -86,7 +86,7 @@ export const Activities: React.FC = () => {
         </div>
 
         {/* 10 Activities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {filteredActivities.map((activity: ActivityItem, idx: number) => {
             const isMerchandise = activity.badgeType === 'MERCHANDISE';
 

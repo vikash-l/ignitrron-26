@@ -1,7 +1,8 @@
 import React from 'react';
 import type { EventConfig, SectionConfig } from '../data/event.types';
 import { defaultSectionConfig } from '../config/sections.config';
-import { placeholderEvent } from '../data/placeholder-event';
+import { legacyCodeRescueEvent } from '../data/legacy-code-rescue';
+import { UltronBackground } from '../components/ui/UltronBackground';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Hero } from '../components/sections/Hero';
@@ -21,7 +22,7 @@ export interface EventPageProps {
   event?: EventConfig;
 }
 
-export const EventPage: React.FC<EventPageProps> = ({ event = placeholderEvent }) => {
+export const EventPage: React.FC<EventPageProps> = ({ event = legacyCodeRescueEvent }) => {
   // Merge default section config with event section overrides
   const sections: SectionConfig = {
     ...defaultSectionConfig,
@@ -29,12 +30,15 @@ export const EventPage: React.FC<EventPageProps> = ({ event = placeholderEvent }
   };
 
   return (
-    <div className="min-h-screen bg-[var(--bg-page)] text-[var(--text-main)] flex flex-col font-sans antialiased">
+    <div className="relative min-h-screen bg-[var(--bg-page)] text-[var(--text-main)] flex flex-col font-sans antialiased">
+      {/* Ultron Machine Background Elements & Telemetry Overlay */}
+      <UltronBackground />
+
       {/* Top Fixed Navbar */}
       <Navbar event={event} sections={sections} />
 
       {/* Main Content Sections */}
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         {sections.hero && <Hero event={event} />}
         {sections.eventInfo && <EventInfo event={event} />}
         {sections.stats && <Stats event={event} />}

@@ -166,21 +166,50 @@ export const cadForgeData: CADForgeData = {
       accent: "amber"
     }
   ],
+  prizes: [
+    {
+      position: "1ST PRIZE",
+      title: "CHAMPION",
+      amount: "₹5,000",
+      description: "First place cash award + Certificate of Excellence",
+      accent: "red",
+      icon: "Trophy"
+    },
+    {
+      position: "2ND PRIZE",
+      title: "RUNNER-UP",
+      amount: "₹3,000",
+      description: "Second place cash award + Certificate of Merit",
+      accent: "cyan",
+      icon: "Award"
+    },
+    {
+      position: "3RD PRIZE",
+      title: "SECOND RUNNER-UP",
+      amount: "₹2,000",
+      description: "Third place cash award + Certificate of Merit",
+      accent: "purple",
+      icon: "Medal"
+    }
+  ],
   coordinators: [
     {
-      name: "Paavan Ashok Kumar",
+      name: "Ayman Nuhad",
       role: "Student Coordinator",
-      phone: "+91 87546 42788"
+      phone: "+91 93635 29044",
+      telLink: "tel:+919363529044"
     },
     {
-      name: "Tharun Kumar",
+      name: "Kavin R K",
       role: "Student Coordinator",
-      phone: "+91 99432 99466"
+      phone: "+91 93434 29709",
+      telLink: "tel:+919343429709"
     },
     {
-      name: "Dharshan Mech",
+      name: "Aghasthya M N",
       role: "Student Coordinator",
-      phone: "+91 98946 82659"
+      phone: "+91 99449 23482",
+      telLink: "tel:+919944923482"
     }
   ]
 };

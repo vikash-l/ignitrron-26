@@ -1,0 +1,404 @@
+/* ==========================================================================
+   CORPORATE WALK — BLACK WIDOW THEME
+   Core Design System & Base Styles
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-primary: #050505;
+  --bg-secondary: #0c0c0e;
+  --bg-charcoal: #121215;
+  --bg-surface: #17171c;
+  
+  --accent-red: #D90429;
+  --accent-red-glow: rgba(217, 4, 41, 0.4);
+  --accent-red-subtle: rgba(217, 4, 41, 0.12);
+  --accent-crimson: #7A0018;
+  
+  --text-primary: #F2F0EA;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+  --text-dark: #333333;
+  
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-red: rgba(217, 4, 41, 0.35);
+  --border-active: rgba(217, 4, 41, 0.8);
+
+  /* Typography */
+  --font-display: 'Syne', 'Cinzel', sans-serif;
+  --font-serif: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Spacing & Layout */
+  --container-max: 1320px;
+  --nav-height: 72px;
+  
+  /* Transitions */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-sharp: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.2s var(--ease-sharp);
+  --transition-smooth: 0.5s var(--ease-cinematic);
+  --transition-slow: 0.8s var(--ease-cinematic);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-red);
+  color: #ffffff;
+}
+
+/* Base Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-red {
+  color: var(--accent-red) !important;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Background Atmosphere Layers */
+#canvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Ambient Radial Spotlights */
+.ambient-glow-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glow-red-hero {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227, 27, 35, 0.28) 0%, rgba(122, 0, 24, 0.14) 45%, transparent 70%);
+  filter: blur(50px);
+  animation: pulseGlow 7s ease-in-out infinite alternate;
+}
+
+.glow-crimson-left {
+  position: absolute;
+  top: 35%;
+  left: -80px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.16) 0%, rgba(100, 0, 15, 0.08) 50%, transparent 70%);
+  filter: blur(60px);
+  animation: pulseGlow 9s ease-in-out infinite alternate-reverse;
+}
+
+.glow-beam-bottom {
+  position: absolute;
+  bottom: -50px;
+  left: 15%;
+  width: 70vw;
+  height: 380px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(227, 27, 35, 0.2) 0%, rgba(122, 0, 24, 0.08) 50%, transparent 75%);
+  filter: blur(45px);
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.92) translate(0, 0); opacity: 0.8; }
+  50% { transform: scale(1.08) translate(15px, -15px); opacity: 1; }
+  100% { transform: scale(0.95) translate(-10px, 10px); opacity: 0.85; }
+}
+
+/* Tactical Precision Grid Matrix */
+.tactical-grid-pattern {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.22;
+  background-size: 64px 64px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 45%, black 45%, transparent 92%);
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, black 45%, transparent 92%);
+}
+
+/* Background Deadpool Silhouette Watermark */
+.deadpool-bg-watermark {
+  position: fixed;
+  top: 15%;
+  right: 5%;
+  width: 560px;
+  height: 560px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23E31B23' stroke-width='8'/%3E%3Cline x1='50' y1='4' x2='50' y2='96' stroke='%23E31B23' stroke-width='8'/%3E%3Cellipse cx='32' cy='50' rx='10' ry='16' fill='%23E31B23' transform='rotate(-18 32 50)'/%3E%3Cellipse cx='68' cy='50' rx='10' ry='16' fill='%23E31B23' transform='rotate(18 68 50)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotateWatermark 120s linear infinite;
+}
+
+@keyframes rotateWatermark {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* HUD Tactical Runway Telemetry Badges */
+.hud-telemetry {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.28);
+  padding: 5.5rem 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hud-top-row, .hud-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hud-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-red);
+  box-shadow: 0 0 8px var(--accent-red);
+  animation: blinkHud 2s ease-in-out infinite;
+}
+
+@keyframes blinkHud {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.hud-cross {
+  color: rgba(227, 27, 35, 0.4);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .hud-telemetry {
+    display: none;
+  }
+}
+
+/* Architectural Guideline Overlays */
+.ambient-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  opacity: 0.08;
+}
+
+.ambient-grid .grid-line {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(227, 27, 35, 0.4) 30%, rgba(255, 255, 255, 0.5) 70%, transparent);
+}
+
+/* Film Grain Texture */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Section Common Structure */
+.section {
+  position: relative;
+  padding: 8rem 0;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 0;
+  }
+}
+
+/* Label Tags (e.g. 01 // CORPORATE PRESENCE) */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 1.5rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-red);
+  box-shadow: 0 0 8px var(--accent-red);
+}
+
+/* Section Title - Huge Confident Editorial Type */
+.section-heading-huge {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+}
+
+/* Subtle Red Atmospheric Glows */
+.red-ambient-spot {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Links & Buttons Reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Reveal Animation Classes */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger-1 { transition-delay: 0.1s; }
+.reveal-stagger-2 { transition-delay: 0.2s; }
+.reveal-stagger-3 { transition-delay: 0.3s; }
+.reveal-stagger-4 { transition-delay: 0.4s; }

@@ -13,14 +13,14 @@ export const Round3EvidenceBoard: React.FC = () => {
   return (
     <div className="relative w-full h-full min-h-[320px] bg-[#000000] rounded-xl overflow-hidden border border-red-900/50 p-4 flex flex-col justify-between group shadow-[0_0_20px_rgba(193,18,31,0.2)]">
       {/* Header */}
-      <div className="flex items-center justify-between text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
-        <div className="flex items-center gap-2">
-          <Search className="w-4 h-4 text-[#e31b23] animate-pulse" />
-          <span>DIGITAL_CRIME_SCENE_BOARD_V2.0</span>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
+        <div className="flex items-center gap-2 max-w-full overflow-hidden">
+          <Search className="w-4 h-4 shrink-0 text-[#e31b23] animate-pulse" />
+          <span className="truncate">DIGITAL_CRIME_SCENE_BOARD_V2.0</span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <span className="w-2 h-2 rounded-full bg-[#e31b23] animate-ping" />
-          <span className="text-[#e31b23] font-mono text-[10px] font-bold">CASE VERDICT READY</span>
+          <span className="text-[#e31b23] font-mono text-[10px] font-bold whitespace-nowrap">CASE VERDICT READY</span>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export const Round3EvidenceBoard: React.FC = () => {
         </svg>
 
         {/* Evidence Pins Row */}
-        <div className="relative z-10 grid grid-cols-3 gap-2">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-2">
           {nodes.map((n) => (
             <button
               key={n.id}

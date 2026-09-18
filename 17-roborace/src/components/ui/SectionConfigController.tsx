@@ -59,7 +59,7 @@ export const SectionConfigController: React.FC<SectionConfigControllerProps> = (
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 220 }}
-              className="fixed right-0 top-0 bottom-0 w-[320px] sm:w-[380px] bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl z-50 overflow-y-auto flex flex-col justify-between"
+              className="fixed right-0 top-0 bottom-0 w-full max-w-[320px] sm:w-full max-w-[380px] bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl z-50 overflow-y-auto flex flex-col justify-between"
             >
               <div>
                 {/* Header */}

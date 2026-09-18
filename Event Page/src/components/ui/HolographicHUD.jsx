@@ -15,6 +15,21 @@ export function HolographicHUD({
 }) {
   const [animatedPrize, setAnimatedPrize] = useState(0);
   const [hoveredTimelineIdx, setHoveredTimelineIdx] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  // Responsive Breakpoint Listener
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      setIsMobile(w <= 768);
+      setIsTablet(w > 768 && w <= 1024);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const activeEvent = EVENTS_DATA[activeEventIndex] || EVENTS_DATA[0];
   const hoveredEvent = (hoveredEventIndex !== null && EVENTS_DATA[hoveredEventIndex])
@@ -40,12 +55,20 @@ export function HolographicHUD({
     requestAnimationFrame(updateCounter);
   }, []);
 
-  const handlePrev = () => {
+  const handlePrev = (e) => {
+    if (e) {
+      e.stopPropagation?.();
+      e.preventDefault?.();
+    }
     const nextIdx = (activeEventIndex - 1 + EVENTS_DATA.length) % EVENTS_DATA.length;
     onSelectEvent(nextIdx);
   };
 
-  const handleNext = () => {
+  const handleNext = (e) => {
+    if (e) {
+      e.stopPropagation?.();
+      e.preventDefault?.();
+    }
     const nextIdx = (activeEventIndex + 1) % EVENTS_DATA.length;
     onSelectEvent(nextIdx);
   };
@@ -61,7 +84,7 @@ export function HolographicHUD({
       pointerEvents: 'none',
       display: 'flex',
       flexDirection: 'column',
-      padding: '16px 24px 20px 24px',
+      padding: isMobile ? '8px 10px 10px 10px' : '16px 24px 20px 24px',
       boxSizing: 'border-box',
       fontFamily: "'Rajdhani', sans-serif"
     }}>
@@ -80,8 +103,8 @@ export function HolographicHUD({
           display: 'flex',
           justify: 'space-between',
           alignItems: 'center',
-          height: '72px',
-          padding: '0 24px',
+          height: isMobile ? '56px' : '72px',
+          padding: isMobile ? '0 12px' : '0 24px',
           background: 'rgba(7, 17, 13, 0.96)',
           border: '1px solid rgba(57, 255, 136, 0.35)',
           borderRadius: '10px',
@@ -101,7 +124,7 @@ export function HolographicHUD({
           }} />
 
           {/* LEFT BRAND / BACK CONTROL */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '8px' : '14px' }}>
             {isEventFocused ? (
               <button
                 onClick={onBackToArchive}
@@ -109,10 +132,10 @@ export function HolographicHUD({
                   background: 'rgba(57, 255, 136, 0.08)',
                   border: '1px solid #39FF88',
                   borderRadius: '4px',
-                  padding: '7px 18px',
+                  padding: isMobile ? '5px 12px' : '7px 18px',
                   color: '#EAF7F0',
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: '11px',
+                  fontSize: isMobile ? '10px' : '11px',
                   fontWeight: 700,
                   letterSpacing: '1.5px',
                   display: 'flex',
@@ -122,97 +145,44 @@ export function HolographicHUD({
                   boxShadow: '0 0 15px rgba(57, 255, 136, 0.25)'
                 }}
               >
-                <ArrowLeft size={14} /> [ BACK TO ARCHIVE ]
+                <ArrowLeft size={isMobile ? 12 : 14} /> [ BACK ]
               </button>
             ) : (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '50%',
-                  border: '1px solid #39FF88',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justify: 'center',
-                  background: 'rgba(57, 255, 136, 0.08)'
-                }}>
-                  <Shield size={20} color="#39FF88" />
-                </div>
-                <div>
-                  <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '17px', fontWeight: 900, color: '#EAF7F0', letterSpacing: '2px' }}>
-                    IGNITRRON <span style={{ color: '#39FF88' }}>’26</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '6px' : '12px' }}>
+                <a href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: isMobile ? '6px' : '12px',
+                    textDecoration: 'none',
+                    pointerEvents: 'auto'
+                  }}
+                >
+                  <div style={{
+                    width: isMobile ? '28px' : '36px',
+                    height: isMobile ? '28px' : '36px',
+                    borderRadius: '50%',
+                    border: '1px solid #39FF88',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: 'rgba(57, 255, 136, 0.08)'
+                  }}>
+                    <Shield size={isMobile ? 16 : 20} color="#39FF88" />
                   </div>
-                  <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '9px', color: '#789589', letterSpacing: '1px' }}>
-                    DOOMSDAY ARCHIVE // 27 STATIONS
+                  <div>
+                    <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: isMobile ? '14px' : '17px', fontWeight: 900, color: '#EAF7F0', letterSpacing: '2px' }}>
+                      IGNITRRON <span style={{ color: '#39FF88' }}>’26</span>
+                    </div>
+                    {!isMobile && (
+                      <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '9px', color: '#789589', letterSpacing: '1px' }}>
+                        DOOMSDAY ARCHIVE // 27 STATIONS
+                      </div>
+                    )}
                   </div>
-                </div>
+                </a>
               </div>
             )}
-          </div>
-
-          {/* CENTER STATION SELECTOR BADGE */}
-          {!isEventFocused && (
-            <div style={{
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              fontFamily: "'Share Tech Mono', monospace",
-              fontSize: '10px',
-              color: '#39FF88',
-              fontWeight: 'bold',
-              letterSpacing: '2px',
-              background: 'rgba(57, 255, 136, 0.06)',
-              border: '1px solid rgba(57, 255, 136, 0.35)',
-              padding: '5px 18px',
-              borderRadius: '20px'
-            }}>
-              SELECT AN EVENT STATION
-            </div>
-          )}
-
-          {/* RIGHT CONTROLS: PRIZE POOL & AUDIO TOGGLE */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            {/* PRIZE POOL */}
-            <div style={{
-              background: 'rgba(57, 255, 136, 0.05)',
-              border: '1px solid rgba(251, 202, 3, 0.35)',
-              borderRadius: '4px',
-              padding: '5px 16px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-              <Award size={15} color="#FBCA03" />
-              <div>
-                <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '8px', color: '#789589' }}>
-                  PRIZE POOL
-                </div>
-                <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '13px', fontWeight: 800, color: '#FBCA03' }}>
-                  ₹{animatedPrize.toLocaleString()}
-                </div>
-              </div>
-            </div>
-
-            {/* AUDIO TOGGLE */}
-            <button
-              onClick={onToggleSound}
-              style={{
-                background: 'rgba(57, 255, 136, 0.06)',
-                border: '1px solid rgba(57, 255, 136, 0.3)',
-                borderRadius: '4px',
-                padding: '7px 14px',
-                color: '#39FF88',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                cursor: 'pointer',
-                fontSize: '10px',
-                fontFamily: "'Share Tech Mono', monospace"
-              }}
-            >
-              {isMuted ? <VolumeX size={14} color="#E21D2D" /> : <Volume2 size={14} color="#39FF88" />}
-              {isMuted ? 'OFF' : 'ON'}
-            </button>
           </div>
         </header>
       </div>
@@ -262,75 +232,116 @@ export function HolographicHUD({
         {isEventFocused && (
           <div style={{
             display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
             alignItems: 'center',
             justify: 'center',
-            gap: '16px',
+            gap: isMobile ? '12px' : '16px',
             width: '100%',
-            maxWidth: '900px',
-            maxHeight: 'calc(100vh - 210px)',
+            maxWidth: isMobile ? '100%' : '900px',
+            maxHeight: isMobile ? 'calc(100vh - 160px)' : 'calc(100vh - 210px)',
             margin: '0 auto',
-            pointerEvents: 'auto'
+            pointerEvents: 'auto',
+            padding: isMobile ? '0 12px' : '0'
           }}>
             {/* Previous Event Button */}
-            <button
-              onClick={handlePrev}
-              style={{
-                background: 'rgba(57, 255, 136, 0.08)',
-                border: '1px solid rgba(57, 255, 136, 0.4)',
-                borderRadius: '50%',
-                width: '42px',
-                height: '42px',
-                display: 'flex',
-                alignItems: 'center',
-                justify: 'center',
-                color: '#39FF88',
-                cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(57, 255, 136, 0.25)',
-                flexShrink: 0
-              }}
-            >
-              <ChevronLeft size={20} />
-            </button>
+            {!isMobile && (
+              <button
+                onClick={handlePrev}
+                onMouseDown={(e) => e.stopPropagation()}
+                onPointerDown={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
+                title="Previous Event Station"
+                style={{
+                  background: 'rgba(7, 17, 13, 0.92)',
+                  border: '1px solid #39FF88',
+                  borderRadius: '50%',
+                  width: '46px',
+                  height: '46px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#39FF88',
+                  cursor: 'pointer',
+                  boxShadow: '0 0 20px rgba(57, 255, 136, 0.35)',
+                  flexShrink: 0,
+                  position: 'relative',
+                  zIndex: 100,
+                  pointerEvents: 'auto',
+                  transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(57, 255, 136, 0.25)';
+                  e.currentTarget.style.boxShadow = '0 0 30px rgba(57, 255, 136, 0.75)';
+                  e.currentTarget.style.transform = 'scale(1.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(7, 17, 13, 0.92)';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(57, 255, 136, 0.35)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                <ChevronLeft size={22} style={{ pointerEvents: 'none' }} />
+              </button>
+            )}
 
             {/* MAIN HERO EVENT CARD */}
             <div style={{
               background: activeEvent.isHeroEvent
-                ? 'linear-gradient(135deg, rgba(226, 29, 45, 0.16) 0%, rgba(7, 17, 13, 0.96) 100%)'
-                : 'linear-gradient(135deg, rgba(7, 17, 13, 0.96) 0%, rgba(2, 6, 5, 0.98) 100%)',
-              border: activeEvent.isHeroEvent ? '2px solid #E21D2D' : '1px solid rgba(57, 255, 136, 0.45)',
-              boxShadow: activeEvent.isHeroEvent ? '0 0 45px rgba(226, 29, 45, 0.35)' : '0 0 35px rgba(57, 255, 136, 0.25)',
+                ? 'rgba(18, 2, 4, 0.55)'
+                : 'rgba(2, 12, 8, 0.55)',
+              border: activeEvent.isHeroEvent 
+                ? '1px solid rgba(255, 30, 56, 0.45)' 
+                : '1px solid rgba(30, 255, 150, 0.35)',
+              boxShadow: activeEvent.isHeroEvent 
+                ? '0 0 20px rgba(226, 29, 45, 0.08)' 
+                : '0 0 20px rgba(20, 255, 140, 0.08)',
               borderRadius: '12px',
-              padding: 'clamp(24px, 3.5vw, 38px) clamp(24px, 4.5vw, 48px)',
-              width: '90%',
-              maxWidth: '720px',
+              padding: isMobile ? '20px 20px' : 'clamp(24px, 3.5vw, 38px) clamp(24px, 4.5vw, 48px)',
+              width: '100%',
+              maxWidth: isMobile ? '100%' : '720px',
               maxHeight: '100%',
               overflowY: 'auto',
-              backdropFilter: 'blur(16px)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
               textAlign: 'center',
               boxSizing: 'border-box'
             }}>
-              {/* LEVEL 1: Station Badge */}
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              {/* LEVEL 1: Station Badge & Day Indicator */}
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: isMobile ? '8px' : '12px' }}>
                 <span style={{
                   fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '11px',
-                  padding: '3px 12px',
+                  fontSize: isMobile ? '9.5px' : '11px',
+                  padding: '3px 10px',
                   background: 'rgba(57, 255, 136, 0.08)',
                   border: '1px solid #39FF88',
                   borderRadius: '3px',
                   color: '#39FF88',
                   fontWeight: 'bold',
-                  letterSpacing: '1.5px'
+                  letterSpacing: '1px'
                 }}>
                   STATION {activeEvent.id} / 27
+                </span>
+
+                <span style={{
+                  fontFamily: "'Share Tech Mono', monospace",
+                  fontSize: isMobile ? '9px' : '10px',
+                  padding: '3px 8px',
+                  background: activeEvent.day === 'Day 1' ? 'rgba(57, 255, 136, 0.15)' : activeEvent.day === 'Day 2' ? 'rgba(22, 199, 132, 0.15)' : 'rgba(251, 202, 3, 0.15)',
+                  border: `1px solid ${activeEvent.day === 'Day 1' ? '#39FF88' : activeEvent.day === 'Day 2' ? '#16C784' : '#FBCA03'}`,
+                  borderRadius: '3px',
+                  color: activeEvent.day === 'Day 1' ? '#39FF88' : activeEvent.day === 'Day 2' ? '#16C784' : '#FBCA03',
+                  fontWeight: 'bold',
+                  letterSpacing: '1px'
+                }}>
+                  {activeEvent.day.toUpperCase()}
                 </span>
 
                 {activeEvent.isHeroEvent && (
                   <span style={{
                     fontFamily: "'Orbitron', sans-serif",
-                    fontSize: '10px',
+                    fontSize: isMobile ? '9px' : '10px',
                     fontWeight: 800,
-                    padding: '3px 10px',
+                    padding: '3px 8px',
                     background: '#E21D2D',
                     color: '#FFF',
                     borderRadius: '3px',
@@ -338,7 +349,7 @@ export function HolographicHUD({
                     alignItems: 'center',
                     gap: '4px'
                   }}>
-                    <Sparkles size={11} /> HERO EVENT
+                    <Sparkles size={11} /> HERO
                   </span>
                 )}
               </div>
@@ -346,13 +357,13 @@ export function HolographicHUD({
               {/* LEVEL 1 HERO: EVENT NAME */}
               <h1 style={{
                 fontFamily: "'Orbitron', sans-serif",
-                fontSize: 'clamp(22px, 3.8vw, 36px)',
+                fontSize: isMobile ? '20px' : 'clamp(22px, 3.8vw, 36px)',
                 fontWeight: 900,
                 color: '#EAF7F0',
-                margin: '0 auto 8px auto',
-                maxWidth: '92%',
-                letterSpacing: '2px',
-                lineHeight: 1.15,
+                margin: '0 auto 6px auto',
+                maxWidth: '96%',
+                letterSpacing: '1.5px',
+                lineHeight: 1.2,
                 textTransform: 'uppercase',
                 textShadow: activeEvent.isHeroEvent ? '0 0 25px rgba(226, 29, 45, 0.5)' : '0 0 25px rgba(57, 255, 136, 0.35)'
               }}>
@@ -360,30 +371,30 @@ export function HolographicHUD({
               </h1>
 
               {/* LEVEL 2: CHARACTER MARVEL IDENTITY */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', marginBottom: '14px' }}>
-                <div style={{ width: '60px', height: '2px', background: 'linear-gradient(90deg, transparent 0%, #39FF88 50%, transparent 100%)' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', marginBottom: isMobile ? '10px' : '14px' }}>
+                <div style={{ width: '40px', height: '1.5px', background: 'linear-gradient(90deg, transparent 0%, #39FF88 50%, transparent 100%)' }} />
                 <div style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: 'clamp(11px, 1.6vw, 14px)',
+                  fontSize: isMobile ? '10px' : 'clamp(11px, 1.6vw, 14px)',
                   fontWeight: 700,
                   color: '#39FF88',
-                  letterSpacing: '2.5px',
+                  letterSpacing: '2px',
                   textTransform: 'uppercase'
                 }}>
-                  [ {activeEvent.heroCharacter.toUpperCase()} // PRECISION OPERATIVE ]
+                  [ {activeEvent.heroCharacter.toUpperCase()} ]
                 </div>
               </div>
 
               {/* LEVEL 3: Character Quote / Subtitle */}
               <blockquote style={{
                 fontFamily: "'Rajdhani', sans-serif",
-                fontSize: '14px',
+                fontSize: isMobile ? '12px' : '14px',
                 fontStyle: 'italic',
                 fontWeight: 600,
                 color: '#FBCA03',
-                margin: '0 0 20px 0',
-                padding: '0 10px',
-                lineHeight: 1.45,
+                margin: isMobile ? '0 0 16px 0' : '0 0 20px 0',
+                padding: '0 8px',
+                lineHeight: 1.4,
                 opacity: 0.95
               }}>
                 "{activeEvent.quote || "Whatever it takes."}"
@@ -393,15 +404,15 @@ export function HolographicHUD({
               <button
                 onClick={onOpenDetails}
                 style={{
-                  padding: '12px 34px',
+                  padding: isMobile ? '10px 24px' : '12px 34px',
                   background: activeEvent.isHeroEvent ? '#E21D2D' : 'linear-gradient(135deg, #39FF88 0%, #16C784 100%)',
                   border: 'none',
                   borderRadius: '4px',
                   color: activeEvent.isHeroEvent ? '#FFF' : '#020605',
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: '12px',
+                  fontSize: isMobile ? '11px' : '12px',
                   fontWeight: 900,
-                  letterSpacing: '2.5px',
+                  letterSpacing: '2px',
                   cursor: 'pointer',
                   boxShadow: activeEvent.isHeroEvent ? '0 0 25px rgba(226, 29, 45, 0.6)' : '0 0 25px rgba(57, 255, 136, 0.5)',
                   display: 'inline-flex',
@@ -409,30 +420,107 @@ export function HolographicHUD({
                   gap: '8px'
                 }}
               >
-                <Play size={14} fill="currentColor" /> ENTER EVENT
+                <Play size={12} fill="currentColor" /> ENTER EVENT
               </button>
+
+              {/* Mobile Chevrons Row */}
+              {isMobile && (
+                <div style={{
+                  display: 'flex',
+                  justify: 'center',
+                  alignItems: 'center',
+                  gap: '24px',
+                  marginTop: '16px',
+                  paddingTop: '12px',
+                  borderTop: '1px solid rgba(57, 255, 136, 0.15)'
+                }}>
+                  <button
+                    onClick={handlePrev}
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onTouchStart={(e) => e.stopPropagation()}
+                    style={{
+                      background: 'rgba(57, 255, 136, 0.06)',
+                      border: '1px solid #39FF88',
+                      borderRadius: '50%',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#39FF88',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '12px', color: '#789589' }}>
+                    {activeEvent.id} / 27
+                  </span>
+                  <button
+                    onClick={handleNext}
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onTouchStart={(e) => e.stopPropagation()}
+                    style={{
+                      background: 'rgba(57, 255, 136, 0.06)',
+                      border: '1px solid #39FF88',
+                      borderRadius: '50%',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#39FF88',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Next Event Button */}
-            <button
-              onClick={handleNext}
-              style={{
-                background: 'rgba(57, 255, 136, 0.08)',
-                border: '1px solid rgba(57, 255, 136, 0.4)',
-                borderRadius: '50%',
-                width: '42px',
-                height: '42px',
-                display: 'flex',
-                alignItems: 'center',
-                justify: 'center',
-                color: '#39FF88',
-                cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(57, 255, 136, 0.25)',
-                flexShrink: 0
-              }}
-            >
-              <ChevronRight size={20} />
-            </button>
+            {!isMobile && (
+              <button
+                onClick={handleNext}
+                onMouseDown={(e) => e.stopPropagation()}
+                onPointerDown={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
+                title="Next Event Station"
+                style={{
+                  background: 'rgba(7, 17, 13, 0.92)',
+                  border: '1px solid #39FF88',
+                  borderRadius: '50%',
+                  width: '46px',
+                  height: '46px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#39FF88',
+                  cursor: 'pointer',
+                  boxShadow: '0 0 20px rgba(57, 255, 136, 0.35)',
+                  flexShrink: 0,
+                  position: 'relative',
+                  zIndex: 100,
+                  pointerEvents: 'auto',
+                  transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(57, 255, 136, 0.25)';
+                  e.currentTarget.style.boxShadow = '0 0 30px rgba(57, 255, 136, 0.75)';
+                  e.currentTarget.style.transform = 'scale(1.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(7, 17, 13, 0.92)';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(57, 255, 136, 0.35)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                <ChevronRight size={22} style={{ pointerEvents: 'none' }} />
+              </button>
+            )}
           </div>
         )}
       </main>
@@ -451,7 +539,7 @@ export function HolographicHUD({
           background: 'rgba(7, 17, 13, 0.96)',
           border: '1px solid rgba(57, 255, 136, 0.35)',
           borderRadius: '10px',
-          padding: '12px 24px',
+          padding: isMobile ? '8px 12px' : '12px 24px',
           backdropFilter: 'blur(16px)',
           boxShadow: '0 -4px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(57, 255, 136, 0.1)',
           boxSizing: 'border-box'
@@ -462,12 +550,12 @@ export function HolographicHUD({
             justify: 'space-between',
             alignItems: 'center',
             gap: '16px',
-            marginBottom: '8px',
+            marginBottom: isMobile ? '4px' : '8px',
             fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '11px'
+            fontSize: isMobile ? '9px' : '11px'
           }}>
             <div style={{ color: '#39FF88', fontWeight: 'bold', letterSpacing: '1.5px', flexShrink: 0 }}>
-              DOOMSDAY STATIONS // 27 NODES
+              {isMobile ? 'STATIONS // 27 NODES' : 'DOOMSDAY STATIONS // 27 NODES'}
             </div>
 
             <div style={{
@@ -479,49 +567,72 @@ export function HolographicHUD({
               overflow: 'hidden',
               textOverflow: 'ellipsis'
             }}>
-              STATION {activeEvent.id} SELECTED <span style={{ color: '#39FF88' }}>— {activeEvent.title.toUpperCase()}</span>
+              {isMobile ? (
+                <span>STN {activeEvent.id} <span style={{ color: '#39FF88' }}>— {activeEvent.title.toUpperCase()}</span></span>
+              ) : (
+                <span>STATION {activeEvent.id} SELECTED <span style={{ color: '#39FF88' }}>— {activeEvent.title.toUpperCase()}</span></span>
+              )}
             </div>
           </div>
 
           {/* Clean Progress Bar Container */}
-          <div style={{
-            position: 'relative',
-            display: 'flex',
-            alignItems: 'center',
-            justify: 'space-between',
-            height: '14px',
-            background: 'rgba(57, 255, 136, 0.05)',
-            border: '1px solid rgba(57, 255, 136, 0.25)',
-            borderRadius: '7px',
-            padding: '0 10px',
-            boxSizing: 'border-box'
-          }}>
-            {EVENTS_DATA.map((evt, idx) => {
-              const isSelected = idx === activeEventIndex;
-              const isHoveredNode = idx === hoveredTimelineIdx;
+          {isMobile ? (
+            <div style={{
+              position: 'relative',
+              height: '4px',
+              background: 'rgba(57, 255, 136, 0.1)',
+              borderRadius: '2px',
+              overflow: 'hidden',
+              marginTop: '4px'
+            }}>
+              <div style={{
+                width: `${((activeEventIndex + 1) / EVENTS_DATA.length) * 100}%`,
+                height: '100%',
+                background: '#39FF88',
+                boxShadow: '0 0 8px #39FF88',
+                transition: 'width 0.3s ease'
+              }} />
+            </div>
+          ) : (
+            <div style={{
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justify: 'space-between',
+              height: '14px',
+              background: 'rgba(57, 255, 136, 0.05)',
+              border: '1px solid rgba(57, 255, 136, 0.25)',
+              borderRadius: '7px',
+              padding: '0 10px',
+              boxSizing: 'border-box'
+            }}>
+              {EVENTS_DATA.map((evt, idx) => {
+                const isSelected = idx === activeEventIndex;
+                const isHoveredNode = idx === hoveredTimelineIdx;
 
-              return (
-                <button
-                  key={evt.id}
-                  onClick={() => onSelectEvent(idx)}
-                  onMouseEnter={() => setHoveredTimelineIdx(idx)}
-                  onMouseLeave={() => setHoveredTimelineIdx(null)}
-                  title={`Station ${evt.id}: ${evt.title}`}
-                  style={{
-                    width: isSelected ? '10px' : '5px',
-                    height: isSelected ? '10px' : '5px',
-                    borderRadius: '50%',
-                    background: isSelected ? '#39FF88' : (isHoveredNode ? '#16C784' : '#789589'),
-                    border: isSelected ? '2px solid #FFF' : 'none',
-                    cursor: 'pointer',
-                    boxShadow: isSelected ? '0 0 8px #39FF88' : 'none',
-                    transition: 'all 0.2s ease',
-                    padding: 0
-                  }}
-                />
-              );
-            })}
-          </div>
+                return (
+                  <button
+                    key={evt.id}
+                    onClick={() => onSelectEvent(idx)}
+                    onMouseEnter={() => setHoveredTimelineIdx(idx)}
+                    onMouseLeave={() => setHoveredTimelineIdx(null)}
+                    title={`Station ${evt.id}: ${evt.title}`}
+                    style={{
+                      width: isSelected ? '10px' : '5px',
+                      height: isSelected ? '10px' : '5px',
+                      borderRadius: '50%',
+                      background: isSelected ? '#39FF88' : (isHoveredNode ? '#16C784' : '#789589'),
+                      border: isSelected ? '2px solid #FFF' : 'none',
+                      cursor: 'pointer',
+                      boxShadow: isSelected ? '0 0 8px #39FF88' : 'none',
+                      transition: 'all 0.2s ease',
+                      padding: 0
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
         </footer>
       </div>
     </div>

@@ -17,16 +17,16 @@ export const Round2CipherVisual: React.FC = () => {
   return (
     <div className="relative w-full h-full min-h-[320px] bg-[#000000] rounded-xl overflow-hidden border border-red-900/40 p-4 flex flex-col justify-between group">
       {/* Header Bar */}
-      <div className="flex items-center justify-between text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-red-400 border-b border-red-900/30 pb-2 z-10">
+        <div className="flex items-center gap-2 max-w-full overflow-hidden">
           {isUnlocked ? (
-            <Unlock className="w-4 h-4 text-emerald-400 animate-bounce" />
+            <Unlock className="w-4 h-4 shrink-0 text-emerald-400 animate-bounce" />
           ) : (
-            <Lock className="w-4 h-4 text-[#e31b23]" />
+            <Lock className="w-4 h-4 shrink-0 text-[#e31b23]" />
           )}
-          <span>CRYPTIC_CIPHER_MATRIX_V2.0</span>
+          <span className="truncate">CRYPTIC_CIPHER_MATRIX_V2.0</span>
         </div>
-        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${
+        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border whitespace-nowrap shrink-0 ${
           isUnlocked 
             ? 'bg-emerald-950 text-emerald-300 border-emerald-500/40' 
             : 'bg-red-950 text-[#e31b23] border-red-600/40'

@@ -40,9 +40,22 @@ export interface EventConfig {
     requirements: boolean;
     rules: boolean;
     prizes: boolean;
+    coordinators?: boolean;
     faq: boolean;
     winners: boolean;
     registration: boolean;
+  };
+
+  coordinators?: {
+    faculty: {
+      name: string;
+      role: string;
+    }[];
+    student: {
+      name: string;
+      role: string;
+      phone: string;
+    }[];
   };
 
   theme: {
@@ -211,19 +224,17 @@ export interface EventConfig {
 }
 
 export const eventData: EventConfig = {
-  name: "TECHNO CLASH",
+  name: "TECHNO CLASH – QUIZ",
   tagline: "MULTI-ROUND TECHNICAL QUIZ",
   description: "A multi-round technical quiz covering engineering fundamentals, emerging technologies, programming, science, innovation, and current technological developments.",
   category: "NATIONAL TECHNICAL COMPETITION 2026",
-  date: "COMPETITION DATES CONFIGURED BY ORGANIZERS",
   mode: "ONLINE PRELIMS + ON-STAGE FINALS",
-  teamSize: "AS SPECIFIED BY ORGANIZERS",
-  deadline: "CONFIGURED BY ORGANIZERS",
+  teamSize: "2 MEMBERS",
 
   character: {
     name: "NEXA",
     role: "TECHNO CLASH DIGITAL GUIDE",
-    avatar: "/character.avif",
+    avatar: "character.jpg",
     bio: "Chief Systems Architect & inventor of the TECHNO CLASH neural evaluation grid.",
     quotes: [
       "Only 25 teams will survive the prelims.",
@@ -270,9 +281,31 @@ export const eventData: EventConfig = {
     requirements: true,
     rules: true,
     prizes: true,
+    coordinators: true,
     faq: true,
     winners: true,
     registration: true,
+  },
+
+  coordinators: {
+    faculty: [
+      {
+        name: "Mr. Pradeepkumar G",
+        role: "FACULTY COORDINATOR"
+      }
+    ],
+    student: [
+      {
+        name: "Jai Gautham S",
+        role: "STUDENT COORDINATOR",
+        phone: "+91 93632 10400"
+      },
+      {
+        name: "Gayathri K",
+        role: "STUDENT COORDINATOR",
+        phone: "+91 78717 51981"
+      }
+    ]
   },
 
   theme: {
@@ -463,7 +496,7 @@ export const eventData: EventConfig = {
       id: "REQ-02",
       number: "02",
       title: "TEAM SIZE",
-      description: "Each team must have the required number of members as specified by the organizers.",
+      description: "Each team must consist of exactly 2 members.",
       icon: "UserCheck"
     },
     {
@@ -521,7 +554,7 @@ export const eventData: EventConfig = {
     {
       id: "RU-01",
       title: "TEAM PARTICIPATION",
-      description: "Teams must register with the required number of members. All members must be present for competition stages.",
+      description: "Teams must register with exactly 2 members. Both members must be present for competition stages.",
       category: "GENERAL"
     },
     {
@@ -558,36 +591,39 @@ export const eventData: EventConfig = {
 
   prizes: [
     {
-      position: "1ST PLACE",
-      subLabel: "GRAND CHAMPIONS",
-      title: "TECHNO CLASH TROPHY",
+      position: "1ST PRIZE",
+      subLabel: "WINNER",
+      title: "1ST PLACE",
+      amount: "₹3,000",
       description: "Supreme triumph over the Final Boss Challenge.",
       perks: [
-        "Grand Holographic Trophy",
-        "Golden Certificates of Excellence",
-        "VIP Incubation Access"
+        "Cash Prize of ₹3,000",
+        "Winner Certificate of Excellence",
+        "Techno Clash Champion Trophy"
       ],
       icon: "Trophy"
     },
     {
-      position: "2ND PLACE",
+      position: "2ND PRIZE",
       subLabel: "RUNNER UP",
-      title: "SILVER RUNNER SHIELD",
+      title: "2ND PLACE",
+      amount: "₹2,000",
       description: "Excellence across Prelims, Round 1, and Final Boss.",
       perks: [
-        "Runner-Up Shield",
-        "Merit Certificates"
+        "Cash Prize of ₹2,000",
+        "Runner-Up Certificate of Merit"
       ],
       icon: "Award"
     },
     {
-      position: "3RD PLACE",
+      position: "3RD PRIZE",
       subLabel: "SECOND RUNNER UP",
-      title: "BRONZE MEDALISTS",
+      title: "3RD PLACE",
+      amount: "₹1,000",
       description: "Top-tier speed and algorithmic mastery.",
       perks: [
-        "Bronze Medals",
-        "Merit Certificates"
+        "Cash Prize of ₹1,000",
+        "Second Runner-Up Certificate of Merit"
       ],
       icon: "Medal"
     }
@@ -630,7 +666,7 @@ export const eventData: EventConfig = {
 
   registration: {
     label: "REGISTER FOR CLASH",
-    url: "#register"
+    url: "https://www.theticket9.com/event/ignitrron-26"
   },
 
   contact: {

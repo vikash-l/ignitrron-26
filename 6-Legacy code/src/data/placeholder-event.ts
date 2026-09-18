@@ -21,7 +21,7 @@ export const placeholderEvent: EventConfig = {
     subtitle: 'EVENT TAGLINE',
     description: 'A comprehensive master template structure engineered for 27 distinct event websites. Completely data-driven, responsive, and accessible.',
     primaryButtonText: 'REGISTER NOW',
-    primaryButtonUrl: '#registration',
+    primaryButtonUrl: 'https://www.theticket9.com/event/ignitrron-26',
     secondaryButtonText: 'VIEW DETAILS',
     secondaryButtonUrl: '#about',
     badgeText: 'OFFICIAL EVENT 2026',
@@ -118,7 +118,7 @@ export const placeholderEvent: EventConfig = {
       date: 'DAY 1',
     },
     {
-      time: '05:00 PM',
+      time: '04:00 PM',
       title: 'FINAL SUBMISSION & JUDGING',
       description: 'Project code submission deadline followed by live project demonstrations.',
       date: 'DAY 2',
@@ -191,7 +191,7 @@ export const placeholderEvent: EventConfig = {
     title: 'READY TO PARTICIPATE?',
     subtitle: 'Register your team before the registration deadline to secure your slot.',
     label: 'REGISTER NOW',
-    url: 'https://example.com/register',
+    url: 'https://www.theticket9.com/event/ignitrron-26',
     deadlineText: 'REGISTRATION CLOSES ON DD / MM / YYYY AT 00:00',
   },
 

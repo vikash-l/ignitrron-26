@@ -68,7 +68,7 @@ export const LookingForSection: React.FC = () => {
           <span className="font-space text-xs tracking-widest text-[#00f0ff] uppercase font-bold">
             EVALUATION CRITERIA
           </span>
-          <h2 className="font-anton text-5xl sm:text-7xl text-white tracking-wider uppercase mt-2">
+          <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-white tracking-wider uppercase mt-2">
             WHAT WE'RE LOOKING FOR
           </h2>
           <p className="font-space text-base text-gray-400 mt-3">
@@ -77,7 +77,7 @@ export const LookingForSection: React.FC = () => {
         </div>
 
         {/* 6 Visual Keywords Comic Panel Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-3 gap-6">
           {criteria.map((item, index) => (
             <motion.div
               key={item.title}
@@ -89,7 +89,7 @@ export const LookingForSection: React.FC = () => {
               className="group relative p-8 bg-[#121216] border-2 border-white/15 hover:border-[#ff003c] rounded-xl transition-all duration-300 transform hover:scale-[1.03] hover:shadow-spider-red overflow-hidden"
             >
               {/* Comic Number Watermark */}
-              <div className="absolute -top-4 -right-4 font-anton text-7xl text-white/5 group-hover:text-[#ff003c]/10 transition-colors pointer-events-none">
+              <div className="absolute -top-4 -right-4 font-anton text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl text-white/5 group-hover:text-[#ff003c]/10 transition-colors pointer-events-none">
                 0{index + 1}
               </div>
 

@@ -10,7 +10,7 @@ export const legacyCodeRescueEvent: EventConfig = {
   eventInfo: {
     date: '18 SEPTEMBER 2026',
     time: '5-HOUR CHALLENGE',
-    venue: 'NMS LAB',
+    venue: 'HPC LAB',
     mode: 'ON-SITE LAB',
     teamSize: '3–4 MEMBERS / TEAM',
     registrationDeadline: '40 TEAMS MAXIMUM',
@@ -21,10 +21,11 @@ export const legacyCodeRescueEvent: EventConfig = {
     subtitle: 'INHERIT. DEBUG. REFACTOR. EVOLVE.',
     description: 'A high-pressure software engineering competition where teams inherit an unfamiliar legacy application, identify critical issues, improve its internal structure, and implement new functionality without breaking existing systems.',
     primaryButtonText: 'REGISTER NOW',
-    primaryButtonUrl: '#registration',
+    primaryButtonUrl: 'https://www.theticket9.com/event/ignitrron-26',
     secondaryButtonText: 'VIEW CHALLENGE',
     secondaryButtonUrl: '#about',
     badgeText: 'SYSTEM STATUS // ONLINE • AI PROTOCOL // ACTIVE',
+    visualImage: 'legacy-code/ultron-core.jpg',
   },
 
   stats: [
@@ -169,7 +170,7 @@ export const legacyCodeRescueEvent: EventConfig = {
   ],
 
   sponsors: [
-    { name: 'NMS LAB INFRASTRUCTURE', tier: 'COMPETITION VENUE' },
+    { name: 'HPC LAB INFRASTRUCTURE', tier: 'COMPETITION VENUE' },
     { name: 'LEGACY CODE REPOSITORY', tier: 'CHALLENGE PROVIDER' },
   ],
 
@@ -196,7 +197,7 @@ export const legacyCodeRescueEvent: EventConfig = {
     },
     {
       question: 'Where is the event conducted?',
-      answer: 'NMS LAB.',
+      answer: 'HPC LAB.',
     },
     {
       question: 'When is the event?',
@@ -222,8 +223,8 @@ export const legacyCodeRescueEvent: EventConfig = {
     title: 'READY TO RESCUE THE CODE?',
     subtitle: '40 teams. One legacy system. Five hours.',
     label: 'REGISTER NOW',
-    url: '#registration',
-    deadlineText: 'LIMITED SLOTS: 40 TEAMS • NMS LAB • 18 SEPTEMBER 2026',
+    url: 'https://www.theticket9.com/event/ignitrron-26',
+    deadlineText: 'LIMITED SLOTS: 40 TEAMS • HPC LAB • 18 SEPTEMBER 2026',
   },
 
   sections: {
@@ -243,7 +244,7 @@ export const legacyCodeRescueEvent: EventConfig = {
 
   contactEmail: 'sanjai.ms@nmslab.edu',
   socialLinks: [
-    { platform: 'NMS LAB', url: '#' },
+    { platform: 'HPC LAB', url: '#' },
     { platform: 'GitHub Repository', url: '#' },
   ],
 };

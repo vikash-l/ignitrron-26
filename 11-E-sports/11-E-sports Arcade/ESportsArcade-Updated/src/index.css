@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #39ff14;
+    --color-bg: #030508;
+    --color-text: #e0e0e0;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#030508] text-gray-300 font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .glass-panel-rich {
+    @apply bg-[#0a0f14]/80 backdrop-blur-xl border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.8)];
+  }
+
+  .glass-card-tilt {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .glass-card-tilt:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(57, 255, 20, 0.15);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #030508;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a232c;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39ff14;
+}
+
+/* Section scroll offset */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Glassmorphism UI Elements */
+.glass-panel-rich {
+  background: rgba(10, 15, 20, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 30px 60px -10px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-panel-rich:hover {
+  border-color: rgba(57, 255, 20, 0.2);
+  box-shadow: 0 30px 60px -10px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 30px rgba(57,255,20,0.1);
+}
+
+.glass-card-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.glass-card-tilt:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* Typography styles */
+.text-stroke-title {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.05);
+  color: transparent;
+}
+
+/* Animated Glowing Button */
+.btn-glow {
+  position: relative;
+  background: linear-gradient(135deg, #39ff14, #2eb80b);
+  color: black !important;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.3);
+  font-weight: 800;
+  letter-spacing: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(57, 255, 20, 0.5);
+  border-radius: 999px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5), inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(135deg, #4dff2e, #39ff14);
+  box-shadow: 0 0 40px rgba(57, 255, 20, 0.9), 0 0 15px rgba(255, 255, 255, 0.8);
+  transform: translateY(-4px) scale(1.05);
+  border-color: #ffffff;
+}
+
+.btn-glow:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-glow:hover::before {
+  left: 150%;
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(57,255,20,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+/* Parallax Background Layers */
+.parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}

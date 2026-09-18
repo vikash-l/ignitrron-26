@@ -22,7 +22,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ event }) => {
           subtitle="Backed by leading game dev engines, hardware makers, and indie incubators."
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {event.sponsors.map((sponsor, index) => (
             <motion.div
               key={sponsor.name}

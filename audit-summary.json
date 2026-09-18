@@ -1,0 +1,2194 @@
+[
+  {
+    "id": "dashboard",
+    "name": "Main Dashboard",
+    "folder": "Event Page",
+    "fileCount": 21,
+    "fixedWidthIssues": 1,
+    "giantFontIssues": 1,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      }
+    ],
+    "rigidGrids": []
+  },
+  {
+    "id": "coming-soon",
+    "name": "Coming Soon Portal",
+    "folder": "Coming_soon",
+    "fileCount": 17,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 1,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "src/components/background/AtmosphericBackground.tsx",
+        "items": [
+          "w-[950px]",
+          "w-[780px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[550px]",
+          "w-[340px]",
+          "w-[420px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/NextChapter.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/components/sections/NextChapter.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": []
+  },
+  {
+    "id": "launchpad",
+    "name": "Launchpad",
+    "folder": "1-Lanch Pad",
+    "fileCount": 25,
+    "fixedWidthIssues": 7,
+    "giantFontIssues": 14,
+    "rigidGridIssues": 4,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/BuildSection.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/HeroSection.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[160px]",
+          "w-[220px]",
+          "w-[270px]",
+          "w-[320px]"
+        ]
+      },
+      {
+        "file": "src/components/MysteryBoxSection.tsx",
+        "items": [
+          "w-[180px]",
+          "w-[220px]"
+        ]
+      },
+      {
+        "file": "src/components/PrizeSection.tsx",
+        "items": [
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/WhyLaunchpadSection.tsx",
+        "items": [
+          "w-[800px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/BuildSection.tsx",
+        "items": [
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/CrewSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/DiscoverSection.tsx",
+        "items": [
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/EventDetailsSection.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/FinalCTASection.tsx",
+        "items": [
+          "text-8xl",
+          "text-9xl"
+        ]
+      },
+      {
+        "file": "src/components/HeroSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-9xl"
+        ]
+      },
+      {
+        "file": "src/components/LookingForSection.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/MysteryBoxSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/MysteryTwistSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/PitchSection.tsx",
+        "items": [
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/PrizeSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/TeamSizeSection.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/WhyLaunchpadSection.tsx",
+        "items": [
+          "text-8xl",
+          "text-9xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/DiscoverSection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/EventDetailsSection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/LookingForSection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/TeamSizeSection.tsx",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "mun-conference",
+    "name": "MUN Conference",
+    "folder": "2-MUN Conference",
+    "fileCount": 1,
+    "fixedWidthIssues": 1,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": []
+  },
+  {
+    "id": "techno-clash",
+    "name": "Techno Clash",
+    "folder": "3-Techno clash/sample",
+    "fileCount": 36,
+    "fixedWidthIssues": 7,
+    "giantFontIssues": 3,
+    "rigidGridIssues": 8,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/sections/FinalBoss.tsx",
+        "items": [
+          "w-[700px]",
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[480px]",
+          "w-[420px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[550px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/AIGuideAssistant.tsx",
+        "items": [
+          "w-[400px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/FinalBoss.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/FinalBoss.tsx",
+        "count": 5
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Requirements.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Rounds.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/ui/RegistrationModal.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "mechanical-design-challenge",
+    "name": "CAD Forge",
+    "folder": "4-Mechanical design challenge",
+    "fileCount": 36,
+    "fixedWidthIssues": 8,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 6,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/canvas/MilesMoralesPoster.tsx",
+        "items": [
+          "w-[270px]",
+          "w-[310px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[500px]",
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Registration.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Software.tsx",
+        "items": [
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Contact.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/WhyParticipate.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "legacy-code",
+    "name": "Legacy Code",
+    "folder": "6-Legacy code",
+    "fileCount": 33,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 5,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/layout/Navbar.tsx",
+        "items": [
+          "w-[180px]"
+        ]
+      },
+      {
+        "file": "src/index.css",
+        "items": [
+          "width: 1024px",
+          "width: 1126px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/index.css",
+        "items": [
+          "font-size: 16px",
+          "font-size: 56px",
+          "font-size: 36px",
+          "font-size: 24px",
+          "font-size: 20px",
+          "font-size: 15px"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/App.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "research-zero-to-hero",
+    "name": "Research Zero to Hero",
+    "folder": "7-research_zero_to_hero",
+    "fileCount": 29,
+    "fixedWidthIssues": 9,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 5,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/sections/About.tsx",
+        "items": [
+          "w-[480px]",
+          "w-[280px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[350px]",
+          "w-[600px]",
+          "w-[380px]",
+          "w-[420px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "items": [
+          "w-[400px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/ResearchJourney.tsx",
+        "items": [
+          "w-[500px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/GammaCursor.tsx",
+        "items": [
+          "width: 768px"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/layout/Footer.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "ipl-mega-auction",
+    "name": "IPL Mega Auction",
+    "folder": "10-ipl",
+    "fileCount": 3,
+    "fixedWidthIssues": 2,
+    "giantFontIssues": 1,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px",
+          "width: 600px"
+        ]
+      },
+      {
+        "file": "style.css",
+        "items": [
+          "width: 140px",
+          "width: 220px",
+          "width: 1300px",
+          "width: 620px",
+          "width: 420px",
+          "width: 350px",
+          "width: 100px",
+          "width: 440px",
+          "min-width: 900px",
+          "width: 160px",
+          "width: 900px",
+          "width: 1100px",
+          "width: 868px",
+          "width: 700px",
+          "width: 500px",
+          "width: 1024px",
+          "width: 280px",
+          "width: 768px",
+          "width: 480px",
+          "min-width: 769px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "style.css",
+        "items": [
+          "font-size: 16px",
+          "font-size: 15px",
+          "font-size: 14px"
+        ]
+      }
+    ],
+    "rigidGrids": []
+  },
+  {
+    "id": "e-sports-arcade",
+    "name": "E-Sports Arcade",
+    "folder": "11-E-sports Arcade",
+    "fileCount": 41,
+    "fixedWidthIssues": 8,
+    "giantFontIssues": 3,
+    "rigidGridIssues": 7,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/GamesLineupSection.tsx",
+        "items": [
+          "w-[800px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/About.tsx",
+        "items": [
+          "w-[480px]",
+          "w-[280px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[300px]",
+          "w-[550px]",
+          "w-[380px]",
+          "w-[420px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "src/index.css",
+        "items": [
+          "width: 400px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/HeroSection.tsx",
+        "items": [
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/GamesLineupSection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/layout/Footer.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "criminal-chronicles",
+    "name": "Criminal Chronicles 2.0",
+    "folder": "12-Criminal Chronicals",
+    "fileCount": 25,
+    "fixedWidthIssues": 5,
+    "giantFontIssues": 4,
+    "rigidGridIssues": 5,
+    "fixedWidths": [
+      {
+        "file": "src/components/FinalCTA.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/Hero.tsx",
+        "items": [
+          "w-[500px]",
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/HeroCharacterImage.tsx",
+        "items": [
+          "w-[620px]"
+        ]
+      },
+      {
+        "file": "src/components/Rounds.tsx",
+        "items": [
+          "w-[800px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/components/FinalCTA.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/Hero.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/Prizes.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/Rounds.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/CaseFileVisual.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/RoundVisuals/Round3EvidenceBoard.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/Sponsors.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/Stats.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/WhyParticipate.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "milan-26",
+    "name": "MILAN 26",
+    "folder": "13-Milan 26",
+    "fileCount": 46,
+    "fixedWidthIssues": 12,
+    "giantFontIssues": 3,
+    "rigidGridIssues": 8,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/canvas/MilesMoralesPoster.tsx",
+        "items": [
+          "w-[270px]",
+          "w-[310px]"
+        ]
+      },
+      {
+        "file": "src/components/layout/Navbar.tsx",
+        "items": [
+          "w-[260px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/CinematicManifesto.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/ClosingSection.tsx",
+        "items": [
+          "w-[650px]",
+          "w-[500px]",
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[800px]",
+          "w-[1100px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Registration.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Software.tsx",
+        "items": [
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/WhatOffers.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/ShieldHeroGraphic.tsx",
+        "items": [
+          "w-[420px]",
+          "w-[500px]",
+          "w-[340px]",
+          "w-[480px]",
+          "w-[300px]",
+          "w-[380px]",
+          "w-[440px]",
+          "w-[260px]",
+          "w-[390px]",
+          "w-[280px]",
+          "w-[360px]",
+          "w-[410px]"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/ClosingSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Contact.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/WhatOffers.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/WhyParticipate.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "project-presentation",
+    "name": "Project Presentation",
+    "folder": "14-Project_Presntation",
+    "fileCount": 26,
+    "fixedWidthIssues": 3,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 1,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[380px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "paper-presentation",
+    "name": "Paper Presentation",
+    "folder": "15-Paper presentation",
+    "fileCount": 1,
+    "fixedWidthIssues": 1,
+    "giantFontIssues": 1,
+    "rigidGridIssues": 1,
+    "fixedWidths": [
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px",
+          "w-[420px]"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "index.html",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "index.html",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "robo-race",
+    "name": "Robo Race",
+    "folder": "17-roborace",
+    "fileCount": 30,
+    "fixedWidthIssues": 13,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 4,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/sections/About.tsx",
+        "items": [
+          "w-[400px]",
+          "w-[480px]",
+          "w-[320px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[360px]",
+          "w-[400px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Judging.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Obstacles.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "items": [
+          "w-[500px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RaceJourney.tsx",
+        "items": [
+          "w-[500px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[400px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/FuturisticBackground.tsx",
+        "items": [
+          "w-[500px]",
+          "w-[600px]",
+          "w-[450px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/QuicksilverCursor.tsx",
+        "items": [
+          "width: 768px"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "src/index.css",
+        "items": [
+          "width: 300px",
+          "width: 200px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/layout/Footer.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Obstacles.tsx",
+        "count": 4
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "drone-race",
+    "name": "Drone Race",
+    "folder": "18-Drone_Race",
+    "fileCount": 23,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 2,
+    "fixedWidths": [
+      {
+        "file": "src/components/background/AtmosphericBackground.tsx",
+        "items": [
+          "w-[900px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[380px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Categories.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Rounds.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "line-follower",
+    "name": "Line Follower",
+    "folder": "19-Line follower",
+    "fileCount": 12,
+    "fixedWidthIssues": 3,
+    "giantFontIssues": 3,
+    "rigidGridIssues": 1,
+    "fixedWidths": [
+      {
+        "file": "src/style.css",
+        "items": [
+          "width: 1024px",
+          "width: 170px",
+          "width: 1126px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "w-[620px]"
+        ]
+      },
+      {
+        "file": "style.css",
+        "items": [
+          "width: 1280px",
+          "width: 768px",
+          "width: 480px",
+          "min-width: 640px",
+          "min-width: 768px",
+          "min-width: 1024px",
+          "min-width: 1280px",
+          "width: 140px",
+          "min-width: 200px",
+          "width: 270px",
+          "width: 1023px",
+          "width: 767px",
+          "width: 840px",
+          "width: 640px",
+          "width: 1050px",
+          "min-width: 110px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/style.css",
+        "items": [
+          "font-size: 16px",
+          "font-size: 56px",
+          "font-size: 36px",
+          "font-size: 24px",
+          "font-size: 20px",
+          "font-size: 15px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "style.css",
+        "items": [
+          "text-7xl",
+          "text-8xl",
+          "font-size: 13px",
+          "font-size: 11px"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "style.css",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "marvel-quiz",
+    "name": "Marvel Quiz",
+    "folder": "21-marvel quiz",
+    "fileCount": 40,
+    "fixedWidthIssues": 2,
+    "giantFontIssues": 6,
+    "rigidGridIssues": 6,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/CinematicHero.jsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/FinalResult.jsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/HeroLokiSection.jsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/HeroSection.jsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/LokiJudgement.jsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/EventIntro.jsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/EventOverview.jsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/FinalResult.jsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/LokiJudgement.jsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/RulesSection.jsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/WhatAwaitsYou.jsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "game-genesis-x",
+    "name": "Game Genesis X",
+    "folder": "22-Game genesis X",
+    "fileCount": 33,
+    "fixedWidthIssues": 6,
+    "giantFontIssues": 5,
+    "rigidGridIssues": 5,
+    "fixedWidths": [
+      {
+        "file": "src/components/background/GambitBackground.tsx",
+        "items": [
+          "w-[850px]",
+          "w-[800px]",
+          "w-[380px]",
+          "w-[280px]",
+          "w-[400px]",
+          "w-[260px]",
+          "w-[370px]"
+        ]
+      },
+      {
+        "file": "src/components/layout/Navbar.tsx",
+        "items": [
+          "w-[120px]",
+          "w-[150px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[550px]",
+          "w-[620px]",
+          "w-[560px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "items": [
+          "w-[340px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/GambitBackground.tsx",
+        "items": [
+          "w-[700px]",
+          "w-[600px]",
+          "w-[650px]",
+          "w-[320px]",
+          "w-[340px]",
+          "w-[300px]",
+          "w-[330px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/components/background/GambitBackground.tsx",
+        "items": [
+          "text-9xl",
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/About.tsx",
+        "items": [
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-9xl",
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Prizes.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/ui/GambitBackground.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/layout/Footer.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "breaking-the-build",
+    "name": "Breaking the Build",
+    "folder": "23-Breaking the build",
+    "fileCount": 24,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 1,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/Guest.tsx",
+        "items": [
+          "w-[370px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[650px]",
+          "w-[380px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/SessionInfo.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "japanese-street",
+    "name": "Japanese Street",
+    "folder": "26-Japanese_Street",
+    "fileCount": 23,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/EventCarousel.tsx",
+        "items": [
+          "w-[800px]",
+          "w-[270px]",
+          "w-[310px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[380px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": []
+  },
+  {
+    "id": "auto-show",
+    "name": "Auto Show",
+    "folder": "27-Auto show",
+    "fileCount": 25,
+    "fixedWidthIssues": 2,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 1,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[550px]",
+          "w-[450px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/GhostRiderBackground.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[500px]",
+          "w-[450px]"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/components/sections/FinalCta.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Experience.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "corporate-walk",
+    "name": "Corporate Walk",
+    "folder": "Corporate Walk",
+    "fileCount": 1,
+    "fixedWidthIssues": 1,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "index.html",
+        "items": [
+          "width: 500px"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": []
+  },
+  {
+    "id": "structure-x",
+    "name": "StructureX",
+    "folder": "Structure X",
+    "fileCount": 32,
+    "fixedWidthIssues": 2,
+    "giantFontIssues": 2,
+    "rigidGridIssues": 10,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/index.css",
+        "items": [
+          "width: 1400px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/Hero.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/AboutSection.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/ChallengeSection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/EvaluationDashboard.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/EventSnapshot.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/Hero.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/MachinerySection.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/PresentationGuide.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/RegistrationCTA.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/TechnicalInteraction.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/WorldOfStructures.tsx",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "business-model-canvas",
+    "name": "Business Model Canvas",
+    "folder": "BMC",
+    "fileCount": 56,
+    "fixedWidthIssues": 13,
+    "giantFontIssues": 4,
+    "rigidGridIssues": 12,
+    "fixedWidths": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "width: 170px",
+          "width: 1024px"
+        ]
+      },
+      {
+        "file": "src/components/canvas/MilesMoralesPoster.tsx",
+        "items": [
+          "w-[270px]",
+          "w-[310px]"
+        ]
+      },
+      {
+        "file": "src/components/canvas/Oscorp3DModelViewer.tsx",
+        "items": [
+          "w-[480px]"
+        ]
+      },
+      {
+        "file": "src/components/canvas/OscorpTechCanvas.tsx",
+        "items": [
+          "w-[900px]",
+          "w-[600px]",
+          "w-[550px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/CinematicManifesto.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/ClosingSection.tsx",
+        "items": [
+          "w-[650px]",
+          "w-[500px]",
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[360px]",
+          "w-[460px]",
+          "w-[280px]",
+          "w-[480px]",
+          "w-[380px]",
+          "w-[420px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[350px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Software.tsx",
+        "items": [
+          "w-[600px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/WhatOffers.tsx",
+        "items": [
+          "w-[700px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/SectionConfigController.tsx",
+        "items": [
+          "w-[320px]",
+          "w-[380px]"
+        ]
+      },
+      {
+        "file": "src/components/ui/ShieldHeroGraphic.tsx",
+        "items": [
+          "w-[420px]",
+          "w-[500px]",
+          "w-[340px]",
+          "w-[480px]",
+          "w-[300px]",
+          "w-[380px]",
+          "w-[440px]",
+          "w-[260px]",
+          "w-[390px]",
+          "w-[280px]",
+          "w-[360px]",
+          "w-[410px]"
+        ]
+      },
+      {
+        "file": "index.html",
+        "items": [
+          "width: 767px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "src/App.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      },
+      {
+        "file": "src/components/sections/ClosingSection.tsx",
+        "items": [
+          "text-7xl",
+          "text-8xl"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      },
+      {
+        "file": "src/components/ui/PitchTimerModal.tsx",
+        "items": [
+          "text-7xl"
+        ]
+      }
+    ],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/EventHighlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/EventInfo.tsx",
+        "count": 3
+      },
+      {
+        "file": "src/components/sections/Highlights.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/PresentationFormat.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Registration.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/Sponsors.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/Stats.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/WhatOffers.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/WhatTeamsShouldPresent.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/WhyParticipate.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/ui/PitchTimerModal.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/ui/RegisterModal.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "project-jarvis",
+    "name": "Project JARVIS",
+    "folder": "Project JARVIS",
+    "fileCount": 4,
+    "fixedWidthIssues": 1,
+    "giantFontIssues": 1,
+    "rigidGridIssues": 0,
+    "fixedWidths": [
+      {
+        "file": "style.css",
+        "items": [
+          "min-width: 1024px",
+          "width: 1023px",
+          "width: 140px",
+          "width: 900px",
+          "width: 1360px",
+          "width: 1100px",
+          "width: 1280px",
+          "width: 1050px",
+          "width: 250px",
+          "width: 360px",
+          "width: 1440px",
+          "width: 620px",
+          "width: 680px",
+          "width: 450px",
+          "width: 1260px",
+          "width: 1240px",
+          "width: 1140px",
+          "width: 330px",
+          "width: 290px",
+          "width: 1320px",
+          "width: 120px",
+          "width: 580px",
+          "width: 540px",
+          "width: 410px",
+          "width: 280px",
+          "width: 180px",
+          "width: 320px",
+          "width: 1024px",
+          "width: 640px",
+          "width: 1180px",
+          "width: 860px",
+          "width: 240px",
+          "min-width: 180px",
+          "width: 440px",
+          "width: 960px",
+          "width: 1080px",
+          "width: 768px",
+          "width: 1400px",
+          "width: 992px",
+          "width: 1200px",
+          "width: 600px",
+          "width: 700px",
+          "width: 380px",
+          "width: 480px"
+        ]
+      }
+    ],
+    "giantFonts": [
+      {
+        "file": "style.css",
+        "items": [
+          "font-size: 16px"
+        ]
+      }
+    ],
+    "rigidGrids": []
+  },
+  {
+    "id": "path-pilot",
+    "name": "Path Pilot",
+    "folder": "Path_Pilot",
+    "fileCount": 24,
+    "fixedWidthIssues": 2,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 2,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[700px]",
+          "w-[390px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Categories.tsx",
+        "count": 2
+      },
+      {
+        "file": "src/components/sections/Rules.tsx",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "hire-code",
+    "name": "Workshop 2 (Hire Code)",
+    "folder": "Hire_Code",
+    "fileCount": 24,
+    "fixedWidthIssues": 4,
+    "giantFontIssues": 0,
+    "rigidGridIssues": 2,
+    "fixedWidths": [
+      {
+        "file": "src/components/sections/Guest.tsx",
+        "items": [
+          "w-[390px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/Hero.tsx",
+        "items": [
+          "w-[650px]",
+          "w-[380px]",
+          "w-[440px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/RegistrationCTA.tsx",
+        "items": [
+          "w-[850px]"
+        ]
+      },
+      {
+        "file": "src/components/sections/VideoResume.tsx",
+        "items": [
+          "w-[600px]",
+          "w-[420px]"
+        ]
+      }
+    ],
+    "giantFonts": [],
+    "rigidGrids": [
+      {
+        "file": "src/components/sections/Experience.tsx",
+        "count": 1
+      },
+      {
+        "file": "src/components/sections/SessionInfo.tsx",
+        "count": 1
+      }
+    ]
+  }
+]

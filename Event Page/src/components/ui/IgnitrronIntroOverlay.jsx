@@ -3,6 +3,16 @@ import React, { useEffect, useState } from 'react';
 export function IgnitrronIntroOverlay({ onEnterSystem }) {
   const [logIndex, setLogIndex] = useState(0);
   const [showButton, setShowButton] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const logs = [
     "SYSTEM ONLINE",
@@ -40,7 +50,7 @@ export function IgnitrronIntroOverlay({ onEnterSystem }) {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '40px 20px',
+      padding: isMobile ? '20px' : '40px 20px',
       boxSizing: 'border-box',
       textAlign: 'center',
       background: 'radial-gradient(circle at center, rgba(2, 6, 5, 0.4) 0%, rgba(2, 6, 5, 0.96) 100%)'
@@ -58,22 +68,22 @@ export function IgnitrronIntroOverlay({ onEnterSystem }) {
         fontFamily: "'Share Tech Mono', monospace",
         color: '#39FF88',
         letterSpacing: '2px',
-        marginBottom: '28px',
+        marginBottom: '24px',
         opacity: 0.9
       }}>
         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#39FF88', boxShadow: '0 0 8px #39FF88' }} />
-        DOOMSDAY SPATIAL COMMAND V26.4
+        {isMobile ? 'DOOMSDAY SPATIAL COMMAND' : 'DOOMSDAY SPATIAL COMMAND V26.4'}
       </div>
 
       {/* MAIN IGNITRRON ’26 TITLE */}
-      <div style={{ padding: '0 20px', margin: '0 0 12px 0' }}>
+      <div style={{ padding: '0 10px', margin: '0 0 12px 0' }}>
         <h1 style={{
           fontFamily: "'Orbitron', sans-serif",
-          fontSize: 'clamp(46px, 8.5vw, 96px)',
+          fontSize: 'clamp(32px, 8.5vw, 96px)',
           fontWeight: 900,
           margin: 0,
           color: '#EAF7F0',
-          letterSpacing: '8px',
+          letterSpacing: isMobile ? '3px' : '8px',
           textShadow: '0 0 25px rgba(234, 247, 240, 0.2), 0 0 50px rgba(57, 255, 136, 0.15)',
           lineHeight: 1.05
         }}>
@@ -87,12 +97,12 @@ export function IgnitrronIntroOverlay({ onEnterSystem }) {
       {/* Sub-Title */}
       <div style={{
         fontFamily: "'Rajdhani', sans-serif",
-        fontSize: 'clamp(15px, 2.5vw, 24px)',
+        fontSize: 'clamp(12px, 2.5vw, 24px)',
         fontWeight: 600,
         color: '#16C784',
-        letterSpacing: '7px',
+        letterSpacing: isMobile ? '3px' : '7px',
         textTransform: 'uppercase',
-        marginBottom: '36px',
+        marginBottom: '28px',
         opacity: 0.9
       }}>
         MARVEL SPATIAL EVENT UNIVERSE
@@ -129,7 +139,7 @@ export function IgnitrronIntroOverlay({ onEnterSystem }) {
         <button
           onClick={onEnterSystem}
           style={{
-            marginTop: '28px',
+            marginTop: '24px',
             padding: '14px 32px',
             background: 'rgba(57, 255, 136, 0.05)',
             border: '1px solid rgba(57, 255, 136, 0.4)',

@@ -150,7 +150,7 @@ export const HeroCharacterImage: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className="relative w-full max-w-[620px] mx-auto lg:ml-auto lg:mr-0 flex justify-center items-center group"
+      className="relative w-full max-w-full max-w-[620px] mx-auto lg:ml-auto lg:mr-0 flex justify-center items-center group"
     >
       
       {/* LAYER 1: Background Atmospheric Activation System (Parallax: 2px) */}
@@ -217,7 +217,7 @@ export const HeroCharacterImage: React.FC = () => {
           
           {/* Uploaded Character Image with Feathered Mask & Activation Fade */}
           <img
-            src="/assets/hero-character.jpg"
+            src="assets/hero-character.jpg"
             alt="Dark cinematic vigilante figure representing the Criminal Chronicles 2.0 investigation theme"
             loading="eager"
             onLoad={() => setIsLoaded(true)}

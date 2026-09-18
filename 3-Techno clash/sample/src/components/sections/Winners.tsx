@@ -16,7 +16,7 @@ export const Winners: React.FC = () => {
           <Crown className="w-4 h-4 text-amber-400" /> ULTIMATE HONOR
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
+        <h2 className="text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
           {w.title}
         </h2>
         <p className="text-xs text-amber-400 font-bold tracking-widest mt-2">

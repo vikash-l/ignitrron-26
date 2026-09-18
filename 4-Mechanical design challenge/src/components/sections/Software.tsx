@@ -42,7 +42,7 @@ export const Software: React.FC = () => {
   return (
     <section id="software" className="relative py-24 bg-[#05060b] overflow-hidden">
       {/* Spider-Verse Venom background glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[300px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -52,7 +52,7 @@ export const Software: React.FC = () => {
             <Cpu className="w-3.5 h-3.5" />
             <span>Approved Modeling Platforms</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-orbitron tracking-tight text-white mb-4">
             OFFICIAL CAD SOFTWARE
           </h2>
           <p className="text-slate-400 font-sans text-sm sm:text-base">
@@ -62,7 +62,7 @@ export const Software: React.FC = () => {
         </div>
 
         {/* 3 Animated Software Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8">
           {cadForgeData.software.map((sw) => {
             const detail = softwareDetails[sw.name];
             return (

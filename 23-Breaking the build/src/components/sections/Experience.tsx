@@ -40,7 +40,7 @@ export const Experience: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           
           {/* ROW 1: 3 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6">
             {row1.map((item, idx) => (
               <motion.div
                 key={item.id}
@@ -84,7 +84,7 @@ export const Experience: React.FC = () => {
           </div>
 
           {/* ROW 2: 2 Cards Centered Under the Row 1 Gaps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
             {row2.map((item, idx) => (
               <motion.div
                 key={item.id}

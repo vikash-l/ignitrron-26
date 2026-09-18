@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
     >
       {/* Interactive Cursor-Responsive Ambient Environmental Lighting */}
       <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 blur-[140px]"
+        className="absolute w-full max-w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 blur-[140px]"
         style={{
           background: 'radial-gradient(circle, #C63C32 0%, #243B63 50%, transparent 75%)',
           x: isHovered && !reducedMotion ? lightX : '50%',
@@ -181,7 +181,7 @@ export const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.46, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-xl mx-auto lg:mx-0 mb-9"
+                className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-2.5 max-w-xl mx-auto lg:mx-0 mb-9"
               >
                 <div className="ronin-panel px-3.5 py-2.5 rounded flex items-center gap-2.5">
                   <Sparkles className="h-4 w-4 text-[#C63C32] flex-shrink-0" />
@@ -295,7 +295,7 @@ export const Hero: React.FC = () => {
                 scale: reducedMotion ? 1 : artworkScrollScale,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[380px] sm:max-w-[440px] z-10"
+              className="relative w-full max-w-full max-w-[380px] sm:max-w-full max-w-[440px] z-10"
             >
               {/* Visual Frame with Gold Hairline & Soft Edge Glow */}
               <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-black/90 border border-[#C9A45C]/35 bg-[#0E1524]">

@@ -63,7 +63,7 @@ export const Stats: React.FC = () => {
   return (
     <section className="relative py-12 bg-[#050505] border-y border-red-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {EVENT_DATA.stats.map((stat, idx) => {
             const Icon = icons[idx] || Radio;
             return (
@@ -83,7 +83,7 @@ export const Stats: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+                <div className="font-heading font-black text-3xl sm:text-4xl lg:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight">
                   {stat.numericValue !== undefined ? (
                     <AnimatedCounter
                       end={stat.numericValue}

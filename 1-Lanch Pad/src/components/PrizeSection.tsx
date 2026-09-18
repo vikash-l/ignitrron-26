@@ -43,7 +43,7 @@ export const PrizeSection: React.FC = () => {
   return (
     <section id="prizes" className="relative py-28 px-4 bg-[#0a0a0c] overflow-hidden border-t border-white/10">
       {/* Dynamic Glow Spotlight */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-radial from-[#ff003c]/20 via-[#00f0ff]/10 to-transparent blur-3xl pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[600px] bg-radial from-[#ff003c]/20 via-[#00f0ff]/10 to-transparent blur-3xl pointer-events-none rounded-full" />
       <div className="absolute inset-0 bg-halftone-red opacity-20 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center">
@@ -53,19 +53,19 @@ export const PrizeSection: React.FC = () => {
           OFFICIAL BOUNTY POOL
         </div>
 
-        <h2 className="font-anton text-5xl sm:text-7xl md:text-8xl text-white tracking-wider uppercase mb-2 drop-shadow-[4px_4px_0px_#ff003c]">
+        <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-white tracking-wider uppercase mb-2 drop-shadow-[4px_4px_0px_#ff003c]">
           PRIZE POOL
         </h2>
 
         <div className="inline-block px-6 py-2 bg-black border-2 border-[#00f0ff] rounded-lg mb-14 shadow-spider-blue">
           <span className="font-space text-xs text-gray-400 uppercase tracking-widest">TOTAL LAUNCHPAD PRIZE POOL</span>
-          <h3 className="font-anton text-4xl sm:text-5xl text-[#00f0ff] tracking-wider">
+          <h3 className="font-anton text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#00f0ff] tracking-wider">
             ₹6,000
           </h3>
         </div>
 
         {/* 3 Visually Distinct Prize Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full items-end">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-8 w-full items-end">
           {prizes.map((prize) => (
             <motion.div
               key={prize.place}
@@ -76,7 +76,7 @@ export const PrizeSection: React.FC = () => {
               className={`relative p-8 bg-[#121216] border-4 ${prize.border} rounded-2xl ${prize.shadow} flex flex-col items-center group transition-all duration-300 transform hover:scale-[1.04]`}
             >
               {/* Comic Numbering 01, 02, 03 */}
-              <div className="absolute -top-6 left-6 font-anton text-6xl text-white drop-shadow-[3px_3px_0px_#0a0a0c]">
+              <div className="absolute -top-6 left-6 font-anton text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-white drop-shadow-[3px_3px_0px_#0a0a0c]">
                 {prize.place}
               </div>
 
@@ -88,7 +88,7 @@ export const PrizeSection: React.FC = () => {
                 {prize.title}
               </span>
 
-              <h4 className="font-anton text-5xl sm:text-6xl text-white tracking-wider my-2">
+              <h4 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl text-white tracking-wider my-2">
                 {prize.amount}
               </h4>
 

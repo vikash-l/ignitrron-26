@@ -20,7 +20,7 @@ export const FinalBoss: React.FC = () => {
     <section id="final-boss" className="py-28 relative overflow-hidden bg-[#03060f] border-y-2 border-amber-500/50">
       {/* Darkened Climax Ambient Environment */}
       <div className="absolute inset-0 bg-tech-grid opacity-15 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-500/10 rounded-full filter blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[700px] bg-amber-500/10 rounded-full filter blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -30,7 +30,7 @@ export const FinalBoss: React.FC = () => {
             <Crown className="w-4 h-4 text-amber-400" /> {fb.badge}
           </div>
           
-          <h2 className="font-mono text-5xl sm:text-6xl xl:text-7xl font-black text-white tracking-tight">
+          <h2 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl xl:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl font-black text-white tracking-tight">
             {fb.title} <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-glow-gold">
               {fb.mainTitle}
@@ -50,13 +50,13 @@ export const FinalBoss: React.FC = () => {
         <div className="relative bg-[#070b1a]/95 border-2 border-amber-400/80 rounded-3xl p-8 sm:p-12 shadow-[0_0_80px_rgba(255,184,0,0.25)] backdrop-blur-2xl mb-16 overflow-hidden">
           
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-            <svg className="w-[600px] h-[600px] animate-spin-slow" viewBox="0 0 500 500">
+            <svg className="w-full max-w-[600px] h-[600px] animate-spin-slow" viewBox="0 0 500 500">
               <circle cx="250" cy="250" r="230" stroke="#FFB800" strokeWidth="2" fill="none" strokeDasharray="30 15" />
               <circle cx="250" cy="250" r="170" stroke="#00F0FF" strokeWidth="1.5" fill="none" strokeDasharray="10 5" />
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 relative z-10 font-mono text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 relative z-10 font-mono text-xs">
             {fb.teamworkIndicators.map((ind, i) => (
               <div
                 key={i}
@@ -77,7 +77,7 @@ export const FinalBoss: React.FC = () => {
               FINAL BOSS EXECUTION FLOW SEQUENCE
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2 text-center text-[10px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-8 gap-2 text-center text-[10px]">
               {fb.flowSteps.map((s) => (
                 <div 
                   key={s.step} 
@@ -103,7 +103,7 @@ export const FinalBoss: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {fb.rankingFactors.map((factor) => (
               <div
                 key={factor.number}

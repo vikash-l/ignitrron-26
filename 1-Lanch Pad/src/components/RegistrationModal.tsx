@@ -3,8 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
 import { DOMAINS_DATA, type DomainPrompt } from '../utils/domainsData';
 import { soundFx } from '../utils/soundFx';
-import confetti from 'canvas-confetti';
-
+const triggerConfetti = () => {
+  if (typeof window !== 'undefined' && (window as any).confetti) {
+    (window as any).confetti({
+      particleCount: 100,
+      spread: 120,
+      origin: { y: 0.5 },
+      colors: ['#ff003c', '#00f0ff', '#ffffff']
+    });
+  }
+};
 
 interface RegistrationModalProps {
   isOpen: boolean;
@@ -52,12 +60,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     soundFx.playBoxUnlock();
 
     // Trigger celebration confetti
-    confetti({
-      particleCount: 100,
-      spread: 120,
-      origin: { y: 0.5 },
-      colors: ['#ff003c', '#00f0ff', '#ffffff']
-    });
+    triggerConfetti();
 
     setSubmitted(true);
   };
@@ -120,7 +123,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 </div>
 
                 {/* Team Leader & Contact */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block font-bebas text-sm text-gray-300 tracking-wider uppercase mb-1">
                       TEAM LEADER NAME *

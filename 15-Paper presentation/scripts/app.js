@@ -162,15 +162,11 @@
           </div>
         </div>
 
-        <!-- Domain Footer with Prizes & Action -->
-        <div class="pt-5 border-t border-slate-800 flex items-center justify-between">
+        <!-- Domain Footer with Prizes -->
+        <div class="pt-5 border-t border-slate-800">
           <div class="text-[11px] font-mono text-slate-400">
             1st: <span class="text-cyan-300 font-bold">${d.prizes.first}</span> | 2nd: <span class="text-purple-300 font-bold">${d.prizes.second}</span>
           </div>
-          <button onclick="window.selectDomainForSubmission('${d.id}')" class="inline-flex items-center gap-1.5 text-xs font-orbitron font-bold text-cyan-300 hover:text-slate-950 px-3.5 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-400 border border-cyan-500/40 transition-all duration-200">
-            <span>REGISTER DOMAIN</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </button>
         </div>
       </div>
     `).join('');

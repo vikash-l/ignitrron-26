@@ -74,10 +74,10 @@ const PROJECTS = [
   },
   {
     name: 'IPL Mega Auction',
-    folder: '10-ipl-main',
+    folder: '10-ipl',
     subpath: 'ipl-mega-auction',
     base: '/ipl-mega-auction/',
-    isVite: true
+    isVite: false
   },
   {
     name: 'E-Sports Arcade',
@@ -137,13 +137,13 @@ const PROJECTS = [
   },
   {
     name: 'Marvel Quiz',
-    folder: '21-Marvel Quiz/sample',
+    folder: '21-marvel quiz',
     subpath: 'marvel-quiz',
     base: '/marvel-quiz/',
     isVite: true
   },
   {
-    name: 'Game Genesis X (IN.ZEROS)',
+    name: 'Game Genesis X IN.ZEROS',
     folder: '22-Game genesis X',
     subpath: 'game-genesis-x',
     base: '/game-genesis-x/',
@@ -169,22 +169,105 @@ const PROJECTS = [
     subpath: 'auto-show',
     base: '/auto-show/',
     isVite: true
+  },
+  {
+    name: 'Corporate Walk',
+    folder: 'Corporate Walk',
+    subpath: 'corporate-walk',
+    base: '/corporate-walk/',
+    isVite: false
+  },
+  {
+    name: 'StructureX',
+    folder: 'Structure X',
+    subpath: 'structure-x',
+    base: '/structure-x/',
+    isVite: true
+  },
+  {
+    name: 'Business Model Canvas',
+    folder: 'BMC',
+    subpath: 'business-model-canvas',
+    base: '/business-model-canvas/',
+    isVite: true
+  },
+  {
+    name: 'Project J.A.R.V.I.S.',
+    folder: 'Project JARVIS',
+    subpath: 'project-jarvis',
+    base: '/project-jarvis/',
+    isVite: false
+  },
+  {
+    name: 'Path Pilot (Line Follower Contest)',
+    folder: 'Path_Pilot',
+    subpath: 'path-pilot',
+    base: '/path-pilot/',
+    isVite: true
+  },
+  {
+    name: 'Workshop 2',
+    folder: 'Hire_Code',
+    subpath: 'hire-code',
+    base: '/hire-code/',
+    isVite: true
   }
 ];
 
-function copyDirRecursive(src, dest) {
+const UNWANTED_DIRS = new Set([
+  'node_modules', '.git', '.github', 'dist', 'src',
+  'GrootsArcade', 'sample', 'ps5_data', 'build'
+]);
+
+const UNWANTED_FILES = new Set([
+  'vite.config.ts', 'vite.config.js', 'vite.config.mjs',
+  'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json',
+  'package.json', 'package-lock.json', '.oxlintrc.json',
+  'README.md', '.gitignore', 'doc.txt', 'ps5.txt',
+  'ps5_utf8.txt', 'fetchGroot.cjs', 'build-export.js',
+  '.DS_Store', 'serve.ps1'
+]);
+
+function shouldExclude(name, isDirectory) {
+  if (isDirectory) {
+    if (UNWANTED_DIRS.has(name) || name.includes('GrootsArcade') || name.includes('sample')) {
+      return true;
+    }
+    return false;
+  }
+
+  // 1. Exclude macOS duplicate files (e.g. "index 2.html", "favicon 3.svg", "vite.config 3.ts")
+  if (/ (2|3|4|5|6|7|8|9)(\..*)?$/.test(name)) {
+    return true;
+  }
+
+  // 2. Exclude source code extensions (.ts, .tsx, .mts, .cts, .py, .ps1, .zip, .log, .env)
+  if (/\.(tsx?|mts|cts|py|ps1|zip|log|env)$/i.test(name)) {
+    return true;
+  }
+
+  // 3. Exclude config/dev files (vite.config*, tsconfig*, package*.json, etc.)
+  if (UNWANTED_FILES.has(name) || /vite\.config/i.test(name) || /tsconfig/i.test(name)) {
+    return true;
+  }
+
+  return false;
+}
+
+function copyCleanDirRecursive(src, dest) {
+  if (!fs.existsSync(src)) return;
   if (!fs.existsSync(dest)) {
     fs.mkdirSync(dest, { recursive: true });
   }
   const entries = fs.readdirSync(src, { withFileTypes: true });
   for (const entry of entries) {
-    const srcPath = path.join(src, entry.name);
-    const destPath = path.join(dest, entry.name);
-    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === '.DS_Store' || entry.name === 'dist' || entry.name === 'sample' || entry.name.endsWith('.zip') || entry.name.endsWith('.ps1')) {
+    if (shouldExclude(entry.name, entry.isDirectory())) {
       continue;
     }
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
-      copyDirRecursive(srcPath, destPath);
+      copyCleanDirRecursive(srcPath, destPath);
     } else {
       fs.copyFileSync(srcPath, destPath);
     }
@@ -229,8 +312,11 @@ function main() {
         // 1. Configure base in vite.config
         updateViteConfigBase(projectDir, p.base);
 
-        // 2. Build via npx vite build
-        const buildCmd = `npx vite build --base=${p.base} --outDir dist --emptyOutDir`;
+        // 2. Build via npx vite build or direct node execution
+        const localVitePath = path.join(projectDir, 'node_modules', 'vite', 'bin', 'vite.js');
+        const buildCmd = fs.existsSync(localVitePath)
+          ? `node "${localVitePath}" build --base=${p.base} --outDir dist --emptyOutDir`
+          : `npx vite build --base=${p.base} --outDir dist --emptyOutDir`;
         console.log(`  Executing: ${buildCmd}`);
         const out = execSync(buildCmd, { cwd: projectDir, encoding: 'utf8' });
         console.log(`  Build output summary: ${out.split('\n').filter(l => l.includes('built in') || l.includes('dist/')).join(' | ')}`);
@@ -240,16 +326,16 @@ function main() {
         if (!fs.existsSync(distDir)) {
           throw new Error(`dist directory was not generated at ${distDir}`);
         }
-        copyDirRecursive(distDir, targetDeployDir);
+        copyCleanDirRecursive(distDir, targetDeployDir);
 
         // If it's the dashboard, also copy to deployment root for root index.html
         if (p.isRootAlso) {
-          copyDirRecursive(distDir, DEPLOYMENT_DIR);
+          copyCleanDirRecursive(distDir, DEPLOYMENT_DIR);
         }
       } else {
         // Pure Static HTML project -> copy project files directly
         console.log(`  Static project: copying assets and HTML`);
-        copyDirRecursive(projectDir, targetDeployDir);
+        copyCleanDirRecursive(projectDir, targetDeployDir);
       }
 
       // 4. Verify output

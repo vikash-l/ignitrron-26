@@ -14,7 +14,7 @@ export const Stats: React.FC<StatsProps> = ({ event }) => {
   return (
     <section id="stats" className="py-16 bg-[#06080e] relative border-y border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`grid grid-cols-2 md:grid-cols-${Math.min(event.stats.length, 4)} gap-4 md:gap-6`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${Math.min(event.stats.length, 4)} gap-4 md:gap-6`}>
           {event.stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -33,7 +33,7 @@ export const Stats: React.FC<StatsProps> = ({ event }) => {
                   </div>
                 )}
 
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-mono text-white tracking-tight mb-1 group-hover:text-cyan-400 transition-colors">
+                <div className="text-3xl sm:text-4xl lg:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-mono text-white tracking-tight mb-1 group-hover:text-cyan-400 transition-colors">
                   {stat.value}
                 </div>
 

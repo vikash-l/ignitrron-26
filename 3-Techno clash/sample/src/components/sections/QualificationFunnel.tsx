@@ -21,7 +21,7 @@ export const QualificationFunnel: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs mb-3 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
             <Filter className="w-3.5 h-3.5" /> QUALIFICATION FUNNEL
           </div>
-          <h2 className="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h2 className="font-mono text-4xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
             STAGE-BY-STAGE <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-amber-400">ELIMINATION</span>
           </h2>
           <p className="text-slate-400 text-sm font-mono mt-2">

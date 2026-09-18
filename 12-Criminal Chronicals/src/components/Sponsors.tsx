@@ -13,7 +13,7 @@ export const Sponsors: React.FC = () => {
             <span>COMMUNITY & INDUSTRY PARTNERS</span>
           </div>
 
-          <h2 className="font-heading font-black text-4xl sm:text-6xl tracking-tight text-white uppercase">
+          <h2 className="font-heading font-black text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl tracking-tight text-white uppercase">
             SPONSORS & <span className="text-[#e31b23]">PARTNERS</span>
           </h2>
         </div>
@@ -32,7 +32,7 @@ export const Sponsors: React.FC = () => {
             Official sponsors and industry partners supporting Criminal Chronicles 2.0 will be announced closer to the event date.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}

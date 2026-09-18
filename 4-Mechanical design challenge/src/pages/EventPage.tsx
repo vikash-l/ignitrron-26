@@ -7,6 +7,7 @@ import { About } from '../components/sections/About';
 import { EventFlow } from '../components/sections/EventFlow';
 import { Rules } from '../components/sections/Rules';
 import { Software } from '../components/sections/Software';
+import { Prizes } from '../components/sections/Prizes';
 import { WhyParticipate } from '../components/sections/WhyParticipate';
 import { Contact } from '../components/sections/Contact';
 
@@ -26,6 +27,7 @@ export const EventPage: React.FC = () => {
         <EventFlow />
         <Rules />
         <Software />
+        <Prizes />
         <WhyParticipate />
         <Contact />
       </main>

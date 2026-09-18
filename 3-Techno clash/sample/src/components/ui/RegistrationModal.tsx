@@ -71,7 +71,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
         <div className="p-6 max-h-[80vh] overflow-y-auto">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-mono text-cyan-300 mb-1.5 flex items-center gap-1.5">
                     <Users className="w-3.5 h-3.5" /> TEAM NAME *
@@ -191,7 +191,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 pt-4 font-mono text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
                   <div>
                     <span className="text-slate-500 text-[10px] block">TEAM NAME</span>
                     <span className="text-white font-bold text-sm">{formData.teamName}</span>

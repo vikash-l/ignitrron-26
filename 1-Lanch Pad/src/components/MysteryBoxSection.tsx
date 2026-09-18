@@ -2,8 +2,18 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Box, Lock, Unlock, Sparkles, ArrowRight, Zap } from 'lucide-react';
 import { soundFx } from '../utils/soundFx';
-import confetti from 'canvas-confetti';
 import pointingHandsImg from '../assets/pointing_hands.jpg';
+
+const triggerConfetti = () => {
+  if (typeof window !== 'undefined' && (window as any).confetti) {
+    (window as any).confetti({
+      particleCount: 90,
+      spread: 110,
+      origin: { y: 0.6 },
+      colors: ['#ff003c', '#00f0ff', '#ffffff']
+    });
+  }
+};
 
 interface MysteryBoxSectionProps {
   onUnlocked: () => void;
@@ -26,12 +36,12 @@ export const MysteryBoxSection: React.FC<MysteryBoxSectionProps> = ({ onUnlocked
   ];
 
   const handleUnlock = () => {
-    if (isUnlocking || isUnlocked) return;
+    if (isUnlocked || isUnlocking) return;
 
-    soundFx.playClick();
     setIsUnlocking(true);
+    soundFx.playWebShoot();
 
-    // 1. Shake & sound effect after 300ms
+    // 1. Play Box Opening Sound after small delay
     setTimeout(() => {
       soundFx.playBoxUnlock();
     }, 400);
@@ -44,12 +54,7 @@ export const MysteryBoxSection: React.FC<MysteryBoxSectionProps> = ({ onUnlocked
       setIsUnlocked(true);
 
       // Trigger comic red/cyan confetti explosion
-      confetti({
-        particleCount: 90,
-        spread: 110,
-        origin: { y: 0.6 },
-        colors: ['#ff003c', '#00f0ff', '#ffffff']
-      });
+      triggerConfetti();
 
       onUnlocked();
     }, 1400);
@@ -113,7 +118,7 @@ export const MysteryBoxSection: React.FC<MysteryBoxSectionProps> = ({ onUnlocked
           <span>TWO CHOICES • YOU DECIDE</span>
         </div>
 
-        <h2 className="font-anton text-5xl sm:text-7xl md:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[5px_5px_0px_#ff003c]">
+        <h2 className="font-anton text-2xl sm:text-3xl md:text-4xl lg:text-5xl sm:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl md:text-4xl sm:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl md:text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl lg:text-7xl lg:text-8xl text-white tracking-wider uppercase mb-3 drop-shadow-[5px_5px_0px_#ff003c]">
           MYSTERY BOX
         </h2>
 

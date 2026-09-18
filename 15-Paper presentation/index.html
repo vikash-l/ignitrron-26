@@ -2,9 +2,10 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>IGNITRRON — Paper Presentation | Present Your Idea. Impact The Future.</title>
-  <meta name="description" content="Official Paper Presentation Event at Ignitrron. Day 2, 10:00 AM – 5:00 PM at ECE Class. ₹40,000 Total Prize Pool across 5 domains." />
+  <meta name="description" content="Official Paper Presentation Event at Ignitrron. Day 2, 9:00 AM – 4:00 PM at ECE Class. 5 Research Domains, ₹25,000 Total Prize Pool." />
+  <meta name="keywords" content="Paper Presentation, Ignitrron, Technical Symposium, Engineering Research, Student Conference" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +32,10 @@
   <!-- Custom Design System Styles -->
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/components.css" />
+
+  <!-- Ignitrron Mobile Responsive Image Hiding Overrides -->
+  
+
 </head>
 <body class="bg-[#030712] text-slate-300 antialiased selection:bg-cyan-500/30 selection:text-white relative min-h-screen">
 
@@ -88,7 +93,7 @@
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 group">
+        <a href="https://ignitrron-26.freelancerskpriet.workers.dev/" class="flex items-center gap-3 group">
           <div class="relative w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-400/40 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.25)] group-hover:border-cyan-300 transition-colors">
             <svg class="w-6 h-6 text-cyan-400 group-hover:rotate-180 transition-transform duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="3" />
@@ -129,10 +134,10 @@
           </button>
 
           <!-- Register Now CTA Button -->
-          <button data-open-modal="registration-modal" class="btn-quantum-primary px-5 py-2 text-xs sm:text-sm font-orbitron flex items-center gap-2">
+          <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-quantum-primary px-5 py-2 text-xs sm:text-sm font-orbitron flex items-center gap-2 no-underline">
             <span>REGISTER NOW</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </button>
+          </a>
 
           <!-- Mobile Hamburger Menu Button -->
           <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
@@ -209,7 +214,7 @@
               </div>
               <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900/80 border border-purple-500/30 text-xs font-mono text-purple-300 font-bold shadow-sm">
                 <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span>10:00 AM – 5:00 PM</span>
+                <span>9:00 AM – 4:00 PM</span>
               </div>
               <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900/80 border border-amber-500/30 text-xs font-mono text-amber-300 font-bold shadow-sm">
                 <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -219,15 +224,10 @@
 
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
-              <button data-open-modal="registration-modal" class="btn-quantum-primary w-full sm:w-auto px-8 py-4 text-sm font-orbitron font-bold flex items-center justify-center gap-2.5">
+              <a href="https://www.theticket9.com/event/ignitrron-26" target="_blank" rel="noopener noreferrer" class="btn-quantum-primary w-full sm:w-auto px-8 py-4 text-sm font-orbitron font-bold flex items-center justify-center gap-2.5 no-underline">
                 <span>REGISTER NOW</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </button>
-              
-              <button data-open-modal="registration-modal" class="btn-quantum-outline w-full sm:w-auto px-7 py-4 text-sm font-orbitron font-bold flex items-center justify-center gap-2">
-                <span>SUBMIT ABSTRACT</span>
-                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              </button>
+              </a>
 
               <a href="#domains" class="text-xs font-mono font-semibold text-slate-400 hover:text-white px-4 py-2 transition-colors">
                 EXPLORE DOMAINS ↓
@@ -267,7 +267,7 @@
                   <span class="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest">IGNITRRON LAB HUD</span>
                 </div>
                 <div class="text-xs font-mono text-slate-300 font-semibold">
-                  5 DOMAINS · <span class="text-amber-400 font-bold">₹40,000 PRIZE POOL</span>
+                  5 DOMAINS · <span class="text-amber-400 font-bold">₹25,000 PRIZE POOL</span>
                 </div>
               </div>
 
@@ -291,21 +291,33 @@
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-orbitron text-white tracking-tight mb-4">
             THE EVENT
           </h2>
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8">
             Paper Presentation is a technical event conducted as part of Ignitrron where participants present innovative ideas, research concepts, technological solutions, and interdisciplinary work.
           </p>
+
+          <!-- Clearly Visible Presentation Requirement Disclaimer Box -->
+          <div class="p-5 sm:p-6 rounded-2xl bg-amber-950/25 border border-amber-500/40 backdrop-blur-md shadow-[0_0_25px_rgba(245,158,11,0.12)] text-left transition-all">
+            <div class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="flex-shrink-0 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="text-xs font-mono font-bold tracking-widest text-amber-400 uppercase">PRESENTATION REQUIREMENT & DISCLAIMER</span>
+                  <span class="inline-block w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b] animate-pulse"></span>
+                </div>
+                <p class="text-xs sm:text-sm text-amber-200/90 leading-relaxed font-normal">
+                  <strong class="font-semibold text-amber-300">Disclaimer:</strong> Idea-only presentations are not encouraged. Participants are expected to present a well-developed paper supported by proper research, technical analysis, methodology, implementation, experimental results, or relevant evidence. Simply presenting a concept or proposed idea without substantial technical/research content may not be considered favorably during evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- 6 Official Event Metric Cards -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 mb-12">
-          <div class="hud-glass-panel p-5 text-center">
-            <div class="text-2xl sm:text-3xl font-extrabold font-mono text-cyan-400 mb-1">100</div>
-            <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Expected Participants</div>
-          </div>
-          <div class="hud-glass-panel p-5 text-center">
-            <div class="text-2xl sm:text-3xl font-extrabold font-mono text-purple-400 mb-1">25</div>
-            <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Expected Teams</div>
-          </div>
+        <!-- 4 Official Event Metric Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
           <div class="hud-glass-panel p-5 text-center">
             <div class="text-2xl sm:text-3xl font-extrabold font-mono text-amber-400 mb-1">4</div>
             <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Members / Team</div>
@@ -315,7 +327,7 @@
             <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Event Day</div>
           </div>
           <div class="hud-glass-panel p-5 text-center">
-            <div class="text-xl sm:text-2xl font-extrabold font-mono text-sky-400 mb-1">10 AM–5 PM</div>
+            <div class="text-xl sm:text-2xl font-extrabold font-mono text-sky-400 mb-1">9 AM–4 PM</div>
             <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Time Window</div>
           </div>
           <div class="hud-glass-panel p-5 text-center">
@@ -396,13 +408,13 @@
                 <span class="text-4xl font-black font-mono text-purple-400">02</span>
                 <span class="text-[10px] font-mono text-purple-300 bg-purple-950/40 px-2.5 py-1 rounded border border-purple-500/30">STEP_02</span>
               </div>
-              <h3 class="text-xl font-bold text-white mb-3 font-orbitron">SUBMIT ABSTRACT</h3>
+              <h3 class="text-xl font-bold text-white mb-3 font-orbitron">SLIDE PREPARATION</h3>
               <p class="text-sm text-slate-300 leading-relaxed font-light">
-                Submit your paper abstract, select your domain, and attach your required presentation file.
+                Prepare your research presentation slides (PPT / PDF) covering your chosen domain topic.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-500">
-              Unique IGN-PAP Submission ID
+              Bring your own laptop
             </div>
           </div>
 
@@ -476,7 +488,7 @@
             ACCOLADES & RECOGNITION
           </span>
           <div class="text-5xl sm:text-7xl md:text-8xl font-black font-mono text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 tracking-tight leading-none mb-3">
-            ₹40,000
+            ₹25,000
           </div>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-black font-orbitron text-white tracking-wider uppercase mb-3">
             TOTAL PRIZE POOL
@@ -485,9 +497,9 @@
             Win recognition for your ideas.
           </p>
           <div class="inline-flex items-center gap-3 text-xs sm:text-sm font-mono text-cyan-300 bg-cyan-950/40 px-4 py-2 rounded-xl border border-cyan-500/30">
-            <span>₹5,000 — 1st Prize / Domain</span>
+            <span>₹3,000 — 1st Prize / Domain</span>
             <span>•</span>
-            <span>₹3,000 — 2nd Prize / Domain</span>
+            <span>₹2,000 — 2nd Prize / Domain</span>
           </div>
         </div>
 
@@ -548,7 +560,7 @@
                 </div>
                 <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-sm">
                   <span class="text-lg">⏰</span>
-                  <span class="font-semibold text-white">10:00 AM – 5:00 PM</span>
+                  <span class="font-semibold text-white">9:00 AM – 4:00 PM</span>
                 </div>
                 <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-sm">
                   <span class="text-lg">📍</span>
@@ -558,7 +570,7 @@
 
               <div class="p-4 rounded-xl bg-cyan-950/30 border border-cyan-500/30 text-center">
                 <div class="text-xs font-mono font-bold text-cyan-300">
-                  100 Participants | 25 Teams | 4 Members/Team
+                  5 Domains | 4 Members/Team | ₹25,000 Total Prize
                 </div>
               </div>
             </div>
@@ -570,256 +582,6 @@
     </section>
 
   </main>
-
-  <!-- =======================================================
-       REGISTRATION & ABSTRACT SUBMISSION MODAL
-       ======================================================= -->
-  <div id="registration-modal" class="fixed inset-0 z-[80] hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-3 sm:p-6 overflow-y-auto">
-    <div class="relative w-full max-w-4xl rounded-3xl bg-slate-950 border border-cyan-500/40 shadow-[0_0_50px_rgba(0,240,255,0.2)] my-auto max-h-[92vh] overflow-y-auto">
-      
-      <!-- Modal Header -->
-      <div class="sticky top-0 z-20 bg-slate-950/95 backdrop-blur-md px-6 py-5 border-b border-slate-800 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-cyan-400 tracking-widest uppercase">IGNITRRON PAPER PRESENTATION</div>
-          <h2 class="text-xl sm:text-2xl font-black font-orbitron text-white">SUBMIT YOUR IDEA</h2>
-        </div>
-        <button id="closeModalBtn" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 transition-colors" title="Close Portal">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-
-      <!-- Modal Body -->
-      <div class="p-6 sm:p-8">
-        
-        <div id="quantumFormAlert" class="hidden"></div>
-
-        <!-- FORM CONTAINER -->
-        <div id="registrationFormSection">
-          
-          <form id="ignitrronRegistrationForm" novalidate>
-            
-            <!-- SECTION 1: TEAM LEADER DETAILS -->
-            <div class="mb-10">
-              <div class="flex items-center gap-2.5 pb-3 mb-6 border-b border-slate-800">
-                <span class="h-6 w-6 rounded-md bg-cyan-500/20 text-cyan-400 text-xs font-mono font-bold flex items-center justify-center">01</span>
-                <h3 class="text-sm font-bold font-orbitron text-white uppercase tracking-wider">TEAM LEADER DETAILS</h3>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Full Name *</label>
-                  <input type="text" id="leaderName" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="Leader Full Name" />
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Email Address *</label>
-                  <input type="email" id="leaderEmail" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="leader@institution.edu" />
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Mobile Number (10 digits) *</label>
-                  <input type="tel" id="leaderMobile" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="e.g. 9876543210" />
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">College / Institution *</label>
-                  <input type="text" id="collegeName" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="College / University Name" />
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Department *</label>
-                  <input type="text" id="departmentName" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="e.g. CSE / ECE / Mechanical" />
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Year of Study *</label>
-                  <select id="yearOfStudy" class="quantum-input w-full px-3 py-3 rounded-xl text-sm">
-                    <option value="1st Year">1st Year</option>
-                    <option value="2nd Year">2nd Year</option>
-                    <option value="3rd Year" selected>3rd Year</option>
-                    <option value="4th Year">4th Year</option>
-                    <option value="Postgraduate">Postgraduate</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- SECTION 2: TEAM DETAILS (4 MEMBERS PER TEAM) -->
-            <div class="mb-10">
-              <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
-                <div class="flex items-center gap-2.5">
-                  <span class="h-6 w-6 rounded-md bg-purple-500/20 text-purple-400 text-xs font-mono font-bold flex items-center justify-center">02</span>
-                  <h3 class="text-sm font-bold font-orbitron text-white uppercase tracking-wider">TEAM DETAILS (4 MEMBERS)</h3>
-                </div>
-                <span class="text-xs font-mono text-purple-400 font-bold">4 MEMBERS / TEAM</span>
-              </div>
-
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Team Name *</label>
-                  <input type="text" id="teamName" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="e.g. Quantum Innovators" />
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                  <div>
-                    <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Team Member 2 Name</label>
-                    <input type="text" id="member2Name" class="quantum-input w-full px-4 py-2.5 rounded-xl text-sm" placeholder="Member 2 Full Name" />
-                  </div>
-                  <div>
-                    <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Team Member 3 Name</label>
-                    <input type="text" id="member3Name" class="quantum-input w-full px-4 py-2.5 rounded-xl text-sm" placeholder="Member 3 Full Name" />
-                  </div>
-                  <div>
-                    <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Team Member 4 Name</label>
-                    <input type="text" id="member4Name" class="quantum-input w-full px-4 py-2.5 rounded-xl text-sm" placeholder="Member 4 Full Name" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- SECTION 3: PAPER & ABSTRACT DETAILS -->
-            <div class="mb-10">
-              <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
-                <div class="flex items-center gap-2.5">
-                  <span class="h-6 w-6 rounded-md bg-amber-500/20 text-amber-400 text-xs font-mono font-bold flex items-center justify-center">03</span>
-                  <h3 class="text-sm font-bold font-orbitron text-white uppercase tracking-wider">PAPER & ABSTRACT SUBMISSION</h3>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span id="wordStatusBadge" class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300">ABSTRACT</span>
-                  <span id="wordCountDisplay" class="text-xs font-mono text-slate-400">0 words</span>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Research Domain (5 Domains) *</label>
-                  <select id="paperDomain" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm">
-                    <!-- Populated by scripts/forms.js -->
-                  </select>
-                </div>
-
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Paper Title *</label>
-                  <input type="text" id="paperTitle" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm" placeholder="Full title of your presentation paper" />
-                </div>
-
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Abstract Summary *</label>
-                  <textarea id="paperAbstract" rows="5" required class="quantum-input w-full px-4 py-3 rounded-xl text-sm font-mono leading-relaxed" placeholder="Summarize your research concept, methodology, and key innovations..."></textarea>
-                </div>
-
-                <div>
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Keywords (Press Enter or Comma)</label>
-                  <input type="text" id="keywordInput" class="quantum-input w-full px-4 py-2.5 rounded-xl text-sm mb-2" placeholder="e.g. AI, VLSI, CAD, Bio-Sensors..." />
-                  <div id="keywordTagsList" class="flex flex-wrap gap-2"></div>
-                </div>
-
-                <!-- Document Upload -->
-                <div class="pt-2">
-                  <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Upload PPT / Abstract Document (.PDF, .DOC, .DOCX, .PPT)</label>
-                  
-                  <div id="fileDropZone" class="file-drop-zone p-6 rounded-2xl text-center">
-                    <input type="file" id="abstractFileInput" accept=".pdf,.doc,.docx,.ppt,.pptx" class="hidden" />
-                    <div class="flex flex-col items-center justify-center pointer-events-none">
-                      <svg class="w-8 h-8 text-cyan-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-                      <div class="text-xs font-bold text-white mb-1">Drag and drop file here or click below</div>
-                      <button type="button" onclick="document.getElementById('abstractFileInput').click()" class="pointer-events-auto mt-2 px-4 py-1.5 rounded-xl text-xs font-mono bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500 hover:text-slate-950 transition-colors">
-                        Browse File
-                      </button>
-                    </div>
-                  </div>
-
-                  <div id="fileUploadPreview" class="hidden p-4 rounded-xl bg-slate-900 border border-cyan-500/40 mt-3">
-                    <div class="flex items-center justify-between mb-2">
-                      <div class="truncate text-xs font-bold text-white" id="uploadedFileName">document.pdf</div>
-                      <span id="uploadProgressPct" class="text-xs font-mono text-cyan-400 font-bold">100% READY</span>
-                    </div>
-                    <div class="quantum-progress-track">
-                      <div id="uploadProgressBar" class="quantum-progress-fill" style="width: 100%;"></div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Submit Action -->
-            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div class="text-[11px] font-mono text-slate-500">
-                🔒 Official Ignitrron Research Transmission
-              </div>
-              <button type="submit" class="btn-quantum-primary w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm font-orbitron font-bold uppercase tracking-wider flex items-center justify-center gap-2">
-                <span>TRANSMIT SUBMISSION</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </button>
-            </div>
-
-          </form>
-        </div>
-
-        <!-- ==========================================
-             SUBMISSION TRANSMITTED SUCCESS SCREEN
-             ========================================== -->
-        <div id="submissionSuccessSection" class="hidden text-center py-6">
-          <div class="success-holo-circle">
-            <svg class="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-          </div>
-
-          <div class="text-xs font-mono tracking-[0.3em] text-emerald-400 uppercase mb-2">CONFIRMED TRANSMISSION</div>
-          <h2 class="text-2xl sm:text-4xl font-extrabold font-orbitron text-white tracking-wide mb-3">
-            SUBMISSION TRANSMITTED
-          </h2>
-          <p class="text-sm text-slate-300 max-w-md mx-auto mb-8 font-light">
-            Your idea has entered the Ignitrron research network.
-          </p>
-
-          <!-- Unique Submission ID Box -->
-          <div class="max-w-md mx-auto p-5 rounded-2xl bg-cyan-950/30 border-2 border-cyan-400/80 shadow-[0_0_30px_rgba(0,240,255,0.2)] mb-8">
-            <div class="text-[10px] font-mono text-cyan-300 uppercase tracking-widest mb-1">OFFICIAL SUBMISSION IDENTIFIER</div>
-            <div id="successSubmissionId" class="text-3xl font-extrabold font-mono text-cyan-400 tracking-widest">
-              IGN-PAP-001
-            </div>
-          </div>
-
-          <!-- Summary Grid -->
-          <div class="max-w-lg mx-auto grid grid-cols-2 gap-4 text-left mb-8 p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div>
-              <div class="text-[10px] font-mono text-slate-500 uppercase">Team Name</div>
-              <div id="successTeamName" class="text-xs font-bold text-white truncate">Team Alpha</div>
-            </div>
-            <div>
-              <div class="text-[10px] font-mono text-slate-500 uppercase">Team Leader</div>
-              <div id="successLeaderName" class="text-xs font-bold text-white truncate">Leader Name</div>
-            </div>
-            <div class="col-span-2">
-              <div class="text-[10px] font-mono text-slate-500 uppercase">Paper Title</div>
-              <div id="successPaperTitle" class="text-xs font-semibold text-cyan-300 truncate">"Paper Title"</div>
-            </div>
-            <div>
-              <div class="text-[10px] font-mono text-slate-500 uppercase">Domain</div>
-              <div id="successDomainTitle" class="text-xs font-mono text-purple-300 truncate">SOFTWARE</div>
-            </div>
-            <div>
-              <div class="text-[10px] font-mono text-slate-500 uppercase">Submitted Date</div>
-              <div id="successTimestamp" class="text-xs font-mono text-slate-300 truncate">Date Time</div>
-            </div>
-            <div class="col-span-2 pt-2 border-t border-slate-800 flex justify-between items-center">
-              <div id="successInstitution" class="text-[10px] font-mono text-slate-400 truncate">Institution</div>
-              <div id="successStatus" class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">VERIFIED</div>
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button id="downloadConfirmationBtn" class="btn-quantum-primary px-6 py-3 text-xs font-orbitron font-bold flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span>DOWNLOAD CONFIRMATION</span>
-            </button>
-            <button id="backToHomeFromSuccess" class="btn-quantum-outline px-6 py-3 text-xs font-orbitron font-bold">
-              RETURN TO HOME
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- =======================================================
        ADMIN COMMAND CENTER & ANALYTICS PORTAL
@@ -1089,7 +851,7 @@
             "Present your idea. Impact the future."
           </p>
           <p class="text-xs text-purple-300 font-mono mt-2">
-            Day 2 | 10 AM – 5 PM | ECE Class
+            Day 2 | 10 AM – 4 PM | ECE Class
           </p>
         </div>
 
@@ -1115,7 +877,7 @@
         <div class="flex items-center gap-4">
           <a href="#hero" class="hover:text-cyan-400">Home</a>
           <a href="#domains" class="hover:text-cyan-400">5 Domains</a>
-          <a href="#prizes" class="hover:text-cyan-400">₹40K Prizes</a>
+          <a href="#prizes" class="hover:text-cyan-400">₹25K Prizes</a>
           <button data-open-admin class="hover:text-purple-400">Command Center</button>
         </div>
       </div>
@@ -1158,5 +920,11 @@
       }, 50);
     })();
   </script>
+
+<!-- IGNITRRON GLOBAL TOP-LEFT BACK BUTTON -->
+<a href="/" id="ignitrron-global-back-btn" style="position: fixed; top: 16px; left: 16px; z-index: 99999; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9999px; color: #ffffff; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.06)'; this.style.borderColor='rgba(255,255,255,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.25)';">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  <span>Back</span>
+</a>
 </body>
 </html>

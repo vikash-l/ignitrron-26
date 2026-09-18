@@ -4,6 +4,7 @@ import { ExternalLink, Building2 } from 'lucide-react';
 import { EventConfig } from '../../types/event';
 import { SectionHeader } from '../ui/SectionHeader';
 import { Card } from '../ui/Card';
+import inZerosMembersImg from '../../assets/inzeros_members.png';
 
 interface InZerosPartnerProps {
   event: EventConfig;
@@ -50,6 +51,20 @@ export const InZerosPartner: React.FC<InZerosPartnerProps> = ({ event }) => {
               </p>
             </div>
 
+            {/* INZEROS Team Photo */}
+            <div className="pt-4 border-t border-[#1A0C1C] space-y-2">
+              <span className="text-xs font-mono text-[#E626FF] font-bold uppercase tracking-widest block">
+                INZEROS LEADERSHIP
+              </span>
+              <div className="relative rounded-2xl overflow-hidden border border-[#8F26FF]/40 shadow-[0_0_20px_rgba(143,38,255,0.25)] max-w-xl mx-auto group">
+                <img
+                  src={inZerosMembersImg}
+                  alt="InZeros Members - Ezashkan & Mubhash"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+
             {/* WEBSITE Subsection */}
             <div className="pt-4 border-t border-[#1A0C1C] space-y-1.5">
               <span className="text-xs font-mono text-[#E626FF] font-bold uppercase tracking-widest block">
@@ -74,7 +89,7 @@ export const InZerosPartner: React.FC<InZerosPartnerProps> = ({ event }) => {
                 MEMBERS
               </span>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 gap-4">
                 {members.map((member, idx) => (
                   <div
                     key={idx}

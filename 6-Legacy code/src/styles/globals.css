@@ -47,14 +47,21 @@
   }
 }
 
-/* Subtle Technical Blueprint Architecture Pattern */
+/* Premium Dark Machined Metallic Background Surface */
 .ultron-blueprint-bg {
   background-color: #070809;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(198, 40, 40, 0.04), transparent 70%),
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 100% 100%, 48px 48px, 48px 48px;
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(198, 40, 40, 0.12), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(20, 24, 32, 0.9), transparent 80%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, transparent 50%, rgba(198, 40, 40, 0.02) 100%);
+}
+
+/* Very Light Holographic Grid Lines (3% Opacity) */
+.holographic-grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(240, 68, 68, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(240, 68, 68, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 /* Metallic Machined Seam Border */
@@ -81,6 +88,44 @@
 @keyframes ultronEyePulse {
   0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px #f04444; }
   50% { opacity: 0.35; transform: scale(0.85); box-shadow: 0 0 2px #c62828; }
+}
+
+/* Slow Laser Diagnostic Scan Line Animation */
+.ultron-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(240, 68, 68, 0.15), rgba(240, 68, 68, 0.35), rgba(240, 68, 68, 0.15), transparent);
+  animation: scanSweep 14s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes scanSweep {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Extremely Slow CSS Data Stream Movement */
+.slow-data-stream-v {
+  animation: dataStreamV 35s linear infinite;
+}
+
+@keyframes dataStreamV {
+  0% { transform: translateY(-3%); }
+  50% { transform: translateY(3%); }
+  100% { transform: translateY(-3%); }
+}
+
+.slow-warning-pulse {
+  animation: warningPulse 8s infinite ease-in-out;
+}
+
+@keyframes warningPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.55; }
 }
 
 /* Machined Chamfer Cut Corner Utilities */

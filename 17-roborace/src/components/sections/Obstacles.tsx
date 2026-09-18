@@ -57,7 +57,7 @@ export const Obstacles: React.FC = () => {
     <section id="obstacles" className="py-24 bg-transparent relative overflow-hidden">
       {/* Visual backgrounds */}
       <div className="absolute inset-0 bg-grid-racing opacity-[0.03] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-full max-w-[350px] h-[350px] rounded-full bg-slate-500/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
@@ -71,7 +71,7 @@ export const Obstacles: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 md:grid-cols-3 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4"
         >
           {obstacles.map((obs, idx) => (
             <motion.div

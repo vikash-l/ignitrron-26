@@ -25,7 +25,7 @@ export const Stats: React.FC<StatsProps> = ({ event }) => {
         </div>
 
         {/* Machine Readouts Grid with Thin Separators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#262A33] border border-[#262A33] bg-[#121418] machined-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#262A33] border border-[#262A33] bg-[#121418] machined-border">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -35,7 +35,7 @@ export const Stats: React.FC<StatsProps> = ({ event }) => {
               transition={{ duration: 0.3, delay: index * 0.08 }}
               className="p-6 text-center space-y-2 flex flex-col justify-center items-center"
             >
-              <div className="text-3xl sm:text-4xl md:text-5xl font-black font-industrial tracking-wider text-[#E8EAED]">
+              <div className="text-3xl sm:text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-industrial tracking-wider text-[#E8EAED]">
                 {stat.value}
               </div>
               <div className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest text-[#F04444]">

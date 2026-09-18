@@ -492,7 +492,7 @@
           <div class="header">
             <div>
               <div class="brand">IGNITRRON — PAPER PRESENTATION</div>
-              <div style="font-size: 12px; color: #94a3b8;">DAY 2 • 10:00 AM – 5:00 PM • ECE CLASS</div>
+              <div style="font-size: 12px; color: #94a3b8;">DAY 2 • 10:00 AM – 4:00 PM • ECE CLASS</div>
             </div>
             <div class="tag">OFFICIAL TEAM PASS</div>
           </div>

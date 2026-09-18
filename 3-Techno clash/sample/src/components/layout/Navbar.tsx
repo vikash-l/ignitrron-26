@@ -59,10 +59,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
         <div className="flex items-center justify-between">
           
           {/* Logo & HUD Status */}
-          <div
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            onMouseEnter={() => sound.playHover()}
-            className="flex items-center gap-3 cursor-pointer group"
+          <a
+            href="https://ignitrron-26.freelancerskpriet.workers.dev/"
+            className="flex items-center gap-3 cursor-pointer group no-underline"
           >
             <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 font-extrabold text-white text-lg shadow-[0_0_15px_#00F0FF] transition-transform duration-200 group-hover:scale-105">
               <Cpu className="w-5 h-5 text-slate-950 animate-pulse" />
@@ -76,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
                 <span>ONLINE PRELIMS → TOP 10</span>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation Links */}
           <div className="hidden xl:flex items-center space-x-5 font-mono text-xs tracking-wider">
@@ -103,18 +102,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
               {muted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-cyan-400" />}
             </button>
 
-            <button
-              onClick={() => {
-                sound.playClick();
-                onRegisterClick();
-              }}
+            <a
+              href="https://www.theticket9.com/event/ignitrron-26"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => sound.playClick()}
               onMouseEnter={() => sound.playHover()}
-              className="relative group overflow-hidden px-5 py-2.5 text-xs font-mono font-bold rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-slate-950 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all transform hover:scale-105"
+              className="relative group overflow-hidden px-5 py-2.5 text-xs font-mono font-bold rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-slate-950 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all transform hover:scale-105 no-underline inline-flex"
             >
               <span className="flex items-center gap-1.5 relative z-10 text-white">
                 <Sparkles className="w-3.5 h-3.5" /> REGISTER NOW
               </span>
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}

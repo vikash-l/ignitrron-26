@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
 
 export interface CardProps extends Omit<HTMLMotionProps<'div'>, 'children'> {
   children: React.ReactNode;
@@ -14,7 +12,7 @@ export const Card: React.FC<CardProps> = ({
   children,
   variant = 'glass',
   hoverEffect = true,
-  className,
+  className = '',
   ...props
 }) => {
   const baseStyles = 'rounded-xl p-6 relative overflow-hidden transition-all duration-300';
@@ -32,7 +30,7 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <motion.div
-      className={twMerge(clsx(baseStyles, variantStyles[variant], hoverStyles, className))}
+      className={`${baseStyles} ${variantStyles[variant]} ${hoverStyles} ${className}`}
       {...props}
     >
       {children}

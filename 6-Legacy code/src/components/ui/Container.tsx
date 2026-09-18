@@ -1,6 +1,6 @@
 import React from 'react';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+
+import { cn } from '../../utils/cn';
 
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -23,13 +23,11 @@ export const Container: React.FC<ContainerProps> = ({
 
   return (
     <div
-      className={twMerge(
-        clsx(
+      className={cn(
           'w-full mx-auto px-4 sm:px-6 lg:px-8',
           sizeClasses[size],
           className
-        )
-      )}
+        )}
       {...props}
     >
       {children}

@@ -665,7 +665,7 @@ export const AtmosphericBackground: React.FC = () => {
 
       {/* 2. Soft Dimmed Amber/Gold Atmospheric Emitter */}
       <div 
-        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[550px] rounded-full opacity-10 blur-[180px]"
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-[900px] h-[550px] rounded-full opacity-10 blur-[180px]"
         style={{
           background: 'radial-gradient(ellipse, #e8a63a 0%, #d6a84f 40%, #8c6a2d 70%, transparent 85%)',
         }}
