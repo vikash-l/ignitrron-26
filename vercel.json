@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "node assemble-final.js",
-  "outputDirectory": "deployment"
+  "buildCommand": "echo 'Deployment ready'",
+  "outputDirectory": "deployment",
+  "cleanUrls": true,
+  "trailingSlash": true
 }
