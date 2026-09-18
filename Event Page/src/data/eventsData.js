@@ -268,7 +268,7 @@ export const EVENTS_DATA = [
     coordinators: [
       { name: "Abishek Chandrasekar", phone: "9698692750" }
     ],
-    prizes: { first: "₹10,000", second: "₹7,000", third: "₹5,000", total: "₹22,000" },
+    prizes: { first: "₹5,000", second: "₹3,000", third: "₹2,000", total: "₹10,000" },
     description: "Program high-speed autonomous PID line follower bots.",
     accentColor: "#00D9FF",
     position: [-24, -14, -4]
